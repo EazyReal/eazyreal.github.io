@@ -9,18 +9,19 @@ site_name: Maxwill's site
 # repo_url: 'https://github.com/EazyReal/eazyreal.github.io'
 
 # Navigation
+# ./docs/ bla is filled
 nav:
     - 'Home': 'index.md'
     - 'CV': 'cv.md'
     - 'About': 'about.md'
     - 'NLP': 
-      - 'Standford 224n' : 'NLP\stanford224n-home.md'
-      - 'Paper List 2020 Summer' : 'NLP\paperlist2020summer.md'
+        - 'Standford 224n' : 'NLP/stanford224n-home.md'
+        - 'Paper List 2020 Summer' : 'NLP/paperlist2020summer.md'
     - 'Quantum':
-      - 'Quantum Compuation and Quantum Information' : 'Quantum\QIC.md'
+        - 'Quantum Compuation and Quantum Information' : 'Quantum/QIC.md'
     - 'Math':
-      - 'Linear Algebra II' : 'Math\LAII.md'
-      - 'Introduction to Real Analysis II' : 'Math\IntroRAII.md'
+        - 'Linear Algebra II' : 'Math/LAII.md'
+        - 'Introduction to Real Analysis II' : 'Math/IntroRAII.md'
 
 # Theme
 theme:
@@ -56,9 +57,18 @@ extra:
 
 # Extensions
 markdown_extensions:
+  - extra
+  - tables
+  - fenced_code
   - attr_list
   - admonition
+  - mdx_math: # python-markdown-math
+      enable_dollar_delimiter: true
   - codehilite:
       guess_lang: false
   - toc:
       permalink: true
+
+# for math
+extra_javascript:
+    - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML
