@@ -29,7 +29,7 @@ mkdocs new <project-root>
 mkdocs serve
 ```
 
-### deploy to github page (with github option)
+### deploy to github page (with github aption)
 - create `<project-root>/.github/workflows/ci.yml`
 ```
 # this deploy github action is from https://squidfunk.github.io/mkdocs-material/publishing-your-site/

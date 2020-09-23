@@ -1,4 +1,5 @@
 # this deploy github action is from https://squidfunk.github.io/mkdocs-material/publishing-your-site/
+# Maxwill changed run: pip install mkdocs-material to pip install -r requirements.txt
 name: ci 
 on:
   push:
