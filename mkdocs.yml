@@ -14,6 +14,7 @@ nav:
     - 'Home': 'index.md'
     - 'CV': 'cv.md'
     - 'About': 'about.md'
+    - 'Tutorial': 'step-by-step-mkdocs.md'
     - 'NLP': 
         - 'Standford 224n' : 'NLP/stanford224n-home.md'
         - 'Paper List 2020 Summer' : 'NLP/paperlist2020summer.md'

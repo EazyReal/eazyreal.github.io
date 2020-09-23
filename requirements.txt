@@ -1,2 +1,2 @@
-mkdocs-material
+mkdocs-material 
 python-markdown-math
