@@ -1,3 +1,5 @@
 mkdocs-material 
-python-markdown-math
+mkdocs-minify-plugin
 mkdocs-git-revision-date-plugin
+mkdocs-redirects
+python-markdown-math

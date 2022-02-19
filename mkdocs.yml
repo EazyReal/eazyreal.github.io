@@ -1,24 +1,29 @@
 # Project information
 site_name: Maxwill's site
-# site_description: 'Maxwill's personal website'
-# site_author: 'Maxwill - Yan-Tong Lin'
-# site_url: 'https://eazyreal.github.io/'
+site_description: Maxwill's personal website
+site_author: Maxwill
+site_url: https://maxwill.one/
 
 # Repository
-# repo_name: 'EazyReal/eazyreal.github.io'
-# repo_url: 'https://github.com/EazyReal/eazyreal.github.io'
-
-# Navigation
+repo_name: EazyReal/eazyreal.github.io
+repo_url: https://github.com/EazyReal/eazyreal.github.io
 edit_uri: https://github.com/EazyReal/eazyreal.github.io/tree/main/docs/
 
 # Theme
 theme:
-  name: "material"
-  custom_dir: "overrides"
+  name: material
+  custom_dir: overrides
   palette:
-    scheme: "default"
-    primary: "teal"
-    accent: "indigo"
+    - scheme: default
+      primary: teal
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode=
   features:
     - navigation.tabs
     - navigation.tabs.sticky
@@ -36,11 +41,6 @@ theme:
     repo: fontawesome/brands/git-alt
   logo: "img/infinity.svg"
   favicon: "img/favicon.ico"
-  plugins:
-    - tags:
-      tags_file: tags.md
-    - search
-    - git-revision-date
 
 extra:
   #social links at btm
@@ -67,6 +67,13 @@ markdown_extensions:
       guess_lang: false
   - toc:
       permalink: true
+
+# Plugins
+plugins:
+  - search
+  - git-revision-date
+  - tags:
+      tags_file: tags.md
 
 # for math
 extra_javascript:

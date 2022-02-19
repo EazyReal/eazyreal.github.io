@@ -6,17 +6,13 @@ tags:
 
 # Maxwill's Site
 
-Hello visitors,  
-This is a personal website of Maxwill Lin
+### About myself
 
-## Introduction
+I am Maxwill, a first year MS student at NTU GICE.  
+You can find my CV [here](./cv.md).
 
-
-## Contact Information
-
-- Email
-    - 0312fs3@gmail.com
-- Social Networkings
-    - [Github](https://github.com/EazyReal)
-    - [Facebook](https://www.facebook.com/profile.php?id=100016734543516)
-    - [LinkedIn](https://www.linkedin.com/in/yan-tong-lin-ba4a72194/)
+### Contact Information
+- 0312fs3@gmail.com
+- [Github](https://github.com/EazyReal)
+- [LinkedIn](https://www.linkedin.com/in/maxwilllin/)
+- [Twitter](https://twitter.com/tensorfi)
