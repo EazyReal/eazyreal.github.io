@@ -74,6 +74,7 @@ plugins:
   - git-revision-date
   - tags:
       tags_file: tags.md
+  # - macros:
 
 # for math
 extra_javascript:
