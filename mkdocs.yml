@@ -11,50 +11,52 @@ site_name: Maxwill's site
 # Navigation
 # ./docs/ bla is filled
 nav:
-    - 'Home': 'index.md'
-    - 'CV': 'cv.md'
-    - 'About': 'about.md'
-    - 'Tutorial': 'step-by-step-mkdocs.md'
-    - 'NLP': 
-        - 'Standford 224n' : 'NLP/stanford224n-home.md'
-        - 'Paper List 2020 Summer' : 'NLP/paperlist2020summer.md'
-    - 'Quantum':
-        - 'Quantum Compuation and Quantum Information' : 'Quantum/QIC.md'
-    - 'Math':
-        - 'Linear Algebra II' : 'Math/LAII.md'
-        - 'Introduction to Real Analysis II' : 'Math/IntroRAII.md'
+  - "Home": "index.md"
+  - "CV": "cv.md"
+  - "About": "about.md"
+  - "Tutorial": "step-by-step-mkdocs.md"
+  - "NLP":
+      - "Standford 224n": "NLP/stanford224n-home.md"
+      - "Paper List 2020 Summer": "NLP/paperlist2020summer.md"
+  - "Quantum":
+      - "Quantum Compuation and Quantum Information": "Quantum/QIC.md"
+  - "Math":
+      - "Linear Algebra II": "Math/LAII.md"
+      - "Introduction to Real Analysis II": "Math/IntroRAII.md"
 
 # Theme
 theme:
-    name: 'material'
-    custom_dir: 'overrides'
-    palette:
-        scheme: 'default'
-        primary: 'teal'
-        accent: 'indigo'
-    features:
-        - 'tabs'
-        #- 'instant'
-    font:
-        text: 'Roboto'
-        code: 'Roboto Mono'
-    icon:
-        logo: 'img/infinity.svg'
-        repo: fontawesome/brands/git-alt
-    # at upper left
-    logo: 'img/infinity.svg'
-    # at browser's tab
-    favicon: 'img/favicon.ico'
+  name: "material"
+  custom_dir: "overrides"
+  palette:
+    scheme: "default"
+    primary: "teal"
+    accent: "indigo"
+  features:
+    - "tabs"
+    #- 'instant'
+  font:
+    text: "Roboto"
+    code: "Roboto Mono"
+  icon:
+    logo: "img/infinity.svg"
+    repo: fontawesome/brands/git-alt
+  # at upper left
+  logo: "img/infinity.svg"
+  # at browser's tab
+  favicon: "img/favicon.ico"
 
 extra:
-#social links at btm
+  #social links at btm
   social:
     - icon: fontawesome/brands/github-alt
-      link: 'https://github.com/EazyReal'
+      link: "https://github.com/EazyReal"
     - icon: fontawesome/brands/facebook
-      link: 'https://www.facebook.com/profile.php?id=100016734543516'
+      link: "https://www.facebook.com/maxwill.lin"
     - icon: fontawesome/brands/linkedin
-      link: 'https://www.linkedin.com/in/yan-tong-lin-ba4a72194/'
+      link: "https://www.linkedin.com/in/maxwilllin/"
+    - icon: fontawesome/brands/twitter
+      link: "https://twitter.com/tensorfi"
 
 # Extensions
 markdown_extensions:
@@ -72,4 +74,4 @@ markdown_extensions:
 
 # for math
 extra_javascript:
-    - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML
