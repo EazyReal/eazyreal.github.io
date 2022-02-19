@@ -41,6 +41,7 @@ menu:
 ## Below is for PaperMod theme
 
 params:
+  mathjax: true
   # this is passed \themes\PaperMod\layouts\partials\head.html
   assets:
     favicon: "favicon.ico"
