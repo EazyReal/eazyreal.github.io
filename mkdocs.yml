@@ -9,20 +9,7 @@ site_name: Maxwill's site
 # repo_url: 'https://github.com/EazyReal/eazyreal.github.io'
 
 # Navigation
-# ./docs/ bla is filled
-nav:
-  - "Home": "index.md"
-  - "CV": "cv.md"
-  - "About": "about.md"
-  - "Tutorial": "step-by-step-mkdocs.md"
-  - "NLP":
-      - "Standford 224n": "NLP/stanford224n-home.md"
-      - "Paper List 2020 Summer": "NLP/paperlist2020summer.md"
-  - "Quantum":
-      - "Quantum Compuation and Quantum Information": "Quantum/QIC.md"
-  - "Math":
-      - "Linear Algebra II": "Math/LAII.md"
-      - "Introduction to Real Analysis II": "Math/IntroRAII.md"
+edit_uri: https://github.com/EazyReal/eazyreal.github.io/tree/main/docs/
 
 # Theme
 theme:
@@ -33,18 +20,27 @@ theme:
     primary: "teal"
     accent: "indigo"
   features:
-    - "tabs"
-    #- 'instant'
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.instant
+    - navigation.tracking
+    - navigation.indexes
+    - navigation.top
+    - toc.follow
+    - header.autohide
   font:
     text: "Roboto"
     code: "Roboto Mono"
   icon:
     logo: "img/infinity.svg"
     repo: fontawesome/brands/git-alt
-  # at upper left
   logo: "img/infinity.svg"
-  # at browser's tab
   favicon: "img/favicon.ico"
+  plugins:
+    - tags:
+      tags_file: tags.md
+    - search
+    - git-revision-date
 
 extra:
   #social links at btm

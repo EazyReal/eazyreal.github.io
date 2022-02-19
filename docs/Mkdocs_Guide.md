@@ -1,3 +1,8 @@
+---
+title: mkdocs guide
+tags:
+  - guide
+---
 
 ## Step by step tutorial
 - [reference](https://www.itread01.com/content/1541236983.html)

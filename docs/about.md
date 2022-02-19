@@ -1,4 +1,4 @@
-# About this website
+# About
 - [github pages](https://pages.github.com/)
 - [mkdocs](https://www.mkdocs.org/)
 - [mkdocs-material](https://squidfunk.github.io/mkdocs-material/)

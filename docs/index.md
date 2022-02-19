@@ -1,3 +1,9 @@
+---
+title: Maxwill's Site
+tags:
+    - home
+---
+
 # Maxwill's Site
 
 Hello visitors,  
