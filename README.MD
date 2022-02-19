@@ -5,3 +5,4 @@
 - commit 6e68d709b1f71eeba38eb018770f5f2cffb5147a is stable (links work correctly)
   - config.yml baseURL: "https://eazyreal.github.io/"
   - CNAME: maxwill.one
+
