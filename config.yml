@@ -1,4 +1,4 @@
-baseURL: "https://github.com/eazyreal/" # this is used by theme???
+baseURL: "https://eazyreal.github.io/" # this is used by theme???
 languageCode: "en-us"
 title: "Maxwill's Site"
 theme: "PaperMod"
