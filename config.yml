@@ -1,4 +1,4 @@
-baseURL: "eazyreal.github.io/" # this is used by theme???
+baseURL: "aaa/" # this is used by theme???
 languageCode: "en-us"
 title: "Maxwill's Site"
 theme: "PaperMod"
@@ -27,15 +27,15 @@ menu:
   main:
     - identifier: tags
       name: tags
-      url: tags/
+      url: tags
       weight: 20
     - identifier: CV
       name: CV
-      url: cv/
+      url: cv
       weight: 10
     - identifier: Search
       name: Search
-      url: search/
+      url: search
       weight: 99
 
 ## Below is for PaperMod theme
@@ -56,10 +56,7 @@ params:
   description: Maxwill's Site
   keywords: [Blog, Portfolio]
   author: ["Maxwill"]
-  images:
-    [
-      "https://en.wikipedia.org/wiki/Image#/media/File:Image_created_with_a_mobile_phone.png",
-    ]
+  images: []
   DateFormat: "January 2, 2006"
   defaultTheme: auto # dark, light
   disableThemeToggle: false
