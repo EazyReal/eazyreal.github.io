@@ -41,10 +41,20 @@ menu:
 ## Below is for PaperMod theme
 
 params:
+  # this is passed \themes\PaperMod\layouts\partials\head.html
+  assets:
+    favicon: "favicon.ico"
+    favicon16x16: "favicon.ico"
+    favicon32x32: "favicon.ico"
+    apple_touch_icon: "favicon.ico"
+    safari_pinned_tab: "favicon.ico"
+    # disableHLJS: true # to disable highlight.js
+    # disableFingerprinting: true
+
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  title: ExampleSite
-  description: "ExampleSite description"
-  keywords: [Blog, Portfolio, PaperMod]
+  title: Maxwill's Site
+  description: Maxwill's Site
+  keywords: [Blog, Portfolio]
   author: ["Maxwill"]
   images:
     [
@@ -67,19 +77,10 @@ params:
   showtoc: false
   tocopen: false
 
-  assets:
-    # disableHLJS: true # to disable highlight.js
-    # disableFingerprinting: true
-    favicon: "favicon.ico"
-    favicon16x16: "favicon.ico"
-    favicon32x32: "favicon.ico"
-    apple_touch_icon: "favicon.ico"
-    safari_pinned_tab: "<link / abs url>"
-
   label:
     text: "Maxwill's Site"
     icon: "favicon.ico"
-    iconHeight: 35
+    iconHeight: 20
 
   # profile-mode
   profileMode:
