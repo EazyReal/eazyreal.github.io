@@ -33,6 +33,9 @@ menu:
       name: CV
       url: cv
       weight: 10
+    - identifier: Posts
+      name: Posts
+      url: posts
     - identifier: Search
       name: Search
       url: search
@@ -92,6 +95,8 @@ params:
     buttons:
       - name: CV
         url: cv
+      - name: Posts
+        url: posts
       - name: Tags
         url: tags
       - name: Search
