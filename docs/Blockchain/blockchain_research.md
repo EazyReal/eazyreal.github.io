@@ -4,6 +4,7 @@ tags:
     - research
     - blockchain
     - NTU
+lastUpdated: 2022/2/24
 ---
 
 # Blockchain Resources
@@ -30,11 +31,13 @@ tags:
 - [DispersedLedger: High-Throughput Byzantine Consensus
 on Variable Bandwidth Networks
 ](https://arxiv.org/pdf/2110.04371.pdf)
+- [Trifecta: the Blockchain Trilemma Solved](http://pramodv.ece.illinois.edu/pubs/Whitepaper2019-9.pdf)
+
 
 ## Links
 - [Research Space](/aMKXpWTCT9ajoup2ZWGX_A)
 - [Blockchain Resources (Archived)](/Hy9fnYCJRl6rhaGI6j0qCg)
-- [Search on Isit](https://ieeexplore.ieee.org/search/searchresult.jsp?action=search&newsearch=true&matchBoolean=true&queryText=(%22Full%20Text%20.AND.%20Metadata%22:blockchain)%20AND%20(%22All%20Metadata%22:ISIT))
+- [Search on ISIT](https://ieeexplore.ieee.org/search/searchresult.jsp?action=search&newsearch=true&matchBoolean=true&queryText=(%22Full%20Text%20.AND.%20Metadata%22:blockchain)%20AND%20(%22All%20Metadata%22:ISIT))
 
 ## Ideas
 - Arbitrage based fixed interest protocol (game theory)
@@ -55,9 +58,10 @@ on Variable Bandwidth Networks
 - Chains
     - [x] Arbitrum
     - [ ] AVAX-C
-    - [ ] ETH 2.0
-    - [ ] Polkadot
-    - [ ] Near
+    - [ ] Casper(eth2.0)
+    - [ ] GRANDPA(polkadot)
+    - [ ] Nightshade(near)
+    - [ ] OHIE
 - Primitives
     - BFTs
     - Data Availability Oracle
@@ -68,9 +72,9 @@ on Variable Bandwidth Networks
         - hash, multisig, VRF, VDF, ZK-SNARK
 - Sharding
     - Polyshard
-    - [ ] Free to Shard
+    - [ ] Free2Shard
         -  [ ] Separating Agreement from Execution for Byzantine Fault Tolerant Services
-        -  [ ] lazyledger
+        -  [ ] Lazyledger
 
 ## Courses
 - https://cs.nyu.edu/~mishra/
@@ -79,15 +83,26 @@ on Variable Bandwidth Networks
 - https://web.stanford.edu/class/archive/ee/ee374/ee374.1206/
 - https://cs251.stanford.edu/syllabus.html
 
-## Entry Points, Must Read
-- Free2Shard (Uniconsensus Model)
-- Prism (DAG based SOTA single chain)
-- Fraud and Data Availability Proof
-    - the same name 
+## Entries and Must-Reads
+- Survey Entry
+    - Free2Shard
+- SOTA Consensus (Lasted Updated 2022/2/24)
+    - Prism: Deconstructing the Blockchain to Approach Physical Limits, 2019
+        - structured DAG based POW blockchain, physical limit
+    - Scalable and Probabilistic Leaderless BFT Consensus through Metastability
+        - Snow Consensus Family
+    - HotStuff: BFT Consensus in the Lens of Blockchain
+        - Partial-sync, Linear, Responsive leader-based BFT based on 3-chain confirmation rule
+- Uniconsensus Sharding
+    - Free2Shard, 2020
+        - Also a good survey
+- Data Availability
+    - Fraud and Data Availability Proof
     - Coded Merkled Tree
     - Coded Interleaving Tree
-- Arbitrum (State Commitment)
-- Bitcoin Analysis
+- Layer 2
+    - Arbitrum (State Commitment)
+- Longest Chain Analysis
     - Bitcoin Backbone
     - Nakamoto Always Win
     - Rethinking Large-Scale Consensus
@@ -260,8 +275,3 @@ and Secure Proof of Stake
 - Solutions to Scalability of Blockchain: A Survey
 - [Layer 2 Blockchain Scaling: a Survey](https://arxiv.org/pdf/2107.10881.pdf)
 - Review of Techniques for Privacy-Preserving Blockchain Systems
-
-
-### SOTA protocols
-- DispersedLedger: High-Throughput Byzantine Consensus on Variable Bandwidth Networks
-- [Trifecta: the Blockchain TriLemma Solved](http://pramodv.ece.illinois.edu/pubs/Whitepaper2019-9.pdf)
