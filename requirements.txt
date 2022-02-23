@@ -3,4 +3,4 @@ mkdocs-minify-plugin
 mkdocs-git-revision-date-plugin
 mkdocs-redirects
 python-markdown-math
-//mkdocs-macros-plugin
+# mkdocs-macros-plugin

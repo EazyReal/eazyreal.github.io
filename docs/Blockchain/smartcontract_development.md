@@ -1,11 +1,13 @@
 ---
 title: Smart Contract Resources
 tags:
+    - guide
     - blockchain
     - smart contract
-    - technology
+    - tech
 ---
-# Web3 Resources
+
+# Smart Contract Resources
 
 [Maxwill's Skill Development](/z5Av2ObVRLCkmeINnc-5Tg)
 

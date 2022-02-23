@@ -1,13 +1,23 @@
+---
+title: Linear Algebra II
+tags:
+    - note
+    - "2020"
+    - Linear Algebra
+    - Math
+    - NYCU
+author: Maxwill
+lastUpdated: 2020/06/10
+description :  Linear Algebra II
+copyright : "screen shots are mainly from Ming-Hsuan Kang's lecture notes, paste for note clarity and save time only" 
+---
+
 # Linear Algebra II
 
 * [NCTU Lecture Notes](https://hackmd.io/r-CG8R7xTZ2S3pRa6JD9FA)
 * [NCTU 2020 spring](https://hackmd.io/xJD55HhBS-CiMdAiSCNYEg)
 
-[TOC]
-
-
 ## week 1-1 (3/2/2020)
-
 * review
     * linear independency
     * basis and dimension
@@ -49,9 +59,7 @@
                         \end{bmatrix} 
     6. determinant and characristic function by MI
     7. $f_{T\mid _W}(x) = ?$ 
-
     :::
-    
     ::: info
     Proof:
     1. By definition : $W = span\{w, T(w), T^2(w), T^3(w)...\}$
@@ -65,7 +73,6 @@
         * uses $F$ instead of $R$ for generasity
 
 ## week 1-2(3/4/2020)
-
 * matrix transformation self review
     * http://www.taiwan921.lib.ntu.edu.tw/mypdf/math02.pdf
     ![](https://i.imgur.com/bLgkz3Z.png)
@@ -79,7 +86,6 @@
         * ![](https://i.imgur.com/mFl31C2.png)
     * find eigenvalues and vectors
     * $A = P^{-1}QP$
-
 * course
     * [use cyclic subspace to proof Cayley-Hamilton Theorem](https://ccjou.wordpress.com/2011/01/31/%E5%88%A9%E7%94%A8%E5%BE%AA%E7%92%B0%E5%AD%90%E7%A9%BA%E9%96%93%E8%AD%89%E6%98%8E-cayley-hamilton-%E5%AE%9A%E7%90%86/)
 * invariant subspace is useful for analyzing  

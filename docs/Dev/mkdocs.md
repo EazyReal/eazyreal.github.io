@@ -2,6 +2,7 @@
 title: mkdocs guide
 tags:
   - guide
+  - tech
 ---
 
 ## Step by step tutorial
