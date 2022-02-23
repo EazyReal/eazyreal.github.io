@@ -7,98 +7,245 @@ tags:
 ---
 
 # Blockchain Resources
+- Block is for batch processing txs.
+- Chain is for determining the unique total ordering.
+- Blocktree (forking) is inevitable in the presence of asynchrony.
+- Consensus is to
+    - (non-triviality) decide when fork
+    - (security) ensure the choice will not change in the future
+    - (liveness) ensure new tx comes in 
+- Sharding is to 
+    - avoid full replication of storage and computation 
+    - allow XCMP
+- To achieve sharding in a uniconsensus scheme
+    - data availability
+    - data integrity
+    - shard liveness
 
-- [Research Space](/aMKXpWTCT9ajoup2ZWGX_A)
+## TOC
+[TOC]
 
-https://ieeexplore.ieee.org/search/searchresult.jsp?action=search&newsearch=true&matchBoolean=true&queryText=(%22Full%20Text%20.AND.%20Metadata%22:blockchain)%20AND%20(%22All%20Metadata%22:ISIT)
-tree sharding?
-https://medium.com/encode-club/encode-hack-avalanche-workshop-2-video-slides-784175a68fb
-
-
-https://arxiv.org/pdf/2110.04371.pdf
-
-## Current Tasks
-- Classes are good, maybe read first!
-- Protocols
-    - Polyshard
-    - Prism Revisit
-- Chains
-    - Arbitrum
-    - Avax-C
-    - ETH 2.0
-    - Polkadot
-    - Near
-- Primitives
-    - BFTs
-    - Code Computings
-    - Cryptography
-        - hash
-        - multisig
-        - VRF
-        - VDF
-        - ZK-SNARK
-
-## Prioritized
-- Sharding
-    - Polyshard
-    - Arbitrum
-    - Fraud Proof
-    - ETH 2.0
-- Avalanche
+## TMP
 - Scaling Blockchains Without Giving up Decentralization and Security 
-- Fantom (Lachesis: Scalable Asynchronous BFT on DAG Streams)
-- Solana (X)
-- Keeping Authorities “Honest or Bust” with Decentralized Witness Cosigning
-    - Byzcoin use this to reduce $O(n^2)$ PBFT to $O(n)$ by multisigning
-        - Harmony claim to use BSL multisig to increase security
-    - https://www.youtube.com/watch?v=rJhfH7Xn6ko
 - [DispersedLedger: High-Throughput Byzantine Consensus
 on Variable Bandwidth Networks
 ](https://arxiv.org/pdf/2110.04371.pdf)
 
-## Model
+## Links
+- [Research Space](/aMKXpWTCT9ajoup2ZWGX_A)
+- [Blockchain Resources (Archived)](/Hy9fnYCJRl6rhaGI6j0qCg)
+- [Search on Isit](https://ieeexplore.ieee.org/search/searchresult.jsp?action=search&newsearch=true&matchBoolean=true&queryText=(%22Full%20Text%20.AND.%20Metadata%22:blockchain)%20AND%20(%22All%20Metadata%22:ISIT))
+
+## Ideas
+- Arbitrage based fixed interest protocol (game theory)
+- Tree shard (leveled consensus)
+- Adding concurrency to smart contracts (prism: consensus is not the bottlenet)
+- Blockchain+
+    - Network Topology 
+        - potentially network coding problem
+    - Privacy
+        - zk-SNARK learning
+- Proof or Disproof
+    - Can we seal POS blocks?
+    - Can we encode computing program to computing result (one-way)?
+    - Can we provide tx order fairness with game theory? 
+
+## Todo
+- Blockchain Classes
+- Chains
+    - [x] Arbitrum
+    - [ ] AVAX-C
+    - [ ] ETH 2.0
+    - [ ] Polkadot
+    - [ ] Near
+- Primitives
+    - BFTs
+    - Data Availability Oracle
+    - State Commitment (Fraud Proof)
+    - Free2Shard
+    - Code Computings
+    - Cryptography
+        - hash, multisig, VRF, VDF, ZK-SNARK
+- Sharding
+    - Polyshard
+    - [ ] Free to Shard
+        -  [ ] Separating Agreement from Execution for Byzantine Fault Tolerant Services
+        -  [ ] lazyledger
+
+## Courses
+- https://cs.nyu.edu/~mishra/
+- https://ethresear.ch/
+- https://courses.grainger.illinois.edu/ece598pv/sp2021/
+- https://web.stanford.edu/class/archive/ee/ee374/ee374.1206/
+- https://cs251.stanford.edu/syllabus.html
+
+## Entry Points, Must Read
+- Free2Shard (Uniconsensus Model)
+- Prism (DAG based SOTA single chain)
+- Fraud and Data Availability Proof
+    - the same name 
+    - Coded Merkled Tree
+    - Coded Interleaving Tree
+- Arbitrum (State Commitment)
+- Bitcoin Analysis
+    - Bitcoin Backbone
+    - Nakamoto Always Win
+    - Rethinking Large-Scale Consensus
+
+---
+
+## Network Model
 - Randomized Gossip Algorithms, https://web.stanford.edu/~boyd/papers/pdf/gossip.pdf
 - How Efficient Can Gossip Be? (On the Cost of Resilient Information Exchange)
-- (A)Synchronous, GST https://decentralizedthoughts.github.io/2019-06-01-2019-5-31-models/
+- [Consensus in the Presence of Partial Synchrony, 1988](https://groups.csail.mit.edu/tds/papers/Lynch/jacm88.pdf) 
+    - this paper defines partial sync with GST or unkown $\Delta$
+        - https://decentralizedthoughts.github.io/2019-06-01-2019-5-31-models/
+    - On the minimal synchronism needed for distributed consensus, 1987
+    - Impossibility of distributed consensus with one faulty process, 1985 (i.e. the FLP impossibility)
+![](https://i.imgur.com/AXZU10j.png)
 
-## Sharding
-- Scalable Network-Coded PBFT Consensus Algorithm
-- PolyShard: Coded Sharding Achieves Linearly Scaling Efficiency and Security Simultaneously
-- Low Latency Cross-Shard Transactions in Coded Blockchain
-- [Trifecta: the Blockchain TriLemma Solved](http://pramodv.ece.illinois.edu/pubs/Whitepaper2019-9.pdf)
+
+
+---
+
+## Primitives, Utils, Analysis
+
+### Nakamoto Analysis
+- [The Bitcoin Backbone Protocol: Analysis and Applications](https://eprint.iacr.org/2014/765.pdf), 2015
+- Liveness and Consistency of Bitcoin and Prism lockchains: The Non-lockstep Synchronous Case
+- A Rational Protocol Treatment of 51% Attacks, 2021
+- Everything is a Race and Nakamoto Always Wins, 2020
+- Rethinking Large-Scale Consensus, 2020
+
+### Privacy
+- [Manta: a Plug and Play Private DeFi Stack](https://eprint.iacr.org/2021/743.pdf)
+- [Grin --- MimbleWimble](https://medium.com/@brandonarvanaghi/grin-transactions-explained-step-by-step-fdceb905a853)
+
+### Cryptography Primitives
+- Keeping Authorities “Honest or Bust” with Decentralized Witness Cosigning
+    - Byzcoin use this to reduce $O(n^2)$ PBFT communication complexity to $O(n)$ by multisigning
+    - Harmony claim to use BSL multisig to increase security
+- [JMT (Jellyfish Merkle Tree)](https://diem-developers-components.netlify.app/papers/jellyfish-merkle-tree/2021-01-14.pdf)
+- CMT (Coded Merkle Tree)
+- CIT (Coded Interleaving Tree)
+
+### Tx Order Fairness
+- Order-Fair Consensus in the Permissionless Setting
+
+
+
+---
+
+## Sharding 
+
+### General
+- Free2Shard: Adaptive-adversary-resistant sharding via Dynamic Self Allocation (T0)
+- [Trifecta: the Blockchain Trilemma Solved](http://pramodv.ece.illinois.edu/pubs/Whitepaper2019-9.pdf)
 - [Polkadot](https://medium.com/polkadot-network/grandpa-block-finality-in-polkadot-an-introduction-part-1-d08a24a021b5)
 - OHIE: Blockchain Scaling Made Simple
+- Zilliqa (computation sharding)
+- [RapidChain: Scaling Blockchain via Full Sharding](https://eprint.iacr.org/2018/460.pdf)
+- [Elrond: A Highly Scalable Public Blockchain via Adaptive State Sharding
+and Secure Proof of Stake
+](https://elrond.com/assets/files/elrond-whitepaper.pdf)
 
-### Coded Computing
+### ECC 
 - Lagrange Coded Computing: Optimal Design for Resiliency, Security, and Privacy
+- PolyShard: Coded Sharding Achieves Linearly Scaling Efficiency and Security Simultaneously
+- Scalable Network-Coded PBFT Consensus Algorithm
+- Low Latency Cross-Shard Transactions in Coded Blockchain
+- Dynamic Distributed Storage for Blockchains
+- On the information theory of clustering, registration, and blockchains
+
+### XCMP
+- State of the art: Cross Chain Communications
+- [Connext Docs, XCMP trillema](https://docs.connext.network/Integration/SystemOverview/connextvsxyz)
+    - proxy lite client!
 
 ### Near
 - [open problem](https://medium.com/nearprotocol/unsolved-problems-in-blockchain-sharding-2327d6517f43)
 - [near consensus](https://near.org/papers/nightshade/#nightshade)
 
+### Fraud and Data Availability Proof
+- Coded Merkle Tree: Solving Data Availability Attacks in Blockchains
+- [Fraud and Data Availability Proofs: Maximising Light Client Security and Scaling Blockchains with Dishonest Majorities](https://arxiv.org/pdf/1809.09044.pdf)
+- Overcoming Data Availability Attacks in Blockchain Systems: LDPC Code Design for Coded Merkle Tree
+- CIT
 
-## ISIT
-- Scalable Network-Coded PBFT Consensus Algorithm
-- PolyShard: Coded Sharding Achieves Linearly Scaling Efficiency and Security Simultaneously
-- Low Latency Cross-Shard Transactions in Coded Blockchain
-- Dynamic Distributed Storage for Blockchains
+### State Commitment
 
-### Coded Computing
-- Lagrange Coded Computing: Optimal Design for Resiliency, Security, and Privacy
+---
 
-https://cs.nyu.edu/~mishra/COURSES/09.HPGP/scribe4
+## Consensus
 
-## New
-- State of the art: Cross Chain Communications
-- On the information theory of clustering, registration, and blockchains
+### BFT
+- Separating Agreement from Execution for Byzantine Fault Tolerant Services (T1)
+- Communication complexity of byzantine agreement, revisited
+- TaiJi: Longest Chain Availability with BFT Fast Confirmation
+- Breaking the O(n2) bit barrier: scalable byzantine agreement with an adaptive adversary
+- [HotStuff: BFT Consensus with Linearity and Responsiveness, 2020](https://dl.acm.org/doi/pdf/10.1145/3293611.3331591)
+    - [HotStuff: BFT Consensus in the Lens of Blockchain, 2019](https://arxiv.org/pdf/1803.05069.pdf)
+    - [HotStuff the Linear, Optimal-Resilience, One-Message BFT Devil](https://dahliamalkhi.files.wordpress.com/2018/03/hot-stuff-arxiv2018.pdf)
+    - [ZK-TLV 0x09 - Ittai Abraham - The HotStuff approach to BFT (Part 3)](https://www.youtube.com/watch?v=ONobI3X70Rc&ab_channel=ZeroKnowledge)
+- [The Honey Badger of BFT Protocols, 2016](https://eprint.iacr.org/2016/199.pdf)
+- LinSBFT: Linear-Communication One-Step BFT Protocol for Public Blockchains
+- ByzCoin 
+    - Enhancing Bitcoin Security and Performance with Strong Consistency via Collective Signing
+    - Cosi + bitcoin-NG
+- Casper the Friendly Finality Gadget
+    - https://www.youtube.com/watch?v=S262StTwkmo&ab_channel=NEAR
+- [from streamlet to hotstuff](https://courses.grainger.illinois.edu/ece598pv/sp2021/lectureslides2021/ECE_598_PV_course_notes14_v2.pdf)
+- Leaderless Byzantine Fault Tolerant Consensus
+    - O(nlogn), Good Preli
+- [Consensus in the Presence of Partial Synchrony, 1988](https://groups.csail.mit.edu/tds/papers/Lynch/jacm88.pdf) 
 
 
-## Courses, Links
-- https://ethresear.ch/
-- https://courses.grainger.illinois.edu/ece598pv/sp2021/
-    - privacy
-- http://web.stanford.edu/class/ee374/
-    - prism
+### Dags
+- [HGraph](https://www.swirlds.com/downloads/SWIRLDS-TR-2016-01.pdf)
+- [Conflux](https://arxiv.org/pdf/1805.03870.pdf)
+- IOTA paper (Tangle)
+- [Fantom](https://arxiv.org/pdf/1810.10360.pdf) (Lachesis Consensus)
+- Prism: Deconstructing the Blockchain to Approach Physical Limits
+
+### Snow
+- [Avalanche](https://assets.website-files.com/5d80307810123f5ffbb34d6e/6009805681b416f34dcae012_Avalanche%20Consensus%20Whitepaper.pdf) (Snowflake Consensus)
+- [ ] Blizzard: a Distributed Consensus Protocol for Mobile Devices (2 Layer Avalanche?)
+- [ ] Asynchronous Epidemic Algorithms for Consistency in Large-scale Systems (A PhD thesis)
+
+
+### Solana
+- https://medium.com/solana-labs/tower-bft-solanas-high-performance-implementation-of-pbft-464725911e79
+- https://docs.solana.com/cluster/overview
+- https://solana.com/solana-whitepaper.pdf
+
+---
+
+## Sybil Resistance
+
+### POS
+- Securing Proof-of-Stake Nakamoto Consensus Under Bandwidth Constraint
+- Babylon: Reusing Bitcoin Mining to Enhance Proof-of-Stake Security
+
+---
+
+## Layer 2
+
+### Side Chain
+
+### Rollup
+- Arbitrum
+
+### Side Channel
+- [Lightening Sidechain](https://www.bitcoinlightning.com/wp-content/uploads/2018/03/lightning-network-paper.pdf)
+- High Throughput Cryptocurrency Routing in Payment Channel Networks
+
+---
+
+## Permissioned Blockchain
+- Hotstuff
+- IBM Hyperledger Frabic
+
+---
 
 ## Surveys
 - A Survey of State-of-the-Art on Blockchains: Theories, Modelings, and Tools
@@ -111,95 +258,10 @@ https://cs.nyu.edu/~mishra/COURSES/09.HPGP/scribe4
 - Deconstructing Blockchains: A Comprehensive Survey on Consensus, Membership and Structure
 - A Survey of Distributed Consensus Protocols for Blockchain Networks
 - Solutions to Scalability of Blockchain: A Survey
-- L2 https://arxiv.org/pdf/2107.10881.pdf
+- [Layer 2 Blockchain Scaling: a Survey](https://arxiv.org/pdf/2107.10881.pdf)
 - Review of Techniques for Privacy-Preserving Blockchain Systems
-
-## Top Conference
-- A Rational Protocol Treatment of 51% Attacks, iacr2021
-    - game theory result that mitigates 51% attack
-- Manta, iacr
-    - NI-ZK Minting + AMM
-
----
-
-## Bitcoin Backbone
-- [The Bitcoin Backbone Protocol: Analysis and Applications](https://eprint.iacr.org/2014/765.pdf)
-- Liveness and Consistency of Bitcoin and Prism lockchains: The Non-lockstep Synchronous Case
-
----
-
-## PBFT
-- Breaking the O(n2) bit barrier: scalable byzantine agreement with an adaptive adversary
-- **Hot-Stuff** the Linear, Optimal-Resilience, One-Message BFT Devil
-    - Linear msg, partial sync,  BFT
-    - https://www.youtube.com/watch?v=ONobI3X70Rc&ab_channel=ZeroKnowledge
-- LinSBFT: Linear-Communication One-Step BFT Protocol for Public Blockchains
-- ByzCoin 
-    - Enhancing Bitcoin Security and Performance with Strong Consistency via Collective Signing
-    - Cosi + bitcoin-NG
-- Casper the Friendly Finality Gadget
-    - https://www.youtube.com/watch?v=S262StTwkmo&ab_channel=NEAR
-- [from streamlet to hotstuff](https://courses.grainger.illinois.edu/ece598pv/sp2021/lectureslides2021/ECE_598_PV_course_notes14_v2.pdf)
-- Leaderless Byzantine Fault Tolerant Consensus
-    - O(nlogn), Good Preli
-
----
-
-## Privacy
-- [Manta: a Plug and Play Private DeFi Stack](https://eprint.iacr.org/2021/743.pdf)
-
----
-
-## Efficiency
 
 
 ### SOTA protocols
+- DispersedLedger: High-Throughput Byzantine Consensus on Variable Bandwidth Networks
 - [Trifecta: the Blockchain TriLemma Solved](http://pramodv.ece.illinois.edu/pubs/Whitepaper2019-9.pdf)
-    - https://www.youtube.com/watch?v=cvrrZrQYg_g&ab_channel=UWECEmedia
-    - Prism: Deconstructing the Blockchain to Approach Physical Limits
-    - Coded Merkle Tree: Solving Data Availability Attacks in Blockchains
-    - Overcoming Data Availability Attacks in Blockchain Systems: LDPC Code Design for Coded Merkle Tree
-Debarnab Mitra, Student Member, IEEE, Lev Tauz, Stud.
-- Solana (Adhoc, POH + TowerBFT)
-    - https://medium.com/solana-labs/tower-bft-solanas-high-performance-implementation-of-pbft-464725911e79
-    - https://docs.solana.com/cluster/overview
-    - https://solana.com/solana-whitepaper.pdf
-- [Avalanche](https://assets.website-files.com/5d80307810123f5ffbb34d6e/6009805681b416f34dcae012_Avalanche%20Consensus%20Whitepaper.pdf) (Snowflake Consensus)
-- [Fantom](https://arxiv.org/pdf/1810.10360.pdf) (Lachesis Consensus)
-- IOTA paper (Tangle)
-
-### Dags
-- [HGraph](https://www.swirlds.com/downloads/SWIRLDS-TR-2016-01.pdf)
-- [Conflux](https://arxiv.org/pdf/1805.03870.pdf)
-
-
-### L2
-- [Lightening Sidechain](https://www.bitcoinlightning.com/wp-content/uploads/2018/03/lightning-network-paper.pdf)
-- High Throughput Cryptocurrency Routing in Payment Channel Networks
-
-### Old Sharding
-- Zilliqa (comp sharding, X)
-- [RapidChain: Scaling Blockchain via Full Sharding](https://eprint.iacr.org/2018/460.pdf)
-- [Elrond: A Highly Scalable Public Blockchain via Adaptive State Sharding
-and Secure Proof of Stake
-](https://elrond.com/assets/files/elrond-whitepaper.pdf)
-
----
-
-## Video Resources
-- [Distributed Systems Fundamentals: Berkley Course](https://www.youtube.com/watch?v=BF1pLZASX8s&list=PLZvgWu86XaWkpnQa6-OA7DG6ilM_RnxhW&index=4&ab_channel=BlockchainatBerkeleyX)
-- [Scaling Blockchain: Berkley Course](https://www.youtube.com/watch?v=h2PcWelrSro&list=PLZvgWu86XaWnJTCJuiRhxlLaw1S3EwNF6&index=1&ab_channel=BlockchainatBerkeleyX)
-- [Trust without Trust: Distributed Systems & Consensus](https://www.youtube.com/watch?v=KhBNWlQHwFg&list=PLSONl1AVlZNXUhgIrfgI6E3ayShvKI-o6&index=6&ab_channel=BlockchainatBerkeley)
-
-
-## Decentralized Clustering
-Decentralized Clustering on Compressed Data without Prior Knowledge of the Number of Clusters
-https://www.imsc.res.in/~meena/papers/kmeans.pdf (Clustering = minimize $\sum_X \min_C d(x,c)$ is NP-hard (even for 2-d, k=2))
-A local search approximation algorithm for k-means clustering
-Exact and Approximation Algorithms for Clustering
-Clustering using simulated annealing with probabilistic redistribution
-https://hal.archives-ouvertes.fr/hal-00915822/document
-- data processor
-    - Decentralized K-means using randomized Gossip protocols for clustering large datasets
-    - Fault tolerant decentralised K-Means clustering for asynchronous large-scale networks 
-    - Epidemic K-Means Clustering
