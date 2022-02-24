@@ -68,3 +68,6 @@ git push origin master (main after 2020/10/1)
 
 ### For supporting math equations
 - https://squidfunk.github.io/mkdocs-material/reference/mathjax/
+
+### Editing with Edit Link + HackMD-It Chrome Extension
+- https://hackmd.io/c/tutorials/%2Fs%2Fhackmd-it
