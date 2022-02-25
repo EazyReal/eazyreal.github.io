@@ -7,6 +7,7 @@ site_author: maxwill
 # Repository
 repo_name: EazyReal/eazyreal.github.io
 repo_url: https://github.com/EazyReal/eazyreal.github.io
+# use with hackmd-it
 edit_uri: https://github.com/EazyReal/eazyreal.github.io/tree/main/docs/
 
 # Theme
@@ -43,7 +44,8 @@ theme:
   favicon: img/favicon.ico
 
 extra:
-  #social links at btm
+  # social links at btm
+  # https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/
   social:
     - icon: fontawesome/brands/github-alt
       link: https://github.com/EazyReal
@@ -53,7 +55,7 @@ extra:
       link: https://www.linkedin.com/in/maxwilllin
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/tensorfi
-    - icon: fontawesome-solid-envelope
+    - icon: fontawesome/solid/envelope
       link: mailto:contact@maxwill.one
 
 # Extensions
@@ -63,6 +65,7 @@ markdown_extensions:
   - fenced_code
   - attr_list
   - admonition
+  # https://squidfunk.github.io/mkdocs-material/reference/mathjax/
   - pymdownx.arithmatex:
       generic: true
   - codehilite:

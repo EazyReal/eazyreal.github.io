@@ -60,14 +60,22 @@ git commit -m "commit msgs"
 git push origin master (main after 2020/10/1)
 ```
 
-### Notes
+---
+
+## Notes
 - first deploymemt will take longer (about 10 mins or more)
 - make sure you have the option in github repo settings turned on 
 - make sure the `gh-pages` branch is set up correctly
 
+---
+
+## Features
 
 ### For supporting math equations
 - https://squidfunk.github.io/mkdocs-material/reference/mathjax/
+
+### Using Emojis 
+- https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/
 
 ### Editing with Edit Link + HackMD-It Chrome Extension
 - https://hackmd.io/c/tutorials/%2Fs%2Fhackmd-it
