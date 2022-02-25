@@ -1,8 +1,8 @@
 # Project information
 site_name: Maxwill's site
-site_description: Maxwill's personal website
-site_author: Maxwill
 site_url: https://maxwill.one/
+site_description: Maxwill's personal website
+site_author: maxwill
 
 # Repository
 repo_name: EazyReal/eazyreal.github.io
@@ -23,7 +23,7 @@ theme:
     - scheme: slate
       toggle:
         icon: material/toggle-switch
-        name: Switch to light mode=
+        name: Switch to light mode
   features:
     - navigation.tabs
     - navigation.tabs.sticky
@@ -34,25 +34,27 @@ theme:
     - toc.follow
     - header.autohide
   font:
-    text: "Roboto"
-    code: "Roboto Mono"
+    text: Roboto
+    code: Roboto Mono
   icon:
-    logo: "img/infinity.svg"
+    logo: img/infinity.svg
     repo: fontawesome/brands/git-alt
-  logo: "img/infinity.svg"
-  favicon: "img/favicon.ico"
+  logo: img/infinity.svg
+  favicon: img/favicon.ico
 
 extra:
   #social links at btm
   social:
     - icon: fontawesome/brands/github-alt
-      link: "https://github.com/EazyReal"
+      link: https://github.com/EazyReal
     - icon: fontawesome/brands/facebook
-      link: "https://www.facebook.com/maxwill.lin"
+      link: https://www.facebook.com/maxwill.lin
     - icon: fontawesome/brands/linkedin
-      link: "https://www.linkedin.com/in/maxwilllin/"
+      link: https://www.linkedin.com/in/maxwilllin
     - icon: fontawesome/brands/twitter
-      link: "https://twitter.com/tensorfi"
+      link: https://twitter.com/tensorfi
+    - icon: fontawesome-solid-envelope
+      link: mailto:contact@maxwill.one
 
 # Extensions
 markdown_extensions:
