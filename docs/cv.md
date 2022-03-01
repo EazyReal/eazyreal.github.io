@@ -1,13 +1,11 @@
 ---
 title: CV
 author: Maxwill
-tags:
-    - CV
-lastUpdated: 2022/02/24
+tags: [CV]
+lastUpdated: 2022/03/02
 ---
 
 # Yan-Tong Lin
-> Currently open for PhD candicacies and SWE positions (internships are prefered).
 
 ![](https://i.imgur.com/N65jgTe.jpg =35%x)
 
@@ -18,14 +16,16 @@ lastUpdated: 2022/02/24
 ## External Links
 * [GitHub](https://github.com/EazyReal)
 * [Google Scholar](https://scholar.google.com.tw/citations?user=LRBdYYIAAAAJ)
-* [LinkedIn](https://www.linkedin.com/in/yan-tong-lin/)
+* [LinkedIn](https://www.linkedin.com/in/maxwilllin/)
 * [Online CV](https://hackmd.io/@ytlin/cv)
 
 ---
 
 ## Education
-- **Candicate for M.S. in Communication Engineering, National Taiwan University**
+- **Candidate for M.S. in Communication Engineering, National Taiwan University**
     - Taipei, Taiwan, Sep 2021 - Now
+    - Current research topics: blockchain scaling (Layer 2, Sharding) 
+    - Research interests: algorithms, complexity, quantum computation, etc.
 - **B.S. in Computer Science and Applied Mathematics, National Yang Ming Chiao Tung University**
 	- Hsinchu, Taiwan, Sep 2018 - June 2021
     - **GPA 4.24/4.3 with 26 credits in 2020 spring**
@@ -127,18 +127,15 @@ lastUpdated: 2022/02/24
 ## Languages and Technologies
 
 ### Languages
-- C++, Python, Typescript, $\LaTeX{}$,  Solidity
-- (Learning) Go, Rust
+- (medium/high) C++, Python, Typescript, Solidity, $\LaTeX{}$
+- (basic) Rust, Go
 
 ### Technologies
-- pytorch, AllenNLP
-- git
-- docker
-- hardhat, chai.js, ethers.js, eth-brownie, pytest
-
-### Technologies (Learning)
-- svelte, svelte-kit, react, next.js
-- gRPC, GraphQL
+- NLP: (medium/high) pytorch, AllenNLP
+- Blockchain: (medium/high) hardhat, ethers.js, (basic) brownie
+- Utils: (basic) git, CICD, docker
+- Frontend: (medium) svelte-kit, (basic) next
+- Backend: (basic) gqlgen, gRPC
 
 ---
 
