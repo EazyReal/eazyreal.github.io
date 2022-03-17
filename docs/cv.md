@@ -2,11 +2,11 @@
 title: CV
 author: Maxwill
 tags: [CV]
-lastUpdated: 2022/03/17
+lastUpdated: 2022/03/18
 ---
 
 # Yan-Tong Lin
-> open to PhD positions, summer internship
+> open to PhD positions, summer researcher internship
 
 ![](https://i.imgur.com/N65jgTe.jpg =35%x)
 
@@ -31,9 +31,9 @@ lastUpdated: 2022/03/17
 	- Hsinchu, Taiwan, Sep 2018 - June 2021
 	- Previously known as National Chiao Tung University 
     - GPA 3.83/4.0 (last 60, challenging courses)
-    - Relevant coursework
+    - [Relevant coursework](https://hackmd.io/@ytlin/transcripts)
         - Algorithms
-            - Selected Topics in Intractable Problems A+
+            - [Selected Topics in Intractable Problems](https://timetable.nycu.edu.tw/?r=main/crsoutline&Acy=109&Sem=2&CrsNo=5296&lang=en-us) A+
             - [Quantum Computation and Quantum Information](https://timetable.nycu.edu.tw/?r=main/crsoutline&Acy=109&Sem=1&CrsNo=5081) 93
             - [Advanced Algorithms](https://timetable.nctu.edu.tw/?r=main/crsoutline&Acy=108&Sem=2&CrsNo=5903) 98
             - Formal Language and Computation Theory 97
@@ -53,8 +53,8 @@ lastUpdated: 2022/03/17
 
 ## Exprerience
 - **Blockchain R&D Intern, Sudo Research**
-    - Taipei, Taiwan, Mar 2020 -
-    - Responsibilities: Smart contract development, crypto projects research
+    - Taipei, Taiwan, Mar 2020 - now
+    - Responsibilities: smart contract development, blockchain  research
 - **Research Intern, Institute of Information Science, Academia Sinica**
 	- Taipei, Taiwan, Jul 2020 - Sep 2020
     - Responsibilities: NLP system development, research paper composition
@@ -62,11 +62,12 @@ lastUpdated: 2022/03/17
 
 ---
 
-## Hilights
-- **TOEFL iBT Home Edition, 104/120**, June 2021
-- The 45th Annual **ICPC Asia Taipei-Hsinchu Site**, Silver Award, Nov 2020
-- NTU-IBM Q System 2020 Q-Camp, Best Presentation Award, Sep 2020
-- [**Google Code Jam 2020, advanced to R3**](https://codingcompetitions.withgoogle.com/codejam/round/000000000019ff7e), ranked 541st (top 0.056%)
+## Highlights
+- [**TOEFL iBT Home Edition 104/120**](https://hackmd.io/@ytlin/transcripts), June 2021
+- [**Codeforces**](https://codeforces.com/profile/maxwill) 1996 (highest 2035)
+- [**Dean's list**](https://hackmd.io/@ytlin/transcripts#Dean%E2%80%99s-List-President%E2%80%99s-Award), 2020
+- [**The 45th Annual ICPC Asia Taipei-Hsinchu Site, Silver Award**](https://hackmd.io/@ytlin/transcripts), Nov 2020
+- [**Google Code Jam 2020**](https://codingcompetitions.withgoogle.com/codejam/round/000000000019ff7e), ranked 541st in round 3 out of 960000 participants (top 0.056%)
 - [**NCTU Collegiate Programming Exam**](https://www.facebook.com/nctupe), ranked 1st (top 1% among NCTU students)
 
 ---
@@ -82,15 +83,18 @@ lastUpdated: 2022/03/17
 -  [**Integrating the Proposed Simulator to Qiskit Aer**](https://github.com/EazyReal/NTU-IBMQ-QCamp2020)
     -  Best Presentation Award, [NTU-IBMQ 2020 QCamp](https://github.com/qiskit-community/qiskit-hackathon-taiwan-20/issues/17)
 -  [**Syntax-Aware Natural Language Inference with Graph Matching Networks**](https://ieeexplore.ieee.org/abstract/document/9382461)
-    -   The work during the internship at NLU lab, Institute of Information Science, Academia Sinica lead by [Dr. Keh-Yih Su](https://www.iis.sinica.edu.tw/pages/kysu/index.html)
+    -  Internship program at Institute of Information Science, Academia Sinica
+    -  Advisor: [Keh-Yih Su](https://www.iis.sinica.edu.tw/pages/kysu/index.html)
     -  Accepted as an oral paper in [TAAI 2020](https://taai2020.github.io/) International Track
-    -  [source](https://github.com/EazyReal/2020-IIS-internship/tree/master/MNLI)
+    -  [Python Implementation](https://github.com/EazyReal/2020-IIS-internship/tree/master/MNLI)
 -  [**Solutioin to $k$-MaxVD for Trees in $O(kn)$**](https://hackmd.io/@ytlin/kMaxVD-presentation)
-    -  Individual study S20, advisor: [Dr. Chiuyuan Chen](https://scholar.nctu.edu.tw/en/persons/chiuyuan-chen), co-advisor: [Dr. Meng-Tsung Tsai](https://people.cs.nctu.edu.tw/~mtsai/index.html)
-- [**Competitive Programming Archives from 2019**](https://github.com/EazyReal/CompetitveProgramming)
-- [**EazyNoGo**, game AI based on MCTS and RAVE](https://github.com/EazyReal/EazyNoGo)
-    -  Individual study F19 at NCTU CGI lab, advisor: [Dr. I-Chen Wu](https://cgilab.nctu.edu.tw/~icwu/)
-    -  [report](https://github.com/EazyReal/NCTU2019fall-reports/blob/master/cgilab/Indivisual%20Study%202019%20spring%20at%20CGI%20lab%20report.pptx)
+    -  Individual study S20 at National Chiao Tung University
+    -  Advisor: [Dr. Chiuyuan Chen](https://scholar.nctu.edu.tw/en/persons/chiuyuan-chen), co-advisor: [Dr. Meng-Tsung Tsai](https://people.cs.nctu.edu.tw/~mtsai/index.html)
+- [**Competitive Programming Codes**](https://github.com/EazyReal/CompetitveProgramming), 2019-2021
+- [**EazyNoGo**, game AI based on MCTS w/ RAVE](https://github.com/EazyReal/EazyNoGo)
+    -  Individual study F19 at NCTU CGI lab
+    -  Advisor: [Dr. I-Chen Wu](https://cgilab.nctu.edu.tw/~icwu/)
+    -  [Report](https://github.com/EazyReal/NCTU2019fall-reports/blob/master/cgilab/Indivisual%20Study%202019%20spring%20at%20CGI%20lab%20report.pptx)
 - [Deep Learning Assignments](https://github.com/EazyReal/NCTU2019fall_DeepLearning/blob/master/HW3/HW3%20Report.pdf)
 - [Introduction to Artificial Intelligence Assignments](https://github.com/EazyReal/Intro2AI-2020spring)
 - **[Treap Tutorial](https://hackmd.io/9Hw3BAv8RhecludOcMEsvw) for [NCTU PCCA](https://www.facebook.com/NCTUPCCA/) winter camp**
@@ -98,14 +102,15 @@ lastUpdated: 2022/03/17
 ---
 
 ## Awards and Honors
-- NTU Introduction to Fintech Quant Trading Competition, ranked 4/138, NTU F21
-- **TOEFL iBT Home Edition 104/120**, June 2021
-- **Codeforces** Rating: 1996 (highest 2035)
-- The 45th Annual **ICPC Asia Taipei-Hsinchu Site**, Silver Award, Nov 2020
-- NTU-IBM Q System 2020 Q-Camp, Best Presentation Award, Sep 2020
+- Quant Trading Competition, Intro to Fintech at NTU F21, ranked 4/138
+- [**TOEFL iBT Home Edition 104/120**](https://hackmd.io/@ytlin/transcripts), June 2021
+- [**Codeforces**](https://codeforces.com/profile/maxwill) 1996 (highest 2035)
+- [**Dean's list**](https://hackmd.io/@ytlin/transcripts#Dean%E2%80%99s-List-President%E2%80%99s-Award), 2020
+- [**The 45th Annual ICPC Asia Taipei-Hsinchu Site, Silver Award**](https://hackmd.io/@ytlin/transcripts), Nov 2020
+- **NTU-IBM Q System 2020 Q-Camp, Best Presentation Award**, Sep 2020
 - [**Google Code Jam 2020**](https://codingcompetitions.withgoogle.com/codejam/round/000000000019ff7e), ranked 541st in round 3 out of 960000 participants (top 0.056%)
 - Microsoft Q# Coding Contest - Summer 2020, ranked 252nd
-- [NCTU Collegiate Programming Exam](https://www.facebook.com/nctupe), ranked 1st (out of 100+ students from NCTU) (top 1%)
+- [**NCTU Collegiate Programming Exam**](https://www.facebook.com/nctupe), ranked 1st (out of 100+ students from NCTU) (top 1%)
 - Google Kickstart 2020 Round A, ranked 916th (solved all problems)
 - Codeforces Global Round 7, ranked 666th (out of 18180 contestants)
 - Google Code Jam IO 2020, ranked 154th
@@ -123,7 +128,8 @@ lastUpdated: 2022/03/17
 ---
 
 ## Languages and Technologies
-> ready to pickup new skills rapidly
+
+Ready to pick up new skills rapidly
 
 ### Languages
 - (medium/high) C++, Python, Typescript, Solidity, LaTeX
@@ -131,7 +137,7 @@ lastUpdated: 2022/03/17
 
 ### Technologies
 - Machine Learning: (medium/high) pytorch, AllenNLP
-- Blockchain: (medium/high) hardhat, ethers.js, (basic) brownie, EVM, DeFis
+- Blockchain: (medium/high) hardhat, ethers.js, EVM, DeFi protocols, (basic) brownie
 - Utils: (medium) git, CICD, docker
 - Frontend: (medium) svelte-kit, (basic) next
 - Backend: (basic) gqlgen, gRPC
@@ -139,15 +145,9 @@ lastUpdated: 2022/03/17
 ---
 
 ## Leadership
-* NCTU Infinity Math Research Club, Club Leader
-	* Nov 2019 - Jun 2021
-* NCTU Guitar Club 11, Teacher
-	* Sep 2019 - Jun 2020
-* General Mathematics 2019 spring, Teaching Assistant
-	* Sep 2019 - Jan 2020
-* Band (Yu-Cheng-Tong-Xing), as Keyboard, Guitar
-	* Sep 2019 - Jun 2020
-* NCTU CS Union 10/11, Department of Public Relation
-	* Sep 2019 - Jun 2020
-* CKHS Classical Guitar Club, Department of Activities 
-	* Sep 2013 - Jun 2014
+- NCTU Infinity Math Research Club, Club Leader, Nov 2019 - Jun 2021
+- NCTU Guitar Club 11, Teacher, Sep 2019 - Jun 2020
+- General Mathematics 2019 spring, Teaching Assistant, Sep 2019 - Jan 2020
+- Band (Yu-Cheng-Tong-Xing), as Keyboard, Guitar, Sep 2019 - Jun 2020
+- NCTU CS Union 10/11, Department of Public Relation, Sep 2019 - Jun 2020
+- CKHS Classical Guitar Club, Department of Activities, Sep 2013 - Jun 2014
