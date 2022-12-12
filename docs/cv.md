@@ -3,122 +3,138 @@ title: CV
 author: Maxwill
 tags: [CV]
 lastUpdated: 2022/03/18
+timeCreated: 2022-10-23 13:45
+timeModified: 2022-10-30 16:43
 ---
 
-# Yan-Tong Lin
-> open to PhD positions, summer researcher internship
-
-![](https://i.imgur.com/N65jgTe.jpg =35%x)
+# Yan-Tong (Maxwill) Lin
 
 ## Contact Information
--  0312fs3@gmail.com
+- [Email](mailto:0312fs3@gmail.com)
+- [GitHub](https://github.com/EazyReal)
+- [Twitter](https://twitter.com/tensorfi)
+- [LinkedIn](https://www.linkedin.com/in/maxwilllin/)
 
-## External Links
-- [Github](https://github.com/EazyReal)
-- [Google Scholar](https://scholar.google.com.tw/citations?user=LRBdYYIAAAAJ)
-- [Linkedin](https://www.linkedin.com/in/maxwilllin/)
+## Links
 - [Online CV](https://hackmd.io/@ytlin/cv)
+- [Online Transcripts](https://hackmd.io/@ytlin/transcripts)
 
 ---
 
 ## Education
-- **Candidate for M.S. in Communication Engineering, National Taiwan University**
-    - Taipei, Taiwan, Sep 2021 - Now
-    - Advisor: [I-Hsiang Wang](http://cc.ee.ntu.edu.tw/~ihsiangw/)
-    - Current research topics: blockchain scaling (sharding, roll-ups) 
-    - Research interests: algorithms, blockchains, quantum computation
-- **B.S. in Computer Science and Applied Mathematics, National Yang Ming Chiao Tung University**
-	- Hsinchu, Taiwan, Sep 2018 - June 2021
-	- Previously known as National Chiao Tung University 
-    - GPA 3.83/4.0 (last 60, challenging courses)
-    - [Relevant coursework](https://hackmd.io/@ytlin/transcripts)
-        - Algorithms
-            - [Selected Topics in Intractable Problems](https://timetable.nycu.edu.tw/?r=main/crsoutline&Acy=109&Sem=2&CrsNo=5296&lang=en-us) A+
-            - [Quantum Computation and Quantum Information](https://timetable.nycu.edu.tw/?r=main/crsoutline&Acy=109&Sem=1&CrsNo=5081) 93
-            - [Advanced Algorithms](https://timetable.nctu.edu.tw/?r=main/crsoutline&Acy=108&Sem=2&CrsNo=5903) 98
-            - Formal Language and Computation Theory 97
-        - Machine Learning
-            - Deep Learning 91
-            - Introduction to Aritificial Intelligence 93
-            - Data Science and Machine Intelligence 94
-            - [Quantum Machine Learning (NTHU)](https://www.ccxp.nthu.edu.tw/ccxp/INQUIRE/JH/output/6_6.1_6.1.12/10910IPHD500200.pdf?ACIXSTORE=so3kuq349ree8hmggbd2ov8846) A+
-        - Mathematics
-            - [Advanced Linear Algebra (NTHU)](https://www.ccxp.nthu.edu.tw/ccxp/INQUIRE/JH/output/6_6.1_6.1.12/10910MATH331000.pdf?ACIXSTORE=9j8jserdlk5nbca4erj0mth2p1) A+
-            - Linear Algebra I, II 98, 96
-            - Algebra I 95
-            - Probabilistic Theory 90
-            - Introduction to Analysis 85
+- **M.S. in Communication Engineering, [National Taiwan University](https://www.ntu.edu.tw/english/)**
+	- Taipei, Taiwan, Sep 2021 – present 
+	- GPA: 4.03/4.3
+	- Advisor: [Dr. I-Hsiang Wang](http://cc.ee.ntu.edu.tw/~ihsiangw/)
+	- research topics: consensus, multiparty computation, coded computation
+- **B.S. in Computer Science and Applied Mathematics, [National Yang Ming Chiao Tung University](https://en.nycu.edu.tw/)**
+    - NYMU and NCTU formally merged into NYCU on February 1, 2021
+	- Hsinchu, Taiwan, Sep 2018 – June 2021
+	- GPA: 85.55/100
+	- [Relevant coursework](https://hackmd.io/@ytlin/transcripts)
+		- Algorithms
+			- [Selected Topics in Intractable Problems](https://timetable.nycu.edu.tw/?r=main/crsoutline&Acy=109&Sem=2&CrsNo=5296&lang=en-us) A+
+			- [Quantum Computation and Quantum Information](https://timetable.nycu.edu.tw/?r=main/crsoutline&Acy=109&Sem=1&CrsNo=5081) 93
+			- [Advanced Algorithms](https://timetable.nctu.edu.tw/?r=main/crsoutline&Acy=108&Sem=2&CrsNo=5903) 98
+			- Formal Language and Computation Theory 97
+		- Machine Learning
+			- Deep Learning 91
+			- Introduction to Artificial Intelligence 93
+			- Data Science and Machine Intelligence 94
+			- [Quantum Machine Learning (NTHU)](https://www.ccxp.nthu.edu.tw/ccxp/INQUIRE/JH/output/6_6.1_6.1.12/10910IPHD500200.pdf?ACIXSTORE=so3kuq349ree8hmggbd2ov8846) A+
+		- Mathematics
+			- [Advanced Linear Algebra (NTHU)](https://www.ccxp.nthu.edu.tw/ccxp/INQUIRE/JH/output/6_6.1_6.1.12/10910MATH331000.pdf?ACIXSTORE=9j8jserdlk5nbca4erj0mth2p1) A+
+			- Linear Algebra I, II 98, 96
+			- Algebra I 95
+			- Probabilistic Theory 90
+			- Introduction to Analysis (Honor Class) 85
 
 ---
 
-## Exprerience
-- **Blockchain R&D Intern, Sudo Research**
-    - Taipei, Taiwan, Mar 2020 - now
-    - Responsibilities: smart contract development, blockchain  research
-- **Research Intern, Institute of Information Science, Academia Sinica**
+## Experience
+- **Student Researcher, [BTQ](https://www.btq.li/)**
+	- Taipei, Taiwan, Aug 2022 – present
+    - Surveyed the development of zero-knowledge proof systems, recursive SNARKs, and other cryptography primitives (e.g. Fractal, Halo, Plonky2, etc.); presented the summarized results
+    - Reviewed code bases (Plonky2) and experimented with custom functions and recursion structures
+    - Identified attacks on an internally proposed signature aggregation scheme and provided fixes
+    - Implementing an internally proposed signature aggregation scheme
+- **Summer Analyst, [Kronos Research](https://kronosresearch.com/)**
+	- Taipei, Taiwan, June 2022 – Aug 2022
+    - Accepted with the best coding test score among the 4 interns out of 100+ applicants
+    - Developed an order tracking gadget to track the slippage of sent orders
+    - Programmed an alpha model that leverages correlations between symbols and improves upon existing alphas when combined by 42.4% in terms of R2 score
+- **Blockchain R&D Intern, [Sudo Research Labs](https://www.linkedin.com/company/sudoresearch/about/)**
+	- Taipei, Taiwan, Mar 2022 - June 2022
+	- Extracted insights from documentation, academic papers, and code bases of consensus/layer 2/cross-chain protocols and presented the results to both technical and non-technical team members in an intuitive and accessible way
+	- Contributed to open-source documentations (e.g. Arbitrum, Polygon Bor, [decentralized thoughts](https://twitter.com/kartik1507/status/1185321750881538050))
+	- Identified potential risks and centralization of blockchain/DeFi protocols by reviewing the code bases and prevented millions of potential losses.
+	- Participated in discussions about protocol design and smart contract development
+- **Research Intern, [Institute of Information Science, Academia Sinica](https://www.iis.sinica.edu.tw/en/index.html)**
 	- Taipei, Taiwan, Jul 2020 - Sep 2020
-    - Responsibilities: NLP system development, research paper composition
-    - Among the 6 interns from UCSD (Halıcıoğlu Data Science Institute), U Michigan (Department of Computer Science), National Taiwan University (Department of Electrical Engineering), he got the highest score on the final examination given by Dr. Keh-Yih Su 
+    - Applied graph neural networks and cross attention to the task of natural language inference by considering it as a dependency graph matching problem.
+    - Built the model and composed a research paper that summarized the results which got accepted at TAAI 2020.
+    - Got the highest score in the final exam about statistical NLP given by Dr. Keh-Yih Su among the 6 interns from UCSD (Halıcıoğlu Data Science Institute), U Michigan (Department of Computer Science), and NTU (Department of Electrical Engineering)
 
 ---
 
 ## Highlights
-- [**TOEFL iBT Home Edition 104/120**](https://hackmd.io/@ytlin/transcripts), June 2021
+- [**TOEFL iBT 108/120**](https://hackmd.io/@ytlin/transcripts), Oct. 2022
+- [**GRE V156/170 Q170/170**](https://hackmd.io/@ytlin/transcripts), Oct. 2022
 - [**Codeforces**](https://codeforces.com/profile/maxwill) 1996 (highest 2035)
-- [**Dean's list**](https://hackmd.io/@ytlin/transcripts#Dean%E2%80%99s-List-President%E2%80%99s-Award), 2020
-- [**The 45th Annual ICPC Asia Taipei-Hsinchu Site, Silver Award**](https://hackmd.io/@ytlin/transcripts), Nov 2020
-- [**Google Code Jam 2020**](https://codingcompetitions.withgoogle.com/codejam/round/000000000019ff7e), ranked 541st in round 3 out of 960000 participants (top 0.056%)
-- [**NCTU Collegiate Programming Exam**](https://www.facebook.com/nctupe), ranked 1st (top 1% among NCTU students)
+- [**Presidential Award**](https://hackmd.io/@ytlin/transcripts#Dean%E2%80%99s-List-President%E2%80%99s-Award), 2020
+- [**Google Code Jam 2020**](https://codingcompetitions.withgoogle.com/codejam/round/000000000019ff7e), ranked 541st in round 3 out of 96000 participants (top 0.56%), June 6th 2020
+- [**NCTU Collegiate Programming Exam**](https://www.facebook.com/nctupe), ranked 1st (top 1%)
 
 ---
 
 ## Selected Projects
-- [**Technical Report: Bitcoin and Prism**](https://hackmd.io/@ytlin/bitcoin)
-- [**Bulk Mint NFTs**](https://polygonscan.com/tx/0x539c2077b724e71b370a9ea5bc6aaa626fdfcfa16377437b8a5d513687147916) bypassing 1 per Account Restriction
-- [**Sveth**](https://github.com/EazyReal/Sveth), eth hooks for svelte
-- [**Blockchain Resources**](https://hackmd.io/@ytlin/blockchain), a list of interesting research papers, most surveyed
-- [**Note for ECE 598PV, Spring 2021**](https://hackmd.io/@ytlin/ECE598)
+
+### Theory
+These are some writings and presentations for coursework or research.
+- **Theoretical Aspects of Modern Cryptography**
+    - [Syllabus](https://hackmd.io/@csie-tamc/SJTFrm3RF)
+    - [Coursework, including a final project, a scribe, and problem sets](https://drive.google.com/drive/folders/1JMRcIRK0sLPSBOarRPpKHDL0CKYHuZmM?usp=sharing)
+- [**Presentation: Best Chain Protocols and Improvments**](https://drive.google.com/file/d/1oQRTnn2oglmHK-RhmQoIf_v1ZSk6LV_D/view)
+    - A presentation for a group meeting covering the setting, analysis, and scaling solutions of best chain protocols
+- [**Note: Principles of Blockchains at UIUC**](https://hackmd.io/@ytlin/ECE598)
+- [**Review: Exponential Algorithmic Speedup by Quantum Walk (Final Presentation)**](https://github.com/EazyReal/QCQI2020fall/blob/main/QCQI_final__Oral_Version_.pdf)
+    - [Final report](https://github.com/EazyReal/QCQI2020fall/blob/main/QCQI_final__Textual_Version_.pdf)
+- [**Solutioin to $k$-MaxVD for Trees in $O(kn)$**](https://github.com/EazyReal/k-Max-VD-for-trees)
+    - How many vertices can k vertices dominates in any given tree? The solution is based on dynamic programming on trees with optimization. This is the individual study project in the 2020 spring semester advised by [Dr. Chiuyuan Chen](https://scholar.nctu.edu.tw/en/persons/chiuyuan-chen) and co-advised by [Dr. Meng-Tsung Tsai](https://people.cs.nctu.edu.tw/~mtsai/index.html)
+- [**Treap Tutorial**](https://hackmd.io/9Hw3BAv8RhecludOcMEsvw) for [NCTU PCCA](https://www.facebook.com/NCTUPCCA/) (Programming Challenging Contest Association) winter camp
 - [**NYCU Lecture Notes**](https://hackmd.io/@ytlin/nycu-notes)
-- [**Review: Exponential Algorithmic Speedup by Quantum Walk**](https://github.com/EazyReal/QCQI2020fall/blob/main/QCQI_final__Oral_Version_.pdf)
--  [**Integrating the Proposed Simulator to Qiskit Aer**](https://github.com/EazyReal/NTU-IBMQ-QCamp2020)
-    -  Best Presentation Award, [NTU-IBMQ 2020 QCamp](https://github.com/qiskit-community/qiskit-hackathon-taiwan-20/issues/17)
--  [**Syntax-Aware Natural Language Inference with Graph Matching Networks**](https://ieeexplore.ieee.org/abstract/document/9382461)
-    -  Internship program at Institute of Information Science, Academia Sinica
-    -  Advisor: [Keh-Yih Su](https://www.iis.sinica.edu.tw/pages/kysu/index.html)
-    -  Accepted as an oral paper in [TAAI 2020](https://taai2020.github.io/) International Track
-    -  [Python Implementation](https://github.com/EazyReal/2020-IIS-internship/tree/master/MNLI)
--  [**Solutioin to $k$-MaxVD for Trees in $O(kn)$**](https://hackmd.io/@ytlin/kMaxVD-presentation)
-    -  Individual study S20 at National Chiao Tung University
-    -  Advisor: [Dr. Chiuyuan Chen](https://scholar.nctu.edu.tw/en/persons/chiuyuan-chen), co-advisor: [Dr. Meng-Tsung Tsai](https://people.cs.nctu.edu.tw/~mtsai/index.html)
-- [**Competitive Programming Codes**](https://github.com/EazyReal/CompetitveProgramming), 2019-2021
-- [**EazyNoGo**, game AI based on MCTS w/ RAVE](https://github.com/EazyReal/EazyNoGo)
-    -  Individual study F19 at NCTU CGI lab
-    -  Advisor: [Dr. I-Chen Wu](https://cgilab.nctu.edu.tw/~icwu/)
-    -  [Report](https://github.com/EazyReal/NCTU2019fall-reports/blob/master/cgilab/Indivisual%20Study%202019%20spring%20at%20CGI%20lab%20report.pptx)
-- [Deep Learning Assignments](https://github.com/EazyReal/NCTU2019fall_DeepLearning/blob/master/HW3/HW3%20Report.pdf)
-- [Introduction to Artificial Intelligence Assignments](https://github.com/EazyReal/Intro2AI-2020spring)
-- **[Treap Tutorial](https://hackmd.io/9Hw3BAv8RhecludOcMEsvw) for [NCTU PCCA](https://www.facebook.com/NCTUPCCA/) winter camp**
+
+### Engineering
+- [**Bulk Mint NFTs**](https://github.com/EazyReal/BulkMintNFTs)
+    - Identified and exploited a weakness in a smart contract to mint multiple NFTs in [one transaction](https://polygonscan.com/tx/0x539c2077b724e71b370a9ea5bc6aaa626fdfcfa16377437b8a5d513687147916) bypassing an one per account restriction. I reminded the company and asked for permission before using the code moderately.
+- [**Sveth**](https://github.com/EazyReal/Sveth)
+    - Developed a frontend library that integrates ethers.js into svelte
+- [**Qiskit ALCom Provider**](https://github.com/EazyReal/NTU-IBMQ-QCamp2020)
+	- Integrated a new quantum simulator to the Qiskit Aer library and won the Best Presentation Award of [NTU-IBMQ 2020 QCamp](https://github.com/qiskit-community/qiskit-hackathon-taiwan-20/issues/17)
+ - [**Competitive Programming Codes** from 2019](https://github.com/EazyReal/CompetitveProgramming)
+     - This is the repository for most of my codes in competitive programming contests.
+- [**EazyNoGo**](https://github.com/EazyReal/EazyNoGo)
+	-  Programmed a NoGo AI based on Monte Carlo Tree Search with Rapid Action Value Estimation in C++. This is the individual study project in the 2019 fall semester at [NCTU CGI lab](https://cgilab.nctu.edu.tw/) advised by [Dr.I-Chen Wu](https://cgilab.nctu.edu.tw/~icwu/).
+- [**Implementation**](https://github.com/EazyReal/2020-IIS-internship/tree/master/MNLI) of [**Syntax-Aware Natural Language Inference with Graph Matching Networks**](https://ieeexplore.ieee.org/abstract/document/9382461)
+    - Implemented the proposed model in a clean and modular way that is compatible with the [AllenNLP](https://allenai.org/allennlp/software/allennlp-library) library. This is my intern project at [Institute of Information Science, Academia Sinica](https://www.iis.sinica.edu.tw/en/index.html) advised by [Dr. Keh-Yih Su](https://www.iis.sinica.edu.tw/pages/kysu/index.html)
 
 ---
 
 ## Awards and Honors
-- Quant Trading Competition, Intro to Fintech at NTU F21, ranked 4/138
-- [**TOEFL iBT Home Edition 104/120**](https://hackmd.io/@ytlin/transcripts), June 2021
+- Quant Trading Competition, Intro to Fintech (NTU S21), ranked 4/138
 - [**Codeforces**](https://codeforces.com/profile/maxwill) 1996 (highest 2035)
-- [**Dean's list**](https://hackmd.io/@ytlin/transcripts#Dean%E2%80%99s-List-President%E2%80%99s-Award), 2020
-- [**The 45th Annual ICPC Asia Taipei-Hsinchu Site, Silver Award**](https://hackmd.io/@ytlin/transcripts), Nov 2020
-- **NTU-IBM Q System 2020 Q-Camp, Best Presentation Award**, Sep 2020
-- [**Google Code Jam 2020**](https://codingcompetitions.withgoogle.com/codejam/round/000000000019ff7e), ranked 541st in round 3 out of 960000 participants (top 0.056%)
-- Microsoft Q# Coding Contest - Summer 2020, ranked 252nd
-- [**NCTU Collegiate Programming Exam**](https://www.facebook.com/nctupe), ranked 1st (out of 100+ students from NCTU) (top 1%)
-- Google Kickstart 2020 Round A, ranked 916th (solved all problems)
-- Codeforces Global Round 7, ranked 666th (out of 18180 contestants)
-- Google Code Jam IO 2020, ranked 154th
-- 2019 **ICPC Asia Taiwan Online Programming Contest**, ranked 14
-- CKHS TOI School Team Selection, ranked 2nd, Feb 2015 
-- General English Proficiency Test, High-intermediate Level, Preliminary Test,  Listening: 101, Reading 107, May 2018 
-- **National Tsing Hua University Chemistry High School Student Program**, 2012
-- Admitted to **the 4th Science Class of Taipei Municipal Jianguo High School**, 2012
+- [**Presidential Award**](https://hackmd.io/@ytlin/transcripts#Dean%E2%80%99s-List-President%E2%80%99s-Award), Nov. 2020
+    - a scholarship for outstanding academic performance
+- [**The 2020 ICPC Asia Taipei-Hsinchu Site Programming Contest, Silver Award**](https://hackmd.io/@ytlin/transcripts), Nov. 7-9 2020
+- **The 2019 ICPC Asia Taiwan Online Programming Contest, Silver Award**
+- **NTU-IBM Q System 2020 Q-Camp, Best Presentation Award**, Sep. 2020
+    - a Qiskit quantum computing hackathon
+- [**Google Code Jam 2020**](https://codingcompetitions.withgoogle.com/codejam/round/000000000019ff7e), ranked 541st in round 3 out of 96000 participants (top 0.56%)
+- [**NCTU Collegiate Programming Exam**](https://www.facebook.com/nctupe), ranked 1st (top 1%), Spring Semester, 2019
+    - ranked 1/100+ in an exam that CS students must take to graduate
+- Codeforces Global Round 7, ranked 666th out of 18180 contestants (top 3%)
+- Admitted to **National Tsing Hua University Chemistry High School Student Program**
+- Admitted to **the 4th Science Class of [Taipei Municipal Jianguo High School](https://www2.ck.tp.edu.tw/en)**
 
 ---
 
@@ -144,10 +160,16 @@ Ready to pick up new skills rapidly
 
 ---
 
-## Leadership
-- NCTU Infinity Math Research Club, Club Leader, Nov 2019 - Jun 2021
-- NCTU Guitar Club 11, Teacher, Sep 2019 - Jun 2020
-- General Mathematics 2019 spring, Teaching Assistant, Sep 2019 - Jan 2020
-- Band (Yu-Cheng-Tong-Xing), as Keyboard, Guitar, Sep 2019 - Jun 2020
-- NCTU CS Union 10/11, Department of Public Relation, Sep 2019 - Jun 2020
-- CKHS Classical Guitar Club, Department of Activities, Sep 2013 - Jun 2014
+## Leadership and Extracurricular Activities
+- NCTU Infinity Math Research Club, Club Leader, Nov. 2019 - Jun. 2021
+    - Organized biweekly seminars and gave technical talks 
+- NCTU Guitar Club 11, Education Officer, Sep. 2019 - Jun. 2020
+    - Taught and performed acoustic guitar in front of hundreds of people
+- General Mathematics 2019 spring, Teaching Assistant, Sep. 2019 - Jan. 2020
+    - Assited the professor by marking assignments
+- Band (Yu-Cheng-Tong-Xing), Keyboard/Guitar Player, Sep. 2019 - Jun. 2020
+    - Performed in front of hundreds of people
+- NCTU CS Union 10/11, Department of Public Relation, Sep. 2019 - Jun. 2020
+    - Organized and participated in PR events
+- CKHS Classical Guitar Club, Activities Officer, Sep. 2013 - Jun. 2014
+    - Organized and participated in activities; performed in front of hundreds of people
