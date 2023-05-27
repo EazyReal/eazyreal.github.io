@@ -7,19 +7,20 @@ tags: [home]
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=eazyreal&show_icons=true&theme=dark)
 
 ## About Me
-- 1st year MS student at National Taiwan University
-  - Current research directions: blockchain scalability and security (sharding, roll-ups) 
-  - Research interests: algorithms, complexity, quantum computing, etc.
-- Coder 
-  - smart contracts
-  - machine learning algorithms
-  - (previously) competitive programming
+- Incoming MSCS student at Georgia Tech
+- Broadly interested in
+  - cryptography
+  - blockchains (consensus algorithms, smart contracts)
+  - machine learning
+  - competitive programming
+- [CV in Markdown](https://hackmd.io/@ytlin/cv)
+  - This site is static and can be outdated (last modified to fix redirect error, 5/28/2023)
+- [CV in $\LaTex{}$](https://drive.google.com/file/d/16nkGvbMUJJ8JabQOxMNzgntl9-LsBaEd)
   
 ---
 
 ## Selected Honors
-- A+s in theoratical courses (e.g. Quantum Computation and Quantum Information, Quantum Machine Learning, Advanced Algorithms, Intractable Problems, Advanced Linear Algebra, Algebra)
-- Yan-Tong Lin, Meng-Tse Wu, and Keh-Yih Su. "Syntax-aware Natural Language Inference with Graph Matching Networks." 2020 International Conference on Technologies and Applications of Artificial Intelligence (TAAI). IEEE, 2020.
+- A+s in theoretical courses (e.g. Quantum Computation and Quantum Information, Quantum Machine Learning, Advanced Algorithms, Intractable Problems, Advanced Linear Algebra, Algebra)
 - Ranked 541st in Google Code Jam 2020
 
 ---
@@ -27,22 +28,23 @@ tags: [home]
 ## Languages and Technologies
 
 ### Languages
-- (medium/high) C++, Python, Typescript
-- (basic) Rust, Go
+- (familiar) C++, Rust, Python, Typescript, Solidity, $\LaTeX{}$
+- (basic) Go
 
 ### Technologies
-- NLP: (medium/high) pytorch, AllenNLP
-- Blockchain: (medium/high) hardhat, ethers.js, (basic) brownie
-- Utils: (basic) git, CICD, docker
-- Frontend: (medium) svelte, svelte-kit, (basic) react, next
+- Machine Learning: pytorch, AllenNLP
+- Blockchain: hardhat, ethers.js, EVM, DeFi protocols, brownie
+- Utils: git, CICD, docker
+- Frontend: svelte, svelte-kit, (basic) react, next
 - Backend: (basic) gqlgen, gRPC
 
 ---
 
-## In Free time
-- browse technologies, best practices
-- learn Rust
-- music
-- (previously) guitar, games
+## Hobbies and Interests
+- music listening, games
+- (not so often now) guitar, piano
 
+## Addresses
 0xb1B6356EA9E2f3Bf9867d6Ac1c1Bfd2cB1553Abb
+ytlin.eth  
+maxwill.sol
