@@ -9,14 +9,14 @@ tags: [home]
 ## About Me
 - Incoming MSCS student at Georgia Tech
 - Broadly interested in
-  - cryptography
+  - cryptography (SNARKs, secret sharing)
   - blockchains (consensus algorithms, smart contracts)
   - machine learning
   - competitive programming
 - [CV in Markdown](https://hackmd.io/@ytlin/cv)
-  - This site is static and can be outdated (last modified to fix redirect error, 5/28/2023)
-- [CV in $\LaTex{}$](https://drive.google.com/file/d/16nkGvbMUJJ8JabQOxMNzgntl9-LsBaEd)
-  
+- [CV in LaTex](https://drive.google.com/file/d/16nkGvbMUJJ8JabQOxMNzgntl9-LsBaEd)
+- This site is static and can be outdated (last modified to fix redirect error, 5/28/2023)  
+
 ---
 
 ## Selected Honors
@@ -45,6 +45,6 @@ tags: [home]
 - (not so often now) guitar, piano
 
 ## Addresses
-0xb1B6356EA9E2f3Bf9867d6Ac1c1Bfd2cB1553Abb
+0xb1B6356EA9E2f3Bf9867d6Ac1c1Bfd2cB1553Abb  
 ytlin.eth  
 maxwill.sol
