@@ -20,9 +20,13 @@ Hi~ I am Maxwill!
 ---
 
 ## Hobbies and Interests
-- music listening, games
-- playing guitar, piano
-    - [me playing Fight, an acoustic guitar song](https://youtu.be/XmpmadFYGOk)
+- Listening music, playing games
+- Researching healthy diet
+- Exercising (weight training and Zone 2 running)
+- Playings guitar, piano
+    - [Me playing Fight, an acoustic guitar song](https://youtu.be/XmpmadFYGOk)
+- Traveling
+    - I was proudly [hosted by Antalpha Hacker House](https://youtu.be/MSYaon4zNsc?si=ac7TzA_bLDmVUMfR) as a hacker during ETH CC in Paris
 
 ---
 
