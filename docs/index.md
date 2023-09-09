@@ -26,7 +26,7 @@ tags: [home]
 - Playings guitar, piano
     - [Me playing Fight, an acoustic guitar song](https://youtu.be/XmpmadFYGOk)
 - Traveling
-    - I was proudly [hosted by Antalpha Hacker House](https://youtu.be/MSYaon4zNsc?si=ac7TzA_bLDmVUMfR) as a hacker during ETH CC in Paris
+    - I was [hosted by Antalpha Hacker House](https://youtu.be/MSYaon4zNsc?si=ac7TzA_bLDmVUMfR) as a hacker during ETH CC in Paris
 
 ---
 
