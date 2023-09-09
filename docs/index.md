@@ -3,7 +3,7 @@ title: YanTong (Maxwill) Lin
 tags: [home]
 ---
 
-Hi~ I am Maxwill!
+<img src="img/profile.jpg" alt="drawing" width="200"/>
 
 ## About Me
 - I am a 1st year MSCS student at Georgia Tech broadly interested in
