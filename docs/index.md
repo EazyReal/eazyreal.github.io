@@ -15,8 +15,8 @@ tags: [home]
     - I scored multiple A+s in hardcore courses in Theoretical CS/Math (e.g. Quantum Computation and Quantum Information, Quantum Machine Learning, Advanced Algorithms, Intractable Problems, Advanced Linear Algebra, Algebra)
     - I won ~9k at ETH Global Paris, a global hackathon with 1400 attendees and 321 projects.
 - Here is my [1-page CV](https://drive.google.com/file/d/16nkGvbMUJJ8JabQOxMNzgntl9-LsBaEd) and [CV with projects and leadership](https://drive.google.com/file/d/1ntaSsTQ9a0-AxTWxOlPUJBn5N1Ntv3ho/view?usp=sharing)
-    - My writing samples are in the theory project section or [this tab](./writing_samples.md)
-    - Engineering projects are in the engineering project section
+    - Writing samples are in the theory project section or [this tab](./writing_samples.md)
+    - Engineering projects are in the engineering project section or [this tab](./projects.md)
 - Please see my CV for my professional information mainly since this site is static and can be outdated (last modified: Sep 8th 2023).
 
 ---
