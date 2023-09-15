@@ -21,6 +21,16 @@ tags: [home]
 
 ---
 
+## Updates
+- Courses that I am taking in 2023 fall at Georgia Tech:
+  - CS 6035 Introduction to Information Security
+  - CS 6515 Introduction to Graduate Algorithms
+  - CSE 8803 DLT Deep Learning for Text
+  - CSE 6243 Advanced Topics in Machine Learning
+- I find return oriented programming something particularly interesting and enjoy teaching my peers
+
+---
+
 ## Hobbies and Interests
 - Listening music, playing games
 - Researching healthy diet
