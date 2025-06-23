@@ -26,6 +26,9 @@ theme:
         icon: material/toggle-switch
         name: Switch to light mode
   features:
+    - content.action.edit
+    - content.action.view
+    - content.updated
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.instant
@@ -76,7 +79,7 @@ markdown_extensions:
 # Plugins
 plugins:
   - search
-  - git-revision-date
+  - git-revision-date-localized
   - tags:
       tags_file: tags.md
   # - macros:

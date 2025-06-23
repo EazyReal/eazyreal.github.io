@@ -8,8 +8,8 @@
 
 ## Serve Locally
 - `git clone {this}`
-- `pip install -r requirements.txt`
-- `mkdocs serve`
+- `uv sync`
+- `uv run mkdocs serve`
 
 ---
 
