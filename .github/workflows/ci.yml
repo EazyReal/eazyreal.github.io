@@ -11,10 +11,10 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
         with:
-          python-version: 3.x
-      #- run: pip install mkdocs-material
-      - run: pip install -r requirements.txt
-      - run: mkdocs gh-deploy --force
+          enable-cache: true
+      - run: uv python install
+      - run: uv sync --locked
+      - run: uv run mkdocs gh-deploy --force
