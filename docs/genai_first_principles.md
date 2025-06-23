@@ -1,7 +1,8 @@
 # GenAI from first principles
 
-- author: [Maxwill Lin](https://www.linkedin.com/in/maxwilllin/)
-- last updated: {{ git_revision_date_localized }}
+*Author: [Maxwill Lin](https://www.linkedin.com/in/maxwilllin/)*
+
+*Last updated: {{ git_revision_date_localized }}*
 
 ## Why LLMs success
 
