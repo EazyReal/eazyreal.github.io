@@ -5,13 +5,13 @@ tags: []
 
 *Last updated: {{ git_revision_date_localized }}*
 
-I asked GPT to explain my tastes with our past interactions, the prompt is
+I asked GPT to explain my tastes with our past interactions, the prompt is: 
 ```
 In the age of GenAI, tastes matter
 How would you describe my taste in writing and coding?
 Write a docs using my writing taste.
 ```
-The reponse is: 
+The response is: 
 
 # TL;DR
 
