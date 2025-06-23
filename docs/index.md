@@ -18,6 +18,7 @@ Generalist with a strong foundation in mathematics and coding, currently focusin
 * [LinkedIn](https://www.linkedin.com/in/maxwilllin/)
 * [CV](https://drive.google.com/file/d/1iBTJaVHiqBjrJ9jxYKth7Zv-mOVhbsf0/view)
 * [GenAI from first principles](./genai_first_principles.md)
+* In the age of GenAI, [tastes](./tastes.md) matter
 * [Writing samples](./writing_samples.md)
 * [Engineering projects](./projects.md)
 
