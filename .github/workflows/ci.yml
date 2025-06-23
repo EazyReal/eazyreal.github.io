@@ -16,5 +16,5 @@ jobs:
         with:
           enable-cache: true
       - run: uv python install
-      - run: uv sync --locked
+      - run: uv sync --locked --no-dev
       - run: uv run mkdocs gh-deploy --force
