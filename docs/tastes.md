@@ -11,7 +11,7 @@ In the age of GenAI, tastes matter
 How would you describe my taste in writing and coding?
 Write a docs using my writing taste.
 ```
-The response is: 
+The (quite-accurate) response is: 
 
 # TL;DR
 
