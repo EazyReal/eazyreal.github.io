@@ -1,0 +1,6841 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Linear Algebra II">
+      
+      
+        <meta name="author" content="Maxwill">
+      
+      
+        <link rel="canonical" href="https://eazyreal.github.io/Math/LinearAlgebra_II/">
+      
+      
+        <link rel="prev" href="../IntroRA_II/">
+      
+      
+        <link rel="next" href="../../NLP/stanford224n-home/">
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Linear Algebra II - Maxwill's site</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#linear-algebra-ii" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Maxwill&#39;s site" class="md-header__button md-logo" aria-label="Maxwill's site" data-md-component="logo">
+      
+  <img src="../../img/infinity.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Maxwill's site
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Linear Algebra II
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/EazyReal/eazyreal.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    EazyReal/eazyreal.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Maxwill Lin
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../genai_first_principles/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  GenAI from first principles
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../projects/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Projects
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../tags/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Tags
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../tastes/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Tastes
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../writing_samples/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Writing Samples
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Algorithm/talk_treap/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Algorithm
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Blockchain/ECE598PV_S2021/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Blockchain
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../Advanced_LA/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Math
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../NLP/stanford224n-home/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  NLP
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Quantum/review_qarithmetic/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Quantum
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Maxwill&#39;s site" class="md-nav__button md-logo" aria-label="Maxwill's site" data-md-component="logo">
+      
+  <img src="../../img/infinity.svg" alt="logo">
+
+    </a>
+    Maxwill's site
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/EazyReal/eazyreal.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    EazyReal/eazyreal.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Maxwill Lin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../genai_first_principles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    GenAI from first principles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Projects
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tags/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tags
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tastes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tastes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../writing_samples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Writing Samples
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Algorithm
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Algorithm
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Algorithm/talk_treap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Treap presentation for NCTU PCCA wintercamp 2020
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Blockchain
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Blockchain
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Blockchain/ECE598PV_S2021/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Note for ECE 598PV, Spring 2021
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Blockchain/blockchain_research/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Blockchain Resources
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Blockchain/smartcontract_development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Smart Contract Resources
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Math
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Math
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Advanced_LA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Advanced Linear Algebra
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Algebra_I/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Algebra I
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Algebra_II/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Algebra II
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IntroRA_II/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction to Analysis II
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Linear Algebra II
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linear Algebra II
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#week-1-1-322020" class="md-nav__link">
+    <span class="md-ellipsis">
+      week 1-1 (3/2/2020)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-1-2342020" class="md-nav__link">
+    <span class="md-ellipsis">
+      week 1-2(3/4/2020)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-2-1march9th2020" class="md-nav__link">
+    <span class="md-ellipsis">
+      week 2-1(March/9th/2020)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="week 2-1(March/9th/2020)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#t-invariant-subspaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      !T-invariant subspaces
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#annihilator-annt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Annihilator - Ann(T)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cayley-hamilton-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      !Cayley-Hamilton Theorem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#general-eigenspacedecomposition-of-v" class="md-nav__link">
+    <span class="md-ellipsis">
+      !(General Eigenspace)Decomposition of V
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#next-jordan-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Jordan Form
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-linear-algebra-studies" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Linear Algebra studies
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-2-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 2-2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 2-2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quiz-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      quiz problem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-material" class="md-nav__link">
+    <span class="md-ellipsis">
+      other material
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-3-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 3-1
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 3-1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nilpotent-lt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nilpotent LT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Theorem
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-3-2-skipped-3-3self-studysaturday" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 3-2 skipped, 3-3(self study@Saturday)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 3-2 skipped, 3-3(self study@Saturday)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#th-v-can-be-decomposed-with-nilpotent-lton-v" class="md-nav__link">
+    <span class="md-ellipsis">
+      !Th. - V can be decomposed with Nilpotent LT(on V)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="!Th. - V can be decomposed with Nilpotent LT(on V)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proof-sketch-of-part-32020323-correct-by-teacher" class="md-nav__link">
+    <span class="md-ellipsis">
+      Proof sketch of part 3(2020/3/23, correct by teacher)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hw3" class="md-nav__link">
+    <span class="md-ellipsis">
+      HW3
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-4-12020323" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 4-1(2020/3/23)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 4-1(2020/3/23)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jordan-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      !Jordan Form
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="!Jordan Form">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#part-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      part 1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      part 2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      part 3
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uniqueness" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uniqueness?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#steps-to-find-a-jordan-form-matrix-rep" class="md-nav__link">
+    <span class="md-ellipsis">
+      Steps to find a Jordan form matrix rep.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#steps-to-find-a-jordan-basis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Steps to find a Jordan basis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-study" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case Study
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jordan-chevalley-decomposition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jordan Chevalley Decomposition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advantage-of-jordan-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advantage of Jordan Form
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advantage of Jordan Form">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#power-of-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      power of matrix
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#realse-of-hw1-quiz1-quiz2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Realse of HW1 Quiz1 Quiz2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-4-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 4-2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-5-next-topic-inner-product-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 5 - next topic - Inner Product Space
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-5-1-inner-prodct-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 5-1 - Inner Prodct Space
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-5-2-normal-lt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 5-2 - Normal LT
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 5-2 - Normal LT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#symmetric-and-hermitian" class="md-nav__link">
+    <span class="md-ellipsis">
+      Symmetric and Hermitian
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adjoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adjoint
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjoint">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#self-adjoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      self-adjoint
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#normal-and-kerim" class="md-nav__link">
+    <span class="md-ellipsis">
+      Normal and Ker/Im
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#normal-diagonalizable-under-orthogonal-basis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Normal &lt;=&gt; Diagonalizable under orthogonal basis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hw5" class="md-nav__link">
+    <span class="md-ellipsis">
+      HW5
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-6-fill-in-week-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 6 - fill in week 5
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-6-1-othogonalunitary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 6-1 - Othogonal/Unitary
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 6-1 - Othogonal/Unitary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#equivalences" class="md-nav__link">
+    <span class="md-ellipsis">
+      Equivalences
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theorems-revisitted" class="md-nav__link">
+    <span class="md-ellipsis">
+      Theorems revisitted
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isometric" class="md-nav__link">
+    <span class="md-ellipsis">
+      Isometric
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Isometric">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-isometry" class="md-nav__link">
+    <span class="md-ellipsis">
+      general isometry
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isometric-2-d-case-study" class="md-nav__link">
+    <span class="md-ellipsis">
+      Isometric 2-D case study
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#det-and-eigenvalues-of-orthogomal-matrices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Det and Eigenvalues of Orthogomal Matrices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Det and Eigenvalues of Orthogomal Matrices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#orthogonal-3-d-case" class="md-nav__link">
+    <span class="md-ellipsis">
+      Orthogonal 3-D case
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Questions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hw6" class="md-nav__link">
+    <span class="md-ellipsis">
+      HW6
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ta-hour-by-mc-kang-2020414-learned-a-lot" class="md-nav__link">
+    <span class="md-ellipsis">
+      TA hour by MC kang 2020/4/14, learned a lot
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TA hour by MC kang 2020/4/14, learned a lot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#n-reflections-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      n-reflections theorem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#more-on-orientationadvanced-topic" class="md-nav__link">
+    <span class="md-ellipsis">
+      more on Orientation(advanced topic)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-7-self-study-review-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 7 - self study - Review Concepts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 7 - self study - Review Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inner-product" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inner product
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Inner product">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#q-induced-basis-and-induced-inner-product" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: induced basis and induced inner product
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#self-adjoint-hermitian" class="md-nav__link">
+    <span class="md-ellipsis">
+      self-adjoint, Hermitian
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="self-adjoint, Hermitian">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conjugate-transpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      conjugate transpose
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#self-adjoint-th" class="md-nav__link">
+    <span class="md-ellipsis">
+      self-adjoint Th
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#self-adjoint-hermitian_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      self-adjoint, Hermitian
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#normal-lt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Normal LT
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Normal LT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#def" class="md-nav__link">
+    <span class="md-ellipsis">
+      def
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Properties
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theorem_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Theorem
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#orthogonal-and-unitary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Orthogonal and unitary
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Orthogonal and unitary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#def_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      def
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#n-reflections" class="md-nav__link">
+    <span class="md-ellipsis">
+      n-reflections
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-7-quiz" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 7 quiz
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-7-real-canonical-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 7 - Real Canonical Form
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 7 - Real Canonical Form">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analysis-of-real-matrix-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      analysis of real matrix A
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analysis-of-othogonal-matrix-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      analysis of othogonal matrix A
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-topic-quadatic-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      next topic, quadatic form
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-7-quadratic-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 7 - Quadratic Form
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 7 - Quadratic Form">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quafratic-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quafratic Form
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#talor-series-revisited" class="md-nav__link">
+    <span class="md-ellipsis">
+      Talor Series Revisited
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-2-variable-binary-quadratic-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case: 2 variable, Binary Quadratic form
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-ternary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case: Ternary
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#general-case-n" class="md-nav__link">
+    <span class="md-ellipsis">
+      General Case: N
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-7-conic-sections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 7 - Conic Sections
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 7 - Conic Sections">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose-of-this-chapter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose of this chapter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#term" class="md-nav__link">
+    <span class="md-ellipsis">
+      Term
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zero-sets-of-binary-quadratic-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zero Sets of binary Quadratic Form
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deal-with-below-quadratic-terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      deal with below quadratic terms
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zero-set-of-non-degenerate-ternary-quadratic-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      zero set of non-degenerate ternary quadratic form
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="zero set of non-degenerate ternary quadratic form">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conix-sections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conix sections
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusion_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-7-equivalent-quadratic-forms-signature" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 7 - Equivalent Quadratic Forms, Signature
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 7 - Equivalent Quadratic Forms, Signature">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#equivalent-quadratic-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      Equivalent Quadratic Form
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#review-change-of-variable-to-diagonal-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      Review, change of variable to diagonal form
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Review, change of variable to diagonal form">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-orthogonal-instead-of-orthonormal-basis" class="md-nav__link">
+    <span class="md-ellipsis">
+      use orthogonal instead of orthonormal basis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#standard-form-above-is-to-change-diagonal-matrix-to-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Standard form : above is to change diagonal matrix to +-1
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signature-of-real-quadratic-forms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Signature of Real Quadratic Forms
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signature-1-to-1-eq-quadratic-forms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Signature &lt;=&gt;(1-to-1) Eq Quadratic Forms
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-is-trivial" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example is trivial
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hw-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      HW 7
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HW 7">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apllications-of-quadratic-formsbinary-and-tenary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apllications of Quadratic Forms(binary and tenary)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#taylor-expansion-and-extreme-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      Taylor expansion and extreme values
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zero-set-discussion-on-degenerate-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zero set, discussion on degenerate form
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-8-office-hour-2020421" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 8 - Office hour 2020/4/21
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 8 - Office hour 2020/4/21">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#taylor-expansion-for-determining-local-minmax" class="md-nav__link">
+    <span class="md-ellipsis">
+      Taylor Expansion for determining local min/max
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#about-trace" class="md-nav__link">
+    <span class="md-ellipsis">
+      about Trace
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#weel-8-positive-definite-quadratic-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      Weel 8 - Positive Definite Quadratic Form
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Weel 8 - Positive Definite Quadratic Form">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#equivalences-and-proof" class="md-nav__link">
+    <span class="md-ellipsis">
+      Equivalences and proof
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Equivalences and proof">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#case-of-semi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case of semi
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theorem-of-n1-is" class="md-nav__link">
+    <span class="md-ellipsis">
+      Theorem of n1 is
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sylvesters-critirien" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sylvester's critirien
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sylvester&#39;s critirien">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#induction-proof" class="md-nav__link">
+    <span class="md-ellipsis">
+      Induction Proof
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extreme-values-at-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      extreme values at 0?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-8-bilinear-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 8 - Bilinear Form
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 8 - Bilinear Form">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#matrix-representation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Matrix Representation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#coordinate-free-quadratic-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      Coordinate-Free Quadratic Form
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relation-with-quadratic-form-and-inner-product" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relation with Quadratic form and inner product
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#non-degenerate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Non-degenerate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multilinear-form-tensorproduct-theoremextra" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multilinear form, Tensorproduct, Theorem(Extra)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-9-2020427-practice-exam-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 9 - 2020/4/27 practice exam+ review
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 9 - 2020/4/27 practice exam+ review">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#midterm-hint" class="md-nav__link">
+    <span class="md-ellipsis">
+      Midterm hint
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#my-q" class="md-nav__link">
+    <span class="md-ellipsis">
+      My Q
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-9-individual-office-hour-2020428-1500-1600" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 9 - individual office hour @ 2020/4/28 15:00-16:00
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 9 - individual office hour @ 2020/4/28 15:00-16:00">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-does-quntum-computing-study" class="md-nav__link">
+    <span class="md-ellipsis">
+      What does Quntum Computing study
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#main-clairifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Main clairifications
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary-before-midterm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary Before Midterm
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Summary Before Midterm">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jordan-form_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jordan Form
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inner-product-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inner Product Space
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bilinear-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bilinear Form
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trick" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trick
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pictures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pictures
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#self-study-q-for-night-office-hour" class="md-nav__link">
+    <span class="md-ellipsis">
+      self study + Q for night office hour
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#online-ta-hour" class="md-nav__link">
+    <span class="md-ellipsis">
+      online TA hour
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remainning-q" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remainning Q
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-13-svd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 13 - SVD
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 13 - SVD">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#best-fit-subspace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best fit subspace
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best fit subspace">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#motivation-and-eq-defs" class="md-nav__link">
+    <span class="md-ellipsis">
+      motivation and eq defs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#left-singular-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      left singular values
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#best-fit-subspace-and-svd" class="md-nav__link">
+    <span class="md-ellipsis">
+      best fit subspace and SVD
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#note-on-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      Note on details
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relation-with-right-singular-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      relation with right singular value
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#svd-the-decoomposition" class="md-nav__link">
+    <span class="md-ellipsis">
+      SVD - the decoomposition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compact-svd" class="md-nav__link">
+    <span class="md-ellipsis">
+      compact SVD
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#confusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      confusion
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#svd-view-of-best-fit-k-subspace" class="md-nav__link">
+    <span class="md-ellipsis">
+      SVD view of best fit k-subspace
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compression-with-svd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compression with SVD
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pca-best-fit-affine-subspace" class="md-nav__link">
+    <span class="md-ellipsis">
+      PCA - best fit affine subspace
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#svd-vs-pca" class="md-nav__link">
+    <span class="md-ellipsis">
+      SVD vs PCA
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hw-9-week-13" class="md-nav__link">
+    <span class="md-ellipsis">
+      HW 9 @ Week 13
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-13-spectral-drawing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 13 - Spectral Drawing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hw-10-spectral-drawing" class="md-nav__link">
+    <span class="md-ellipsis">
+      HW 10 - Spectral Drawing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-14-matrix-exponential" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 14 - Matrix Exponential
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 14 - Matrix Exponential">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#motivation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Motivation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#definition_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#matrix-limit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Matrix Limit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#discussion-of-jordan-block-expjt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Discussion of Jordan Block (exp(Jt))
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solution-of-linear-system-of-de" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solution of linear system of DE
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-14-discrete-time-markov-chain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 14 - Discrete-Time Markov Chain
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 14 - Discrete-Time Markov Chain">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#positive-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Positive Matrix
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pprobability-vector-and-transition-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      P(Probability) vector and Transition Matrix
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eigenvalues-of-positive-transition-matrix-abs-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Eigenvalues of Positive Transition Matrix abs "&lt;= 1"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-eigenvalue-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      The eigenvalue "1"
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The eigenvalue &#34;1&#34;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#geometric-multiplicity-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Geometric Multiplicity = 1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#all-jordabn-block-of-eigenvalue-one-is-of-size-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      All Jordabn block of eigenvalue one is of size 1
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#asymptotic-behavior-of-vecpik" class="md-nav__link">
+    <span class="md-ellipsis">
+      Asymptotic behavior of \(\vec{\pi}^{(k)}\)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Asymptotic behavior of \(\vec{\pi}^{(k)}\)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ptandp-share-the-same-characteristic-poly" class="md-nav__link">
+    <span class="md-ellipsis">
+      \(P^t~and~P\) share the same characteristic poly
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decompose-space-into-directsum-with-jordan-form-result" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decompose Space into Directsum with Jordan form result
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#abseigenvalue-1-go-to-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      abs(Eigenvalue) &lt; 1 =&gt; go to 0
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusion_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      conclusion
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusion_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-14-q-on-transition-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 14 : Q on transition matrix
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 14 : Q on transition matrix">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hw-11-if-pk-is-positive-how-about-p" class="md-nav__link">
+    <span class="md-ellipsis">
+      HW 11 - if \(P^k\) is positive, how about P
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-15-page-rank" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 15 - Page Rank
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-15-commuting-lt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 15 - Commuting LT
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 15 - Commuting LT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eigenspace-of-t1-is-t2-invariant-subspace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Eigenspace of T1 is T2-invariant subspace
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simutaneously-diagonalizable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simutaneously Diagonalizable
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-about-jordan" class="md-nav__link">
+    <span class="md-ellipsis">
+      What about Jordan
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spectral-drawing-and-symmetric" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spectral drawing and symmetric
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-15-dual-vector-spaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 15 - Dual Vector Spaces
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 15 - Dual Vector Spaces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dual-vector-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dual Vector Space
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dual-basis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dual basis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extra-structures-can-be-provided-by-dual-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extra structures can be provided by dual space
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dual-space-of-inner-product-space-has-natural-dual-basis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dual space of inner product space has natural dual basis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pullback" class="md-nav__link">
+    <span class="md-ellipsis">
+      pullback
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adjoint_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      adjoint
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-15-hw12-s-interesting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 15 - HW12 s interesting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 15 - HW12 s interesting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      solution
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference-book-invariant-subspaces-of-matrices-with-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference Book - Invariant Subspaces of Matrices with Applications
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    NLP
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            NLP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NLP/stanford224n-home/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Stanford CS224n NLP with DL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Quantum
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Quantum
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Quantum/review_qarithmetic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Review: Quantum arithmetic with the Quantum Fourier Transform
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Quantum/review_qml_kernel_random/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Review: Learning with Optimized Random Features: Exponential Speedup by Quantum Machine Learning without Sparsity and Low-Rank Assumptions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Quantum/talk_grover/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction to QC, with Grover's Search
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Quantum/talk_qit_chsh/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quantum Information Theory: CHSH Game
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#week-1-1-322020" class="md-nav__link">
+    <span class="md-ellipsis">
+      week 1-1 (3/2/2020)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-1-2342020" class="md-nav__link">
+    <span class="md-ellipsis">
+      week 1-2(3/4/2020)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-2-1march9th2020" class="md-nav__link">
+    <span class="md-ellipsis">
+      week 2-1(March/9th/2020)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="week 2-1(March/9th/2020)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#t-invariant-subspaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      !T-invariant subspaces
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#annihilator-annt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Annihilator - Ann(T)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cayley-hamilton-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      !Cayley-Hamilton Theorem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#general-eigenspacedecomposition-of-v" class="md-nav__link">
+    <span class="md-ellipsis">
+      !(General Eigenspace)Decomposition of V
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#next-jordan-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Jordan Form
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-linear-algebra-studies" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Linear Algebra studies
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-2-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 2-2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 2-2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quiz-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      quiz problem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-material" class="md-nav__link">
+    <span class="md-ellipsis">
+      other material
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-3-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 3-1
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 3-1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nilpotent-lt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nilpotent LT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Theorem
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-3-2-skipped-3-3self-studysaturday" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 3-2 skipped, 3-3(self study@Saturday)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 3-2 skipped, 3-3(self study@Saturday)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#th-v-can-be-decomposed-with-nilpotent-lton-v" class="md-nav__link">
+    <span class="md-ellipsis">
+      !Th. - V can be decomposed with Nilpotent LT(on V)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="!Th. - V can be decomposed with Nilpotent LT(on V)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proof-sketch-of-part-32020323-correct-by-teacher" class="md-nav__link">
+    <span class="md-ellipsis">
+      Proof sketch of part 3(2020/3/23, correct by teacher)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hw3" class="md-nav__link">
+    <span class="md-ellipsis">
+      HW3
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-4-12020323" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 4-1(2020/3/23)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 4-1(2020/3/23)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jordan-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      !Jordan Form
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="!Jordan Form">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#part-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      part 1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      part 2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      part 3
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uniqueness" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uniqueness?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#steps-to-find-a-jordan-form-matrix-rep" class="md-nav__link">
+    <span class="md-ellipsis">
+      Steps to find a Jordan form matrix rep.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#steps-to-find-a-jordan-basis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Steps to find a Jordan basis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-study" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case Study
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jordan-chevalley-decomposition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jordan Chevalley Decomposition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advantage-of-jordan-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advantage of Jordan Form
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advantage of Jordan Form">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#power-of-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      power of matrix
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#realse-of-hw1-quiz1-quiz2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Realse of HW1 Quiz1 Quiz2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-4-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 4-2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-5-next-topic-inner-product-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 5 - next topic - Inner Product Space
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-5-1-inner-prodct-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 5-1 - Inner Prodct Space
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-5-2-normal-lt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 5-2 - Normal LT
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 5-2 - Normal LT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#symmetric-and-hermitian" class="md-nav__link">
+    <span class="md-ellipsis">
+      Symmetric and Hermitian
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adjoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adjoint
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjoint">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#self-adjoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      self-adjoint
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#normal-and-kerim" class="md-nav__link">
+    <span class="md-ellipsis">
+      Normal and Ker/Im
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#normal-diagonalizable-under-orthogonal-basis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Normal &lt;=&gt; Diagonalizable under orthogonal basis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hw5" class="md-nav__link">
+    <span class="md-ellipsis">
+      HW5
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-6-fill-in-week-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 6 - fill in week 5
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-6-1-othogonalunitary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 6-1 - Othogonal/Unitary
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 6-1 - Othogonal/Unitary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#equivalences" class="md-nav__link">
+    <span class="md-ellipsis">
+      Equivalences
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theorems-revisitted" class="md-nav__link">
+    <span class="md-ellipsis">
+      Theorems revisitted
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isometric" class="md-nav__link">
+    <span class="md-ellipsis">
+      Isometric
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Isometric">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-isometry" class="md-nav__link">
+    <span class="md-ellipsis">
+      general isometry
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isometric-2-d-case-study" class="md-nav__link">
+    <span class="md-ellipsis">
+      Isometric 2-D case study
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#det-and-eigenvalues-of-orthogomal-matrices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Det and Eigenvalues of Orthogomal Matrices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Det and Eigenvalues of Orthogomal Matrices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#orthogonal-3-d-case" class="md-nav__link">
+    <span class="md-ellipsis">
+      Orthogonal 3-D case
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Questions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hw6" class="md-nav__link">
+    <span class="md-ellipsis">
+      HW6
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ta-hour-by-mc-kang-2020414-learned-a-lot" class="md-nav__link">
+    <span class="md-ellipsis">
+      TA hour by MC kang 2020/4/14, learned a lot
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TA hour by MC kang 2020/4/14, learned a lot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#n-reflections-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      n-reflections theorem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#more-on-orientationadvanced-topic" class="md-nav__link">
+    <span class="md-ellipsis">
+      more on Orientation(advanced topic)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-7-self-study-review-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 7 - self study - Review Concepts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 7 - self study - Review Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inner-product" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inner product
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Inner product">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#q-induced-basis-and-induced-inner-product" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: induced basis and induced inner product
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#self-adjoint-hermitian" class="md-nav__link">
+    <span class="md-ellipsis">
+      self-adjoint, Hermitian
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="self-adjoint, Hermitian">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conjugate-transpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      conjugate transpose
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#self-adjoint-th" class="md-nav__link">
+    <span class="md-ellipsis">
+      self-adjoint Th
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#self-adjoint-hermitian_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      self-adjoint, Hermitian
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#normal-lt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Normal LT
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Normal LT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#def" class="md-nav__link">
+    <span class="md-ellipsis">
+      def
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Properties
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theorem_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Theorem
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#orthogonal-and-unitary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Orthogonal and unitary
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Orthogonal and unitary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#def_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      def
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#n-reflections" class="md-nav__link">
+    <span class="md-ellipsis">
+      n-reflections
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-7-quiz" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 7 quiz
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-7-real-canonical-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 7 - Real Canonical Form
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 7 - Real Canonical Form">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analysis-of-real-matrix-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      analysis of real matrix A
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analysis-of-othogonal-matrix-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      analysis of othogonal matrix A
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-topic-quadatic-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      next topic, quadatic form
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-7-quadratic-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 7 - Quadratic Form
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 7 - Quadratic Form">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quafratic-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quafratic Form
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#talor-series-revisited" class="md-nav__link">
+    <span class="md-ellipsis">
+      Talor Series Revisited
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-2-variable-binary-quadratic-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case: 2 variable, Binary Quadratic form
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-ternary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case: Ternary
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#general-case-n" class="md-nav__link">
+    <span class="md-ellipsis">
+      General Case: N
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-7-conic-sections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 7 - Conic Sections
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 7 - Conic Sections">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose-of-this-chapter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose of this chapter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#term" class="md-nav__link">
+    <span class="md-ellipsis">
+      Term
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zero-sets-of-binary-quadratic-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zero Sets of binary Quadratic Form
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deal-with-below-quadratic-terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      deal with below quadratic terms
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zero-set-of-non-degenerate-ternary-quadratic-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      zero set of non-degenerate ternary quadratic form
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="zero set of non-degenerate ternary quadratic form">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conix-sections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conix sections
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusion_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-7-equivalent-quadratic-forms-signature" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 7 - Equivalent Quadratic Forms, Signature
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 7 - Equivalent Quadratic Forms, Signature">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#equivalent-quadratic-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      Equivalent Quadratic Form
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#review-change-of-variable-to-diagonal-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      Review, change of variable to diagonal form
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Review, change of variable to diagonal form">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-orthogonal-instead-of-orthonormal-basis" class="md-nav__link">
+    <span class="md-ellipsis">
+      use orthogonal instead of orthonormal basis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#standard-form-above-is-to-change-diagonal-matrix-to-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Standard form : above is to change diagonal matrix to +-1
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signature-of-real-quadratic-forms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Signature of Real Quadratic Forms
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signature-1-to-1-eq-quadratic-forms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Signature &lt;=&gt;(1-to-1) Eq Quadratic Forms
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-is-trivial" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example is trivial
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hw-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      HW 7
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HW 7">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apllications-of-quadratic-formsbinary-and-tenary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apllications of Quadratic Forms(binary and tenary)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#taylor-expansion-and-extreme-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      Taylor expansion and extreme values
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zero-set-discussion-on-degenerate-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zero set, discussion on degenerate form
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-8-office-hour-2020421" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 8 - Office hour 2020/4/21
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 8 - Office hour 2020/4/21">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#taylor-expansion-for-determining-local-minmax" class="md-nav__link">
+    <span class="md-ellipsis">
+      Taylor Expansion for determining local min/max
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#about-trace" class="md-nav__link">
+    <span class="md-ellipsis">
+      about Trace
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#weel-8-positive-definite-quadratic-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      Weel 8 - Positive Definite Quadratic Form
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Weel 8 - Positive Definite Quadratic Form">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#equivalences-and-proof" class="md-nav__link">
+    <span class="md-ellipsis">
+      Equivalences and proof
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Equivalences and proof">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#case-of-semi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case of semi
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theorem-of-n1-is" class="md-nav__link">
+    <span class="md-ellipsis">
+      Theorem of n1 is
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sylvesters-critirien" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sylvester's critirien
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sylvester&#39;s critirien">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#induction-proof" class="md-nav__link">
+    <span class="md-ellipsis">
+      Induction Proof
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extreme-values-at-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      extreme values at 0?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-8-bilinear-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 8 - Bilinear Form
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 8 - Bilinear Form">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#matrix-representation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Matrix Representation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#coordinate-free-quadratic-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      Coordinate-Free Quadratic Form
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relation-with-quadratic-form-and-inner-product" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relation with Quadratic form and inner product
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#non-degenerate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Non-degenerate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multilinear-form-tensorproduct-theoremextra" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multilinear form, Tensorproduct, Theorem(Extra)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-9-2020427-practice-exam-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 9 - 2020/4/27 practice exam+ review
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 9 - 2020/4/27 practice exam+ review">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#midterm-hint" class="md-nav__link">
+    <span class="md-ellipsis">
+      Midterm hint
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#my-q" class="md-nav__link">
+    <span class="md-ellipsis">
+      My Q
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-9-individual-office-hour-2020428-1500-1600" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 9 - individual office hour @ 2020/4/28 15:00-16:00
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 9 - individual office hour @ 2020/4/28 15:00-16:00">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-does-quntum-computing-study" class="md-nav__link">
+    <span class="md-ellipsis">
+      What does Quntum Computing study
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#main-clairifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Main clairifications
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary-before-midterm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary Before Midterm
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Summary Before Midterm">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jordan-form_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jordan Form
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inner-product-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inner Product Space
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bilinear-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bilinear Form
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trick" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trick
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pictures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pictures
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#self-study-q-for-night-office-hour" class="md-nav__link">
+    <span class="md-ellipsis">
+      self study + Q for night office hour
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#online-ta-hour" class="md-nav__link">
+    <span class="md-ellipsis">
+      online TA hour
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remainning-q" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remainning Q
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-13-svd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 13 - SVD
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 13 - SVD">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#best-fit-subspace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best fit subspace
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best fit subspace">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#motivation-and-eq-defs" class="md-nav__link">
+    <span class="md-ellipsis">
+      motivation and eq defs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#left-singular-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      left singular values
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#best-fit-subspace-and-svd" class="md-nav__link">
+    <span class="md-ellipsis">
+      best fit subspace and SVD
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#note-on-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      Note on details
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relation-with-right-singular-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      relation with right singular value
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#svd-the-decoomposition" class="md-nav__link">
+    <span class="md-ellipsis">
+      SVD - the decoomposition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compact-svd" class="md-nav__link">
+    <span class="md-ellipsis">
+      compact SVD
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#confusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      confusion
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#svd-view-of-best-fit-k-subspace" class="md-nav__link">
+    <span class="md-ellipsis">
+      SVD view of best fit k-subspace
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compression-with-svd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compression with SVD
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pca-best-fit-affine-subspace" class="md-nav__link">
+    <span class="md-ellipsis">
+      PCA - best fit affine subspace
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#svd-vs-pca" class="md-nav__link">
+    <span class="md-ellipsis">
+      SVD vs PCA
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hw-9-week-13" class="md-nav__link">
+    <span class="md-ellipsis">
+      HW 9 @ Week 13
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-13-spectral-drawing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 13 - Spectral Drawing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hw-10-spectral-drawing" class="md-nav__link">
+    <span class="md-ellipsis">
+      HW 10 - Spectral Drawing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-14-matrix-exponential" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 14 - Matrix Exponential
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 14 - Matrix Exponential">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#motivation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Motivation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#definition_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#matrix-limit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Matrix Limit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#discussion-of-jordan-block-expjt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Discussion of Jordan Block (exp(Jt))
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solution-of-linear-system-of-de" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solution of linear system of DE
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-14-discrete-time-markov-chain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 14 - Discrete-Time Markov Chain
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 14 - Discrete-Time Markov Chain">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#positive-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Positive Matrix
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pprobability-vector-and-transition-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      P(Probability) vector and Transition Matrix
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eigenvalues-of-positive-transition-matrix-abs-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Eigenvalues of Positive Transition Matrix abs "&lt;= 1"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-eigenvalue-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      The eigenvalue "1"
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The eigenvalue &#34;1&#34;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#geometric-multiplicity-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Geometric Multiplicity = 1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#all-jordabn-block-of-eigenvalue-one-is-of-size-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      All Jordabn block of eigenvalue one is of size 1
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#asymptotic-behavior-of-vecpik" class="md-nav__link">
+    <span class="md-ellipsis">
+      Asymptotic behavior of \(\vec{\pi}^{(k)}\)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Asymptotic behavior of \(\vec{\pi}^{(k)}\)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ptandp-share-the-same-characteristic-poly" class="md-nav__link">
+    <span class="md-ellipsis">
+      \(P^t~and~P\) share the same characteristic poly
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decompose-space-into-directsum-with-jordan-form-result" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decompose Space into Directsum with Jordan form result
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#abseigenvalue-1-go-to-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      abs(Eigenvalue) &lt; 1 =&gt; go to 0
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusion_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      conclusion
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusion_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-14-q-on-transition-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 14 : Q on transition matrix
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 14 : Q on transition matrix">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hw-11-if-pk-is-positive-how-about-p" class="md-nav__link">
+    <span class="md-ellipsis">
+      HW 11 - if \(P^k\) is positive, how about P
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-15-page-rank" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 15 - Page Rank
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-15-commuting-lt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 15 - Commuting LT
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 15 - Commuting LT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eigenspace-of-t1-is-t2-invariant-subspace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Eigenspace of T1 is T2-invariant subspace
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simutaneously-diagonalizable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simutaneously Diagonalizable
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-about-jordan" class="md-nav__link">
+    <span class="md-ellipsis">
+      What about Jordan
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spectral-drawing-and-symmetric" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spectral drawing and symmetric
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-15-dual-vector-spaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 15 - Dual Vector Spaces
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 15 - Dual Vector Spaces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dual-vector-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dual Vector Space
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dual-basis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dual basis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extra-structures-can-be-provided-by-dual-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extra structures can be provided by dual space
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dual-space-of-inner-product-space-has-natural-dual-basis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dual space of inner product space has natural dual basis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pullback" class="md-nav__link">
+    <span class="md-ellipsis">
+      pullback
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adjoint_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      adjoint
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-15-hw12-s-interesting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 15 - HW12 s interesting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 15 - HW12 s interesting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      solution
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference-book-invariant-subspaces-of-matrices-with-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference Book - Invariant Subspaces of Matrices with Applications
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+        <a href="../../tags/#tag:2020" class="md-tag">2020</a>
+      
+    
+      
+      
+      
+        <a href="../../tags/#tag:linear-algebra" class="md-tag">Linear Algebra</a>
+      
+    
+      
+      
+      
+        <a href="../../tags/#tag:math" class="md-tag">Math</a>
+      
+    
+      
+      
+      
+        <a href="../../tags/#tag:nycu" class="md-tag">NYCU</a>
+      
+    
+      
+      
+      
+        <a href="../../tags/#tag:note" class="md-tag">note</a>
+      
+    
+  </nav>
+
+
+  
+    <a href="https://github.com/EazyReal/eazyreal.github.io/tree/main/docs/Math/LinearAlgebra_II.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/EazyReal/eazyreal.github.io/tree/main/docs/Math/LinearAlgebra_II.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+<h1 id="linear-algebra-ii">Linear Algebra II<a class="headerlink" href="#linear-algebra-ii" title="Permanent link">&para;</a></h1>
+<ul>
+<li><a href="https://hackmd.io/r-CG8R7xTZ2S3pRa6JD9FA">NCTU Lecture Notes</a></li>
+<li><a href="https://hackmd.io/xJD55HhBS-CiMdAiSCNYEg">NCTU 2020 spring</a></li>
+</ul>
+<h2 id="week-1-1-322020">week 1-1 (3/2/2020)<a class="headerlink" href="#week-1-1-322020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>review<ul>
+<li>linear independency</li>
+<li>basis and dimension</li>
+<li>dimension theorem</li>
+<li>direct sum</li>
+<li>matrix representation :
+ $$
+ Rep_{\alpha,\beta}(T) = (Rep_\beta(T(\vec{\alpha_1}) ...Rep_\beta(T(\vec{\alpha_i}))
+ $$</li>
+<li>change of basis
+ $$
+ Rep_\alpha(T) = Rep_{\beta,\alpha}(id)Rep_\beta(T)Rep_{\alpha,\beta}(id)
+ $$</li>
+<li>determinant</li>
+<li>Invariant Subspace<ul>
+<li>a subspace <span class="arithmatex">\(W \subset V\ s.t. \forall w \in W, T(w)\in W\)</span> </li>
+<li>direct sum of Invariant Subspace</li>
+</ul>
+</li>
+<li>Eigenspace<ul>
+<li>def: <span class="arithmatex">\(E(\lambda) = \{v \in V \mid T(v)=\lambda v \}\)</span></li>
+<li><span class="arithmatex">\(ker(A-\lambda I)\)</span>, <span class="arithmatex">\(E(\lambda)\ of\ A\)</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>attendence 10%</li>
+<li>next quiz hint:<ul>
+<li>matrix representation + diagonization</li>
+</ul>
+</li>
+<li>lecturing<ul>
+<li><span class="arithmatex">\(T:V\rightarrow V\)</span> be linear transformation</li>
+<li>For <span class="arithmatex">\(\vec{v} \in V\)</span> what is the smallest T-invariant subspace?</li>
+<li>Theorem :
+::: info
+let <span class="arithmatex">\(W = span\{v, T(v), T^2(v), T^3(v)...\}\)</span> 
+then </li>
+<li><span class="arithmatex">\(W\)</span> is a T-invariant subspace</li>
+<li>let <span class="arithmatex">\(dim(W) = m\)</span>, then <span class="arithmatex">\(<span class="arithmatex">\(\alpha = \{ \vec{v} , T(\vec{v}), T^2(\vec{v}), ...T^{m-1}(\vec{v})\}\)</span>\)</span> is a basis of <span class="arithmatex">\(W\)</span></li>
+<li><span class="arithmatex">\(T^m(\vec{v}) = \sum a_iT^i(\vec{v})\)</span></li>
+<li><span class="arithmatex">\(Rep_{\alpha}(T)\)</span> = \begin{bmatrix}
+                       0 &amp; 0 &amp; ...&amp; a_0 \
+                       1 &amp; 0 &amp; ...&amp; a_1 \
+                       0 &amp; 1 &amp; ...&amp; ...\
+                       0 &amp; 0 &amp; ...&amp; a_{m-1}
+                    \end{bmatrix} </li>
+<li>determinant and characristic function by MI</li>
+<li><span class="arithmatex">\(f_{T\mid _W}(x) = ?\)</span> 
+:::
+::: info
+Proof:</li>
+<li>By definition : <span class="arithmatex">\(W = span\{w, T(w), T^2(w), T^3(w)...\}\)</span></li>
+<li><span class="arithmatex">\(\exists \ k\ \ni T^k \in span\{w, T(w), T^2(w), T^3(w)...T^{k-1}(w)\}\)</span> for V is finite-dimentional</li>
+<li><span class="arithmatex">\(T^k(w)\)</span> is linear combination of <span class="arithmatex">\(\alpha\)</span></li>
+<li>by induction , <span class="arithmatex">\(T^{n}\)</span> with <span class="arithmatex">\(n &gt; k\)</span> is too</li>
+<li>then <span class="arithmatex">\(T(\vec{w}) \in W\)</span> is trivial
+:::</li>
+<li>asked teaher for concept confirmation<ul>
+<li>max linear independent set = generating set in this case. But teacher emphisize the concept is different</li>
+<li>uses <span class="arithmatex">\(F\)</span> instead of <span class="arithmatex">\(R\)</span> for generasity</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="week-1-2342020">week 1-2(3/4/2020)<a class="headerlink" href="#week-1-2342020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>matrix transformation self review<ul>
+<li>http://www.taiwan921.lib.ntu.edu.tw/mypdf/math02.pdf
+<img alt="" src="https://i.imgur.com/bLgkz3Z.png" />
+<img alt="" src="https://i.imgur.com/dwAcAUN.png" /></li>
+<li>isomorphic linear transformation &lt;=&gt; invertible linear transformation</li>
+<li><img alt="" src="https://i.imgur.com/9YRBUfZ.png" /></li>
+<li>standard representation <ul>
+<li><img alt="" src="https://i.imgur.com/zlKrbvI.png" /></li>
+<li><img alt="" src="https://i.imgur.com/OiKh18w.png" /></li>
+</ul>
+</li>
+<li>change of coordinate<ul>
+<li><img alt="" src="https://i.imgur.com/mFl31C2.png" /></li>
+</ul>
+</li>
+<li>find eigenvalues and vectors</li>
+<li><span class="arithmatex">\(A = P^{-1}QP\)</span></li>
+</ul>
+</li>
+<li>course<ul>
+<li><a href="https://ccjou.wordpress.com/2011/01/31/%E5%88%A9%E7%94%A8%E5%BE%AA%E7%92%B0%E5%AD%90%E7%A9%BA%E9%96%93%E8%AD%89%E6%98%8E-cayley-hamilton-%E5%AE%9A%E7%90%86/">use cyclic subspace to proof Cayley-Hamilton Theorem</a></li>
+</ul>
+</li>
+<li>invariant subspace is useful for analyzing  </li>
+</ul>
+<h2 id="week-2-1march9th2020">week 2-1(March/9th/2020)<a class="headerlink" href="#week-2-1march9th2020" title="Permanent link">&para;</a></h2>
+<ul>
+<li>3/10/2020 ask teacher </li>
+<li>teacher explained in detailed and intuively</li>
+<li>What's the problem?</li>
+<li>Why invariant subspace?<ul>
+<li>to create more 0 </li>
+</ul>
+</li>
+<li>Why Annihilator?<ul>
+<li>to get blocks of invariant subspaces</li>
+</ul>
+</li>
+<li>Usage of Cayley-Hamilton Theorem?<ul>
+<li>find such a f(x) quickly</li>
+</ul>
+</li>
+<li>The next will be Jordan form<ul>
+<li>what to fill in blocks?</li>
+</ul>
+</li>
+<li>btw, diagonizable and invertible is independent<ul>
+<li><a href="https://yutsumura.com/true-or-false-every-diagonalizable-matrix-is-invertible/">link</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="t-invariant-subspaces">!T-invariant subspaces<a class="headerlink" href="#t-invariant-subspaces" title="Permanent link">&para;</a></h3>
+<ul>
+<li>to find a basis <span class="arithmatex">\(\alpha\)</span> <span class="arithmatex">\(\ni\)</span> </li>
+<li>and extend the basis from span W to span V</li>
+<li>then the matrix representation of T : V-&gt;V
+$$
+\begin{pmatrix}
+T|_W &amp; A \
+O &amp; B
+\end{pmatrix}
+$$</li>
+<li>if we get direct sum of T-invariant subspaces
+$$
+\begin{pmatrix}
+T|<em W_2="W_2">{W_1} &amp; O \
+O &amp; T|</em>
+\end{pmatrix}
+$$</li>
+</ul>
+<h3 id="annihilator-annt">Annihilator - Ann(T)<a class="headerlink" href="#annihilator-annt" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="arithmatex">\(L(V,V) \rightarrow \ set\ of \ polynomials\)</span></li>
+<li><span class="arithmatex">\(for\ T \in L(V,V),\ Ann(T) = \{f(x)\in F[x]\mid f(T)\ is \ 0\ transformation\}\)</span></li>
+<li>a way to get decomposition of <span class="arithmatex">\(V\)</span> to direct sum of T-invariant subspaces </li>
+</ul>
+<h3 id="cayley-hamilton-theorem">!Cayley-Hamilton Theorem<a class="headerlink" href="#cayley-hamilton-theorem" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="arithmatex">\(f_T(T) \in Ann(T)\)</span></li>
+<li>in this case, the usage is to find a <span class="arithmatex">\(f(x) \ni f(T)\equiv 0\)</span></li>
+<li>proof:
+<span class="arithmatex">\(\forall v \in V\)</span>, let T invariant subspace generated by <span class="arithmatex">\(v\)</span> be <span class="arithmatex">\(W\)</span>
+<span class="arithmatex">\(let\ V=W+W^{'}\)</span> 
+since <span class="arithmatex">\([T]_{W+W^{'}}\)</span> can be express as
+$$
+\begin{pmatrix}
+T|_{W} &amp; A \
+O &amp; B
+\end{pmatrix}
+$$
+<span class="arithmatex">\(f_{T|_{W+W^{'}}}(T) = g(x)f_{T|_W}(x)\)</span> Note that g(x) is the <span class="arithmatex">\(det(\lambda I-B)\)</span> part
+<span class="arithmatex">\(f_{T|_W}(v) = 0\)</span> from collagory that followed directly with definition of <span class="arithmatex">\(T|_W\)</span>
+<span class="arithmatex">\(Q.E.D.\)</span></li>
+</ul>
+<h3 id="general-eigenspacedecomposition-of-v">!(General Eigenspace)Decomposition of V<a class="headerlink" href="#general-eigenspacedecomposition-of-v" title="Permanent link">&para;</a></h3>
+<ul>
+<li>goal : <span class="arithmatex">\(V=ker_\infty(T) \bigoplus Im_\infty(T)\)</span></li>
+<li>goal2 : <span class="arithmatex">\(V=\bigoplus E_\infty(\lambda)\)</span> </li>
+<li>
+<p>part 1 
+<img alt="" src="https://i.imgur.com/lGqruvA.png" />
+<img alt="" src="https://i.imgur.com/xtfAkVt.png" />
+Note : hint for T-invariance - exchangable ops</p>
+</li>
+<li>
+<p>part 2
+<img alt="" src="https://i.imgur.com/458oxBu.png" /></p>
+</li>
+</ul>
+<p>Note:
+in part 2 
+if m is inf of all ms satisfy prerequisition
+then <span class="arithmatex">\(V = ker(T^{m-1}) \bigoplus Im(T^{m-1})\)</span> does not hold in general
+confirmed by teacher
+* part 3
+<img alt="" src="https://i.imgur.com/gwZTqOy.png" />
+* part 4
+<img alt="" src="https://i.imgur.com/zNSsqzg.png" /></p>
+<p>Note:
+* Theorem 4
+    * case minimal m = 0 =&gt; invertible(rank(n)) =&gt; trivial
+    * case minimal m &gt;= 1 =&gt; is true 
+* above notes are from Ming-Hsuan Kang
+* <a href="https://math.okstate.edu/people/binegar/4063-5023/4063-5023-l18.pdf">proof of diagonizability</a></p>
+<h3 id="next-jordan-form">Next Jordan Form<a class="headerlink" href="#next-jordan-form" title="Permanent link">&para;</a></h3>
+<ul>
+<li>what's in the block exactly</li>
+</ul>
+<h3 id="what-linear-algebra-studies">What Linear Algebra studies<a class="headerlink" href="#what-linear-algebra-studies" title="Permanent link">&para;</a></h3>
+<ul>
+<li>real world problem, natural functions</li>
+<li>how to express in good basis(change of basis)<ul>
+<li>fourier, Laplace...</li>
+<li>meaningful, easy to compute</li>
+</ul>
+</li>
+<li>linear transformations<ul>
+<li>differential</li>
+<li>integral</li>
+<li>etc.</li>
+</ul>
+</li>
+<li>its quite different from Abstract Algebra by teacher<ul>
+<li>whereas I think the way to think is similar</li>
+<li>just LA emphasize more on linearity and dimension etc.</li>
+</ul>
+</li>
+</ul>
+<h2 id="week-2-2">Week 2-2<a class="headerlink" href="#week-2-2" title="Permanent link">&para;</a></h2>
+<h3 id="quiz-problem">quiz problem<a class="headerlink" href="#quiz-problem" title="Permanent link">&para;</a></h3>
+<ul>
+<li>pA : calculation of T-invariant subspace</li>
+<li>pB : let T : R3-&gt;R3 be reflex transformation, show T is diagonizable<ul>
+<li>hint <span class="arithmatex">\(T^2 = I\)</span> + HW</li>
+<li>I was the first one finished</li>
+</ul>
+</li>
+</ul>
+<h3 id="other-material">other material<a class="headerlink" href="#other-material" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[Invariant Subspace]https://math.okstate.edu/people/binegar/4063-5023/4063-5023-l18.pdf</li>
+</ul>
+<h2 id="week-3-1">Week 3-1<a class="headerlink" href="#week-3-1" title="Permanent link">&para;</a></h2>
+<h3 id="nilpotent-lt">Nilpotent LT<a class="headerlink" href="#nilpotent-lt" title="Permanent link">&para;</a></h3>
+<ul>
+<li>definition <ul>
+<li>T is a nilpotent LT</li>
+<li><span class="arithmatex">\(V = ker_{\infty}(T)\)</span> </li>
+<li><span class="arithmatex">\(T^k = \vec{0} for\ some\ k\)</span></li>
+</ul>
+</li>
+<li>use similar technique as T-invariant subspace<ul>
+<li>find a matrix rep of T 
+$$
+\begin{pmatrix}
+0 &amp; 0 &amp; 0 &amp; ...&amp;0 \
+1 &amp; 0 &amp; 0 &amp; ...&amp;0 \
+0 &amp; 1 &amp; 0 &amp; ...&amp;0 \
+0 &amp; 0 &amp; 1 &amp; ...&amp;0 \
+...&amp;...&amp;...&amp;...&amp;0
+\end{pmatrix}
+$$</li>
+</ul>
+</li>
+</ul>
+<h3 id="theorem">Theorem<a class="headerlink" href="#theorem" title="Permanent link">&para;</a></h3>
+<h2 id="week-3-2-skipped-3-3self-studysaturday">Week 3-2 skipped, 3-3(self study@Saturday)<a class="headerlink" href="#week-3-2-skipped-3-3self-studysaturday" title="Permanent link">&para;</a></h2>
+<h3 id="th-v-can-be-decomposed-with-nilpotent-lton-v">!Th. - V can be decomposed with Nilpotent LT(on V)<a class="headerlink" href="#th-v-can-be-decomposed-with-nilpotent-lton-v" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="https://i.imgur.com/xHP8xXc.png" /></p>
+<h4 id="proof-sketch-of-part-32020323-correct-by-teacher">Proof sketch of part 3(2020/3/23, correct by teacher)<a class="headerlink" href="#proof-sketch-of-part-32020323-correct-by-teacher" title="Permanent link">&para;</a></h4>
+<p>:::info
+let T be nilpotent LT on V of index k+1
+choose <span class="arithmatex">\(v_i\)</span> s.t. <span class="arithmatex">\(T^{k}(v_i)\)</span> forms a basis of <span class="arithmatex">\(Im(T^{k})\)</span> </p>
+<p>Objective : 
+<span class="arithmatex">\(V = W\bigoplus cyclic(v_i)\)</span> for some T-invariant subspace <span class="arithmatex">\(W\)</span></p>
+<p>Proof:
+- key : must have <strong>dot diagram</strong> in mind
+- Induction on k+1, index of T
+- <span class="arithmatex">\(W\)</span> as the left part removing higher dimension cyclic subspaces
+- extension of basis is like finding the current longest given the past longest
+    - <span class="arithmatex">\(v_i\)</span> past longest
+    - <span class="arithmatex">\(u_i\)</span> current longest</p>
+<ol>
+<li>when <span class="arithmatex">\(k = 0, T = 0, T^0 = I\)</span>, holds trivially</li>
+<li>when k holds<ul>
+<li><span class="arithmatex">\(V = ker(T^k) \bigoplus Fv_i\)</span><ul>
+<li>devide V to apply <span class="arithmatex">\(T^k\)</span> is 0 or non-zero</li>
+</ul>
+</li>
+<li><span class="arithmatex">\(V^{'} = ker(T^k)\)</span>, <span class="arithmatex">\(T^{'} = T|_{V^{'}}\)</span><ul>
+<li><span class="arithmatex">\(T^{'}\)</span> is nilpotent on <span class="arithmatex">\(V^{'}\)</span> of index k</li>
+</ul>
+</li>
+<li>Now we find a basis of <span class="arithmatex">\(Im({T^{'}}^{k-1})\)</span>, a subspace of <span class="arithmatex">\(ker(T^k)\)</span><ul>
+<li>part original: <ul>
+<li>from <span class="arithmatex">\(v_i\)</span> to <span class="arithmatex">\(T(v_i)\)</span></li>
+<li><span class="arithmatex">\({T^{'}}^{k-1} (T(v_i))\)</span> = <span class="arithmatex">\(T^k(v_i)\)</span></li>
+<li>l.i. subset of <span class="arithmatex">\(Im({T^{'}}^{k-1}))\)</span></li>
+</ul>
+</li>
+<li>part extended:<ul>
+<li><span class="arithmatex">\(u_i\)</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span class="arithmatex">\(ker(V) = W_0 \bigoplus cyclic(T(v_i)) \bigoplus cyclic(u_i)\)</span><ul>
+<li>by induction hypotesis</li>
+<li><span class="arithmatex">\(T(v_i) \bigoplus u_i\)</span> forms basis of <span class="arithmatex">\(Im({T^{'}}^{k-1})\)</span></li>
+</ul>
+</li>
+<li><span class="arithmatex">\(V = ker(T^k) \bigoplus Fv_i\)</span></li>
+<li><span class="arithmatex">\(V = W_0 \bigoplus cyclic(u_i) \bigoplus cyclic(T(v_i)) \bigoplus Fv_i\)</span></li>
+<li><span class="arithmatex">\(V = W \bigoplus cyclic(v_i)\)</span><ul>
+<li>since <span class="arithmatex">\(cyclic(u_i)\)</span> is T-invariant</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>by induction, Q.E.D.</li>
+<li>by the proof step can actually see W is cyclic subspaces' direct sum
+:::</li>
+</ol>
+<p>Illustration Diagram
+::: spoiler
+<img alt="" src="https://i.imgur.com/zDbcml2.jpg" />
+:::</p>
+<h2 id="hw3">HW3<a class="headerlink" href="#hw3" title="Permanent link">&para;</a></h2>
+<h2 id="week-4-12020323">Week 4-1(2020/3/23)<a class="headerlink" href="#week-4-12020323" title="Permanent link">&para;</a></h2>
+<h3 id="jordan-form">!Jordan Form<a class="headerlink" href="#jordan-form" title="Permanent link">&para;</a></h3>
+<h4 id="part-1">part 1<a class="headerlink" href="#part-1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>for a LT T</li>
+<li><span class="arithmatex">\(V = \bigoplus ker_\infty(T-\lambda_i I)\)</span></li>
+<li><span class="arithmatex">\(V = \bigoplus E_\infty(\lambda_i)\)</span></li>
+</ul>
+<h4 id="part-2">part 2<a class="headerlink" href="#part-2" title="Permanent link">&para;</a></h4>
+<ul>
+<li><span class="arithmatex">\(T-\lambda I\)</span> is nilpotent on <span class="arithmatex">\(E_\infty(\lambda_i)\)</span></li>
+<li><span class="arithmatex">\(E_\infty(\lambda_i) = \bigoplus cyclic(v_i)\)</span></li>
+</ul>
+<h4 id="part-3">part 3<a class="headerlink" href="#part-3" title="Permanent link">&para;</a></h4>
+<ul>
+<li>these <span class="arithmatex">\(cyclic(v_i)\)</span>s have a representation of<br />
+$$
+\begin{pmatrix}
+0 &amp; 0 &amp; 0 &amp; ...&amp;0 \
+1 &amp; 0 &amp; 0 &amp; ...&amp;0 \
+0 &amp; 1 &amp; 0 &amp; ...&amp;0 \
+0 &amp; 0 &amp; 1 &amp; ...&amp;0 \
+...&amp;...&amp;...&amp;...&amp;0
+\end{pmatrix}
+$$</li>
+</ul>
+<h4 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Jordan Form </li>
+</ul>
+<h4 id="uniqueness">Uniqueness?<a class="headerlink" href="#uniqueness" title="Permanent link">&para;</a></h4>
+<ul>
+<li>General Eigenspace Decomposition (YES)</li>
+<li>Cyclic Subsapce Decomposition (No)<ul>
+<li>but the dimensions are unique</li>
+</ul>
+</li>
+<li>generally, the matrix rep. can be said to be unique</li>
+</ul>
+<h4 id="steps-to-find-a-jordan-form-matrix-rep">Steps to find a Jordan form matrix rep.<a class="headerlink" href="#steps-to-find-a-jordan-form-matrix-rep" title="Permanent link">&para;</a></h4>
+<ol>
+<li>find <span class="arithmatex">\(f_A(x)\)</span></li>
+<li>find <strong>dot diagram</strong> for each <span class="arithmatex">\(\lambda\)</span><ul>
+<li>by observe the nulity of <span class="arithmatex">\((T-\lambda I)^k\)</span>
+ex:
+0 &lt;- <span class="arithmatex">\(T(v_2)\)</span> &lt;- <span class="arithmatex">\(v_2\)</span>
+0 &lt;- <span class="arithmatex">\(v_1\)</span></li>
+</ul>
+</li>
+</ol>
+<div class="arithmatex">\[
+\begin{pmatrix}
+\lambda &amp; 1 &amp; 0 \\
+0 &amp; \lambda &amp; 0 \\
+0 &amp; 0 &amp; \lambda \\
+\end{pmatrix}
+\]</div>
+<h4 id="steps-to-find-a-jordan-basis">Steps to find a Jordan basis<a class="headerlink" href="#steps-to-find-a-jordan-basis" title="Permanent link">&para;</a></h4>
+<ol>
+<li>just solve it from basis of <span class="arithmatex">\(E\infty(\lambda)\)</span></li>
+</ol>
+<h4 id="case-study">Case Study<a class="headerlink" href="#case-study" title="Permanent link">&para;</a></h4>
+<ol>
+<li>$$
+\begin{pmatrix}
+5 &amp; 7 &amp; 1 &amp; 1 &amp; 5 \
+-2 &amp; -3 &amp; -1 &amp; -1 &amp; -5 \
+-1 &amp; -3 &amp; 1 &amp; 1 &amp; -3 \
+0 &amp; 0 &amp; 3 &amp; 0 &amp; 1 \
+3 &amp; 3 &amp; 1 &amp; 0 &amp; 6
+\end{pmatrix}
+$$
+2.
+let V be a subspace of real funcitons spanned by <span class="arithmatex">\(\alpha = \{x^{-2}e^x, xe^x, e^x\}\)</span>
+let D be the differential operator
+find Jordan form of D and its jordan basis</li>
+</ol>
+<h3 id="jordan-chevalley-decomposition">Jordan Chevalley Decomposition<a class="headerlink" href="#jordan-chevalley-decomposition" title="Permanent link">&para;</a></h3>
+<p><span class="arithmatex">\(A = P^{-1}(D+N)P = P^{-1}DP + P^{-1}NP\)</span> 
+where
+<span class="arithmatex">\(P^{-1}DP\)</span> is semi-simple part
+<span class="arithmatex">\(P^{-1}DP\)</span> is nilpotent part</p>
+<ul>
+<li><span class="arithmatex">\(\forall A \in M_n(\mathbb{C})\)</span> there exist unique <span class="arithmatex">\(D,N \in M_n(\mathbb{C})\)</span> <ul>
+<li>A = D + N</li>
+<li>DN = ND</li>
+<li>D is diagonizanle</li>
+<li>N is nilpotent</li>
+</ul>
+</li>
+</ul>
+<h3 id="advantage-of-jordan-form">Advantage of Jordan Form<a class="headerlink" href="#advantage-of-jordan-form" title="Permanent link">&para;</a></h3>
+<h4 id="power-of-matrix">power of matrix<a class="headerlink" href="#power-of-matrix" title="Permanent link">&para;</a></h4>
+<ul>
+<li>by <span class="arithmatex">\((D+N)^k\)</span> with the fact that N is nilpotent</li>
+</ul>
+<h2 id="realse-of-hw1-quiz1-quiz2">Realse of HW1 Quiz1 Quiz2<a class="headerlink" href="#realse-of-hw1-quiz1-quiz2" title="Permanent link">&para;</a></h2>
+<ul>
+<li>HW1 30/30</li>
+<li>Quiz1 16/20</li>
+<li>Quiz2 20/20
+::: spoiler
+<img alt="" src="https://i.imgur.com/DuHu2QN.jpg" />
+<img alt="" src="https://i.imgur.com/dTMCqs8.jpg" />
+<img alt="" src="https://i.imgur.com/JkvlEdI.jpg" />
+:::</li>
+</ul>
+<h2 id="week-4-2">Week 4-2<a class="headerlink" href="#week-4-2" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Hw and test</li>
+<li>approximate Jordan form with diagonizable matrix</li>
+</ul>
+<hr />
+<h2 id="week-5-next-topic-inner-product-space">Week 5 - next topic - Inner Product Space<a class="headerlink" href="#week-5-next-topic-inner-product-space" title="Permanent link">&para;</a></h2>
+<hr />
+<h2 id="week-5-1-inner-prodct-space">Week 5-1 - Inner Prodct Space<a class="headerlink" href="#week-5-1-inner-prodct-space" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Definition over <span class="arithmatex">\(\mathbb{R}^N\)</span> and <span class="arithmatex">\(\mathbb{C}^N\)</span></li>
+<li>Definition of orthogonal</li>
+<li>General definition when <span class="arithmatex">\(\mathbb{F}\)</span> is <span class="arithmatex">\(\mathbb{R}\)</span> or <span class="arithmatex">\(\mathbb{C}\)</span></li>
+<li>Inner Product of<ul>
+<li>Continuous Functions</li>
+<li>Discrete Signals</li>
+</ul>
+</li>
+<li>Discrete Fourier Transformation(DFT)<ul>
+<li>meaningful basis</li>
+<li>easy-to-compute basis</li>
+</ul>
+</li>
+<li>Theorem:<ul>
+<li>Every inner product is induced from some basis</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="week-5-2-normal-lt">Week 5-2 - Normal LT<a class="headerlink" href="#week-5-2-normal-lt" title="Permanent link">&para;</a></h2>
+<h3 id="symmetric-and-hermitian">Symmetric and Hermitian<a class="headerlink" href="#symmetric-and-hermitian" title="Permanent link">&para;</a></h3>
+<h3 id="adjoint">Adjoint<a class="headerlink" href="#adjoint" title="Permanent link">&para;</a></h3>
+<h4 id="definition">definition<a class="headerlink" href="#definition" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="https://i.imgur.com/7Yupv1Q.png" />
+- defined on vector space with inner product 
+    - without basis =&gt; more inside </p>
+<h4 id="self-adjoint">self-adjoint<a class="headerlink" href="#self-adjoint" title="Permanent link">&para;</a></h4>
+<ol>
+<li>All eigenvalues of T are real.</li>
+<li>T admits a set of eigenvectors which forms an orthonormal basis of V. (Especially, T is diagonalizable.)</li>
+<li>Under an orthonormal basis, the conjugate transpose of the matrix representation of T is equal to the matrix representation of T∗</li>
+</ol>
+<h3 id="normal-and-kerim">Normal and Ker/Im<a class="headerlink" href="#normal-and-kerim" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="https://i.imgur.com/PsVV0s0.png =70%x" />
+- proof of 5
+<img alt="" src="https://i.imgur.com/fMvmZrz.png =70%x" /></p>
+<h3 id="normal-diagonalizable-under-orthogonal-basis">Normal &lt;=&gt; Diagonalizable under orthogonal basis<a class="headerlink" href="#normal-diagonalizable-under-orthogonal-basis" title="Permanent link">&para;</a></h3>
+<ul>
+<li>proof</li>
+<li>&lt;=<ul>
+<li>trivial</li>
+</ul>
+</li>
+<li>=&gt;<ul>
+<li>key : general eigenspaces = eigenspaces</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="hw5">HW5<a class="headerlink" href="#hw5" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="https://i.imgur.com/vHIsO4Y.png =12%x" />
+<img alt="" src="https://i.imgur.com/PvfaEYa.png =50%x" /></p>
+<hr />
+<h2 id="week-6-fill-in-week-5">Week 6 - fill in week 5<a class="headerlink" href="#week-6-fill-in-week-5" title="Permanent link">&para;</a></h2>
+<ul>
+<li>diagonization of symmetric matrix</li>
+<li>Grandsmith and projection</li>
+<li>norm of <span class="arithmatex">\(C^2\)</span></li>
+<li>2020/04/07 making up HW5</li>
+</ul>
+<p>:::spoiler
+<img alt="" src="https://i.imgur.com/Q2fE7D1.jpg" />
+<img alt="" src="https://i.imgur.com/JH4pW9P.jpg" />
+<img alt="" src="https://i.imgur.com/M2iTpGt.jpg" />
+:::</p>
+<p><strong>Q: relationship of Rn and Cn
+Q: induced innerproduct by basis</strong></p>
+<ul>
+<li>finite filed &gt; 0 is not well defined<ul>
+<li>positive definite</li>
+<li>compare relation</li>
+<li>inner prouct( &gt;= 0)</li>
+<li>only have = 0</li>
+</ul>
+</li>
+</ul>
+<p><a href="https://math.stackexchange.com/questions/1233384/how-to-choose-an-inner-product-with-respect-to-a-basis-in-such-a-way-that-this-b">induced inner product</a></p>
+<hr />
+<h2 id="week-6-1-othogonalunitary">Week 6-1 - Othogonal/Unitary<a class="headerlink" href="#week-6-1-othogonalunitary" title="Permanent link">&para;</a></h2>
+<h3 id="definition_1">Definition<a class="headerlink" href="#definition_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>preserve inner product
+<img alt="" src="https://i.imgur.com/XZYqbnJ.png =70%x" /></li>
+</ul>
+<h3 id="equivalences">Equivalences<a class="headerlink" href="#equivalences" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="https://i.imgur.com/AqDA51E.png =70%x" /></p>
+<h3 id="theorems-revisitted">Theorems revisitted<a class="headerlink" href="#theorems-revisitted" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="https://i.imgur.com/29SKn75.png =70%x" /></p>
+<h3 id="isometric">Isometric<a class="headerlink" href="#isometric" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="arithmatex">\(isometric\)</span> + <span class="arithmatex">\(f(\vec{0}) = \vec{0}\)</span> <span class="arithmatex">\(\iff\)</span> <span class="arithmatex">\(orthogonal\)</span></li>
+<li>must be LT
+<img alt="" src="https://i.imgur.com/gFsrEfr.png =70%x" /></li>
+<li>proof: theorem
+<img alt="" src="https://i.imgur.com/MNqZvVS.png =70%x" /></li>
+<li>proof: LT
+<img alt="" src="https://i.imgur.com/BuyYqU7.png =70%x" /></li>
+</ul>
+<h4 id="general-isometry">general isometry<a class="headerlink" href="#general-isometry" title="Permanent link">&para;</a></h4>
+<ul>
+<li>affine map(LT + bias)</li>
+</ul>
+<h4 id="isometric-2-d-case-study">Isometric 2-D case study<a class="headerlink" href="#isometric-2-d-case-study" title="Permanent link">&para;</a></h4>
+<ul>
+<li>all orthogonal matrice in <span class="arithmatex">\(\mathbb{R}^2\)</span></li>
+<li>rotation/reflection by parametric method</li>
+</ul>
+<h3 id="det-and-eigenvalues-of-orthogomal-matrices">Det and Eigenvalues of Orthogomal Matrices<a class="headerlink" href="#det-and-eigenvalues-of-orthogomal-matrices" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="arithmatex">\(det(A) = +-1\)</span> by <span class="arithmatex">\(det(AA^T) = det(I) = det(A)^2\)</span></li>
+<li><span class="arithmatex">\(T\)</span> is ortho LT, <span class="arithmatex">\(W\)</span> is <span class="arithmatex">\(T-invariant\)</span> implies <span class="arithmatex">\(W^\perp\)</span> is too.</li>
+<li>proof is exercise </li>
+</ul>
+<h4 id="orthogonal-3-d-case">Orthogonal 3-D case<a class="headerlink" href="#orthogonal-3-d-case" title="Permanent link">&para;</a></h4>
+<ul>
+<li><span class="arithmatex">\(det(A) = +-1\)</span></li>
+<li>exist <span class="arithmatex">\(\lambda = +-1\)</span> =&gt; rotate axis or reflecton axis</li>
+<li>by direct sum of T-invariant subspaces(exercise theorem)</li>
+<li>the left part is orthogonal matrice of rank 2 with det = 1, which must be a rotation</li>
+</ul>
+<h3 id="questions">Questions<a class="headerlink" href="#questions" title="Permanent link">&para;</a></h3>
+<p><strong>Q: relationship of Rn and Cn
+Q: induced innerproduct by basis</strong>
+<strong>Q: orthogonal - normal - symmetric(A*=A) relations</strong></p>
+<hr />
+<h2 id="hw6">HW6<a class="headerlink" href="#hw6" title="Permanent link">&para;</a></h2>
+<h2 id="ta-hour-by-mc-kang-2020414-learned-a-lot">TA hour by MC kang 2020/4/14, learned a lot<a class="headerlink" href="#ta-hour-by-mc-kang-2020414-learned-a-lot" title="Permanent link">&para;</a></h2>
+<ul>
+<li>HW6 3-2<ul>
+<li>more analytic way, discuss det=+1,-1, only on 3D</li>
+</ul>
+</li>
+</ul>
+<h3 id="n-reflections-theorem">n-reflections theorem<a class="headerlink" href="#n-reflections-theorem" title="Permanent link">&para;</a></h3>
+<p><a href="http://faculty.uml.edu/dklain/orthogonal.pdf">reference link</a></p>
+<h3 id="more-on-orientationadvanced-topic">more on Orientation(advanced topic)<a class="headerlink" href="#more-on-orientationadvanced-topic" title="Permanent link">&para;</a></h3>
+<ul>
+<li>isometric LT has 2 type!</li>
+<li>continuous isometric (rotate) vs no away (reflect)</li>
+<li>add dimension, what happen<ul>
+<li>spin by dimension</li>
+</ul>
+</li>
+<li>orientation preserving orthogonal LT<ul>
+<li>det +-1</li>
+<li>maintain isometric during continuous changing process!</li>
+</ul>
+</li>
+<li>orientation is 2 for all R^n by 2 reflection = 1 rotation</li>
+<li>may not cover in class :(</li>
+</ul>
+<hr />
+<h2 id="week-7-self-study-review-concepts">Week 7 - self study - Review Concepts<a class="headerlink" href="#week-7-self-study-review-concepts" title="Permanent link">&para;</a></h2>
+<h3 id="inner-product">Inner product<a class="headerlink" href="#inner-product" title="Permanent link">&para;</a></h3>
+<h4 id="q-induced-basis-and-induced-inner-product">Q: induced basis and induced inner product<a class="headerlink" href="#q-induced-basis-and-induced-inner-product" title="Permanent link">&para;</a></h4>
+<h3 id="self-adjoint-hermitian">self-adjoint, Hermitian<a class="headerlink" href="#self-adjoint-hermitian" title="Permanent link">&para;</a></h3>
+<h4 id="conjugate-transpose">conjugate transpose<a class="headerlink" href="#conjugate-transpose" title="Permanent link">&para;</a></h4>
+<h4 id="self-adjoint-th">self-adjoint Th<a class="headerlink" href="#self-adjoint-th" title="Permanent link">&para;</a></h4>
+<ol>
+<li>All eigenvalues of T are real.</li>
+<li>T admits a set of eigenvectors which forms an orthonormal basis of V. (Especially, T is diagonalizable.)</li>
+</ol>
+<h4 id="self-adjoint-hermitian_1">self-adjoint, Hermitian<a class="headerlink" href="#self-adjoint-hermitian_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Under an orthonormal basis, the conjugate transpose of the matrix representation of T is equal to the matrix representation of T∗</li>
+<li>A symmetric/Hermitian matrix is a matrix representation of a self-adjoint linear transform under an orthonormal basis.</li>
+</ul>
+<hr />
+<h3 id="normal-lt">Normal LT<a class="headerlink" href="#normal-lt" title="Permanent link">&para;</a></h3>
+<h4 id="def">def<a class="headerlink" href="#def" title="Permanent link">&para;</a></h4>
+<p>T∗ and T commute</p>
+<h4 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="https://i.imgur.com/HkoBgjm.png" /></p>
+<h4 id="theorem_1">Theorem<a class="headerlink" href="#theorem_1" title="Permanent link">&para;</a></h4>
+<p>A complex linear transformation is diagonalizable under some
+orthonormal basis if and only if it is normal.</p>
+<hr />
+<h3 id="orthogonal-and-unitary">Orthogonal and unitary<a class="headerlink" href="#orthogonal-and-unitary" title="Permanent link">&para;</a></h3>
+<h4 id="def_1">def<a class="headerlink" href="#def_1" title="Permanent link">&para;</a></h4>
+<p>T* = T-1</p>
+<h4 id="n-reflections">n-reflections<a class="headerlink" href="#n-reflections" title="Permanent link">&para;</a></h4>
+<h2 id="week-7-quiz">Week 7 quiz<a class="headerlink" href="#week-7-quiz" title="Permanent link">&para;</a></h2>
+<ul>
+<li>prove cannot find a continuous family of iometry for reflection\</li>
+<li>first show b is inrelevant</li>
+<li>by cont. compose cont. (det。F~(t))</li>
+</ul>
+<hr />
+<h2 id="week-7-real-canonical-form">Week 7 - Real Canonical Form<a class="headerlink" href="#week-7-real-canonical-form" title="Permanent link">&para;</a></h2>
+<h3 id="analysis-of-real-matrix-a">analysis of real matrix A<a class="headerlink" href="#analysis-of-real-matrix-a" title="Permanent link">&para;</a></h3>
+<ul>
+<li>pairs of conjecate roots of <span class="arithmatex">\(f_A(X)\)</span><ul>
+<li>pairs of eigenvalues</li>
+</ul>
+</li>
+<li>conclusion<ul>
+<li>for a eigenvalue <span class="arithmatex">\(\lambda=a-bi\)</span>, and <span class="arithmatex">\(\vec{v}\)</span> be the corresponding eigenvector</li>
+<li>let <span class="arithmatex">\(v = v_1+iv_2\)</span></li>
+<li><span class="arithmatex">\(A(v_1+iv_2) = (av_1+bv_2) + i(-bv_1 + av_2)\)</span></li>
+<li>notice that v1, v2 must be l.i.<ul>
+<li>else the eigen value is real number</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>complex block is 
+$$
+\begin{pmatrix}
+a &amp; -b\ 
+b &amp; a\
+\end{pmatrix}
+$$</li>
+</ul>
+<h3 id="analysis-of-othogonal-matrix-a">analysis of othogonal matrix A<a class="headerlink" href="#analysis-of-othogonal-matrix-a" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="arithmatex">\(\lambda_i = e^{-i\theta_i}=cos\theta_i-isin\theta_i\)</span></li>
+<li>complex block is 
+$$
+\begin{pmatrix}
+cos\theta &amp; -sin\theta\ 
+sin\theta &amp; cos\theta\
+\end{pmatrix}
+$$</li>
+<li>thus we can see <strong>orthogonal matrix</strong> as <strong>reflextions + 2D-rotations</strong></li>
+<li>notice that <span class="arithmatex">\(\beta\)</span>(change of basis) can be chosen to be orthonormal
+<img alt="" src="https://i.imgur.com/2hTaO28.png =70%x" /></li>
+</ul>
+<hr />
+<h2 id="next-topic-quadatic-form">next topic, quadatic form<a class="headerlink" href="#next-topic-quadatic-form" title="Permanent link">&para;</a></h2>
+<hr />
+<h2 id="week-7-quadratic-form">Week 7 - Quadratic Form<a class="headerlink" href="#week-7-quadratic-form" title="Permanent link">&para;</a></h2>
+<h3 id="quafratic-form">Quafratic Form<a class="headerlink" href="#quafratic-form" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="https://i.imgur.com/JKMcS6V.png" />
+<img alt="" src="https://i.imgur.com/fpuD0wX.png" /></p>
+<h3 id="talor-series-revisited">Talor Series Revisited<a class="headerlink" href="#talor-series-revisited" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="https://i.imgur.com/trVz6Wk.png" />
+- k-th order approximation
+- 1st + 2nd-order can be used to detemine local max/min</p>
+<h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="https://i.imgur.com/xFH9JyZ.jpg" /></p>
+<h3 id="case-2-variable-binary-quadratic-form">Case: 2 variable, Binary Quadratic form<a class="headerlink" href="#case-2-variable-binary-quadratic-form" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="https://i.imgur.com/MnaSQbW.jpg" /></p>
+<h3 id="case-ternary">Case: Ternary<a class="headerlink" href="#case-ternary" title="Permanent link">&para;</a></h3>
+<p>calculation example</p>
+<h3 id="general-case-n">General Case: N<a class="headerlink" href="#general-case-n" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="https://i.imgur.com/zwRHur7.png" />
+<img alt="" src="https://i.imgur.com/vf4upzF.png" /></p>
+<h3 id="key">Key<a class="headerlink" href="#key" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Quadratic form is Real Symmetric Matrix</li>
+<li>Diagonizable(R) with orthogonal basis</li>
+</ul>
+<hr />
+<h2 id="week-7-conic-sections">Week 7 - Conic Sections<a class="headerlink" href="#week-7-conic-sections" title="Permanent link">&para;</a></h2>
+<h3 id="purpose-of-this-chapter">Purpose of this chapter<a class="headerlink" href="#purpose-of-this-chapter" title="Permanent link">&para;</a></h3>
+<ul>
+<li>zero set</li>
+</ul>
+<h3 id="term">Term<a class="headerlink" href="#term" title="Permanent link">&para;</a></h3>
+<ul>
+<li>G: <span class="arithmatex">\(ax^2 + bxy + cy^2 + dx + ey + f\)</span></li>
+<li>Q: <span class="arithmatex">\(ax^2 + bxy + cy^2 + dxz + eyz + fz^2\)</span></li>
+<li>H: <span class="arithmatex">\(ax^2 + bxy + cy^2\)</span></li>
+</ul>
+<h3 id="zero-sets-of-binary-quadratic-form">Zero Sets of binary Quadratic Form<a class="headerlink" href="#zero-sets-of-binary-quadratic-form" title="Permanent link">&para;</a></h3>
+<ul>
+<li>key: the signs of two eigenvalues<ul>
+<li><span class="arithmatex">\(sign(\lambda_1) = sign(\lambda_2)\)</span> =&gt; {0, 0}</li>
+<li><span class="arithmatex">\(sign(\lambda_1) \neq sign(\lambda_2)\)</span> =&gt; two lines</li>
+<li>one of them zero =&gt; one line
+<img alt="" src="https://i.imgur.com/Y11DB2y.jpg" /></li>
+</ul>
+</li>
+</ul>
+<h3 id="deal-with-below-quadratic-terms">deal with below quadratic terms<a class="headerlink" href="#deal-with-below-quadratic-terms" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="https://i.imgur.com/3OtM6P5.jpg" /></p>
+<h3 id="zero-set-of-non-degenerate-ternary-quadratic-form">zero set of non-degenerate ternary quadratic form<a class="headerlink" href="#zero-set-of-non-degenerate-ternary-quadratic-form" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="https://i.imgur.com/Ro4QVvm.jpg" /></p>
+<h4 id="conix-sections">Conix sections<a class="headerlink" href="#conix-sections" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="https://i.imgur.com/N4PAneN.png" /></p>
+<h3 id="conclusion_1">Conclusion<a class="headerlink" href="#conclusion_1" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="https://i.imgur.com/GDVuxkN.jpg" />
+- let H be <span class="arithmatex">\(ax^2 + bxy + cy^2\)</span>
+- with <span class="arithmatex">\(Z(G) = Z(Q)\cap Z(z-1)\)</span> ~= <span class="arithmatex">\(Z(Q)\cap Z(z=0) = Z(H)\)</span>
+- we can judge G by H if non-degenerate</p>
+<hr />
+<h2 id="week-7-equivalent-quadratic-forms-signature">Week 7 - Equivalent Quadratic Forms, Signature<a class="headerlink" href="#week-7-equivalent-quadratic-forms-signature" title="Permanent link">&para;</a></h2>
+<h3 id="equivalent-quadratic-form">Equivalent Quadratic Form<a class="headerlink" href="#equivalent-quadratic-form" title="Permanent link">&para;</a></h3>
+<ul>
+<li>def, two quadratic form is called Euivalent iff<ul>
+<li>can obtain each other by change of basis</li>
+<li>but since we want signature =&gt; need not to be orthonormal</li>
+</ul>
+</li>
+<li>Diagonal Form</li>
+<li>note the simbol usage<ul>
+<li><span class="arithmatex">\(Q(\vec{x}^t)\)</span></li>
+<li>more common to use row vector to repr. variable</li>
+</ul>
+</li>
+</ul>
+<h3 id="review-change-of-variable-to-diagonal-form">Review, change of variable to diagonal form<a class="headerlink" href="#review-change-of-variable-to-diagonal-form" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="https://i.imgur.com/1MMbSdv.jpg" />
+- note that <span class="arithmatex">\(\vec{y}^tD\vec{y} = \sum_i\lambda_iy_i^2\)</span></p>
+<h4 id="use-orthogonal-instead-of-orthonormal-basis">use orthogonal instead of orthonormal basis<a class="headerlink" href="#use-orthogonal-instead-of-orthonormal-basis" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="https://i.imgur.com/O13xj9G.png" /></p>
+<h4 id="standard-form-above-is-to-change-diagonal-matrix-to-1">Standard form : above is to change diagonal matrix to +-1<a class="headerlink" href="#standard-form-above-is-to-change-diagonal-matrix-to-1" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="https://i.imgur.com/JgFP6UQ.png" /></p>
+<h3 id="signature-of-real-quadratic-forms">Signature of Real Quadratic Forms<a class="headerlink" href="#signature-of-real-quadratic-forms" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="https://i.imgur.com/P2gXonW.png" />
+- Note: trace of standard form(i.e., signature) + rank can decide standard form</p>
+<h3 id="signature-1-to-1-eq-quadratic-forms">Signature &lt;=&gt;(1-to-1) Eq Quadratic Forms<a class="headerlink" href="#signature-1-to-1-eq-quadratic-forms" title="Permanent link">&para;</a></h3>
+<ul>
+<li>pf: coming chapters </li>
+</ul>
+<h3 id="example-is-trivial">Example is trivial<a class="headerlink" href="#example-is-trivial" title="Permanent link">&para;</a></h3>
+<p>Q: Why signature</p>
+<hr />
+<h2 id="hw-7">HW 7<a class="headerlink" href="#hw-7" title="Permanent link">&para;</a></h2>
+<h3 id="apllications-of-quadratic-formsbinary-and-tenary">Apllications of Quadratic Forms(binary and tenary)<a class="headerlink" href="#apllications-of-quadratic-formsbinary-and-tenary" title="Permanent link">&para;</a></h3>
+<h3 id="taylor-expansion-and-extreme-values">Taylor expansion and extreme values<a class="headerlink" href="#taylor-expansion-and-extreme-values" title="Permanent link">&para;</a></h3>
+<h3 id="zero-set-discussion-on-degenerate-form">Zero set, discussion on degenerate form<a class="headerlink" href="#zero-set-discussion-on-degenerate-form" title="Permanent link">&para;</a></h3>
+<hr />
+<h2 id="week-8-office-hour-2020421">Week 8 - Office hour 2020/4/21<a class="headerlink" href="#week-8-office-hour-2020421" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="https://i.imgur.com/iZ55IXA.png =50%x" /></p>
+<h3 id="taylor-expansion-for-determining-local-minmax">Taylor Expansion for determining local min/max<a class="headerlink" href="#taylor-expansion-for-determining-local-minmax" title="Permanent link">&para;</a></h3>
+<ul>
+<li>terms of poly of <span class="arithmatex">\(dx_i\)</span></li>
+<li>higher order terms are dominated by lower order ones<ul>
+<li>multiply of infinity smalls</li>
+</ul>
+</li>
+<li>we use diagonalize technique to make thing easy<ul>
+<li>chage of variable so that </li>
+<li>only square terms is non-zero</li>
+</ul>
+</li>
+</ul>
+<h3 id="about-trace">about Trace<a class="headerlink" href="#about-trace" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="arithmatex">\(tr(AB) = tr(BA)\)</span> poof by direct calculation</li>
+<li>for more, ex: ABC<ul>
+<li>treat AB as D or BC as D and reduce to 2 matrix case</li>
+<li><span class="arithmatex">\(tr(ABC) \neq tr(BAC)\)</span> in general</li>
+</ul>
+</li>
+<li><span class="arithmatex">\(tr(A) = PDP^{-1}) = tr(DP^{-1}P) = tr(D)\)</span> in this case</li>
+</ul>
+<hr />
+<h2 id="weel-8-positive-definite-quadratic-form">Weel 8 - Positive Definite Quadratic Form<a class="headerlink" href="#weel-8-positive-definite-quadratic-form" title="Permanent link">&para;</a></h2>
+<h3 id="equivalences-and-proof">Equivalences and proof<a class="headerlink" href="#equivalences-and-proof" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Q is positive definite()</li>
+<li>A is positive definite(eigenvalue)</li>
+<li>Q has has unique minimun at 0</li>
+</ul>
+<h4 id="case-of-semi">Case of semi<a class="headerlink" href="#case-of-semi" title="Permanent link">&para;</a></h4>
+<h3 id="theorem-of-n1-is">Theorem of n1 is<a class="headerlink" href="#theorem-of-n1-is" title="Permanent link">&para;</a></h3>
+<h3 id="sylvesters-critirien">Sylvester's critirien<a class="headerlink" href="#sylvesters-critirien" title="Permanent link">&para;</a></h3>
+<h4 id="induction-proof">Induction Proof<a class="headerlink" href="#induction-proof" title="Permanent link">&para;</a></h4>
+<h3 id="extreme-values-at-0">extreme values at 0?<a class="headerlink" href="#extreme-values-at-0" title="Permanent link">&para;</a></h3>
+<h3 id="example_1">Example<a class="headerlink" href="#example_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Q, not positive definite, by can be semi-positive definite?<ul>
+<li>should check higher order?(the conclusion of not local extreme is too fast IMO)</li>
+<li>A(myself): bad Q, this is not discussion for derivatives(Hessian)</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="week-8-bilinear-form">Week 8 - Bilinear Form<a class="headerlink" href="#week-8-bilinear-form" title="Permanent link">&para;</a></h2>
+<h3 id="definition_2">Definition<a class="headerlink" href="#definition_2" title="Permanent link">&para;</a></h3>
+<h3 id="matrix-representation">Matrix Representation<a class="headerlink" href="#matrix-representation" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Note taht tenary up has no matrix repr.</li>
+</ul>
+<h3 id="coordinate-free-quadratic-form">Coordinate-Free Quadratic Form<a class="headerlink" href="#coordinate-free-quadratic-form" title="Permanent link">&para;</a></h3>
+<ul>
+<li>isomorphism between Quadratic form and symmetric bilinear form</li>
+</ul>
+<h3 id="relation-with-quadratic-form-and-inner-product">Relation with Quadratic form and inner product<a class="headerlink" href="#relation-with-quadratic-form-and-inner-product" title="Permanent link">&para;</a></h3>
+<h3 id="non-degenerate">Non-degenerate<a class="headerlink" href="#non-degenerate" title="Permanent link">&para;</a></h3>
+<h3 id="multilinear-form-tensorproduct-theoremextra">Multilinear form, Tensorproduct, Theorem(Extra)<a class="headerlink" href="#multilinear-form-tensorproduct-theoremextra" title="Permanent link">&para;</a></h3>
+<hr />
+<h2 id="week-9-2020427-practice-exam-review">Week 9 - 2020/4/27 practice exam+ review<a class="headerlink" href="#week-9-2020427-practice-exam-review" title="Permanent link">&para;</a></h2>
+<h3 id="midterm-hint">Midterm hint<a class="headerlink" href="#midterm-hint" title="Permanent link">&para;</a></h3>
+<ul>
+<li>True &amp; False</li>
+<li>Jordan Form<ul>
+<li>calculations </li>
+<li>mini poly and possible jordan forms</li>
+</ul>
+</li>
+<li>Quadratic form<ul>
+<li>calculations</li>
+<li>tennary + binary</li>
+<li>local extreme</li>
+<li>zero set discussioni</li>
+<li>positive definite proof</li>
+</ul>
+</li>
+<li>Symmetric, Normal, etc.<ul>
+<li>proof of diagonalizability</li>
+<li>proof of eigenvalues all real(by inner product and real symmetric)</li>
+<li>when have diagonal form(normal, poly with no repitive roots are zero)<ul>
+<li>Q: poly</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="my-q">My Q<a class="headerlink" href="#my-q" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Quantum Computing learning path</li>
+<li>proof of jordan form<ul>
+<li>about nilpotent LT's cyclic decomposition</li>
+<li>about general eigenvalue direct sum</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="week-9-individual-office-hour-2020428-1500-1600">Week 9 - individual office hour @ 2020/4/28 15:00-16:00<a class="headerlink" href="#week-9-individual-office-hour-2020428-1500-1600" title="Permanent link">&para;</a></h2>
+<h3 id="what-does-quntum-computing-study">What does Quntum Computing study<a class="headerlink" href="#what-does-quntum-computing-study" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Q: is lie Group/Algebra related?<ul>
+<li>Yes, bried introduction</li>
+</ul>
+</li>
+<li>A: to make "good" universal gates<ul>
+<li>traditional bit and gate(<span class="arithmatex">\((1,0)^N \to (1,0)^M\)</span>)</li>
+<li>now want universal approximation for wave functions</li>
+<li>Me: and apply them efficiently is the algo part</li>
+</ul>
+</li>
+<li>Q: What should I study<ul>
+<li>a variety of fields </li>
+<li>dont need to be deep, but know the essential concepts</li>
+<li>cause there are many isomorphic realations between fields</li>
+<li>think of the problem on ball and design way to higher dimension</li>
+</ul>
+</li>
+</ul>
+<h3 id="main-clairifications">Main clairifications<a class="headerlink" href="#main-clairifications" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Innerprodect space and basis</li>
+<li>when is inner product well defined</li>
+<li>minimal poly and relation with joran form<ul>
+<li>eigenspace decomposition(multiply 0 of blocks)</li>
+</ul>
+</li>
+<li>restate some inportent fact</li>
+<li>intuition about multilinear form</li>
+</ul>
+<h3 id="summary-before-midterm">Summary Before Midterm<a class="headerlink" href="#summary-before-midterm" title="Permanent link">&para;</a></h3>
+<h4 id="jordan-form_1">Jordan Form<a class="headerlink" href="#jordan-form_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>general eigenspace decomposition of LT<ul>
+<li>T-invariant subspace</li>
+</ul>
+</li>
+<li>cyclic subspace decompositioin of Nilpotent LT<ul>
+<li>nilpotent LT</li>
+</ul>
+</li>
+<li>Cayley-Hamilton Theorem Revisited</li>
+<li>Real Canonical Form</li>
+<li>Topic:<ul>
+<li>Generalized kernel</li>
+<li>Eigen Space discussion</li>
+<li>minimal polinomial and possible jordan form</li>
+</ul>
+</li>
+</ul>
+<h4 id="inner-product-space">Inner Product Space<a class="headerlink" href="#inner-product-space" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Inner Product is defined on vector spaces that<ul>
+<li>F is R or C(or non-finitem, to make &gt;= 0 well defined)</li>
+</ul>
+</li>
+<li><span class="arithmatex">\(v^tw^{bar}\)</span></li>
+<li>3 main concepts, their maxtrix representation, and theorems<ul>
+<li><span class="arithmatex">\(A^*\)</span>, (inner product space)adjoint - (matrix) conjugate transpose</li>
+<li>Self-Adjoint - <span class="arithmatex">\(A = A^*\)</span></li>
+<li>Normal - <span class="arithmatex">\(A, A^*\)</span> commute</li>
+<li>Unitary - <span class="arithmatex">\(A^*A = I\)</span></li>
+</ul>
+</li>
+<li>Isometric </li>
+<li>Self-adjoint<ul>
+<li>Real symmetric or hermitian</li>
+<li>implies:<ul>
+<li>real eigenvalues</li>
+<li>diagonalizable under unitary basis</li>
+</ul>
+</li>
+<li>existence and uniqueness</li>
+</ul>
+</li>
+<li>Normal<ul>
+<li>A complex linear transformation is diagonalizable under some orthonormal basis if and only if it is normal</li>
+<li>proofs are important and interesting</li>
+</ul>
+</li>
+</ul>
+<h4 id="bilinear-form">Bilinear Form<a class="headerlink" href="#bilinear-form" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Quadratic from<ul>
+<li>discussion of zero set<ul>
+<li>conic cure</li>
+</ul>
+</li>
+<li>discussion of extreme value<ul>
+<li>Taylor, gradient, Hessian</li>
+</ul>
+</li>
+<li>EQ quadratic form, signature</li>
+</ul>
+</li>
+<li>1-to-1 relation of symmetric bilinear form with Quadratic form<ul>
+<li>Inner product as "symmetric" and "positive-definite" "bilinear form" </li>
+<li>Idendity if induced by basis</li>
+</ul>
+</li>
+<li>multilinear form and tensor product<ul>
+<li>example illustration</li>
+</ul>
+</li>
+<li>positive definite bilinear form<ul>
+<li>Sylvester’s critirien</li>
+</ul>
+</li>
+</ul>
+<h3 id="trick">Trick<a class="headerlink" href="#trick" title="Permanent link">&para;</a></h3>
+<ul>
+<li>proof v = 0 by <v,v>=0</li>
+<li>proof u-w = 0</li>
+<li>proof space V = W, <span class="arithmatex">\(W \subset V\)</span> and <span class="arithmatex">\(dim~W = dim~V\)</span><ul>
+<li>proof of practice exam 5.a-b</li>
+</ul>
+</li>
+<li>induction on dimension</li>
+<li>consider diagonal matrix first!</li>
+</ul>
+<h3 id="pictures">Pictures<a class="headerlink" href="#pictures" title="Permanent link">&para;</a></h3>
+<p>::: spoiler
+<img alt="" src="https://i.imgur.com/9hFd1sy.jpg" />
+<img alt="" src="https://i.imgur.com/5lFLoGK.jpg" />
+<img alt="" src="https://i.imgur.com/lx2wyKK.jpg" />
+<img alt="" src="https://i.imgur.com/Pa4Mfsp.jpg" />
+<img alt="" src="https://i.imgur.com/0wVySBq.jpg" />
+<img alt="" src="https://i.imgur.com/7Qcghdg.jpg" />
+<img alt="" src="https://i.imgur.com/Vuxy4hM.jpg" />
+<img alt="" src="https://i.imgur.com/o1beFyz.jpg" />
+<img alt="" src="https://i.imgur.com/ti5Q8bz.jpg" />
+<img alt="" src="https://i.imgur.com/OJsx0n9.jpg" />
+:::</p>
+<h3 id="self-study-q-for-night-office-hour">self study + Q for night office hour<a class="headerlink" href="#self-study-q-for-night-office-hour" title="Permanent link">&para;</a></h3>
+<ul>
+<li>hermitian &gt; normal <ul>
+<li>
+<ul>
+<li>eigenvalues all real?</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="https://en.wikipedia.org/wiki/Normal_matrix#Equivalent_definitions">link: EQ def normal</a><ul>
+<li>normal := A* and A commute </li>
+<li>normal &lt;=&gt; A* is poly of A</li>
+<li>normal &lt;=&gt; A and A∗ can be simultaneously diagonalized<ul>
+<li>Actually, <span class="arithmatex">\(A^* = P^tD^{bar}P\)</span> by proof in pdf?</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>commute &lt;=&gt; Simultaneous Diagonalizability<ul>
+<li><a href="https://kconrad.math.uconn.edu/blurbs/linmultialg/minpolyandappns.pdf">Thm. 5.1</a></li>
+<li>also Thm. 4.11 for equivalence of diagonalizability</li>
+</ul>
+</li>
+</ul>
+<h3 id="online-ta-hour">online TA hour<a class="headerlink" href="#online-ta-hour" title="Permanent link">&para;</a></h3>
+<ul>
+<li>diagonal represent as poly &lt;=&gt; poly n-&gt;n need n-1 degree<ul>
+<li>Lagrange construction</li>
+</ul>
+</li>
+<li>if A want to be represent as poly(B)<ul>
+<li>if B position i, j is same, A pos i, j has to be same</li>
+<li>degree smaller</li>
+</ul>
+</li>
+<li>commute and both diagonalizable &lt;=&gt; Simultaneous Diagonalizability</li>
+<li>
+<ul>
+<li>AB reltation stated can &lt;=&gt; A can be poly of B</li>
+</ul>
+</li>
+<li>T and T<em> commute iif T</em> is poly of T is true<ul>
+<li>consider after diagonalized(always can do, normal)</li>
+<li>T* is just <span class="arithmatex">\(T^{bar}\)</span></li>
+<li>then use Lagrange construction</li>
+</ul>
+</li>
+<li>proof trick</li>
+<li>5-a
+<img alt="" src="https://i.imgur.com/MvWVGWc.png" /></li>
+<li>about projection<ul>
+<li>pairwise product is zero transformation<ul>
+<li>lecture note is wrong</li>
+</ul>
+</li>
+<li>sum is idendity</li>
+</ul>
+</li>
+<li>matrix congruence, quadratic form change of variable<ul>
+<li>https://en.wikipedia.org/wiki/Matrix_congruence</li>
+<li>is undser "orthogonal basis"</li>
+</ul>
+</li>
+</ul>
+<h3 id="remainning-q">Remainning Q<a class="headerlink" href="#remainning-q" title="Permanent link">&para;</a></h3>
+<ul>
+<li>taylor expansion for extreme value in genreal<ul>
+<li>my guess, 0, +-, 0, +- ...</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="week-13-svd">Week 13 - SVD<a class="headerlink" href="#week-13-svd" title="Permanent link">&para;</a></h2>
+<h3 id="best-fit-subspace">Best fit subspace<a class="headerlink" href="#best-fit-subspace" title="Permanent link">&para;</a></h3>
+<h4 id="motivation-and-eq-defs">motivation and eq defs<a class="headerlink" href="#motivation-and-eq-defs" title="Permanent link">&para;</a></h4>
+<h3 id="left-singular-values">left singular values<a class="headerlink" href="#left-singular-values" title="Permanent link">&para;</a></h3>
+<h3 id="best-fit-subspace-and-svd">best fit subspace and SVD<a class="headerlink" href="#best-fit-subspace-and-svd" title="Permanent link">&para;</a></h3>
+<ul>
+<li>proof by induction on k</li>
+</ul>
+<h3 id="note-on-details">Note on details<a class="headerlink" href="#note-on-details" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="arithmatex">\(rank(A^tA) = rank(AA^t) = rank(A)\)</span><ul>
+<li>proof by definition  + norm def</li>
+<li>https://math.stackexchange.com/questions/349738/prove-operatornamerankata-operatornameranka-for-any-a-in-m-m-times-n</li>
+</ul>
+</li>
+<li><span class="arithmatex">\(A^tA\)</span> is symmetic</li>
+<li><span class="arithmatex">\(A^tA\)</span> is semi-positive definite</li>
+<li><span class="arithmatex">\(A^tA\)</span> has <strong>orthonormal eigen decomposition</strong></li>
+</ul>
+<h3 id="relation-with-right-singular-value">relation with right singular value<a class="headerlink" href="#relation-with-right-singular-value" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="arithmatex">\(Av_i = \sqrt{\lambda_i}u_i\)</span></li>
+<li>can proof this will be left eighebasis for A^t</li>
+</ul>
+<h3 id="svd-the-decoomposition">SVD - the decoomposition<a class="headerlink" href="#svd-the-decoomposition" title="Permanent link">&para;</a></h3>
+<ul>
+<li>standard basis =&gt; alpha{v} =&gt; sinvular value diagonal matrix(m*n) =&gt; beta =&gt; standard basis</li>
+<li><span class="arithmatex">\(U\sum V^t\)</span></li>
+<li><span class="arithmatex">\(Av_i = \sqrt{\lambda_i}u_i\)</span></li>
+<li><span class="arithmatex">\(A = \sum _{i=1}^r \sqrt{\lambda_i}u_iv_i^t\)</span><ul>
+<li>obs: sum of rank one matrices </li>
+</ul>
+</li>
+</ul>
+<h3 id="compact-svd">compact SVD<a class="headerlink" href="#compact-svd" title="Permanent link">&para;</a></h3>
+<ul>
+<li>use only <span class="arithmatex">\(m*r, r*r, r*n\)</span></li>
+</ul>
+<h3 id="confusion">confusion<a class="headerlink" href="#confusion" title="Permanent link">&para;</a></h3>
+<ul>
+<li>not famil</li>
+</ul>
+<h3 id="svd-view-of-best-fit-k-subspace">SVD view of best fit k-subspace<a class="headerlink" href="#svd-view-of-best-fit-k-subspace" title="Permanent link">&para;</a></h3>
+<h3 id="compression-with-svd">Compression with SVD<a class="headerlink" href="#compression-with-svd" title="Permanent link">&para;</a></h3>
+<h3 id="pca-best-fit-affine-subspace">PCA - best fit affine subspace<a class="headerlink" href="#pca-best-fit-affine-subspace" title="Permanent link">&para;</a></h3>
+<ul>
+<li>max variance subspace</li>
+</ul>
+<h3 id="svd-vs-pca">SVD vs PCA<a class="headerlink" href="#svd-vs-pca" title="Permanent link">&para;</a></h3>
+<ul>
+<li>care mean or not</li>
+</ul>
+<hr />
+<h2 id="hw-9-week-13">HW 9 @ Week 13<a class="headerlink" href="#hw-9-week-13" title="Permanent link">&para;</a></h2>
+<ul>
+<li>last week take a leaf</li>
+<li>https://hackmd.io/Pcp80W3CT26eKqhUwIxzpw</li>
+</ul>
+<hr />
+<h2 id="week-13-spectral-drawing">Week 13 - Spectral Drawing<a class="headerlink" href="#week-13-spectral-drawing" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Vertex =&gt; n-dimensional e vectors</li>
+<li>Now want to project to subspace W</li>
+<li>Minimal "Edge Energy Function"<ul>
+<li>define as the sum of square of distance of edges in subspace W</li>
+</ul>
+</li>
+<li>If want minimal =&gt; take eigenspaces of Laplance matrix<ul>
+<li>can show by definition trivially<ul>
+<li>want each c.c. has the same projection is best =&gt; eigenspaces</li>
+</ul>
+</li>
+<li>used on similarity graph =&gt; spectral clustering</li>
+</ul>
+</li>
+<li>If want minimal + orthogonal to eigenspace of (connected) graph<ul>
+<li>this is spectral drawing</li>
+</ul>
+</li>
+</ul>
+<h2 id="hw-10-spectral-drawing">HW 10 - Spectral Drawing<a class="headerlink" href="#hw-10-spectral-drawing" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="/A0lGBNVlSQ-Ss7A5fluKsQ">LA HW 10 Spectral Drawing</a></li>
+</ul>
+<hr />
+<h2 id="week-14-matrix-exponential">Week 14 - Matrix Exponential<a class="headerlink" href="#week-14-matrix-exponential" title="Permanent link">&para;</a></h2>
+<h3 id="motivation">Motivation<a class="headerlink" href="#motivation" title="Permanent link">&para;</a></h3>
+<ul>
+<li>differential equation solution</li>
+</ul>
+<h3 id="definition_3">Definition<a class="headerlink" href="#definition_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="arithmatex">\(exp(At) = lim_{n\to\infty} \sum_{m=1}^{n}\frac{A^mt^m}{m!}\)</span></li>
+</ul>
+<h3 id="matrix-limit">Matrix Limit<a class="headerlink" href="#matrix-limit" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Convergence, Abs Convergence, Complex Convergence</li>
+<li>Def: Matrix Limit is Entry-wise</li>
+<li>Product of Matrix Limit <ul>
+<li>by elementwise discussion</li>
+</ul>
+</li>
+</ul>
+<h3 id="discussion-of-jordan-block-expjt">Discussion of Jordan Block (exp(Jt))<a class="headerlink" href="#discussion-of-jordan-block-expjt" title="Permanent link">&para;</a></h3>
+<h3 id="solution-of-linear-system-of-de">Solution of linear system of DE<a class="headerlink" href="#solution-of-linear-system-of-de" title="Permanent link">&para;</a></h3>
+<hr />
+<h2 id="week-14-discrete-time-markov-chain">Week 14 - Discrete-Time Markov Chain<a class="headerlink" href="#week-14-discrete-time-markov-chain" title="Permanent link">&para;</a></h2>
+<ul>
+<li>the lecture<ul>
+<li>capture the eigen-related features of transition matrix</li>
+<li>discuss the asymptotic trend when apply the same P infty time</li>
+</ul>
+</li>
+</ul>
+<h3 id="positive-matrix">Positive Matrix<a class="headerlink" href="#positive-matrix" title="Permanent link">&para;</a></h3>
+<ul>
+<li>defined by entry</li>
+</ul>
+<h3 id="pprobability-vector-and-transition-matrix">P(Probability) vector and Transition Matrix<a class="headerlink" href="#pprobability-vector-and-transition-matrix" title="Permanent link">&para;</a></h3>
+<ul>
+<li>P-vector<ul>
+<li>entry sum to 1</li>
+</ul>
+</li>
+<li>T-matrix<ul>
+<li>each column is a P-vector</li>
+</ul>
+</li>
+</ul>
+<h3 id="eigenvalues-of-positive-transition-matrix-abs-1">Eigenvalues of Positive Transition Matrix abs "&lt;= 1"<a class="headerlink" href="#eigenvalues-of-positive-transition-matrix-abs-1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>proof
+<img alt="" src="https://i.imgur.com/XNaGNfd.png" /></li>
+</ul>
+<h3 id="the-eigenvalue-1">The eigenvalue "1"<a class="headerlink" href="#the-eigenvalue-1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>1 is the only (in complex number set) eigenvalue with abs 1<ul>
+<li>triangular inequality</li>
+</ul>
+</li>
+</ul>
+<h4 id="geometric-multiplicity-1">Geometric Multiplicity = 1<a class="headerlink" href="#geometric-multiplicity-1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>reminder: geo multiplicity = how many Jordan block = rank of eigenspace</li>
+<li>proof<ul>
+<li>to make = 1</li>
+<li>required <span class="arithmatex">\(|v_i| = |v_j|~\forall i,j\)</span><ul>
+<li>refer to last section(proof all eigen abs &lt;= 1)</li>
+<li>for replace j with i</li>
+</ul>
+</li>
+<li>since P is positive<ul>
+<li>for take in the abs </li>
+<li>all v_i have same sign</li>
+<li>HW explicitly proof this</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>conclusion<ul>
+<li><span class="arithmatex">\(v = v_i(1,1,1,...,1) = v_i\vec{1}\)</span> is the only eigenvector of abs 1 eigenvalue</li>
+</ul>
+</li>
+</ul>
+<h4 id="all-jordabn-block-of-eigenvalue-one-is-of-size-1">All Jordabn block of eigenvalue one is of size 1<a class="headerlink" href="#all-jordabn-block-of-eigenvalue-one-is-of-size-1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>reminder: dot diagram</li>
+<li>proof by contradiction
+<img alt="" src="https://i.imgur.com/fRkDlL6.jpg" /></li>
+</ul>
+<h3 id="asymptotic-behavior-of-vecpik">Asymptotic behavior of <span class="arithmatex">\(\vec{\pi}^{(k)}\)</span><a class="headerlink" href="#asymptotic-behavior-of-vecpik" title="Permanent link">&para;</a></h3>
+<h4 id="ptandp-share-the-same-characteristic-poly"><span class="arithmatex">\(P^t~and~P\)</span> share the same characteristic poly<a class="headerlink" href="#ptandp-share-the-same-characteristic-poly" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="https://i.imgur.com/N2jPRIT.png" /></p>
+<h4 id="decompose-space-into-directsum-with-jordan-form-result">Decompose Space into Directsum with Jordan form result<a class="headerlink" href="#decompose-space-into-directsum-with-jordan-form-result" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="https://i.imgur.com/zNv82qv.png" /></p>
+<h4 id="abseigenvalue-1-go-to-0">abs(Eigenvalue) &lt; 1 =&gt; go to 0<a class="headerlink" href="#abseigenvalue-1-go-to-0" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="https://i.imgur.com/GAoxLvu.jpg" /></p>
+<h4 id="conclusion_2">conclusion<a class="headerlink" href="#conclusion_2" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="https://i.imgur.com/24hm8JU.png" /></p>
+<h3 id="conclusion_3">Conclusion<a class="headerlink" href="#conclusion_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>take kernel of <span class="arithmatex">\(P-I\)</span>, get the only stationary p-vector!</li>
+</ul>
+<hr />
+<h2 id="week-14-q-on-transition-matrix">Week 14 : Q on transition matrix<a class="headerlink" href="#week-14-q-on-transition-matrix" title="Permanent link">&para;</a></h2>
+<ul>
+<li>what happen if the P is "stuck"?<ul>
+<li>A, B, C state</li>
+<li>A to A, B to C, C to B</li>
+<li>start A =&gt; A</li>
+<li>start B/C =&gt; 0.5B + 0.5C
+<img alt="" src="https://i.imgur.com/aXFdy0i.png" /></li>
+</ul>
+</li>
+<li>
+<p>ans : "positive" = &gt; rank = 1</p>
+</li>
+<li>
+<p>will eigenvalue of P be all positive? or 0</p>
+<ul>
+<li>0 means non-trivial nullspace exist </li>
+</ul>
+</li>
+</ul>
+<h3 id="hw-11-if-pk-is-positive-how-about-p">HW 11 - if <span class="arithmatex">\(P^k\)</span> is positive, how about P<a class="headerlink" href="#hw-11-if-pk-is-positive-how-about-p" title="Permanent link">&para;</a></h3>
+<ul>
+<li>can use positive transition result</li>
+<li>hint: P eigenvalue <span class="arithmatex">\(\lambda\)</span> =&gt; P^k eigenvalue <span class="arithmatex">\(\lambda^k\)</span></li>
+</ul>
+<hr />
+<h2 id="week-15-page-rank">Week 15 - Page Rank<a class="headerlink" href="#week-15-page-rank" title="Permanent link">&para;</a></h2>
+<ul>
+<li>trivial</li>
+</ul>
+<hr />
+<h2 id="week-15-commuting-lt">Week 15 - Commuting LT<a class="headerlink" href="#week-15-commuting-lt" title="Permanent link">&para;</a></h2>
+<h3 id="eigenspace-of-t1-is-t2-invariant-subspace">Eigenspace of T1 is T2-invariant subspace<a class="headerlink" href="#eigenspace-of-t1-is-t2-invariant-subspace" title="Permanent link">&para;</a></h3>
+<ul>
+<li>proof by <span class="arithmatex">\(\forall v \in E_{T_1}(\lambda), T_1T_2v = T_2T_1v=T_2\lambda v\)</span></li>
+<li><span class="arithmatex">\(E_{T_1}(\lambda)\)</span> is T2 invariant</li>
+</ul>
+<h3 id="simutaneously-diagonalizable">Simutaneously Diagonalizable<a class="headerlink" href="#simutaneously-diagonalizable" title="Permanent link">&para;</a></h3>
+<ul>
+<li>restriction of a diagonalizable LT on an invariant subspace is still diagonalizable</li>
+</ul>
+<h3 id="what-about-jordan">What about Jordan<a class="headerlink" href="#what-about-jordan" title="Permanent link">&para;</a></h3>
+<ul>
+<li>nilpotent counter example</li>
+</ul>
+<h3 id="spectral-drawing-and-symmetric">Spectral drawing and symmetric<a class="headerlink" href="#spectral-drawing-and-symmetric" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="arithmatex">\(\sigma : V \to V\)</span> be LT that change the vertices is still same graph<ul>
+<li>than <span class="arithmatex">\(L\)</span>(the Laplance) and <span class="arithmatex">\(\sigma\)</span> is commutable</li>
+</ul>
+</li>
+<li>pick the eigenspaces as a whole =&gt; symmetric!<ul>
+<li>since the picked eigenspaces are <span class="arithmatex">\(\sigma -invariant\)</span></li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="week-15-dual-vector-spaces">Week 15 - Dual Vector Spaces<a class="headerlink" href="#week-15-dual-vector-spaces" title="Permanent link">&para;</a></h2>
+<h3 id="dual-vector-space">Dual Vector Space<a class="headerlink" href="#dual-vector-space" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="https://i.imgur.com/Y1m8TgO.png" /></p>
+<h3 id="dual-basis">Dual basis<a class="headerlink" href="#dual-basis" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="https://i.imgur.com/zykVJsg.jpg" />
+- note that all isomorphisms are based on a certain basis</p>
+<h3 id="extra-structures-can-be-provided-by-dual-space">Extra structures can be provided by dual space<a class="headerlink" href="#extra-structures-can-be-provided-by-dual-space" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="https://i.imgur.com/aHauR3y.png" />
+- Q this
+<img alt="" src="https://i.imgur.com/Rlb3tiS.png" /></p>
+<h3 id="dual-space-of-inner-product-space-has-natural-dual-basis">Dual space of inner product space has natural dual basis<a class="headerlink" href="#dual-space-of-inner-product-space-has-natural-dual-basis" title="Permanent link">&para;</a></h3>
+<ul>
+<li>use f_v(w) = <w, v><ul>
+<li>if v_i forms orthonormal basis</li>
+</ul>
+</li>
+</ul>
+<h3 id="pullback">pullback<a class="headerlink" href="#pullback" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="https://i.imgur.com/G2XVvs6.png" />
+- let T be a V to W, f be a W to F in W* 
+- get a V to F by V to W and W to F</p>
+<h3 id="adjoint_1">adjoint<a class="headerlink" href="#adjoint_1" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="https://i.imgur.com/zo2u0va.jpg" />
+- generalized to for V, W
+    -  <span class="arithmatex">\(T: V \to W\)</span> to <span class="arithmatex">\(T^*: W \to V\)</span> by a natural way </p>
+<hr />
+<h2 id="week-15-hw12-s-interesting">Week 15 - HW12 s interesting<a class="headerlink" href="#week-15-hw12-s-interesting" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="https://i.imgur.com/wnNBFOS.png" /></p>
+<h3 id="solution">solution<a class="headerlink" href="#solution" title="Permanent link">&para;</a></h3>
+<h2 id="reference-book-invariant-subspaces-of-matrices-with-applications">Reference Book - Invariant Subspaces of Matrices with Applications<a class="headerlink" href="#reference-book-invariant-subspaces-of-matrices-with-applications" title="Permanent link">&para;</a></h2>
+<hr />
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 23, 2025 07:31:36 UTC">June 23, 2025</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/EazyReal" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1M480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2m-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3m-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.facebook.com/maxwill.lin" target="_blank" rel="noopener" title="www.facebook.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256c0 120 82.7 220.8 194.2 248.5V334.2h-52.8V256h52.8v-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287v175.9C413.8 494.8 512 386.9 512 256"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/maxwilllin" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5m282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/tensorfi" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.action.edit", "content.action.view", "content.updated", "navigation.tabs", "navigation.tabs.sticky", "navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "toc.follow", "header.autohide"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

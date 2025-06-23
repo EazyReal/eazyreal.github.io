@@ -1,0 +1,5093 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Maxwill's personal website">
+      
+      
+        <meta name="author" content="Maxwill">
+      
+      
+        <link rel="canonical" href="https://eazyreal.github.io/Math/IntroRA_II/">
+      
+      
+        <link rel="prev" href="../Algebra_II/">
+      
+      
+        <link rel="next" href="../LinearAlgebra_II/">
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Introduction to Analysis II - Maxwill's site</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduction-to-analysis-ii" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Maxwill&#39;s site" class="md-header__button md-logo" aria-label="Maxwill's site" data-md-component="logo">
+      
+  <img src="../../img/infinity.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Maxwill's site
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Introduction to Analysis II
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/EazyReal/eazyreal.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    EazyReal/eazyreal.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Maxwill Lin
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../genai_first_principles/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  GenAI from first principles
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../projects/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Projects
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../tags/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Tags
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../tastes/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Tastes
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../writing_samples/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Writing Samples
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Algorithm/talk_treap/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Algorithm
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Blockchain/ECE598PV_S2021/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Blockchain
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../Advanced_LA/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Math
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../NLP/stanford224n-home/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  NLP
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Quantum/review_qarithmetic/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Quantum
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Maxwill&#39;s site" class="md-nav__button md-logo" aria-label="Maxwill's site" data-md-component="logo">
+      
+  <img src="../../img/infinity.svg" alt="logo">
+
+    </a>
+    Maxwill's site
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/EazyReal/eazyreal.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    EazyReal/eazyreal.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Maxwill Lin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../genai_first_principles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    GenAI from first principles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Projects
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tags/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tags
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tastes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tastes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../writing_samples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Writing Samples
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Algorithm
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Algorithm
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Algorithm/talk_treap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Treap presentation for NCTU PCCA wintercamp 2020
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Blockchain
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Blockchain
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Blockchain/ECE598PV_S2021/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Note for ECE 598PV, Spring 2021
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Blockchain/blockchain_research/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Blockchain Resources
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Blockchain/smartcontract_development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Smart Contract Resources
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Math
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Math
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Advanced_LA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Advanced Linear Algebra
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Algebra_I/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Algebra I
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Algebra_II/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Algebra II
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Introduction to Analysis II
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction to Analysis II
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#week-1-1-332020" class="md-nav__link">
+    <span class="md-ellipsis">
+      week 1-1 (3/3/2020)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="week 1-1 (3/3/2020)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reimann-intergral" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reimann Intergral
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reimann Intergral">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#partition-and-refinement" class="md-nav__link">
+    <span class="md-ellipsis">
+      partition and refinement
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-1-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 1-2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 1-2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reimann-intergrability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reimann Intergrability
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refinement" class="md-nav__link">
+    <span class="md-ellipsis">
+      refinement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boundedness-and-monotonicity-integrability" class="md-nav__link">
+    <span class="md-ellipsis">
+      boundedness and monotonicity =&gt; integrability
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-1-3352020" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 1-3(3/5/2020)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 1-3(3/5/2020)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#part-1-pdf-32" class="md-nav__link">
+    <span class="md-ellipsis">
+      part 1 (pdf 32)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theorem-324-continuity-on-a-closed-interval-integrability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Theorem 32.4 : continuity on a closed interval =&gt; integrability
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theorem-325-the-intergrability-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Theorem 32.5 (the Intergrability Theorem)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#definition-326-content-zero-and-measure-zero" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definition 32.6 (content zero and measure zero)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theorem-327-contious-except-content-zero-implies-integrability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Theorem 32.7 (contious except content zero implies integrability)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theorem-328-the-riemann-lebesgue-theorem-in-one-variable-lebesgues-criterion-for-riemann-integrability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Theorem 32.8 (the Riemann-Lebesgue theorem in one variable: Lebesgue’s criterion for Riemann-integrability)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-2-103102020" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 2-1(03/10/2020)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 2-1(03/10/2020)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#theorem-331-the-fundamental-theorem-of-calculus" class="md-nav__link">
+    <span class="md-ellipsis">
+      Theorem 33.1 (the fundamental theorem of calculus)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-2-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 2-2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 2-2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-generalized-mean-value-theorem-for-integrals" class="md-nav__link">
+    <span class="md-ellipsis">
+      the Generalized Mean Value Theorem for Integrals
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integration-by-parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration by parts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-practice-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      advanced practice problem
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-2-32020312" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 2-3(2020/3/12)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 2-3(2020/3/12)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#several-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Several variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jordan-measurable-sets-and-riemann-intergrability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jordan Measurable sets and Riemann Intergrability
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Jordan Measurable sets and Riemann Intergrability">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#content-zero-and-jordan-measurable-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      content zero and Jordan measurable sets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="content zero and Jordan measurable sets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#content-zero" class="md-nav__link">
+    <span class="md-ellipsis">
+      content zero
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jordan-measurable" class="md-nav__link">
+    <span class="md-ellipsis">
+      ! Jordan measurable
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-study" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case study
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#continuity-except-content-zero-implies-riemann-integrability-on-a-rectangle" class="md-nav__link">
+    <span class="md-ellipsis">
+      continuity except content zero implies Riemann integrability on a rectangle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sufficient-conditions-for-content-zero" class="md-nav__link">
+    <span class="md-ellipsis">
+      sufficient conditions for content zero
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="sufficient conditions for content zero">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sufficient-conditions-for-riemann-integrability-on-a-bounded-region" class="md-nav__link">
+    <span class="md-ellipsis">
+      sufficient conditions for Riemann integrability on a bounded region
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zero-riemann-integral-and-its-corollaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      zero Riemann integral and its corollaries
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inter-and-outer-areas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inter and Outer Areas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hw1" class="md-nav__link">
+    <span class="md-ellipsis">
+      HW1
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HW1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#my-part-theorem-327-continuity-except-content-zero-intergrability" class="md-nav__link">
+    <span class="md-ellipsis">
+      My part - Theorem 32.7 - Continuity except content zero -&gt; intergrability
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-3-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 3-1
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 3-1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#practice-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practice Class
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#354-sufficient-conditions-for-riemann-integrability-on-a-bounded-region" class="md-nav__link">
+    <span class="md-ellipsis">
+      ! 35.4 sufficient conditions for Riemann integrability on a bounded region
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#355-zero-reimann-intergral" class="md-nav__link">
+    <span class="md-ellipsis">
+      35.5 zero Reimann intergral
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-3-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 3-2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 3-2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inner-area-and-outer-area" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inner Area and Outer Area
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theorem-333-norm-partition-can-bound-difference-to-u-l-r" class="md-nav__link">
+    <span class="md-ellipsis">
+      !Theorem 33.3 norm Partition can bound difference to U, L, R
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-3-2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 3-2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 3-2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mvts" class="md-nav__link">
+    <span class="md-ellipsis">
+      MVTs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MVTs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#theorem-361" class="md-nav__link">
+    <span class="md-ellipsis">
+      Theorem 36.1
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iterated-intergral-and-funinis-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Iterated Intergral and Funini's Theorem
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Iterated Intergral and Funini&#39;s Theorem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition-of-iterated-intergrals" class="md-nav__link">
+    <span class="md-ellipsis">
+      definition of iterated intergrals
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-4-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 4-1
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-4-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 4-2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 4-2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#change-of-valriables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Change of Valriables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lebesgues-criterion-for-integrablilitygo-back" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lebesgue's Criterion for integrablility(go back)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-4-3-x" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 4-3 (X)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-5-1-5-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 5-1 5-2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 5-1 5-2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#change-of-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Change of Variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theorem-391" class="md-nav__link">
+    <span class="md-ellipsis">
+      Theorem 39.1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#392" class="md-nav__link">
+    <span class="md-ellipsis">
+      39.2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#393-the-bounded-convergence-theoremwait-graduate-level-class-content" class="md-nav__link">
+    <span class="md-ellipsis">
+      39.3 the bounded convergence theorem(wait, graduate level class content)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#394" class="md-nav__link">
+    <span class="md-ellipsis">
+      39.4
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ch-40-41-improper-itergral" class="md-nav__link">
+    <span class="md-ellipsis">
+      ch 40, 41 Improper Itergral
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-course-turn-online" class="md-nav__link">
+    <span class="md-ellipsis">
+      The course turn online
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-9-2020428-ta-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 9 - 2020/4/28 TA class
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 9 - 2020/4/28 TA class">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proof-of-421" class="md-nav__link">
+    <span class="md-ellipsis">
+      proof of 42.1
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patition-to-2-part-need-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patition to 2 part need theorem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-122020520-self-study-for-exam-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 12(2020/5/20) - Self study for exam 2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch40-inproper-integral-i-s-is-not-bounded" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ch40. - Inproper Integral I (S is not bounded)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch-41-inproper-integral-ii-fs-is-not-bounded" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ch 41. - Inproper Integral II (f(S) is not bounded)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch-42-dirichlets-test-absolute-convergence-cauchy-principle-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ch 42. - Dirichlet's test / Absolute convergence / Cauchy principle value
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch-43-improper-integral-on-rk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ch 43. - Improper Integral on \(R^k\)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch-44-lebesgue-measure-lebesgue-measurable-definitionkey" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ch 44. - Lebesgue measure / Lebesgue measurable (Definition)(Key!)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ch 44. - Lebesgue measure / Lebesgue measurable (Definition)(Key!)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lebesgue-measurable-but-not-jordan-measurable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lebesgue measurable but not Jordan measurable
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#review-of-jorndan-measurable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Review of Jorndan Measurable
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch-45-lebesgue-integral" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ch 45. - Lebesgue Integral
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ch 45. - Lebesgue Integral">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4552-comment-is-important-for-complete-understanding" class="md-nav__link">
+    <span class="md-ellipsis">
+      45.5.2 Comment is important for complete understanding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#banach-tarski-paradoxsupplement" class="md-nav__link">
+    <span class="md-ellipsis">
+      banach tarski paradox(supplement)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch-46-riemann-stieltjes-integral" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ch 46. - Riemann-Stieltjes integral
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch-47-48" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ch 47-48
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ch 47-48">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arc-length-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arc Length / Work
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#line-integral-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      Line Integral / Work
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#differential-form-a-way-to-write-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      differential form (a way to write work??)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rectifiable-484" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rectifiable (48.4)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#review-of-ftc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Review of FTC
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch-49-greens-theorem2d-proj" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ch 49. - Green's theorem(2D proj.)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ch 49. - Green&#39;s theorem(2D proj.)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-greens-to-proof-corollaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Green's to proof corollaries
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#convervative-filed" class="md-nav__link">
+    <span class="md-ellipsis">
+      convervative filed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proof-of-greens-case" class="md-nav__link">
+    <span class="md-ellipsis">
+      proof of greens (Case)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch-50-51-surface-area-and-surface-integral" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ch 50-51. - Surface Area and Surface Integral
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ch 50-51. - Surface Area and Surface Integral">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#area" class="md-nav__link">
+    <span class="md-ellipsis">
+      Area
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integral" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integral
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vector-valued" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vector-valued
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch-52-vector-derivatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ch 52. - Vector derivatives
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch-53-gauss-divergence-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ch 53. Gauss' Divergence Theorem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch-54-strokes-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ch 54. Stroke's Theorem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch-55-56-higher-dimension" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ch 55-56. Higher Dimension
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-12-exam-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 12 - Exam 2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-15-for-exam-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 15 - for exam 3
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-15-series" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 15 - Series
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 15 - Series">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition-of-convergence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definition of Convergence
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Definition of Convergence">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cauchy-criterien" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cauchy Criterien
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linearity-of-c-series" class="md-nav__link">
+    <span class="md-ellipsis">
+      linearity of c. series
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#absolute-convergenceac-and-a-a-" class="md-nav__link">
+    <span class="md-ellipsis">
+      Absolute convergence(a.c.) and a+, a-
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Absolute convergence(a.c.) and a+, a-">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comparison-test-ratio-test-root-test-for-ac" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparison Test / Ratio Test / Root Test (for a.c.)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#raabes-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      Raabe’s test
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test Conclusion
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conditional-convergence-cc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conditional convergence c.c.
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Conditional convergence c.c.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alternating-sequence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alternating sequence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dirichlets-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dirichlet’s test
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#abels-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      Abel’s test
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rearrangement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rearrangement
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Rearrangement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rearrangement-of-ac-series" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rearrangement of a.c. series
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rearrangement-of-cc-series" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rearrangement of c.c. series
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#double-series" class="md-nav__link">
+    <span class="md-ellipsis">
+      Double Series!!!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Double Series!!!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#product-of-ac-series-is-ac" class="md-nav__link">
+    <span class="md-ellipsis">
+      Product of a.c. series is a.c.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cauchy-product" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cauchy Product
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-15-sequence-of-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 15 - Sequence of functions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 15 - Sequence of functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pt-uni-uni-cauchy" class="md-nav__link">
+    <span class="md-ellipsis">
+      pt. uni. uni cauchy.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eq-def-of-uni-conv" class="md-nav__link">
+    <span class="md-ellipsis">
+      eq def of uni. conv
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uni-cont-target-cont" class="md-nav__link">
+    <span class="md-ellipsis">
+      uni + cont. =&gt; target cont.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weierstrass-approximation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Weierstrass approximation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dinis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dini's
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sery-of-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sery of function
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sery of function">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cauchy-for-uni-conv" class="md-nav__link">
+    <span class="md-ellipsis">
+      cauchy for uni conv
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#condition-of-swapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      condition of swapping
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hint-of-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hint of final
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LinearAlgebra_II/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linear Algebra II
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    NLP
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            NLP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NLP/stanford224n-home/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Stanford CS224n NLP with DL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Quantum
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Quantum
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Quantum/review_qarithmetic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Review: Quantum arithmetic with the Quantum Fourier Transform
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Quantum/review_qml_kernel_random/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Review: Learning with Optimized Random Features: Exponential Speedup by Quantum Machine Learning without Sparsity and Low-Rank Assumptions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Quantum/talk_grover/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction to QC, with Grover's Search
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Quantum/talk_qit_chsh/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quantum Information Theory: CHSH Game
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#week-1-1-332020" class="md-nav__link">
+    <span class="md-ellipsis">
+      week 1-1 (3/3/2020)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="week 1-1 (3/3/2020)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reimann-intergral" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reimann Intergral
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reimann Intergral">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#partition-and-refinement" class="md-nav__link">
+    <span class="md-ellipsis">
+      partition and refinement
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-1-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 1-2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 1-2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reimann-intergrability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reimann Intergrability
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refinement" class="md-nav__link">
+    <span class="md-ellipsis">
+      refinement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boundedness-and-monotonicity-integrability" class="md-nav__link">
+    <span class="md-ellipsis">
+      boundedness and monotonicity =&gt; integrability
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-1-3352020" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 1-3(3/5/2020)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 1-3(3/5/2020)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#part-1-pdf-32" class="md-nav__link">
+    <span class="md-ellipsis">
+      part 1 (pdf 32)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theorem-324-continuity-on-a-closed-interval-integrability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Theorem 32.4 : continuity on a closed interval =&gt; integrability
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theorem-325-the-intergrability-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Theorem 32.5 (the Intergrability Theorem)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#definition-326-content-zero-and-measure-zero" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definition 32.6 (content zero and measure zero)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theorem-327-contious-except-content-zero-implies-integrability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Theorem 32.7 (contious except content zero implies integrability)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theorem-328-the-riemann-lebesgue-theorem-in-one-variable-lebesgues-criterion-for-riemann-integrability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Theorem 32.8 (the Riemann-Lebesgue theorem in one variable: Lebesgue’s criterion for Riemann-integrability)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-2-103102020" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 2-1(03/10/2020)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 2-1(03/10/2020)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#theorem-331-the-fundamental-theorem-of-calculus" class="md-nav__link">
+    <span class="md-ellipsis">
+      Theorem 33.1 (the fundamental theorem of calculus)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-2-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 2-2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 2-2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-generalized-mean-value-theorem-for-integrals" class="md-nav__link">
+    <span class="md-ellipsis">
+      the Generalized Mean Value Theorem for Integrals
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integration-by-parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration by parts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-practice-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      advanced practice problem
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-2-32020312" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 2-3(2020/3/12)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 2-3(2020/3/12)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#several-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Several variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jordan-measurable-sets-and-riemann-intergrability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jordan Measurable sets and Riemann Intergrability
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Jordan Measurable sets and Riemann Intergrability">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#content-zero-and-jordan-measurable-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      content zero and Jordan measurable sets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="content zero and Jordan measurable sets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#content-zero" class="md-nav__link">
+    <span class="md-ellipsis">
+      content zero
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jordan-measurable" class="md-nav__link">
+    <span class="md-ellipsis">
+      ! Jordan measurable
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-study" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case study
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#continuity-except-content-zero-implies-riemann-integrability-on-a-rectangle" class="md-nav__link">
+    <span class="md-ellipsis">
+      continuity except content zero implies Riemann integrability on a rectangle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sufficient-conditions-for-content-zero" class="md-nav__link">
+    <span class="md-ellipsis">
+      sufficient conditions for content zero
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="sufficient conditions for content zero">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sufficient-conditions-for-riemann-integrability-on-a-bounded-region" class="md-nav__link">
+    <span class="md-ellipsis">
+      sufficient conditions for Riemann integrability on a bounded region
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zero-riemann-integral-and-its-corollaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      zero Riemann integral and its corollaries
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inter-and-outer-areas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inter and Outer Areas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hw1" class="md-nav__link">
+    <span class="md-ellipsis">
+      HW1
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HW1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#my-part-theorem-327-continuity-except-content-zero-intergrability" class="md-nav__link">
+    <span class="md-ellipsis">
+      My part - Theorem 32.7 - Continuity except content zero -&gt; intergrability
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-3-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 3-1
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 3-1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#practice-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practice Class
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#354-sufficient-conditions-for-riemann-integrability-on-a-bounded-region" class="md-nav__link">
+    <span class="md-ellipsis">
+      ! 35.4 sufficient conditions for Riemann integrability on a bounded region
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#355-zero-reimann-intergral" class="md-nav__link">
+    <span class="md-ellipsis">
+      35.5 zero Reimann intergral
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-3-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 3-2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 3-2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inner-area-and-outer-area" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inner Area and Outer Area
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theorem-333-norm-partition-can-bound-difference-to-u-l-r" class="md-nav__link">
+    <span class="md-ellipsis">
+      !Theorem 33.3 norm Partition can bound difference to U, L, R
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-3-2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 3-2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 3-2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mvts" class="md-nav__link">
+    <span class="md-ellipsis">
+      MVTs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MVTs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#theorem-361" class="md-nav__link">
+    <span class="md-ellipsis">
+      Theorem 36.1
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iterated-intergral-and-funinis-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Iterated Intergral and Funini's Theorem
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Iterated Intergral and Funini&#39;s Theorem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition-of-iterated-intergrals" class="md-nav__link">
+    <span class="md-ellipsis">
+      definition of iterated intergrals
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-4-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 4-1
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-4-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 4-2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 4-2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#change-of-valriables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Change of Valriables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lebesgues-criterion-for-integrablilitygo-back" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lebesgue's Criterion for integrablility(go back)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-4-3-x" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 4-3 (X)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-5-1-5-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 5-1 5-2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 5-1 5-2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#change-of-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Change of Variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theorem-391" class="md-nav__link">
+    <span class="md-ellipsis">
+      Theorem 39.1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#392" class="md-nav__link">
+    <span class="md-ellipsis">
+      39.2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#393-the-bounded-convergence-theoremwait-graduate-level-class-content" class="md-nav__link">
+    <span class="md-ellipsis">
+      39.3 the bounded convergence theorem(wait, graduate level class content)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#394" class="md-nav__link">
+    <span class="md-ellipsis">
+      39.4
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ch-40-41-improper-itergral" class="md-nav__link">
+    <span class="md-ellipsis">
+      ch 40, 41 Improper Itergral
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-course-turn-online" class="md-nav__link">
+    <span class="md-ellipsis">
+      The course turn online
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-9-2020428-ta-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 9 - 2020/4/28 TA class
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 9 - 2020/4/28 TA class">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proof-of-421" class="md-nav__link">
+    <span class="md-ellipsis">
+      proof of 42.1
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patition-to-2-part-need-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patition to 2 part need theorem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-122020520-self-study-for-exam-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 12(2020/5/20) - Self study for exam 2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch40-inproper-integral-i-s-is-not-bounded" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ch40. - Inproper Integral I (S is not bounded)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch-41-inproper-integral-ii-fs-is-not-bounded" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ch 41. - Inproper Integral II (f(S) is not bounded)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch-42-dirichlets-test-absolute-convergence-cauchy-principle-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ch 42. - Dirichlet's test / Absolute convergence / Cauchy principle value
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch-43-improper-integral-on-rk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ch 43. - Improper Integral on \(R^k\)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch-44-lebesgue-measure-lebesgue-measurable-definitionkey" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ch 44. - Lebesgue measure / Lebesgue measurable (Definition)(Key!)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ch 44. - Lebesgue measure / Lebesgue measurable (Definition)(Key!)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lebesgue-measurable-but-not-jordan-measurable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lebesgue measurable but not Jordan measurable
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#review-of-jorndan-measurable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Review of Jorndan Measurable
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch-45-lebesgue-integral" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ch 45. - Lebesgue Integral
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ch 45. - Lebesgue Integral">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4552-comment-is-important-for-complete-understanding" class="md-nav__link">
+    <span class="md-ellipsis">
+      45.5.2 Comment is important for complete understanding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#banach-tarski-paradoxsupplement" class="md-nav__link">
+    <span class="md-ellipsis">
+      banach tarski paradox(supplement)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch-46-riemann-stieltjes-integral" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ch 46. - Riemann-Stieltjes integral
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch-47-48" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ch 47-48
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ch 47-48">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arc-length-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arc Length / Work
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#line-integral-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      Line Integral / Work
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#differential-form-a-way-to-write-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      differential form (a way to write work??)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rectifiable-484" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rectifiable (48.4)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#review-of-ftc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Review of FTC
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch-49-greens-theorem2d-proj" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ch 49. - Green's theorem(2D proj.)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ch 49. - Green&#39;s theorem(2D proj.)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-greens-to-proof-corollaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Green's to proof corollaries
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#convervative-filed" class="md-nav__link">
+    <span class="md-ellipsis">
+      convervative filed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proof-of-greens-case" class="md-nav__link">
+    <span class="md-ellipsis">
+      proof of greens (Case)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch-50-51-surface-area-and-surface-integral" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ch 50-51. - Surface Area and Surface Integral
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ch 50-51. - Surface Area and Surface Integral">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#area" class="md-nav__link">
+    <span class="md-ellipsis">
+      Area
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integral" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integral
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vector-valued" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vector-valued
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch-52-vector-derivatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ch 52. - Vector derivatives
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch-53-gauss-divergence-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ch 53. Gauss' Divergence Theorem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch-54-strokes-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ch 54. Stroke's Theorem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch-55-56-higher-dimension" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ch 55-56. Higher Dimension
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-12-exam-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 12 - Exam 2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-15-for-exam-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 15 - for exam 3
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-15-series" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 15 - Series
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 15 - Series">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition-of-convergence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definition of Convergence
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Definition of Convergence">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cauchy-criterien" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cauchy Criterien
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linearity-of-c-series" class="md-nav__link">
+    <span class="md-ellipsis">
+      linearity of c. series
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#absolute-convergenceac-and-a-a-" class="md-nav__link">
+    <span class="md-ellipsis">
+      Absolute convergence(a.c.) and a+, a-
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Absolute convergence(a.c.) and a+, a-">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comparison-test-ratio-test-root-test-for-ac" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparison Test / Ratio Test / Root Test (for a.c.)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#raabes-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      Raabe’s test
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test Conclusion
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conditional-convergence-cc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conditional convergence c.c.
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Conditional convergence c.c.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alternating-sequence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alternating sequence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dirichlets-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dirichlet’s test
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#abels-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      Abel’s test
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rearrangement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rearrangement
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Rearrangement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rearrangement-of-ac-series" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rearrangement of a.c. series
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rearrangement-of-cc-series" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rearrangement of c.c. series
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#double-series" class="md-nav__link">
+    <span class="md-ellipsis">
+      Double Series!!!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Double Series!!!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#product-of-ac-series-is-ac" class="md-nav__link">
+    <span class="md-ellipsis">
+      Product of a.c. series is a.c.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cauchy-product" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cauchy Product
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-15-sequence-of-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 15 - Sequence of functions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week 15 - Sequence of functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pt-uni-uni-cauchy" class="md-nav__link">
+    <span class="md-ellipsis">
+      pt. uni. uni cauchy.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eq-def-of-uni-conv" class="md-nav__link">
+    <span class="md-ellipsis">
+      eq def of uni. conv
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uni-cont-target-cont" class="md-nav__link">
+    <span class="md-ellipsis">
+      uni + cont. =&gt; target cont.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weierstrass-approximation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Weierstrass approximation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dinis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dini's
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sery-of-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sery of function
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sery of function">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cauchy-for-uni-conv" class="md-nav__link">
+    <span class="md-ellipsis">
+      cauchy for uni conv
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#condition-of-swapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      condition of swapping
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hint-of-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hint of final
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+        <a href="../../tags/#tag:analysis" class="md-tag">Analysis</a>
+      
+    
+      
+      
+      
+        <a href="../../tags/#tag:math" class="md-tag">Math</a>
+      
+    
+      
+      
+      
+        <a href="../../tags/#tag:nycu" class="md-tag">NYCU</a>
+      
+    
+      
+      
+      
+        <a href="../../tags/#tag:note" class="md-tag">note</a>
+      
+    
+  </nav>
+
+
+  
+    <a href="https://github.com/EazyReal/eazyreal.github.io/tree/main/docs/Math/IntroRA_II.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/EazyReal/eazyreal.github.io/tree/main/docs/Math/IntroRA_II.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+<h1 id="introduction-to-analysis-ii">Introduction to Analysis II<a class="headerlink" href="#introduction-to-analysis-ii" title="Permanent link">&para;</a></h1>
+<p>Notes for Introduction to Analysis II.
+The screenshots are from the lecture notes of <a href="https://www.math.nctu.edu.tw/faculty/faculty_content.php?S_ID=14&amp;SC_ID=1">Prof. MC Li</a>.</p>
+<div class="toc">
+<ul>
+<li><a href="#introduction-to-analysis-ii">Introduction to Analysis II</a><ul>
+<li><a href="#week-1-1-332020">week 1-1 (3/3/2020)</a><ul>
+<li><a href="#reimann-intergral">Reimann Intergral</a><ul>
+<li><a href="#partition-and-refinement">partition and refinement</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#week-1-2">Week 1-2</a><ul>
+<li><a href="#reimann-intergrability">Reimann Intergrability</a></li>
+<li><a href="#refinement">refinement</a></li>
+<li><a href="#boundedness-and-monotonicity-integrability">boundedness and monotonicity =&gt; integrability</a></li>
+</ul>
+</li>
+<li><a href="#week-1-3352020">Week 1-3(3/5/2020)</a><ul>
+<li><a href="#part-1-pdf-32">part 1 (pdf 32)</a></li>
+<li><a href="#theorem-324-continuity-on-a-closed-interval-integrability">Theorem 32.4 : continuity on a closed interval =&gt; integrability</a></li>
+<li><a href="#theorem-325-the-intergrability-theorem">Theorem 32.5 (the Intergrability Theorem)</a></li>
+<li><a href="#definition-326-content-zero-and-measure-zero">Definition 32.6 (content zero and measure zero)</a></li>
+<li><a href="#theorem-327-contious-except-content-zero-implies-integrability">Theorem 32.7 (contious except content zero implies integrability)</a></li>
+<li><a href="#theorem-328-the-riemann-lebesgue-theorem-in-one-variable-lebesgues-criterion-for-riemann-integrability">Theorem 32.8 (the Riemann-Lebesgue theorem in one variable: Lebesgue’s criterion for Riemann-integrability)</a></li>
+</ul>
+</li>
+<li><a href="#week-2-103102020">Week 2-1(03/10/2020)</a><ul>
+<li><a href="#theorem-331-the-fundamental-theorem-of-calculus">Theorem 33.1 (the fundamental theorem of calculus)</a></li>
+</ul>
+</li>
+<li><a href="#week-2-2">Week 2-2</a><ul>
+<li><a href="#the-generalized-mean-value-theorem-for-integrals">the Generalized Mean Value Theorem for Integrals</a></li>
+<li><a href="#integration-by-parts">Integration by parts</a></li>
+<li><a href="#advanced-practice-problem">advanced practice problem</a></li>
+</ul>
+</li>
+<li><a href="#week-2-32020312">Week 2-3(2020/3/12)</a><ul>
+<li><a href="#several-variables">Several variables</a></li>
+<li><a href="#jordan-measurable-sets-and-riemann-intergrability">Jordan Measurable sets and Riemann Intergrability</a><ul>
+<li><a href="#content-zero-and-jordan-measurable-sets">content zero and Jordan measurable sets</a><ul>
+<li><a href="#content-zero">content zero</a></li>
+<li><a href="#jordan-measurable">! Jordan measurable</a></li>
+<li><a href="#case-study">Case study</a></li>
+</ul>
+</li>
+<li><a href="#continuity-except-content-zero-implies-riemann-integrability-on-a-rectangle">continuity except content zero implies Riemann integrability on a rectangle</a></li>
+<li><a href="#sufficient-conditions-for-content-zero">sufficient conditions for content zero</a><ul>
+<li><a href="#sufficient-conditions-for-riemann-integrability-on-a-bounded-region">sufficient conditions for Riemann integrability on a bounded region</a></li>
+<li><a href="#zero-riemann-integral-and-its-corollaries">zero Riemann integral and its corollaries</a></li>
+<li><a href="#inter-and-outer-areas">Inter and Outer Areas</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#hw1">HW1</a><ul>
+<li><a href="#reference">Reference</a></li>
+<li><a href="#my-part-theorem-327-continuity-except-content-zero-intergrability">My part - Theorem 32.7 - Continuity except content zero -&gt; intergrability</a></li>
+</ul>
+</li>
+<li><a href="#week-3-1">Week 3-1</a><ul>
+<li><a href="#practice-class">Practice Class</a></li>
+<li><a href="#354-sufficient-conditions-for-riemann-integrability-on-a-bounded-region">! 35.4 sufficient conditions for Riemann integrability on a bounded region</a></li>
+<li><a href="#355-zero-reimann-intergral">35.5 zero Reimann intergral</a></li>
+</ul>
+</li>
+<li><a href="#week-3-2">Week 3-2</a><ul>
+<li><a href="#inner-area-and-outer-area">Inner Area and Outer Area</a></li>
+<li><a href="#theorem-333-norm-partition-can-bound-difference-to-u-l-r">!Theorem 33.3 norm Partition can bound difference to U, L, R</a></li>
+</ul>
+</li>
+<li><a href="#week-3-2_1">Week 3-2</a><ul>
+<li><a href="#mvts">MVTs</a><ul>
+<li><a href="#theorem-361">Theorem 36.1</a></li>
+</ul>
+</li>
+<li><a href="#iterated-intergral-and-funinis-theorem">Iterated Intergral and Funini's Theorem</a><ul>
+<li><a href="#definition-of-iterated-intergrals">definition of iterated intergrals</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#week-4-1">Week 4-1</a></li>
+<li><a href="#week-4-2">Week 4-2</a><ul>
+<li><a href="#change-of-valriables">Change of Valriables</a></li>
+<li><a href="#lebesgues-criterion-for-integrablilitygo-back">Lebesgue's Criterion for integrablility(go back)</a></li>
+</ul>
+</li>
+<li><a href="#week-4-3-x">Week 4-3 (X)</a></li>
+<li><a href="#week-5-1-5-2">Week 5-1 5-2</a><ul>
+<li><a href="#change-of-variables">Change of Variables</a></li>
+<li><a href="#theorem-391">Theorem 39.1</a></li>
+<li><a href="#392">39.2</a></li>
+<li><a href="#393-the-bounded-convergence-theoremwait-graduate-level-class-content">39.3 the bounded convergence theorem(wait, graduate level class content)</a></li>
+<li><a href="#394">39.4</a></li>
+<li><a href="#ch-40-41-improper-itergral">ch 40, 41 Improper Itergral</a></li>
+</ul>
+</li>
+<li><a href="#the-course-turn-online">The course turn online</a></li>
+<li><a href="#week-9-2020428-ta-class">Week 9 - 2020/4/28 TA class</a><ul>
+<li><a href="#proof-of-421">proof of 42.1</a></li>
+</ul>
+</li>
+<li><a href="#patition-to-2-part-need-theorem">Patition to 2 part need theorem</a></li>
+<li><a href="#week-122020520-self-study-for-exam-2">Week 12(2020/5/20) - Self study for exam 2</a></li>
+<li><a href="#ch40-inproper-integral-i-s-is-not-bounded">Ch40. - Inproper Integral I (S is not bounded)</a></li>
+<li><a href="#ch-41-inproper-integral-ii-fs-is-not-bounded">Ch 41. - Inproper Integral II (f(S) is not bounded)</a></li>
+<li><a href="#ch-42-dirichlets-test-absolute-convergence-cauchy-principle-value">Ch 42. - Dirichlet's test / Absolute convergence / Cauchy principle value</a></li>
+<li><a href="#ch-43-improper-integral-on-rk">Ch 43. - Improper Integral on \(R^k\)</a></li>
+<li><a href="#ch-44-lebesgue-measure-lebesgue-measurable-definitionkey">Ch 44. - Lebesgue measure / Lebesgue measurable (Definition)(Key!)</a><ul>
+<li><a href="#lebesgue-measurable-but-not-jordan-measurable">Lebesgue measurable but not Jordan measurable</a></li>
+<li><a href="#review-of-jorndan-measurable">Review of Jorndan Measurable</a></li>
+</ul>
+</li>
+<li><a href="#ch-45-lebesgue-integral">Ch 45. - Lebesgue Integral</a><ul>
+<li><a href="#4552-comment-is-important-for-complete-understanding">45.5.2 Comment is important for complete understanding</a></li>
+<li><a href="#banach-tarski-paradoxsupplement">banach tarski paradox(supplement)</a></li>
+</ul>
+</li>
+<li><a href="#ch-46-riemann-stieltjes-integral">Ch 46. - Riemann-Stieltjes integral</a></li>
+<li><a href="#ch-47-48">Ch 47-48</a><ul>
+<li><a href="#arc-length-work">Arc Length / Work</a></li>
+<li><a href="#line-integral-work">Line Integral / Work</a></li>
+<li><a href="#differential-form-a-way-to-write-work">differential form (a way to write work??)</a></li>
+<li><a href="#rectifiable-484">Rectifiable (48.4)</a></li>
+</ul>
+</li>
+<li><a href="#review-of-ftc">Review of FTC</a></li>
+<li><a href="#ch-49-greens-theorem2d-proj">Ch 49. - Green's theorem(2D proj.)</a><ul>
+<li><a href="#use-greens-to-proof-corollaries">Use Green's to proof corollaries</a></li>
+<li><a href="#convervative-filed">convervative filed</a></li>
+<li><a href="#proof-of-greens-case">proof of greens (Case)</a></li>
+</ul>
+</li>
+<li><a href="#ch-50-51-surface-area-and-surface-integral">Ch 50-51. - Surface Area and Surface Integral</a><ul>
+<li><a href="#area">Area</a></li>
+<li><a href="#integral">Integral</a></li>
+<li><a href="#vector-valued">Vector-valued</a></li>
+</ul>
+</li>
+<li><a href="#ch-52-vector-derivatives">Ch 52. - Vector derivatives</a></li>
+<li><a href="#ch-53-gauss-divergence-theorem">Ch 53. Gauss' Divergence Theorem</a></li>
+<li><a href="#ch-54-strokes-theorem">Ch 54. Stroke's Theorem</a></li>
+<li><a href="#ch-55-56-higher-dimension">Ch 55-56. Higher Dimension</a></li>
+<li><a href="#week-12-exam-2">Week 12 - Exam 2</a></li>
+<li><a href="#week-15-for-exam-3">Week 15 - for exam 3</a></li>
+<li><a href="#week-15-series">Week 15 - Series</a><ul>
+<li><a href="#definition-of-convergence">Definition of Convergence</a><ul>
+<li><a href="#cauchy-criterien">Cauchy Criterien</a></li>
+<li><a href="#linearity-of-c-series">linearity of c. series</a></li>
+</ul>
+</li>
+<li><a href="#absolute-convergenceac-and-a-a-">Absolute convergence(a.c.) and a+, a-</a><ul>
+<li><a href="#comparison-test-ratio-test-root-test-for-ac">Comparison Test / Ratio Test / Root Test (for a.c.)</a></li>
+<li><a href="#raabes-test">Raabe’s test</a></li>
+<li><a href="#test-conclusion">Test Conclusion</a></li>
+</ul>
+</li>
+<li><a href="#conditional-convergence-cc">Conditional convergence c.c.</a><ul>
+<li><a href="#alternating-sequence">Alternating sequence</a></li>
+<li><a href="#dirichlets-test">Dirichlet’s test</a></li>
+<li><a href="#abels-test">Abel’s test</a></li>
+</ul>
+</li>
+<li><a href="#rearrangement">Rearrangement</a><ul>
+<li><a href="#rearrangement-of-ac-series">Rearrangement of a.c. series</a></li>
+<li><a href="#rearrangement-of-cc-series">Rearrangement of c.c. series</a></li>
+</ul>
+</li>
+<li><a href="#double-series">Double Series!!!</a><ul>
+<li><a href="#product-of-ac-series-is-ac">Product of a.c. series is a.c.</a></li>
+<li><a href="#cauchy-product">Cauchy Product</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#week-15-sequence-of-functions">Week 15 - Sequence of functions</a><ul>
+<li><a href="#pt-uni-uni-cauchy">pt. uni. uni cauchy.</a></li>
+<li><a href="#eq-def-of-uni-conv">eq def of uni. conv</a></li>
+<li><a href="#uni-cont-target-cont">uni + cont. =&gt; target cont.</a></li>
+<li><a href="#weierstrass-approximation">Weierstrass approximation</a></li>
+<li><a href="#dinis">Dini's</a></li>
+</ul>
+</li>
+<li><a href="#sery-of-function">Sery of function</a><ul>
+<li><a href="#cauchy-for-uni-conv">cauchy for uni conv</a></li>
+<li><a href="#condition-of-swapping">condition of swapping</a></li>
+<li><a href="#hint-of-final">Hint of final</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="week-1-1-332020">week 1-1 (3/3/2020)<a class="headerlink" href="#week-1-1-332020" title="Permanent link">&para;</a></h2>
+<h3 id="reimann-intergral">Reimann Intergral<a class="headerlink" href="#reimann-intergral" title="Permanent link">&para;</a></h3>
+<h4 id="partition-and-refinement">partition and refinement<a class="headerlink" href="#partition-and-refinement" title="Permanent link">&para;</a></h4>
+<ul>
+<li>refinement = add points to partition</li>
+<li>definition of Reimann sum (<span class="arithmatex">\(U_f(P), L_f(P), R_f(P)\)</span>)<ul>
+<li>show  <span class="arithmatex">\(L_f(P) \le L_f(Q)\)</span> and <span class="arithmatex">\(U_f(P) \ge U_f(Q)\)</span></li>
+<li>hint : <span class="arithmatex">\(Q = P \cup (Q-P)\)</span> </li>
+</ul>
+</li>
+<li>Reimann intergral</li>
+<li>Reimann intergrability 
+:::info
+Proof of Prop. 31.3</li>
+</ul>
+<p>31.3.1
+since f is <span class="arithmatex">\(bounded\)</span>, by the <span class="arithmatex">\(completeness\)</span> of <span class="arithmatex">\(R\)</span>,
+<span class="arithmatex">\(m_i \le f(x_i) \le M_i\)</span> are all well defined.</p>
+<p>31.3.2</p>
+<p>:::</p>
+<h2 id="week-1-2">Week 1-2<a class="headerlink" href="#week-1-2" title="Permanent link">&para;</a></h2>
+<h3 id="reimann-intergrability">Reimann Intergrability<a class="headerlink" href="#reimann-intergrability" title="Permanent link">&para;</a></h3>
+<ul>
+<li>http://home.iitk.ac.in/~psraj/mth101/lecture_notes/lecture15-16.pdf</li>
+<li>inf and suf and reimann intergral definition
+<img alt="" src="https://i.imgur.com/6cBS3AF.png =30%x" /></li>
+</ul>
+<h3 id="refinement">refinement<a class="headerlink" href="#refinement" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="https://i.imgur.com/XYx6J5Y.png" />
+Note: proof of equivalence part use the property of inf and sup 
+<img alt="" src="https://i.imgur.com/U8VwsNN.png =80%x" />
+<img alt="" src="https://i.imgur.com/7CYSkNE.png =80%x" /></p>
+<h3 id="boundedness-and-monotonicity-integrability">boundedness and monotonicity =&gt; integrability<a class="headerlink" href="#boundedness-and-monotonicity-integrability" title="Permanent link">&para;</a></h3>
+<ul>
+<li>P = <span class="arithmatex">\(\{a=x_0&lt;x_1&lt;...&lt;x_n=b\}\)</span> where <span class="arithmatex">\(x_i = a+i\frac{b-a}{n}\)</span></li>
+<li><span class="arithmatex">\(U_f(P) - L_f(P) = \frac{b-a}{n}[f(b)-f(a)]\)</span></li>
+<li>Q.E.D</li>
+<li>end of class</li>
+</ul>
+<h2 id="week-1-3352020">Week 1-3(3/5/2020)<a class="headerlink" href="#week-1-3352020" title="Permanent link">&para;</a></h2>
+<h3 id="part-1-pdf-32">part 1 (pdf 32)<a class="headerlink" href="#part-1-pdf-32" title="Permanent link">&para;</a></h3>
+<h3 id="theorem-324-continuity-on-a-closed-interval-integrability">Theorem 32.4 : <strong>continuity</strong> on a <strong>closed</strong> interval =&gt; <strong>integrability</strong><a class="headerlink" href="#theorem-324-continuity-on-a-closed-interval-integrability" title="Permanent link">&para;</a></h3>
+<ul>
+<li>closed and bounded on <span class="arithmatex">\(R\)</span> <span class="arithmatex">\(\implies\)</span> compact</li>
+<li>teacher hint : <strong>continuity and compact</strong> relation</li>
+<li><a href="https://proofwiki.org/wiki/Continuous_Image_of_Compact_Space_is_Compact">review: compact - f(cont.) -&gt; compact</a><ul>
+<li>not used here</li>
+</ul>
+</li>
+<li>Theorem 11.3 says <a href="https://math.stackexchange.com/questions/110573/continuous-mapping-on-a-compact-metric-space-is-uniformly-continuous">f is continuous on a compact space then it is uniformly continuous</a></li>
+<li><span class="arithmatex">\(f\)</span> is <span class="arithmatex">\(uniformly\ continuous\)</span> on <span class="arithmatex">\([a, b]\)</span></li>
+<li>the left is trivial</li>
+<li>let P be a partition with <span class="arithmatex">\(|x_{i+1}-x_i|\lt\delta\)</span></li>
+<li>then <span class="arithmatex">\(M_i-m_i \le \epsilon\ \forall i\)</span> by uniform continuouity</li>
+<li>(actually) <span class="arithmatex">\(\forall \epsilon\ \exists \delta\)</span></li>
+<li>then <span class="arithmatex">\(U_f(P) - L_f(P) = \sum (M_i-m_i)*(x_i-x_{i-1})\)</span></li>
+<li><span class="arithmatex">\(\le \epsilon \sum (x_i-x_{i-1})\)</span></li>
+<li><span class="arithmatex">\(= \epsilon (b-a)\)</span></li>
+<li>then for more formal proof replace <span class="arithmatex">\(\epsilon\)</span> with <span class="arithmatex">\(\frac{\epsilon}{3*(b-a)}\)</span></li>
+<li><span class="arithmatex">\(Q.E.D.\)</span></li>
+</ul>
+<h3 id="theorem-325-the-intergrability-theorem">Theorem 32.5 (<strong>the Intergrability Theorem</strong>)<a class="headerlink" href="#theorem-325-the-intergrability-theorem" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="arithmatex">\(If\ f\ :\ [a, b]\rightarrow\mathbb{R}\ be\  continous\ at\ all\ except\ finite\ many\ points\ in\ [a,b]\)</span></li>
+<li><span class="arithmatex">\(then\ f\ is\ Reimann\ integrable\ on\ [a,b]\)</span></li>
+<li>proof:</li>
+<li>key idea : remove not continous points</li>
+<li>let M, m be global <span class="arithmatex">\(suf\)</span> <span class="arithmatex">\(inf\)</span></li>
+<li>reduce to <span class="arithmatex">\(((M-m)+(b-a))*\epsilon\)</span></li>
+</ul>
+<!--
+* {not continous points} finite => exist M, m
+-->
+
+<ul>
+<li>To review, when will <span class="arithmatex">\(Min, Max\)</span> exist<ul>
+<li>compact in <span class="arithmatex">\(\mathbb{R}\)</span>, closed and bounded</li>
+<li>idea : proof <span class="arithmatex">\(I\)</span> bounded + <span class="arithmatex">\(sup/inf \in I\)</span>?</li>
+</ul>
+</li>
+</ul>
+<h3 id="definition-326-content-zero-and-measure-zero">Definition 32.6 (content zero and measure zero)<a class="headerlink" href="#definition-326-content-zero-and-measure-zero" title="Permanent link">&para;</a></h3>
+<ul>
+<li>see pdf definition</li>
+<li>show <span class="arithmatex">\(\{\frac{1}{n}\mid n\in\mathbb{N}\}\)</span> is content zero<ul>
+<li>only finite elements out of <span class="arithmatex">\(epsilon\)</span> range</li>
+</ul>
+</li>
+<li>show Q is measure zero<ul>
+<li>show that length of <span class="arithmatex">\({\bigcup^{\infty}_{0}}I_i\)</span> is finite(by <span class="arithmatex">\(\epsilon(1+\frac{1}{2}+\frac{1}{4}+...)\)</span> trick</li>
+</ul>
+</li>
+</ul>
+<h3 id="theorem-327-contious-except-content-zero-implies-integrability">Theorem 32.7 (contious except content zero implies integrability)<a class="headerlink" href="#theorem-327-contious-except-content-zero-implies-integrability" title="Permanent link">&para;</a></h3>
+<ul>
+<li>similar method with 32.5</li>
+<li>sketch of proof</li>
+<li>try to remove the points like we did in Theorem 32.5</li>
+<li>use definition of content zero</li>
+<li>show <span class="arithmatex">\([a,b]-{\bigcup^{k}_{0}}I_i\)</span> is compact by removing boundary of <span class="arithmatex">\(I_i\)</span></li>
+</ul>
+<h3 id="theorem-328-the-riemann-lebesgue-theorem-in-one-variable-lebesgues-criterion-for-riemann-integrability">Theorem 32.8 (the Riemann-Lebesgue theorem in one variable: Lebesgue’s criterion for Riemann-integrability)<a class="headerlink" href="#theorem-328-the-riemann-lebesgue-theorem-in-one-variable-lebesgues-criterion-for-riemann-integrability" title="Permanent link">&para;</a></h3>
+<ul>
+<li>mentioned, will cover if have time</li>
+<li>Theorem 32.9 : my guess by substraction and 32.5</li>
+<li>Theorem 33.1 (the fundamental theorem of calculus) </li>
+</ul>
+<h2 id="week-2-103102020">Week 2-1(03/10/2020)<a class="headerlink" href="#week-2-103102020" title="Permanent link">&para;</a></h2>
+<h3 id="theorem-331-the-fundamental-theorem-of-calculus">Theorem 33.1 (the fundamental theorem of calculus)<a class="headerlink" href="#theorem-331-the-fundamental-theorem-of-calculus" title="Permanent link">&para;</a></h3>
+<ul>
+<li>part1</li>
+<li>proof sketch:<ul>
+<li>Riemann integrable <span class="arithmatex">\(\implies\)</span> <strong>bounded</strong> on <span class="arithmatex">\([a,b]\)</span></li>
+<li><span class="arithmatex">\(\exists M &gt; 0 \ni |f(t)| \le M \forall t \in (a,b)\)</span></li>
+<li>then uniform continuity on <span class="arithmatex">\([a, b]\)</span> is trivial<ul>
+<li><span class="arithmatex">\(\forall x,y \in [a,b] \ni |x-y|&lt;\delta\)</span></li>
+<li><span class="arithmatex">\(|\int_{a}^{x}f(t)dt - \int_{a}^{y}f(t)dt| \le M*\delta\)</span></li>
+<li><span class="arithmatex">\(\epsilon - \delta\)</span> trick, M is constant</li>
+</ul>
+</li>
+<li>def of <strong>f continuous</strong></li>
+<li><span class="arithmatex">\(for\ x \in [a,b] \ni x &gt; x_0\)</span></li>
+<li><strong>express</strong> <span class="arithmatex">\(f(x_0)\)</span> as <span class="arithmatex">\(f(x_0)\frac{\int_{x0}^{x}1dt}{x-x_0} = \frac{\int_{x0}^{x}f(x_0)dt}{x-x_0}\)</span></li>
+<li>we have <span class="arithmatex">\(\frac{\int_{a}^{x}f(t)dt - \int_{a}^{x0}f(t)dt}{x-x_0} - f(x_0) = \frac{\int_{a}^{x}f(t)dt - \int_{a}^{x0}f(t)dt}{x-x_0} - \frac{\int_{x0}^{x}f(x_0)dt}{x-x_0}\)</span></li>
+<li>thus if <span class="arithmatex">\(x \in [a,b] \ni x_0&lt;x&lt;x_0+\delta\)</span></li>
+<li>then <span class="arithmatex">\(|\frac{\int_{a}^{x}f(t)dt - \int_{a}^{x0}f(t)dt}{x-x_0} - \frac{\int_{x0}^{x}f(x_0)dt}{x-x_0}| = |\frac{\int_{x_0}^{x}f(t)-f(x_0)dt}{x-x_0}| \le \frac{\int_{x_0}^{x}|f(t)-f(x_0)|dt}{|x-x_0|}\)</span></li>
+<li>since f is continuous</li>
+<li><span class="arithmatex">\(\frac{\int_{x_0}^{x}|f(t)-f(x_0)|dt}{|x-x_0|} &lt; \frac{\int_{x_0}^{x} \epsilon dt}{x-x_0} = \epsilon\)</span></li>
+<li><span class="arithmatex">\(x &lt; x_0\)</span> case can be done similarly</li>
+<li>above proves <span class="arithmatex">\(<span class="arithmatex">\(\frac{d}{dt}(\int_{a}^{x}f(t)dt)\mid_{x=x_0} = f(x_0)\ \forall x_0\ at\ which\ f\ is\ continous\)</span>\)</span></li>
+</ul>
+</li>
+<li>part2 : <span class="arithmatex">\(\int_{a}^{b}f(t)dt = F(b)-F(a)\)</span></li>
+<li>proof sketch:<ul>
+<li>by def <span class="arithmatex">\(\forall \epsilon \exists\ partition\ P \ni U_f(P)-L_f(P) &lt; \epsilon\)</span> </li>
+<li>make a <strong>refinement Q of P to exlude finite indifferentiable points</strong> </li>
+<li>apply <strong>MVT</strong>(mean value theorem) to intervals<ul>
+<li><span class="arithmatex">\(F(b)-F(a) = \sum F(x_i)-F(x_{i-1})\)</span></li>
+<li>= <span class="arithmatex">\(\sum F^{'}(t_i)(x_i-x_{i-1})\)</span></li>
+<li>= <span class="arithmatex">\(\sum f(t_i)(x_i-x_{i-1})\)</span></li>
+</ul>
+</li>
+<li><span class="arithmatex">\(L_f(Q) \le F(b)-F(a) \le U_f(Q)\)</span></li>
+<li><span class="arithmatex">\(L_f(P) \le \int_{a}^{b}f(t)dt \le U_f(P)\)</span></li>
+<li>then <span class="arithmatex">\(|\int_{a}^{b}f(t)dt-(F(b)-F(a))| &lt; \epsilon\)</span></li>
+</ul>
+</li>
+</ul>
+<h2 id="week-2-2">Week 2-2<a class="headerlink" href="#week-2-2" title="Permanent link">&para;</a></h2>
+<ul>
+<li>pass
+<img alt="" src="https://i.imgur.com/U1vzhH7.png" /></li>
+</ul>
+<h3 id="the-generalized-mean-value-theorem-for-integrals">the Generalized Mean Value Theorem for Integrals<a class="headerlink" href="#the-generalized-mean-value-theorem-for-integrals" title="Permanent link">&para;</a></h3>
+<h3 id="integration-by-parts">Integration by parts<a class="headerlink" href="#integration-by-parts" title="Permanent link">&para;</a></h3>
+<h3 id="advanced-practice-problem">advanced practice problem<a class="headerlink" href="#advanced-practice-problem" title="Permanent link">&para;</a></h3>
+<h2 id="week-2-32020312">Week 2-3(2020/3/12)<a class="headerlink" href="#week-2-32020312" title="Permanent link">&para;</a></h2>
+<h3 id="several-variables">Several variables<a class="headerlink" href="#several-variables" title="Permanent link">&para;</a></h3>
+<ul>
+<li>rectangle<ul>
+<li>def is similar with 2d rectangle partition</li>
+</ul>
+</li>
+<li>for general bounded region<ul>
+<li>for such S, use rectangle "disk" <span class="arithmatex">\(D\supseteq S\)</span> + characteristic function <span class="arithmatex">\(\chi_S(x, y)\)</span></li>
+<li>def characteristic function <span class="arithmatex">\(\chi_S(x, y) : \mathbb{R}^2 \rightarrow \{0,1\}\)</span></li>
+<li>then can define <span class="arithmatex">\(\iint_SfdA = \iint_D(f_{\chi _S})dA\)</span></li>
+</ul>
+</li>
+<li>fact : <span class="arithmatex">\(S1 \cup S2\)</span> is Reimann intergrable doesnt <span class="arithmatex">\(\implies\)</span> <span class="arithmatex">\(S1\ and\ S2\)</span> are<ul>
+<li>consider s1 + s2 = 0</li>
+</ul>
+</li>
+</ul>
+<h3 id="jordan-measurable-sets-and-riemann-intergrability">Jordan Measurable sets and Riemann Intergrability<a class="headerlink" href="#jordan-measurable-sets-and-riemann-intergrability" title="Permanent link">&para;</a></h3>
+<h4 id="content-zero-and-jordan-measurable-sets">content zero and Jordan measurable sets<a class="headerlink" href="#content-zero-and-jordan-measurable-sets" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="https://i.imgur.com/NSEzLYX.png" /></p>
+<h5 id="content-zero">content zero<a class="headerlink" href="#content-zero" title="Permanent link">&para;</a></h5>
+<ul>
+<li>bounded and <span class="arithmatex">\(\subset \mathbb{R}^k\)</span></li>
+<li>if for any <span class="arithmatex">\(\epsilon\)</span> &gt; 0 there exists a <strong>finite</strong> collection of k-dimensional rectangular boxes <span class="arithmatex">\(D_1, D_2, ..., D_n \ni Z \subseteq \cup_{i=1}^{n}D_i\)</span> and <span class="arithmatex">\(\sum volume(D_i)&lt;\epsilon\)</span></li>
+</ul>
+<h5 id="jordan-measurable">! Jordan measurable<a class="headerlink" href="#jordan-measurable" title="Permanent link">&para;</a></h5>
+<ul>
+<li>A bounded set <span class="arithmatex">\(S \subset \mathbb{R}\)</span></li>
+<li><span class="arithmatex">\(\mathbb{\delta} S\)</span> is content zero</li>
+</ul>
+<h5 id="case-study">Case study<a class="headerlink" href="#case-study" title="Permanent link">&para;</a></h5>
+<p>consider <span class="arithmatex">\(\mathbb{Q}\)</span> / <a href="https://en.wikipedia.org/wiki/Cantor_set">Cantor Set</a> / Fat Cantor Set / set bounded by Sierpinski Curve
+all of them are not Jordan measurable</p>
+<h4 id="continuity-except-content-zero-implies-riemann-integrability-on-a-rectangle">continuity except content zero implies Riemann integrability on a rectangle<a class="headerlink" href="#continuity-except-content-zero-implies-riemann-integrability-on-a-rectangle" title="Permanent link">&para;</a></h4>
+<h4 id="sufficient-conditions-for-content-zero">sufficient conditions for content zero<a class="headerlink" href="#sufficient-conditions-for-content-zero" title="Permanent link">&para;</a></h4>
+<ul>
+<li>set relationship<ul>
+<li>subset =&gt; ok</li>
+<li>finite union =&gt; ok</li>
+<li>countable union =&gt; content X, measure V</li>
+</ul>
+</li>
+<li>let <span class="arithmatex">\(f : (a,b)\rightarrow \mathbb{R}^2\ be\ C^1\ function\)</span></li>
+<li>
+<p><span class="arithmatex">\(f([c,d])\)</span> is content zero when <span class="arithmatex">\([c,d] \in (a,b)\)</span>
+::: info
+<span class="arithmatex">\(C^1 \implies M = max\{|f'(x)| \mid x \in [c,d]\}\)</span> exists
+let <span class="arithmatex">\(\epsilon&gt;0\)</span>, Take <span class="arithmatex">\(n \in \mathbb{N} \ni \frac{?}{n} \lt \epsilon\)</span>
+partition [c, d] to n equal-length parts
+let <span class="arithmatex">\(f = (f_1,f_2)\)</span>, by MVT to <span class="arithmatex">\(f_1\)</span> and <span class="arithmatex">\(f_2\)</span>
+<span class="arithmatex">\(|f_k(x)-f_k(x_i)| \le M*(x_{i}-x) \forall x \in [x_{i-1}, x]\)</span>
+<span class="arithmatex">\(|f_k(x)-f_k(x_i)| \le M*\frac{d-c}{n}\)</span>
+Hence <span class="arithmatex">\(f([x_{i-1},x_i])\)</span> is contained in the rectangle <span class="arithmatex">\(D_i\)</span> centered at <span class="arithmatex">\(\vec{f(x_i)}\)</span> with side length <span class="arithmatex">\(\frac{2M(d-c)}{n}\)</span>
+then volume of cover is <span class="arithmatex">\((\frac{2M(d-c)}{n})^2*n \lt \epsilon\)</span>
+:::</p>
+</li>
+<li>
+<p>case for <span class="arithmatex">\(C^0\)</span> not holds</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Peano_Curve">Peano Curve</a> : <span class="arithmatex">\(C^0(\mathbb{R}, \mathbb{R}^2)\)</span></li>
+<li><a href="https://en.wikipedia.org/wiki/Cantor_function">Cantor function</a> restrictedto the Cantor set of measure zero</li>
+</ul>
+</li>
+</ul>
+<h5 id="sufficient-conditions-for-riemann-integrability-on-a-bounded-region">sufficient conditions for Riemann integrability on a bounded region<a class="headerlink" href="#sufficient-conditions-for-riemann-integrability-on-a-bounded-region" title="Permanent link">&para;</a></h5>
+<h5 id="zero-riemann-integral-and-its-corollaries">zero Riemann integral and its corollaries<a class="headerlink" href="#zero-riemann-integral-and-its-corollaries" title="Permanent link">&para;</a></h5>
+<h5 id="inter-and-outer-areas">Inter and Outer Areas<a class="headerlink" href="#inter-and-outer-areas" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="https://i.imgur.com/iIgKVu3.png" /></p>
+<h2 id="hw1">HW1<a class="headerlink" href="#hw1" title="Permanent link">&para;</a></h2>
+<h3 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://www.math.cuhk.edu.hk/course_builder/1415/math2060b/Notes%202%20Riemann%20Integration%202015.pdf">Intergrability Critiriens</a></li>
+</ul>
+<h3 id="my-part-theorem-327-continuity-except-content-zero-intergrability">My part - Theorem 32.7 - Continuity except content zero -&gt; intergrability<a class="headerlink" href="#my-part-theorem-327-continuity-except-content-zero-intergrability" title="Permanent link">&para;</a></h3>
+<p>:::info
+proof:
+by the definition of content zero 
+proof by content zero intergral = 0
+not the cutting technique
+<span class="arithmatex">\(\int_{[a,b]}f = \int_{S}f + \int_{S^{'}}f\)</span>
+where <span class="arithmatex">\(S^{'}\)</span> is the content zero part
+proof each part of S' is intergrable and sum of them abs &lt;= 0 , hint : use <span class="arithmatex">\(max(|M|, |m|)\epsilon\)</span>
+=&gt; <span class="arithmatex">\(\int_{[a,b]}f\)</span> is well defined
+Q.E.D.
+:::</p>
+<p>:::spoiler
+the picture solution is not that correct
+should deal with closed interval more carefully
+and use <span class="arithmatex">\(max(|M|, |m|)\epsilon\)</span> to proof eq 0
+<img alt="" src="https://i.imgur.com/59KlAbY.jpg" />
+:::</p>
+<h2 id="week-3-1">Week 3-1<a class="headerlink" href="#week-3-1" title="Permanent link">&para;</a></h2>
+<h3 id="practice-class">Practice Class<a class="headerlink" href="#practice-class" title="Permanent link">&para;</a></h3>
+<h3 id="354-sufficient-conditions-for-riemann-integrability-on-a-bounded-region">! 35.4 sufficient conditions for Riemann integrability on a bounded region<a class="headerlink" href="#354-sufficient-conditions-for-riemann-integrability-on-a-bounded-region" title="Permanent link">&para;</a></h3>
+<ul>
+<li>union of 2 content zero is content zero</li>
+<li>the discontinuous parts are <span class="arithmatex">\(\delta S\)</span> and <span class="arithmatex">\(Z\)</span> so <span class="arithmatex">\(D\)</span> is still intergrable</li>
+</ul>
+<h3 id="355-zero-reimann-intergral">35.5 zero Reimann intergral<a class="headerlink" href="#355-zero-reimann-intergral" title="Permanent link">&para;</a></h3>
+<p>content zero and f bounded =&gt; intergrable and intergral = 0</p>
+<ul>
+<li>end of class</li>
+</ul>
+<h2 id="week-3-2">Week 3-2<a class="headerlink" href="#week-3-2" title="Permanent link">&para;</a></h2>
+<h3 id="inner-area-and-outer-area">Inner Area and Outer Area<a class="headerlink" href="#inner-area-and-outer-area" title="Permanent link">&para;</a></h3>
+<ul>
+<li>concept : lattice </li>
+</ul>
+<h3 id="theorem-333-norm-partition-can-bound-difference-to-u-l-r">!Theorem 33.3 norm Partition can bound difference to U, L, R<a class="headerlink" href="#theorem-333-norm-partition-can-bound-difference-to-u-l-r" title="Permanent link">&para;</a></h3>
+<ul>
+<li>will be useful for future proof</li>
+<li><span class="arithmatex">\(\forall \epsilon &gt;0 \exists \delta &gt; 0\)</span> s.t. if  P is a partition with <span class="arithmatex">\(norm( P ) &lt; \delta\)</span>,  <span class="arithmatex">\(max\{|\int_a^bf(x)dx - R_f(P)|, \int_a^bf(x)dx - U_f(P)|, \int_a^bf(x)dx - L_f(P)|\} &lt; \epsilon\)</span></li>
+<li>proof sketch(U part)<ul>
+<li>by theorem 32.1 equivalent condition for Riemann integrability</li>
+<li>=&gt; get a partition <span class="arithmatex">\(Q\)</span> s.t. <span class="arithmatex">\(U-L &lt; \frac{\epsilon}{2}\)</span> </li>
+<li>let the norm-limited partition be <span class="arithmatex">\(P\)</span></li>
+<li><span class="arithmatex">\(\lambda\)</span> for <span class="arithmatex">\(P\)</span> can be generated from <span class="arithmatex">\(\epsilon\)</span> and <span class="arithmatex">\(|Q|\)</span></li>
+<li>key<ul>
+<li>refer to P's refinement <span class="arithmatex">\(P\cup Q\)</span>, and the fact that <span class="arithmatex">\(|Q|\)</span> is finitely given by <span class="arithmatex">\(\epsilon\)</span></li>
+<li>see <span class="arithmatex">\(P\cup Q\)</span> as <span class="arithmatex">\(Q\)</span> injected to <span class="arithmatex">\(P\)</span></li>
+</ul>
+</li>
+<li>make <span class="arithmatex">\(\delta\)</span> bounded by <span class="arithmatex">\(\frac{\epsilon}{4*M*|Q|}\)</span>(teacher's version) or <span class="arithmatex">\(\frac{\epsilon}{2*(M-m)*|Q|}\)</span></li>
+<li><span class="arithmatex">\(U_f(P) - U_f(P\cup Q) \le (M-m)\delta*|Q|\)</span></li>
+<li><span class="arithmatex">\(U_f(P) \le U_f(P\cup Q) + \frac{\epsilon}{2}\)</span></li>
+<li><span class="arithmatex">\(U_f(P) \le \int_a^bf(x)dx + \frac{\epsilon}{2} + \frac{\epsilon}{2}\)</span><ul>
+<li>by choice of <span class="arithmatex">\(Q\)</span> and <span class="arithmatex">\(P\cup Q\)</span> is refinement</li>
+</ul>
+</li>
+<li><span class="arithmatex">\(U_f(P) \ge \int_a^bf(x)dx - \epsilon\)</span> by definition of intergral</li>
+<li><span class="arithmatex">\(|\int_a^bf(x)dx - U_f(P)| \le \epsilon\)</span> </li>
+</ul>
+</li>
+</ul>
+<h2 id="week-3-2_1">Week 3-2<a class="headerlink" href="#week-3-2_1" title="Permanent link">&para;</a></h2>
+<h3 id="mvts">MVTs<a class="headerlink" href="#mvts" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="https://i.imgur.com/zNbWjKm.png" /></p>
+<h4 id="theorem-361">Theorem 36.1<a class="headerlink" href="#theorem-361" title="Permanent link">&para;</a></h4>
+<ul>
+<li>proof sketch:<ul>
+<li>f is continuouson S and S compact</li>
+<li>Extreme Value Theorem =&gt; Max and Min Exists<ul>
+<li>i.e. <span class="arithmatex">\(\exists p, q \in S \ni f(p) = sup, f(q) = inf\)</span></li>
+<li>https://en.wikipedia.org/wiki/Extreme_value_theorem</li>
+<li>see the generalized version </li>
+</ul>
+</li>
+<li><span class="arithmatex">\(mg(x) \le f(x)g(x) \le Mg(x)\)</span></li>
+<li>since both f and g are continuous on S and S is Jordan measurable</li>
+<li>so <span class="arithmatex">\(m\int_Sg(x)d^kx \le \int_S f(x)g(x)d^kx \le M\int_Sg(x)d^kx)\)</span></li>
+<li>if <span class="arithmatex">\(\int_Sg(x)d^kx = 0\)</span> always hold, take any <span class="arithmatex">\(c \in S\)</span></li>
+<li>else by corollary 10.4 (IVT for several variables)</li>
+<li>S is connected, f is continous on S</li>
+<li><span class="arithmatex">\(m \le \frac{\int_S f(x)g(x)d^kx}{\int_S g(x)d^kx} \le M\)</span></li>
+</ul>
+</li>
+</ul>
+<h3 id="iterated-intergral-and-funinis-theorem">Iterated Intergral and Funini's Theorem<a class="headerlink" href="#iterated-intergral-and-funinis-theorem" title="Permanent link">&para;</a></h3>
+<h4 id="definition-of-iterated-intergrals">definition of iterated intergrals<a class="headerlink" href="#definition-of-iterated-intergrals" title="Permanent link">&para;</a></h4>
+<h2 id="week-4-1">Week 4-1<a class="headerlink" href="#week-4-1" title="Permanent link">&para;</a></h2>
+<p>IIS meeting =&gt; not attended</p>
+<h2 id="week-4-2">Week 4-2<a class="headerlink" href="#week-4-2" title="Permanent link">&para;</a></h2>
+<h3 id="change-of-valriables">Change of Valriables<a class="headerlink" href="#change-of-valriables" title="Permanent link">&para;</a></h3>
+<h3 id="lebesgues-criterion-for-integrablilitygo-back">Lebesgue's Criterion for integrablility(go back)<a class="headerlink" href="#lebesgues-criterion-for-integrablilitygo-back" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="http://www.math.ncku.edu.tw/~rchen/Advanced%20Calculus/Lebesgue%20Criterion%20for%20Riemann%20Integrability.pdf">link</a></li>
+</ul>
+<p>::: success
+- definition of oscillation of f of an interval/at a point x
+    - <span class="arithmatex">\(\omega f(I) = sup\{|f(a)-f(b)|:a,b\in I\}\)</span>
+    - <span class="arithmatex">\(\omega _f(x) = inf\{\omega f(B(x, \delta)):\delta&gt;0\}\)</span>
+- trivial to see <span class="arithmatex">\(\omega _f(x)=0\)</span> when f is continuous
+    - exercise
+:::</p>
+<p>::: info
+(integrable =&gt; measure 0 discontinuous points)
+- let discontinuous set be <span class="arithmatex">\(D\)</span>
+- let <span class="arithmatex">\(N(\alpha) = \{x\in[a,b] : \omega f(x) \ge \alpha\}\)</span>
+- since <span class="arithmatex">\(D = \cup_{k=1}^{\infty}N(\frac{1}{k})\)</span>
+    - the left is to proof <span class="arithmatex">\(N(\alpha)\)</span> is <span class="arithmatex">\(measure\ zero\)</span>
+- then by integrability for <span class="arithmatex">\(\alpha\)</span> exist partition that <span class="arithmatex">\(diff \le \alpha\epsilon/2\)</span>
+<img alt="" src="https://i.imgur.com/5DlGYZQ.png =60%x" />
+- done by definition of <span class="arithmatex">\(N(\alpha)\)</span>
+    - can show <span class="arithmatex">\(len(N(\alpha)) \lt \epsilon\)</span>
+(integrable &lt;= measure 0 discontinuous points)
+- let discontinuous set be D
+- let <span class="arithmatex">\(\epsilon = len(D)\)</span>
+- let 
+- devide into two parts
+    - E, <span class="arithmatex">\(\omega f(J) &gt;= \epsilon\)</span>
+        - still measure zero by subset
+        - compact by closed and bounded
+    - K = [a, b]\E, <span class="arithmatex">\(\omega f(J) &lt; \epsilon\)</span>
+        - compact
+- both part is compact
+    - =&gt; has finite subcover
+- by <span class="arithmatex">\(len(E) &lt; \epsilon\)</span> and <span class="arithmatex">\(\omega f(K) &lt; \epsilon\)</span>
+<img alt="" src="https://i.imgur.com/zeZxLUa.png" /></p>
+<p>:::</p>
+<h2 id="week-4-3-x">Week 4-3 (X)<a class="headerlink" href="#week-4-3-x" title="Permanent link">&para;</a></h2>
+<h2 id="week-5-1-5-2">Week 5-1 5-2<a class="headerlink" href="#week-5-1-5-2" title="Permanent link">&para;</a></h2>
+<h3 id="change-of-variables">Change of Variables<a class="headerlink" href="#change-of-variables" title="Permanent link">&para;</a></h3>
+<h3 id="theorem-391">Theorem 39.1<a class="headerlink" href="#theorem-391" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="https://i.imgur.com/3idDY1q.png =70%x" />
+- part2 proof
+    - <span class="arithmatex">\(\forall\ \bar{x} \in S,\ \exists\ r &gt; 0 \ni B_r(\bar{x}) \subset S\)</span>
+    - <span class="arithmatex">\(h_i = (0, ... ,|h_i|, ...0)\)</span> s.t. <span class="arithmatex">\(h_i &lt; r\)</span>
+    - for each <span class="arithmatex">\(y \in T\)</span>, <span class="arithmatex">\(f(x, y)\)</span> is <span class="arithmatex">\(C^1\)</span>, apply MVT
+        - <span class="arithmatex">\(\exists t_i \ni f(\bar{x}+h, y) - f(\bar{x},y) = \nabla f(\bar{x}+t_ih,y)h\)</span>
+    - uniform continuity of <span class="arithmatex">\(\frac{\partial f(x, y)}{\partial x_i}\)</span> on <span class="arithmatex">\(\bar{B_r(\bar{x})} \times T\)</span></p>
+<h3 id="392">39.2<a class="headerlink" href="#392" title="Permanent link">&para;</a></h3>
+<ul>
+<li>proof, apply chain rule directly, y is i.d. variable, view as constant</li>
+</ul>
+<h3 id="393-the-bounded-convergence-theoremwait-graduate-level-class-content">39.3 the bounded convergence theorem(wait, graduate level class content)<a class="headerlink" href="#393-the-bounded-convergence-theoremwait-graduate-level-class-content" title="Permanent link">&para;</a></h3>
+<h3 id="394">39.4<a class="headerlink" href="#394" title="Permanent link">&para;</a></h3>
+<ul>
+<li>apply 39.3</li>
+</ul>
+<h3 id="ch-40-41-improper-itergral">ch 40, 41 Improper Itergral<a class="headerlink" href="#ch-40-41-improper-itergral" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Type 1 : infinity</li>
+<li>Type 2 : undefined</li>
+<li>tests:<ul>
+<li>comparison test
+<img alt="" src="https://i.imgur.com/UQXMxzG.png" />
+<img alt="" src="https://i.imgur.com/jdqFMnp.png" /></li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="the-course-turn-online">The course turn online<a class="headerlink" href="#the-course-turn-online" title="Permanent link">&para;</a></h2>
+<hr />
+<h2 id="week-9-2020428-ta-class">Week 9 - 2020/4/28 TA class<a class="headerlink" href="#week-9-2020428-ta-class" title="Permanent link">&para;</a></h2>
+<h3 id="proof-of-421">proof of 42.1<a class="headerlink" href="#proof-of-421" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="http://mathsci.kaist.ac.kr/~kdryul/files/articles/Dirichlet's%20Test%20for%20Improper%20Integrals.pdf">link</a><ul>
+<li>MVT-2 of integral</li>
+</ul>
+</li>
+</ul>
+<h2 id="patition-to-2-part-need-theorem">Patition to 2 part need theorem<a class="headerlink" href="#patition-to-2-part-need-theorem" title="Permanent link">&para;</a></h2>
+<hr />
+<h2 id="week-122020520-self-study-for-exam-2">Week 12(2020/5/20) - Self study for exam 2<a class="headerlink" href="#week-122020520-self-study-for-exam-2" title="Permanent link">&para;</a></h2>
+<hr />
+<h2 id="ch40-inproper-integral-i-s-is-not-bounded">Ch40. - Inproper Integral I (S is not bounded)<a class="headerlink" href="#ch40-inproper-integral-i-s-is-not-bounded" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Inproper Integral I (S is not bounded)<ul>
+<li>comparison test</li>
+<li>40.2 proof sketch:<ul>
+<li>two part(g&gt;=f and limitied)</li>
+</ul>
+</li>
+<li>40.3 use definition of limit</li>
+<li>poly functions<ul>
+<li></li>
+<li>by direct calculation</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Care:<ul>
+<li>condition, &gt;0</li>
+</ul>
+</li>
+</ul>
+<h2 id="ch-41-inproper-integral-ii-fs-is-not-bounded">Ch 41. - Inproper Integral II (f(S) is not bounded)<a class="headerlink" href="#ch-41-inproper-integral-ii-fs-is-not-bounded" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Inproper Integral II (f(S) is not bounded)<ul>
+<li>silmilar to 40</li>
+</ul>
+</li>
+<li>Care:<ul>
+<li>different conclusion on <span class="arithmatex">\(cx^{-p}\)</span> at x -&gt; 0</li>
+</ul>
+</li>
+</ul>
+<h2 id="ch-42-dirichlets-test-absolute-convergence-cauchy-principle-value">Ch 42. - Dirichlet's test / Absolute convergence / Cauchy principle value<a class="headerlink" href="#ch-42-dirichlets-test-absolute-convergence-cauchy-principle-value" title="Permanent link">&para;</a></h2>
+<ul>
+<li>42.1 Dirichlet's test for improper integral<ul>
+<li>bounded and decay to 0</li>
+</ul>
+</li>
+<li>42.2 Define improper integral to Complex number<ul>
+<li>absolute convergence for C<ul>
+<li><span class="arithmatex">\(\sqrt{Re^2 + Im^2}\)</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>42.3 Absolute convergence implies convergence<ul>
+<li>counter example for opposite direction<ul>
+<li>sinx/x</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>42.4 Cauchy principle value (P.V.) definition<ul>
+<li><span class="arithmatex">\(+- \infty\)</span></li>
+<li><span class="arithmatex">\(|f(x-&gt;c)| = \infty\)</span> and want <span class="arithmatex">\([a,c) \cup (c,b]\)</span></li>
+</ul>
+</li>
+<li>42.5 how to use<ul>
+<li>If improper integral is convergent, P.V. = its value</li>
+<li>It's possible that improper integral is convergent but P.V. is not</li>
+</ul>
+</li>
+<li>42.6 <ul>
+<li>Let a &lt; 0 &lt; b and f ∶ [a,b] → R be continuous on [a,b] and differentiable at 0,</li>
+<li>then P.V.∫baf(x)/xdx exists</li>
+</ul>
+</li>
+</ul>
+<h2 id="ch-43-improper-integral-on-rk">Ch 43. - Improper Integral on <span class="arithmatex">\(R^k\)</span><a class="headerlink" href="#ch-43-improper-integral-on-rk" title="Permanent link">&para;</a></h2>
+<ul>
+<li>43.1 Limit indeppendent of choice of <span class="arithmatex">\(K_n\)</span><ul>
+<li>may converge or diverge(only has case <span class="arithmatex">\(+\infty\)</span>)</li>
+</ul>
+</li>
+<li>43.2 Definition<ul>
+<li>43.1 shows 43.2 well-defined
+<img alt="" src="https://i.imgur.com/xaAs1HX.png" /></li>
+</ul>
+</li>
+<li>43.3 Higher order 1/|x|^p
+<img alt="" src="https://i.imgur.com/VBbz03e.png" /></li>
+<li>evaluation of function with no anti-derirative by higher dimension improper intergral + fubini</li>
+</ul>
+<hr />
+<h2 id="ch-44-lebesgue-measure-lebesgue-measurable-definitionkey">Ch 44. -  Lebesgue measure / Lebesgue measurable (Definition)(Key!)<a class="headerlink" href="#ch-44-lebesgue-measure-lebesgue-measurable-definitionkey" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Key: cut in range not domain</li>
+<li>Key: Preimage, Tiled</li>
+<li>Key: closed/open/general/for Rk</li>
+<li>Key: Countable(seq of)</li>
+<li>See as a extension of Jordan measurable</li>
+<li>Jordan measurable - Reimann Integrability &lt;=&gt; Lebesgue measurable - Lebesgue Integrability</li>
+<li>Review of Jorndan Measurable
+<img alt="" src="https://i.imgur.com/OEDjgwm.png" /></li>
+</ul>
+<h3 id="lebesgue-measurable-but-not-jordan-measurable">Lebesgue measurable but not Jordan measurable<a class="headerlink" href="#lebesgue-measurable-but-not-jordan-measurable" title="Permanent link">&para;</a></h3>
+<h3 id="review-of-jorndan-measurable">Review of Jorndan Measurable<a class="headerlink" href="#review-of-jorndan-measurable" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="https://i.imgur.com/WQN4jye.png" />
+- Note: Riemann-Lebesgue Theorem</p>
+<h2 id="ch-45-lebesgue-integral">Ch 45. - Lebesgue Integral<a class="headerlink" href="#ch-45-lebesgue-integral" title="Permanent link">&para;</a></h2>
+<ul>
+<li>define on function<ul>
+<li>if for all integral I, pre-image(I) is L.M.</li>
+</ul>
+</li>
+<li>continous =&gt; f is lebesgue measurable</li>
+<li>(similar to ) bounded convergence theorem (<span class="arithmatex">\(\forall x, f(x) = lim f_i(x)\)</span>)
+<img alt="" src="https://i.imgur.com/hJ90RE4.png" /></li>
+</ul>
+<h3 id="4552-comment-is-important-for-complete-understanding">45.5.2 Comment is important for complete understanding<a class="headerlink" href="#4552-comment-is-important-for-complete-understanding" title="Permanent link">&para;</a></h3>
+<ul>
+<li>https://drive.google.com/file/d/1-YLPdabFXtcVg3-nxqRzJbtVwzWPYGEN/view<ul>
+<li>around 45:00</li>
+</ul>
+</li>
+</ul>
+<h3 id="banach-tarski-paradoxsupplement">banach tarski paradox(supplement)<a class="headerlink" href="#banach-tarski-paradoxsupplement" title="Permanent link">&para;</a></h3>
+<ul>
+<li>search =&gt; related to A.C. (Axiom of Choice)</li>
+</ul>
+<h2 id="ch-46-riemann-stieltjes-integral">Ch 46. - Riemann-Stieltjes integral<a class="headerlink" href="#ch-46-riemann-stieltjes-integral" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Noun: finer(is improvement of)</li>
+<li>Key Concept: S(f, g, P) </li>
+<li>EQ criterien (similar to R.I.)</li>
+<li>cases (Step function, Bounded Variant)</li>
+<li>intergrant f , inegrator g, partition P, dummy variable x</li>
+</ul>
+<hr />
+<h2 id="ch-47-48">Ch 47-48<a class="headerlink" href="#ch-47-48" title="Permanent link">&para;</a></h2>
+<h3 id="arc-length-work">Arc Length / Work<a class="headerlink" href="#arc-length-work" title="Permanent link">&para;</a></h3>
+<ul>
+<li>C1 curve (vector-valued function)</li>
+<li>dr = dg'(t), ds = d|g'(x)|</li>
+</ul>
+<h3 id="line-integral-work">Line Integral / Work<a class="headerlink" href="#line-integral-work" title="Permanent link">&para;</a></h3>
+<ul>
+<li>real function <span class="arithmatex">\(f : U \supset C \to R~and~C1 curve C\)</span><ul>
+<li><span class="arithmatex">\(U~open\)</span></li>
+<li><span class="arithmatex">\(C\subset U\subset R^k\)</span></li>
+<li><span class="arithmatex">\(f:U \to R continous\)</span></li>
+</ul>
+</li>
+<li>vector function f</li>
+<li>field f<ul>
+<li>use dot product</li>
+</ul>
+</li>
+</ul>
+<h3 id="differential-form-a-way-to-write-work">differential form (a way to write work??)<a class="headerlink" href="#differential-form-a-way-to-write-work" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Q</li>
+</ul>
+<h3 id="rectifiable-484">Rectifiable (48.4)<a class="headerlink" href="#rectifiable-484" title="Permanent link">&para;</a></h3>
+<ul>
+<li>contious, not necissarily injective</li>
+<li>define on C1 curve, Reiemann similar sum + sup</li>
+<li>proof
+<img alt="" src="https://i.imgur.com/PI0uwXg.png" />
+https://drive.google.com/file/d/1UzJXLamXOVOZJ_bJlGczmPjAc9w7DhLi/view
+<img alt="" src="https://i.imgur.com/lx2MbRa.png" /></li>
+</ul>
+<hr />
+<h2 id="review-of-ftc">Review of FTC<a class="headerlink" href="#review-of-ftc" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="https://i.imgur.com/ndXNlkq.png" /></p>
+<hr />
+<h2 id="ch-49-greens-theorem2d-proj">Ch 49. - Green's theorem(2D proj.)<a class="headerlink" href="#ch-49-greens-theorem2d-proj" title="Permanent link">&para;</a></h2>
+<ul>
+<li>regular region<ul>
+<li>is its interior's closure<ul>
+<li>i.e. remove single point</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>simple closed curve</li>
+<li>piecewise smooth boundary with positive orientation(D on the left)</li>
+</ul>
+<h3 id="use-greens-to-proof-corollaries">Use Green's to proof corollaries<a class="headerlink" href="#use-greens-to-proof-corollaries" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="arithmatex">\(e^{i\pi}\)</span> rotation or (-b, a) of g =&gt; (-Q, P)</li>
+</ul>
+<h3 id="convervative-filed">convervative filed<a class="headerlink" href="#convervative-filed" title="Permanent link">&para;</a></h3>
+<ul>
+<li>g is C2</li>
+<li>gradient of g is f</li>
+<li>results</li>
+</ul>
+<h3 id="proof-of-greens-case">proof of greens (Case)<a class="headerlink" href="#proof-of-greens-case" title="Permanent link">&para;</a></h3>
+<p>https://drive.google.com/file/d/1N1tIY2vqZo4K9mbXG6-wf6WlJKmjP_aP/view?pli=1</p>
+<h2 id="ch-50-51-surface-area-and-surface-integral">Ch 50-51. - Surface Area and Surface Integral<a class="headerlink" href="#ch-50-51-surface-area-and-surface-integral" title="Permanent link">&para;</a></h2>
+<h3 id="area">Area<a class="headerlink" href="#area" title="Permanent link">&para;</a></h3>
+<ul>
+<li>D-&gt;E</li>
+<li>cross dg(x,y)dx dg(x,y)dy (D1)</li>
+<li>special case of g(x,y) = (x,y,h(x))</li>
+</ul>
+<h3 id="integral">Integral<a class="headerlink" href="#integral" title="Permanent link">&para;</a></h3>
+<ul>
+<li>integral&gt;<ul>
+<li>f: D-&gt;E-&gt;Real</li>
+</ul>
+</li>
+</ul>
+<h3 id="vector-valued">Vector-valued<a class="headerlink" href="#vector-valued" title="Permanent link">&para;</a></h3>
+<ul>
+<li>orientation of E</li>
+<li>n</li>
+<li>physic meaning : flux</li>
+</ul>
+<h2 id="ch-52-vector-derivatives">Ch 52. - Vector derivatives<a class="headerlink" href="#ch-52-vector-derivatives" title="Permanent link">&para;</a></h2>
+<ul>
+<li>gradient<ul>
+<li>apply for each dimension</li>
+</ul>
+</li>
+<li>curl <ul>
+<li>cross</li>
+</ul>
+</li>
+<li>divergence<ul>
+<li>dot</li>
+</ul>
+</li>
+<li>laplace</li>
+<li>propositions</li>
+</ul>
+<h2 id="ch-53-gauss-divergence-theorem">Ch 53. Gauss' Divergence Theorem<a class="headerlink" href="#ch-53-gauss-divergence-theorem" title="Permanent link">&para;</a></h2>
+<ul>
+<li>jordan measurable for low to high dimension</li>
+<li>remark: divergence can be given a phiysic meaning by small ball and divergence theorem</li>
+</ul>
+<h2 id="ch-54-strokes-theorem">Ch 54. Stroke's Theorem<a class="headerlink" href="#ch-54-strokes-theorem" title="Permanent link">&para;</a></h2>
+<ul>
+<li>cosistent positive orientatio</li>
+<li>Right Hand Princile
+<img alt="" src="https://i.imgur.com/zFgbnGs.png" /></li>
+</ul>
+<h2 id="ch-55-56-higher-dimension">Ch 55-56. Higher Dimension<a class="headerlink" href="#ch-55-56-higher-dimension" title="Permanent link">&para;</a></h2>
+<ul>
+<li>skip</li>
+</ul>
+<hr />
+<h2 id="week-12-exam-2">Week 12 - Exam 2<a class="headerlink" href="#week-12-exam-2" title="Permanent link">&para;</a></h2>
+<hr />
+<h2 id="week-15-for-exam-3">Week 15 - for exam 3<a class="headerlink" href="#week-15-for-exam-3" title="Permanent link">&para;</a></h2>
+<hr />
+<h2 id="week-15-series">Week 15 - Series<a class="headerlink" href="#week-15-series" title="Permanent link">&para;</a></h2>
+<ul>
+<li>https://www.math.ucdavis.edu/~hunter/intro_analysis_pdf/ch4.pdf</li>
+</ul>
+<h3 id="definition-of-convergence">Definition of Convergence<a class="headerlink" href="#definition-of-convergence" title="Permanent link">&para;</a></h3>
+<ul>
+<li>definition is always important</li>
+</ul>
+<h4 id="cauchy-criterien">Cauchy Criterien<a class="headerlink" href="#cauchy-criterien" title="Permanent link">&para;</a></h4>
+<ul>
+<li>a nice eq form</li>
+</ul>
+<h4 id="linearity-of-c-series">linearity of c. series<a class="headerlink" href="#linearity-of-c-series" title="Permanent link">&para;</a></h4>
+<h3 id="absolute-convergenceac-and-a-a-">Absolute convergence(a.c.) and a+, a-<a class="headerlink" href="#absolute-convergenceac-and-a-a-" title="Permanent link">&para;</a></h3>
+<ul>
+<li>introduce a+, a-</li>
+</ul>
+<h4 id="comparison-test-ratio-test-root-test-for-ac">Comparison Test / Ratio Test / Root Test (for a.c.)<a class="headerlink" href="#comparison-test-ratio-test-root-test-for-ac" title="Permanent link">&para;</a></h4>
+<ul>
+<li>comparison</li>
+<li>ratio/root is to compare to geometric seq</li>
+</ul>
+<h4 id="raabes-test">Raabe’s test<a class="headerlink" href="#raabes-test" title="Permanent link">&para;</a></h4>
+<h4 id="test-conclusion">Test Conclusion<a class="headerlink" href="#test-conclusion" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="https://i.imgur.com/KF15MPc.png" /></p>
+<h3 id="conditional-convergence-cc">Conditional convergence c.c.<a class="headerlink" href="#conditional-convergence-cc" title="Permanent link">&para;</a></h3>
+<h4 id="alternating-sequence">Alternating sequence<a class="headerlink" href="#alternating-sequence" title="Permanent link">&para;</a></h4>
+<ul>
+<li>convergence to 0 if<ul>
+<li>decreasing</li>
+<li>alternating</li>
+<li>a_n to 0 b</li>
+</ul>
+</li>
+</ul>
+<h4 id="dirichlets-test">Dirichlet’s test<a class="headerlink" href="#dirichlets-test" title="Permanent link">&para;</a></h4>
+<ul>
+<li>bi be a bounded above complex sery</li>
+<li>ai be a decrease to 0 sery</li>
+<li>aibi is c.</li>
+</ul>
+<h4 id="abels-test">Abel’s test<a class="headerlink" href="#abels-test" title="Permanent link">&para;</a></h4>
+<ul>
+<li>bi be a c. sery</li>
+<li>ai be a decrease to 0 sery</li>
+<li>aibi is c.</li>
+</ul>
+<h3 id="rearrangement">Rearrangement<a class="headerlink" href="#rearrangement" title="Permanent link">&para;</a></h3>
+<ul>
+<li>definition<ul>
+<li>bijection of indices</li>
+</ul>
+</li>
+<li>magic!</li>
+<li>Note: Q, the statement that not abs convegent is not formal<ul>
+<li>i.e. why <span class="arithmatex">\(a^+, a^-\)</span>, one diverge another dont =&gt; diverge</li>
+</ul>
+</li>
+</ul>
+<h4 id="rearrangement-of-ac-series">Rearrangement of a.c. series<a class="headerlink" href="#rearrangement-of-ac-series" title="Permanent link">&para;</a></h4>
+<ul>
+<li>prove by <span class="arithmatex">\(sup(\sigma^{-1}(\{1...n\}))\)</span> exist as m</li>
+<li>use this + cauchy</li>
+</ul>
+<h4 id="rearrangement-of-cc-series">Rearrangement of c.c. series<a class="headerlink" href="#rearrangement-of-cc-series" title="Permanent link">&para;</a></h4>
+<ul>
+<li>any sum</li>
+</ul>
+<h3 id="double-series">Double Series!!!<a class="headerlink" href="#double-series" title="Permanent link">&para;</a></h3>
+<ul>
+<li>define absolute convergence of double series<ul>
+<li>by an ordering is a.c.</li>
+</ul>
+</li>
+<li>if a.c.(an ordering is )<ul>
+<li>a.c. &lt;=&gt; all ordering is a.c.</li>
+<li>a.c. &lt;=&gt; iterated sum is a.c. </li>
+</ul>
+</li>
+<li>if not a.c. ( a+, a- discussion)<ul>
+<li><span class="arithmatex">\(a+ = \infty, a- \lt \infty\)</span><ul>
+<li>diverge to <span class="arithmatex">\(\infty\)</span> </li>
+</ul>
+</li>
+<li><span class="arithmatex">\(a+ = \infty, a- = \infty\)</span><ul>
+<li>various ordering can converge to any real number<ul>
+<li>my proof(by expand to 1 d, use + - part to make S(if cannot =&gt; c.), and <span class="arithmatex">\(\sigma^{-1}\)</span> can find k to dominate 0,0 to N,N)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="product-of-ac-series-is-ac">Product of a.c. series is a.c.<a class="headerlink" href="#product-of-ac-series-is-ac" title="Permanent link">&para;</a></h4>
+<h4 id="cauchy-product">Cauchy Product<a class="headerlink" href="#cauchy-product" title="Permanent link">&para;</a></h4>
+<ul>
+<li>ai, bi c. to A, B</li>
+<li>if one of ai, bi is a.c.<ul>
+<li>Cauchy product is c. with sum AB</li>
+</ul>
+</li>
+<li>else <ul>
+<li>Cauchy product may d.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="week-15-sequence-of-functions">Week 15 - Sequence of functions<a class="headerlink" href="#week-15-sequence-of-functions" title="Permanent link">&para;</a></h2>
+<h3 id="pt-uni-uni-cauchy">pt. uni. uni cauchy.<a class="headerlink" href="#pt-uni-uni-cauchy" title="Permanent link">&para;</a></h3>
+<h3 id="eq-def-of-uni-conv">eq def of uni. conv<a class="headerlink" href="#eq-def-of-uni-conv" title="Permanent link">&para;</a></h3>
+<h3 id="uni-cont-target-cont">uni + cont. =&gt; target cont.<a class="headerlink" href="#uni-cont-target-cont" title="Permanent link">&para;</a></h3>
+<ul>
+<li>lim f uni and all fn cont. =&gt; cont.</li>
+<li>cont. [] for all delta for above =&gt; () f cont.</li>
+</ul>
+<h3 id="weierstrass-approximation">Weierstrass approximation<a class="headerlink" href="#weierstrass-approximation" title="Permanent link">&para;</a></h3>
+<ul>
+<li>cont. has poly seq uni. approx</li>
+<li>http://www.math.univ-toulouse.fr/~lassere/pdf/2012INPsuitesD1bis.pdf</li>
+</ul>
+<h3 id="dinis">Dini's<a class="headerlink" href="#dinis" title="Permanent link">&para;</a></h3>
+<ul>
+<li>for each x , fx is bounded monotone</li>
+<li>x to lim f x is well defined and cont.</li>
+<li>then lim f is uni approx</li>
+</ul>
+<h2 id="sery-of-function">Sery of function<a class="headerlink" href="#sery-of-function" title="Permanent link">&para;</a></h2>
+<ul>
+<li>pt.</li>
+<li>abs.</li>
+<li>uni.
+<img alt="" src="https://i.imgur.com/lRaCqXj.png" /></li>
+</ul>
+<h3 id="cauchy-for-uni-conv">cauchy for uni conv<a class="headerlink" href="#cauchy-for-uni-conv" title="Permanent link">&para;</a></h3>
+<h3 id="condition-of-swapping">condition of swapping<a class="headerlink" href="#condition-of-swapping" title="Permanent link">&para;</a></h3>
+<ul>
+<li>limit and int/de<ul>
+<li>R.I. uni.</li>
+<li>fn pt. C1, fn' uni.</li>
+</ul>
+</li>
+<li>seri<ul>
+<li>same</li>
+</ul>
+</li>
+</ul>
+<h3 id="hint-of-final">Hint of final<a class="headerlink" href="#hint-of-final" title="Permanent link">&para;</a></h3>
+<ul>
+<li>one mutant one time proof (1/2)</li>
+</ul>
+<p>abel
+<img alt="" src="https://i.imgur.com/maE42u0.png" /></p>
+<p>Arzela-Ascoli theorem, the Heine-Borel theorem for functional spaces</p>
+<p>S compact 
+ C0
+ F closed bounded uni equconti</p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 23, 2025 07:31:36 UTC">June 23, 2025</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/EazyReal" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1M480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2m-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3m-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.facebook.com/maxwill.lin" target="_blank" rel="noopener" title="www.facebook.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256c0 120 82.7 220.8 194.2 248.5V334.2h-52.8V256h52.8v-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287v175.9C413.8 494.8 512 386.9 512 256"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/maxwilllin" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5m282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/tensorfi" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.action.edit", "content.action.view", "content.updated", "navigation.tabs", "navigation.tabs.sticky", "navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "toc.follow", "header.autohide"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
