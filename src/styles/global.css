@@ -1,0 +1,34 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-paper: #f7f6f0;
+  --color-paper-dark: #ece9df;
+  --color-ink: #070707;
+  --color-muted: #66635d;
+  --color-line: #d8d5ca;
+  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  --font-serif: Georgia, "Times New Roman", serif;
+}
+
+@layer base {
+  html {
+    background: var(--color-paper);
+    overflow-x: hidden;
+  }
+
+  body {
+    overflow-wrap: anywhere;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+@layer components {
+  .katex-display {
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+}

@@ -1,0 +1,29 @@
+---
+import "katex/dist/katex.min.css";
+import "../styles/global.css";
+import SiteShell from "../components/SiteShell.astro";
+
+const {
+  title = "Maxwill Lin",
+  description = "Maxwill's personal website.",
+} = Astro.props;
+
+const pageTitle = title === "Maxwill Lin" ? title : `${title} | Maxwill Lin`;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="author" content="Maxwill Lin" />
+    <link rel="icon" href="/img/favicon.ico" />
+    <title>{pageTitle}</title>
+  </head>
+  <body class="overflow-x-hidden bg-paper font-mono text-sm leading-[1.45] text-ink">
+    <SiteShell>
+      <slot />
+    </SiteShell>
+  </body>
+</html>

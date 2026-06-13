@@ -1,5 +1,6 @@
 #ignore site built locally
 site/
+.astro/
 .DS_Store
 
 # Byte-compiled / optimized / DLL files

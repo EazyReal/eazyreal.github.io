@@ -1,0 +1,16 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import Prose from "../components/Prose.astro";
+
+const { frontmatter = {} } = Astro.props;
+const title = frontmatter.title ?? "Technical Note";
+const description =
+  frontmatter.description ??
+  "Technical writing, notes, and project documentation by Maxwill Lin.";
+---
+
+<BaseLayout title={title} description={description}>
+  <Prose>
+    <slot />
+  </Prose>
+</BaseLayout>
