@@ -31,4 +31,37 @@
     overflow-x: auto;
     overflow-y: hidden;
   }
+
+  .prose pre {
+    background: var(--color-paper-dark) !important;
+    color: var(--color-ink) !important;
+    border-color: var(--color-line) !important;
+    box-shadow: none !important;
+  }
+
+  .prose pre code {
+    background: transparent !important;
+    color: var(--color-ink) !important;
+    text-shadow: none !important;
+  }
+
+  .prose pre ::selection {
+    background: #b8d7ff;
+    color: var(--color-ink);
+  }
+
+  .prose .profile-photo {
+    width: 180px;
+    margin: 0 0 2rem;
+  }
+
+  .prose .profile-photo img {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    margin: 0;
+    border: 1px solid var(--color-ink);
+    border-radius: 0;
+    filter: contrast(0.98) brightness(1.02);
+  }
 }

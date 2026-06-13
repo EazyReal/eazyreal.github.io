@@ -6,11 +6,14 @@ tags: [engineering]
 
 # Projects
 
+## RL infrastructure and self-improving task generation
+At Vmax, I designed and built the core system end-to-end for training software-engineering agents: RL infrastructure that orchestrates hundreds of GPUs, a self-improving task generator, and a rollout framework that runs thousands of concurrent sandboxes; I am actively contributing upstream across [slime](https://github.com/THUDM/slime), [Miles](https://github.com/radixark/miles), and [Harbor](https://github.com/harbor-framework/harbor).
+
 ## zkAlpha
 zkAlpha connects quant traders and liquidity providers w/o revealing the strategy through the use of
 zkSNARKs. I was responsible for the protocol design, smart contract pseudocode, and zero-knowledge circuits. My
 teammates contributed to frontend, smart contract development based on pseudocode, and demo. The project won 7
-prizes (including Filecoin grand prize and 1inch 2nd place) and 8863 USD in total out of 1400 attendees and 321
+prizes (including Filecoin grand prize and 1inch 2nd place) and ~USD 9k in total out of 1400 attendees and 321
 projects.
 
 - [hackathon link](https://ethglobal.com/showcase/zkalpha-twwtg)

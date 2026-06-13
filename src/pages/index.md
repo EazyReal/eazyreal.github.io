@@ -4,13 +4,15 @@ title: Maxwill Lin
 tags: [home]
 ---
 
-<p align="center">
-  <img src="/img/profile.jpg" alt="Maxwill Lin" width="180"/>
-</p>
+<figure class="profile-photo">
+  <img src="/img/profile.jpg" alt="Maxwill Lin" />
+</figure>
 
-## TL;DR
+## Current Work
 
-Generalist with a strong foundation in mathematics and coding, currently focusing on Generative AI.
+At Vmax, I designed and built the core system end-to-end for training software-engineering agents: RL infrastructure that orchestrates hundreds of GPUs, a self-improving task generator, and a rollout framework that runs thousands of concurrent sandboxes; I am actively contributing upstream across [slime](https://github.com/THUDM/slime), [Miles](https://github.com/radixark/miles), and [Harbor](https://github.com/harbor-framework/harbor).
+
+Earlier: Meta MRS (Meta Recommendation System), autopilot systems, cryptography/blockchain protocols, and quantitative research.
 
 ## Quick Links
 
@@ -24,8 +26,10 @@ Generalist with a strong foundation in mathematics and coding, currently focusin
 
 ## Professional Experience
 
-* **Meta – Ranking AI Research (RAIR)**
-  Applied ML Researcher working on state‑of‑the‑art Generative AI techniques for ads recommendation.
+* **Vmax – RL infrastructure and self-improving task generation**
+  Designed and built the core system end-to-end: an internal slime fork, a self-improving agentic RL environment generator, and a rollout framework for thousands of concurrent sandboxes; actively contributing upstream across slime, Miles, and Harbor.
+* **Meta – MRS (Meta Recommendation System)**
+  Applied ML Researcher working on LLMs for ads recommendation.
 * **Previous roles**
   Autopilot systems · Cryptography & Blockchain protocols · Quantitative research.
 
@@ -37,8 +41,8 @@ Generalist with a strong foundation in mathematics and coding, currently focusin
 
 ## Some Facts
 
-* Top **0.56 %** (541/100 000+) in **Google Code Jam 2020**
-* **USD 9 000** prize at **ETHGlobal Paris** (1 400 participants, 321 projects)
+* Top **0.56%** of a **96,000+** registrant field in **Google Code Jam 2020**
+* **~USD 9k** prize at **ETHGlobal Paris** (1,400 participants, 321 projects)
 * I enjoyed challenging myself with theoretical CS/ math courses (e.g. Quantum Computation and Quantum Information, Quantum Machine Learning, Advanced Algorithms and Uncertainty, Intractable Problems, Advanced Linear Algebra, Algebra)
 
 ---
@@ -49,6 +53,7 @@ I grew up in Taipei, Taiwan (Mandarin name: **林彥彤 / Yan‑Tong Lin**).
 
 ### Hobbies
 
+* Poker
 * Competitive multiplayer games
 * Health & fitness
 * Guitar & piano — [My “Fight” acoustic guitar cover](https://youtu.be/XmpmadFYGOk)
