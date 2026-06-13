@@ -20,7 +20,7 @@ projects.
 - [presentation](https://docs.google.com/presentation/d/1I3GCcc1bKEILhntgQ1V5M-rADx4QY-NAddNTX6CT41I/)
 
 ## Bulk Mint NFTs
-I identified and exploited a weakness in a smart contract to mint multiple NFTs in [one transaction](https://polygonscan.com/tx/0x539c2077b724e71b370a9ea5bc6aaa626fdfcfa16377437b8a5d513687147916) bypassing a one per account restriction. I reminded the company and asked for permission before using the code moderately.
+I identified a smart contract weakness that allowed multiple NFTs to be minted in [one transaction](https://polygonscan.com/tx/0x539c2077b724e71b370a9ea5bc6aaa626fdfcfa16377437b8a5d513687147916), bypassing a one-per-account restriction. I reported it to the company and used the proof of concept only with permission.
 
 - [github](https://github.com/EazyReal/BulkMintNFTs)
 
