@@ -119,7 +119,7 @@ export const profile = {
   name: siteMeta.name,
   about: [
     [
-      "I design and build algorithms and infrastructure for recursive self-improvement, especially around generative models, reinforcement learning, and software-engineering agents. My taste is simple: make things as simple as possible, but not simpler; quotient out accidental detail, preserve the invariant, then build from there.",
+      "I design and build algorithms and infrastructure for recursive self-improvement, especially around generative models, reinforcement learning, and software-engineering agents. I try to approach research, engineering, business, and prioritization the same way: make things as simple as possible, but not simpler; quotient out accidental detail, preserve the invariant, then build from there.",
     ],
   ],
   photo: {
