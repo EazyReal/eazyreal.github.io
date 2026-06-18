@@ -1,0 +1,24 @@
+---
+import { links, pageMeta, profile } from "../data/siteContent";
+import ArticleLayout from "../layouts/ArticleLayout.astro";
+
+const frontmatter = pageMeta.socials;
+
+const primaryLinks = [links.github, links.linkedin, links.resume, links.x];
+---
+
+<ArticleLayout frontmatter={frontmatter}>
+  <h2>Links</h2>
+  <ul>
+    {
+      primaryLinks.map((link) => (
+        <li>
+          <a href={link.href}>{link.label}</a>
+        </li>
+      ))
+    }
+  </ul>
+
+  <h2>Web3</h2>
+  <pre><code>{profile.web3Addresses.join("\n")}</code></pre>
+</ArticleLayout>

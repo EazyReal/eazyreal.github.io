@@ -6,7 +6,7 @@ export type RichTextPart =
 
 export type RichText = RichTextPart[];
 
-type Link = {
+export type Link = {
   href: string;
   label: string;
 };
@@ -50,15 +50,18 @@ export const siteMeta = {
 
 const pageHrefs = {
   coursework: "/writing/coursework/",
+  experience: "/experience/",
   home: "/",
   oss: "/oss/",
   projects: "/projects/",
+  socials: "/socials/",
   writing: "/writing/",
   writingTags: "/writing/tags/",
 };
 
 export const links = {
   home: { href: pageHrefs.home, label: "Home" },
+  experience: { href: pageHrefs.experience, label: "Experience" },
   projects: { href: pageHrefs.projects, label: "Projects" },
   oss: { href: pageHrefs.oss, label: "Open Source" },
   writing: { href: pageHrefs.writing, label: "Writing" },
@@ -70,6 +73,7 @@ export const links = {
     href: "https://drive.google.com/file/d/1iBTJaVHiqBjrJ9jxYKth7Zv-mOVhbsf0/view",
     label: "Resume",
   },
+  socials: { href: pageHrefs.socials, label: "Socials" },
   x: { href: "https://twitter.com/tensorfi", label: "X" },
   vmax: { href: "https://vmax.ai/", label: "Vmax" },
   slime: { href: `${pageHrefs.oss}#slime`, label: "slime" },
@@ -88,6 +92,11 @@ export const pageMeta = {
     lastUpdated: siteMeta.latestContentUpdate,
     tags: ["home"],
   },
+  experience: {
+    title: "Experience & Education",
+    lastUpdated: siteMeta.latestContentUpdate,
+    tags: ["experience", "education"],
+  },
   oss: {
     title: "Open Source Contributions",
     lastUpdated: siteMeta.latestContentUpdate,
@@ -97,6 +106,11 @@ export const pageMeta = {
     title: links.projects.label,
     lastUpdated: siteMeta.latestContentUpdate,
     tags: ["engineering"],
+  },
+  socials: {
+    title: links.socials.label,
+    lastUpdated: siteMeta.latestContentUpdate,
+    tags: ["socials", "identity"],
   },
   writing: {
     title: links.writing.label,
@@ -111,33 +125,22 @@ export const pageMeta = {
   },
 };
 
-export const siteNavLinks = [links.home, links.projects, links.oss, links.writing];
+export const siteNavLinks = [links.home, links.experience, links.projects, links.oss, links.writing];
 
-export const socialLinks = [links.github, links.linkedin, links.resume, links.x];
+export const socialLinks = [links.github, links.linkedin, links.resume, links.x, links.socials];
 
 export const profile = {
   name: siteMeta.name,
+  motto: "Make things as simple as possible, but not simpler.",
   about: [
     [
-      "I design and build algorithms and infrastructure for recursive self-improvement, especially around generative models, reinforcement learning, and software-engineering agents. I try to approach research, engineering, business, and prioritization the same way: make things as simple as possible, but not simpler; quotient out accidental detail, preserve the invariant, then build from there.",
+      "I develop algorithms and infrastructure for recursive self-improvement, especially around generative models, reinforcement learning, and software-engineering agents. Across research, engineering, business, and prioritization, I try to quotient out accidental detail, preserve the invariant, then build from there.",
     ],
   ],
   photo: {
     src: "/img/profile.jpg",
     alt: siteMeta.name,
   },
-  education: [
-    {
-      degree: "M.S. Computer Science",
-      school: "Georgia Institute of Technology",
-      note: "Algorithms & Generative ML",
-    },
-    {
-      degree: "B.S. Computer Science & Applied Mathematics",
-      school: "National Yang Ming Chiao Tung University",
-      note: "Theoretical CS & Mathematics (Top-2 CS program in Taiwan)",
-    },
-  ],
   web3Addresses: [
     "0xb1B6356EA9E2f3Bf9867d6Ac1c1Bfd2cB1553Abb",
     "ytlin.eth",
@@ -145,17 +148,17 @@ export const profile = {
   ],
 };
 
-const vmaxLead: RichText = [
+export const vmaxLead: RichText = [
   "I am the first technical hire at ",
   { href: links.vmax.href, text: links.vmax.label },
   ", where we are building automation for RL, starting from RL environments.",
 ];
 
-const vmaxSystem: RichText = [
-  "I designed and built the core training system end-to-end: configuration system that makes experiments agent legible and reproducible, RL infrastructure orchestrating hundreds of GPUs, self-improving software-engineering task generators, and a rollout framework running agents in Harbor tasks on thousands of concurrent sandboxes.",
+export const vmaxSystem: RichText = [
+  "I developed the core training system end-to-end: configuration system that makes experiments agent legible and reproducible, RL infrastructure orchestrating hundreds of GPUs, self-improving software-engineering task generators, and a rollout framework running agents in Harbor tasks on thousands of concurrent sandboxes.",
 ];
 
-const vmaxOss: RichText = [
+export const vmaxOss: RichText = [
   "I am a contributor to ",
   { href: links.slime.href, text: links.slime.label },
   " and ",
@@ -163,59 +166,52 @@ const vmaxOss: RichText = [
   ", covering RL training logic, agent integrations, and sandbox runtime fixes.",
 ];
 
-const vmaxMetric: RichText = [
+export const vmaxMetric: RichText = [
   "The system improved an open-source SWE-bench Pro base model by ",
   { strong: "+50% relative" },
   " under a constrained context window using synthetic tasks.",
 ];
 
-export const currentWork = {
-  heading: "Current Work",
-  paragraphs: [vmaxLead, vmaxSystem, vmaxOss],
-};
+export const vmaxHomepageSummary =
+  "first technical hire building RL infrastructure that orchestrates hundreds of GPUs, self-improving task generators, and thousands of concurrent sandboxes.";
 
-export const professionalRoles = [
-  "Vmax - RL infrastructure and self-improving task generation",
-  "Meta - MRS (Meta Recommendation System)",
-  "Tesla Autopilot - Autopilot systems",
-  "BTQ - Post Quantum Cryptography & Blockchain protocols",
-  "Kronos Research - Quantitative research",
-];
-
-export const facts: RichText[] = [
+export const homepageHighlights: RichText[] = [
   [
-    "Top ",
+    "First technical hire building RL infrastructure for software-engineering agents: hundreds of GPUs, self-improving task generators, and thousands of concurrent sandboxes.",
+  ],
+  [
+    "Contributor to ",
+    { href: links.slime.href, text: links.slime.label },
+    " and ",
+    { href: links.harbor.href, text: links.harbor.label },
+    " on RL training logic, agent integrations, and sandbox runtime fixes.",
+  ],
+  [
+    "Built billion-parameter autoregressive user-ad models and an LLM CTR evaluation pipeline at ",
+    { href: `${pageHrefs.experience}#meta-mrs`, text: "Meta MRS" },
+    ", improving AUC from 0.51 to 0.61.",
+  ],
+  [
+    "Ranked top ",
     { strong: "0.56%" },
-    " of a ",
+    " among ",
     { strong: "96,000+" },
-    " registrant field in ",
+    " registrants in ",
     { strong: "Google Code Jam 2020" },
-  ],
-  [
-    "Won ",
-    { strong: "~USD 9k" },
-    " prize in ",
-    { strong: "ETHGlobal Paris" },
-    " (1,400 participants, 321 projects)",
-  ],
-  [
-    "Enjoyed challenging myself with theoretical CS/math courses, including quantum computation, quantum machine learning, advanced algorithms, intractable problems, advanced linear algebra, and algebra.",
+    "; 4.0/4.0 at Georgia Tech with A+ performance in proof-heavy theory courses.",
   ],
 ];
 
 export const personal = {
-  origin: "I grew up in Taipei, Taiwan (Mandarin name: 林彥彤 / Yan-Tong Lin).",
-  hobbies: [
-    ["Poker; competitive multiplayer games; health & fitness."],
+  paragraphs: [
+    ["I grew up in Taipei, Taiwan (Mandarin name: 林彥彤 / Yan-Tong Lin)."],
     [
-      "Guitar & piano: ",
+      "Outside work I have been spending more time on poker, health and fitness, competitive multiplayer games, guitar, and piano. A few traces: ",
       {
         href: "https://youtu.be/XmpmadFYGOk",
         text: '"Fight" acoustic guitar cover',
       },
-      ".",
-    ],
-    [
+      " and an ",
       {
         href: "https://youtu.be/MSYaon4zNsc?si=ac7TzA_bLDmVUMfR",
         text: "ETH CC Paris hacker house",
@@ -286,20 +282,6 @@ export const courseworkGroups: CourseworkGroup[] = [
 ];
 
 export const projects: Project[] = [
-  {
-    id: "rl-infrastructure-and-self-improving-task-generation",
-    title: "RL infrastructure and self-improving task generation",
-    paragraphs: [
-      vmaxLead,
-      vmaxSystem,
-      vmaxMetric,
-      [
-        "I also have merged PRs in ",
-        { href: links.oss.href, text: "slime and Harbor" },
-        ", the open-source systems behind this work.",
-      ],
-    ],
-  },
   {
     id: "zkalpha",
     title: "zkAlpha",

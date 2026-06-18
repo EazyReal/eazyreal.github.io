@@ -1,0 +1,48 @@
+---
+import type { TimelineItem } from "../data/experienceTimeline";
+import RichText from "./RichText.astro";
+
+const { items } = Astro.props as { items: TimelineItem[] };
+---
+
+<ol class="timeline" aria-label="Experience timeline">
+  {
+    items.map((item) => (
+      <li class="timeline-item" id={item.id}>
+        <div class="timeline-marker" aria-hidden="true">
+          {item.image ? (
+            <img src={item.image.src} alt="" loading="lazy" />
+          ) : (
+            <span>{item.initials ?? item.organization.slice(0, 2)}</span>
+          )}
+        </div>
+        <article class="timeline-content">
+          <div class="timeline-meta">
+            <span>{item.period}</span>
+            <span>{item.kind}</span>
+          </div>
+          <h2>{item.title}</h2>
+          <p class="timeline-org">
+            <strong>{item.organization}</strong> · {item.location}
+          </p>
+          <p><RichText parts={item.summary} /></p>
+          <ul>
+            {item.details.map((detail) => <li><RichText parts={detail} /></li>)}
+          </ul>
+          {
+            item.links && item.links.length > 0 && (
+              <p class="timeline-links">
+                {item.links.map((link, index) => (
+                  <>
+                    {index > 0 && " / "}
+                    <a href={link.href}>{link.label}</a>
+                  </>
+                ))}
+              </p>
+            )
+          }
+        </article>
+      </li>
+    ))
+  }
+</ol>
