@@ -6,7 +6,7 @@ const { value } = Astro.props;
 
 {
   value && (
-    <p class="not-prose mb-6 text-xs text-muted">
+    <p class="not-prose last-updated">
       Last updated <time datetime={value}>{formatDisplayDate(value)}</time>
     </p>
   )

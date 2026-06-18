@@ -4,11 +4,11 @@ import SocialLinks from "./SocialLinks.astro";
 import { links, siteMeta } from "../data/siteContent";
 ---
 
-<div class="ml-4 w-[calc(100%-2rem)] py-6 md:ml-12 md:w-[min(690px,calc(100%-6rem))] md:py-11">
-  <header class="mb-7 block md:flex md:items-start md:justify-between md:gap-6">
+<div class="site-shell">
+  <header class="site-header">
     <div>
       <a
-        class="block font-serif text-[30px] leading-none no-underline"
+        class="site-title"
         href={links.home.href}
         aria-label={`${siteMeta.name} home`}
       >
@@ -16,7 +16,7 @@ import { links, siteMeta } from "../data/siteContent";
       </a>
       <SocialLinks />
     </div>
-    <div class="mt-5 md:mt-0">
+    <div class="site-nav-wrap">
       <SiteNav />
     </div>
   </header>
@@ -25,7 +25,7 @@ import { links, siteMeta } from "../data/siteContent";
     <slot />
   </main>
 
-  <footer class="mt-12 border-t border-ink pt-5">
+  <footer class="site-footer">
     <SocialLinks />
   </footer>
 </div>
