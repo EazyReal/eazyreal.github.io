@@ -2,13 +2,10 @@
 import { siteNavLinks } from "../data/siteContent";
 ---
 
-<nav class="flex gap-4 whitespace-nowrap" aria-label="Primary navigation">
+<nav class="site-primary-nav" aria-label="Primary navigation">
   {
     siteNavLinks.map((item) => (
-      <a
-        class="underline decoration-1 underline-offset-[6px] hover:decoration-2"
-        href={item.href}
-      >
+      <a class="site-link" href={item.href}>
         {item.label}
       </a>
     ))
