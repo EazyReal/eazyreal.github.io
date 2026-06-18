@@ -141,9 +141,9 @@ export const profile = {
 };
 
 const vmaxLead: RichText = [
-  "I am the 1st technical staff at ",
+  "I am the first technical hire at ",
   { href: links.vmax.href, text: links.vmax.label },
-  ".",
+  ", where we are building automation for RL, starting from RL environments.",
 ];
 
 const vmaxSystem: RichText = [
