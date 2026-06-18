@@ -19,9 +19,15 @@ type Project = {
 };
 
 export type ExternalWritingItem = Link & {
-  kind: "coursework" | "report" | "tutorial";
+  kind: "coursework" | "essay" | "report" | "tutorial";
   description: string;
   tags: string[];
+};
+
+type CourseworkGroup = {
+  title: string;
+  description: string;
+  links: Link[];
 };
 
 export const links = {
@@ -145,7 +151,15 @@ export const personal = {
   ],
 };
 
-export const externalWritingItems: ExternalWritingItem[] = [
+export const selectedWritingItems: ExternalWritingItem[] = [
+  {
+    href: "/writing/coursework/",
+    label: "Theoretical coursework",
+    kind: "coursework",
+    description:
+      "Graduate-level and theoretical work across cryptography, quantum computation, blockchain protocols, and mathematics.",
+    tags: ["theory", "cryptography", "quantum", "blockchain", "math"],
+  },
   {
     href: "https://hackmd.io/9Hw3BAv8RhecludOcMEsvw",
     label: "Treap Tutorial",
@@ -153,33 +167,45 @@ export const externalWritingItems: ExternalWritingItem[] = [
     description: "Competitive programming teaching material for the NCTU PCCA winter camp.",
     tags: ["algorithms", "data structures", "competitive programming"],
   },
+];
+
+export const courseworkGroups: CourseworkGroup[] = [
   {
-    href: "https://hackmd.io/@csie-tamc/SJTFrm3RF",
-    label: "Theoretical Aspects of Modern Cryptography",
-    kind: "coursework",
-    description: "Course syllabus and problem-set work for modern cryptography.",
-    tags: ["cryptography", "theory"],
+    title: "Modern cryptography",
+    description:
+      "Theoretical Aspects of Modern Cryptography coursework and proof-heavy problem sets.",
+    links: [
+      {
+        href: "https://hackmd.io/@csie-tamc/SJTFrm3RF",
+        label: "Theoretical Aspects of Modern Cryptography",
+      },
+      {
+        href: "https://drive.google.com/drive/folders/1JMRcIRK0sLPSBOarRPpKHDL0CKYHuZmM",
+        label: "Modern Cryptography Problem Set Solutions",
+      },
+    ],
   },
   {
-    href: "https://drive.google.com/drive/folders/1JMRcIRK0sLPSBOarRPpKHDL0CKYHuZmM",
-    label: "Modern Cryptography Problem Set Solutions",
-    kind: "coursework",
-    description: "Problem-set solutions for theoretical aspects of modern cryptography.",
-    tags: ["cryptography", "proofs"],
+    title: "Quantum computation",
+    description:
+      "Quantum computation and quantum information work, including algorithmic speedup by quantum walks.",
+    links: [
+      {
+        href: "https://github.com/EazyReal/QCQI2020fall/blob/main/QCQI_final__Textual_Version_.pdf",
+        label: "Exponential Algorithmic Speedup by Quantum Walk",
+      },
+    ],
   },
   {
-    href: "https://drive.google.com/file/d/1oQRTnn2oglmHK-RhmQoIf_v1ZSk6LV_D/view",
-    label: "Bestchain Protocols and Improvements",
-    kind: "report",
-    description: "A blockchain consensus/protocol writeup.",
-    tags: ["blockchain", "consensus"],
-  },
-  {
-    href: "https://github.com/EazyReal/QCQI2020fall/blob/main/QCQI_final__Textual_Version_.pdf",
-    label: "Exponential Algorithmic Speedup by Quantum Walk",
-    kind: "report",
-    description: "Quantum Computation and Quantum Information final report.",
-    tags: ["quantum computing", "algorithms"],
+    title: "Blockchain protocols",
+    description:
+      "Consensus and protocol-design work from blockchain coursework and reports.",
+    links: [
+      {
+        href: "https://drive.google.com/file/d/1oQRTnn2oglmHK-RhmQoIf_v1ZSk6LV_D/view",
+        label: "Bestchain Protocols and Improvements",
+      },
+    ],
   },
 ];
 

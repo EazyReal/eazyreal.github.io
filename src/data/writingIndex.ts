@@ -1,4 +1,4 @@
-import { externalWritingItems } from "./siteContent";
+import { selectedWritingItems } from "./siteContent";
 
 type MarkdownFrontmatter = {
   title?: string;
@@ -8,6 +8,7 @@ type MarkdownFrontmatter = {
   section?: string;
   lastUpdated?: string;
   featured?: boolean;
+  selected?: boolean;
 };
 
 type MarkdownModule = {
@@ -47,14 +48,6 @@ const internalPageModules = import.meta.glob("../pages/**/*.md", {
 }) as Record<string, MarkdownModule>;
 
 const excludedRoutes = new Set(["/tags/"]);
-const preferredSectionOrder = [
-  "genai",
-  "nlp",
-  "quantum",
-  "math",
-  "algorithm",
-  "blockchain",
-];
 
 const kindTags = [
   "essay",
@@ -158,17 +151,6 @@ const pathToRoute = (path: string) => {
   return `/${route}/`;
 };
 
-const pathToSection = (path: string, frontmatter: MarkdownFrontmatter) => {
-  if (frontmatter.section) {
-    return frontmatter.section;
-  }
-
-  const relativePath = path.replace("../pages/", "");
-  const [section] = relativePath.split("/");
-
-  return relativePath.includes("/") ? section : "Writing";
-};
-
 const inferKind = (frontmatter: MarkdownFrontmatter) => {
   if (frontmatter.kind) {
     return frontmatter.kind;
@@ -207,29 +189,24 @@ const sortEntries = (entries: WritingEntry[]) =>
     return left.title.localeCompare(right.title);
   });
 
-const internalWritingEntries = Object.entries(internalPageModules)
+const selectedMarkdownEntries = Object.entries(internalPageModules)
   .map(([path, mod]) => {
     const frontmatter = mod.frontmatter ?? {};
     const href = mod.url ?? pathToRoute(path);
 
-    if (excludedRoutes.has(href)) {
+    if (excludedRoutes.has(href) || !frontmatter.selected) {
       return null;
     }
 
-    const section = pathToSection(path, frontmatter);
     const rawTags = [...(frontmatter.tags ?? [])];
-
-    if (!rawTags.some((tag) => slugify(tag) === slugify(section))) {
-      rawTags.push(section);
-    }
 
     return {
       href,
       title: frontmatter.title ?? path.replace("../pages/", "").replace(/\.md$/, ""),
       description: frontmatter.description,
       kind: inferKind(frontmatter),
-      section,
-      sectionSlug: slugify(section),
+      section: "Selected",
+      sectionSlug: "selected",
       tags: uniqueBySlug(rawTags),
       lastUpdated: frontmatter.lastUpdated,
       featured: Boolean(frontmatter.featured),
@@ -238,14 +215,14 @@ const internalWritingEntries = Object.entries(internalPageModules)
   })
   .filter((entry): entry is WritingEntry => Boolean(entry));
 
-export const externalWritingEntries: WritingEntry[] = externalWritingItems.map(
+export const selectedExternalEntries: WritingEntry[] = selectedWritingItems.map(
   (item) => ({
     href: item.href,
     title: item.label,
     description: item.description,
     kind: item.kind,
-    section: "External",
-    sectionSlug: "external",
+    section: "Selected",
+    sectionSlug: "selected",
     tags: uniqueBySlug(item.tags),
     featured: false,
     source: "external",
@@ -253,35 +230,9 @@ export const externalWritingEntries: WritingEntry[] = externalWritingItems.map(
 );
 
 export const writingEntries = sortEntries([
-  ...internalWritingEntries,
-  ...externalWritingEntries,
+  ...selectedMarkdownEntries,
+  ...selectedExternalEntries,
 ]);
-
-export const internalWriting = sortEntries(internalWritingEntries);
-
-export const areaFacets: WritingFacet[] = [...new Set(internalWriting.map((entry) => entry.section))]
-  .map((section) => {
-    const entries = internalWriting.filter((entry) => entry.section === section);
-
-    return {
-      label: section,
-      slug: slugify(section),
-      href: `/writing/${slugify(section)}/`,
-      count: entries.length,
-      entries,
-    };
-  })
-  .sort((left, right) => {
-    const leftOrder = preferredSectionOrder.indexOf(left.slug);
-    const rightOrder = preferredSectionOrder.indexOf(right.slug);
-
-    if (leftOrder !== -1 || rightOrder !== -1) {
-      return (leftOrder === -1 ? Number.POSITIVE_INFINITY : leftOrder) -
-        (rightOrder === -1 ? Number.POSITIVE_INFINITY : rightOrder);
-    }
-
-    return left.label.localeCompare(right.label);
-  });
 
 export const tagFacets: WritingFacet[] = [
   ...new Map(
