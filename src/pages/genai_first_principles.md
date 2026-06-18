@@ -5,6 +5,7 @@ description: "A short first-principles note on generative ML, compression, scali
 kind: essay
 section: GenAI
 featured: true
+selected: true
 tags:
     - genai
     - llm

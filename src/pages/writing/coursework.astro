@@ -1,0 +1,35 @@
+---
+import ArticleLayout from "../../layouts/ArticleLayout.astro";
+import { courseworkGroups } from "../../data/siteContent";
+
+const frontmatter = { title: "Theoretical Coursework", tags: ["writing", "coursework"] };
+---
+
+<ArticleLayout frontmatter={frontmatter}>
+  <h1>Theoretical coursework</h1>
+
+  <p>
+    <a href="/writing/">Writing</a>
+  </p>
+
+  <ul>
+    {
+      courseworkGroups.map((group) => (
+        <li>
+          <strong>{group.title}</strong>
+          {" - "}
+          {group.description}
+          <br />
+          <span class="text-muted">
+            {group.links.map((link, index) => (
+              <>
+                {index > 0 && " · "}
+                <a href={link.href}>{link.label}</a>
+              </>
+            ))}
+          </span>
+        </li>
+      ))
+    }
+  </ul>
+</ArticleLayout>
