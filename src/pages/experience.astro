@@ -1,0 +1,12 @@
+---
+import Timeline from "../components/Timeline.astro";
+import { experienceTimeline } from "../data/experienceTimeline";
+import { pageMeta } from "../data/siteContent";
+import ArticleLayout from "../layouts/ArticleLayout.astro";
+
+const frontmatter = pageMeta.experience;
+---
+
+<ArticleLayout frontmatter={frontmatter}>
+  <Timeline items={experienceTimeline} />
+</ArticleLayout>

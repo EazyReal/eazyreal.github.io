@@ -1,12 +1,11 @@
 ---
 import RichText from "../components/RichText.astro";
+import { homepageAffiliationParagraph } from "../data/experienceTimeline";
 import ArticleLayout from "../layouts/ArticleLayout.astro";
 import {
-  currentWork,
-  facts,
+  homepageHighlights,
   pageMeta,
   personal,
-  professionalRoles,
   profile,
 } from "../data/siteContent";
 
@@ -19,44 +18,16 @@ const frontmatter = pageMeta.home;
   </figure>
 
   <h2>About Me</h2>
+  <p class="motto">{profile.motto}</p>
   {profile.about.map((paragraph) => <p><RichText parts={paragraph} /></p>)}
 
-  <h2>{currentWork.heading}</h2>
-  {currentWork.paragraphs.map((paragraph) => <p><RichText parts={paragraph} /></p>)}
+  <p class="affiliation-sentence"><RichText parts={homepageAffiliationParagraph} /></p>
 
-  <h2>Professional Experience</h2>
+  <h2>Selected Highlights</h2>
   <ul>
-    {professionalRoles.map((role) => <li><strong>{role}</strong></li>)}
+    {homepageHighlights.map((highlight) => <li><RichText parts={highlight} /></li>)}
   </ul>
-
-  <h2>Education</h2>
-  <ul>
-    {
-      profile.education.map((item) => (
-        <li>
-          <strong>{item.degree}</strong>, <em>{item.school}</em> - {item.note}
-        </li>
-      ))
-    }
-  </ul>
-
-  <h2>Some Facts</h2>
-  <ul>
-    {facts.map((fact) => <li><RichText parts={fact} /></li>)}
-  </ul>
-
-  <hr />
 
   <h2>Beyond Work</h2>
-  <p>{personal.origin}</p>
-
-  <h3>Hobbies</h3>
-  <ul>
-    {personal.hobbies.map((hobby) => <li><RichText parts={hobby} /></li>)}
-  </ul>
-
-  <hr />
-
-  <h2>Web3 Addresses</h2>
-  <pre><code>{profile.web3Addresses.join("\n")}</code></pre>
+  {personal.paragraphs.map((paragraph) => <p><RichText parts={paragraph} /></p>)}
 </ArticleLayout>
