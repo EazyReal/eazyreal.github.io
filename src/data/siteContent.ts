@@ -66,7 +66,10 @@ export const links = {
   coursework: { href: pageHrefs.coursework, label: "Theoretical coursework" },
   github: { href: "https://github.com/EazyReal", label: "GitHub" },
   linkedin: { href: "https://www.linkedin.com/in/maxwilllin/", label: "LinkedIn" },
-  resume: { href: "/resume-ml.pdf", label: "Resume" },
+  resume: {
+    href: "https://drive.google.com/file/d/1iBTJaVHiqBjrJ9jxYKth7Zv-mOVhbsf0/view",
+    label: "Resume",
+  },
   x: { href: "https://twitter.com/tensorfi", label: "X" },
   vmax: { href: "https://vmax.ai/", label: "Vmax" },
   slime: { href: `${pageHrefs.oss}#slime`, label: "slime" },
