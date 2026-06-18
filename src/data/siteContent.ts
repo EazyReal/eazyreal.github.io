@@ -134,11 +134,13 @@ export const profile = {
   motto: "Make things as simple as possible, but not simpler.",
   about: [
     [
-      "I develop algorithms and infrastructure for recursive self-improvement, especially around generative models, reinforcement learning, and software-engineering agents. Across research, engineering, business, and prioritization, I try to quotient out accidental detail, preserve the invariant, then build from there.",
+      "I develop algorithms and infrastructure for ",
+      { strong: "recursive self-improvement" },
+      ", especially around generative models, reinforcement learning, and software-engineering agents. Across research, engineering, business, and prioritization, I try to quotient out accidental detail, preserve the invariant, then build from there.",
     ],
     [
-      "That is also how I think about GenAI: ",
-      { href: "/genai_first_principles/", text: "from first principles" },
+      "That is also how I think about ",
+      { href: "/genai_first_principles/", text: "GenAI from first principles" },
       ".",
     ],
   ],
@@ -198,7 +200,10 @@ export const homepageHighlights: RichText[] = [
     ".",
   ],
   [
-    "4.0/4.0 at Georgia Tech; A+ in Advanced Algorithms, Advanced Linear Algebra, Quantum Information and Computation, and Theoretical Aspects of Modern Cryptography.",
+    { strong: "4.0/4.0" },
+    " at Georgia Tech; ",
+    { strong: "A+" },
+    " in Advanced Algorithms, Advanced Linear Algebra, Quantum Information and Computation, and Theoretical Aspects of Modern Cryptography.",
   ],
   [
     { href: `${pageHrefs.projects}#zkalpha`, text: "zkAlpha" },
