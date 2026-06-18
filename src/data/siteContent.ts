@@ -177,19 +177,11 @@ export const vmaxHomepageSummary =
 
 export const homepageHighlights: RichText[] = [
   [
-    "First technical hire building RL infrastructure for software-engineering agents: hundreds of GPUs, self-improving task generators, and thousands of concurrent sandboxes.",
-  ],
-  [
     "Contributor to ",
     { href: links.slime.href, text: links.slime.label },
     " and ",
     { href: links.harbor.href, text: links.harbor.label },
     " on RL training logic, agent integrations, and sandbox runtime fixes.",
-  ],
-  [
-    "Built billion-parameter autoregressive user-ad models and an LLM CTR evaluation pipeline at ",
-    { href: `${pageHrefs.experience}#meta-mrs`, text: "Meta MRS" },
-    ", improving AUC from 0.51 to 0.61.",
   ],
   [
     "Ranked top ",
@@ -198,7 +190,18 @@ export const homepageHighlights: RichText[] = [
     { strong: "96,000+" },
     " registrants in ",
     { strong: "Google Code Jam 2020" },
-    "; 4.0/4.0 at Georgia Tech with A+ performance in proof-heavy theory courses.",
+    ".",
+  ],
+  [
+    "4.0/4.0 at Georgia Tech; A+ in Advanced Algorithms, Advanced Linear Algebra, Quantum Information and Computation, and Theoretical Aspects of Modern Cryptography.",
+  ],
+  [
+    { href: `${pageHrefs.projects}#zkalpha`, text: "zkAlpha" },
+    " won ",
+    { strong: "~US$9k" },
+    " across 7 prizes at ",
+    { strong: "ETHGlobal Paris" },
+    " (1,400 participants, 321 projects).",
   ],
 ];
 
