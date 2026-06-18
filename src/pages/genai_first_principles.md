@@ -18,44 +18,78 @@ tags:
 *Author: [Maxwill Lin](https://www.linkedin.com/in/maxwilllin/)*
 
 
-## Why LLMs success
+## Intelligence is compression
 
-- useful objective: learn the distribution of human language
-- efficiently trainable and expressive architecture: transformers / linear-RNNs
-
-**generative ML is compression.**
+Compression is assigning shorter codes to likely data.
+For a generative model, negative log-likelihood is expected code length:
 
 $$
-\theta^* = \arg\min_{\theta} \, \mathbb{E}_{z \sim p_{\text{data}}} \left[ \ell\left(h_\theta, z\right) \right]
+\mathcal L(\theta)
+= \mathbb E_{x \sim p_{\text{data}}}[-\log p_\theta(x)]
+= H(p_{\text{data}}) + D_{\mathrm{KL}}(p_{\text{data}} \| p_\theta)
 $$
 
-when we do maximum likelihood for GenAI especially, it is equivalent to minimizing the KL divergence
+Since $H(p_{\text{data}})$ is fixed, maximum likelihood is minimizing:
+
 $$
-\mathcal L(\theta)=H\bigl(p_{\text{data}}\bigr)+D_{\mathrm{KL}} \bigl(p_{\text{data}}\;\|\;p_\theta\bigr),
+D_{\mathrm{KL}}(p_{\text{data}} \| p_\theta)
 $$
 
-As long as the empirically-observed scaling laws hold, emerging abilities must be there if loss is to decrease (forced to compress in the most generalizable way) 
+So training a generative model is learning a compressor for the data distribution.
+If the distribution is broad enough, memorization is not enough; lower loss requires reusable structure.
+
+What we call intelligence is useful structure discovered by compression.
 
 ---
 
-## Reasoning? No, just well-guided RL
+## Scaling laws + implementation
 
-Typically RL does not work well in practice due to the enormous search space and sparse reward.
-Human heuristics in language distribution (so-called reasoning) provides a good starting point.
+If intelligence is useful compression, scaling laws say better compression keeps converting data, parameters, and compute into lower loss.
+
+The Bitter Lesson is the implementation rule: less hand-coded inductive bias, more scalable search and learning.
+
+A scalable implementation of compression is how intelligence is built:
+
+- data: broad enough that shortcuts fail
+- objective: dense compression signal
+- architecture: expressive, low-bias, highly parallelizable
+- compute: optimization that keeps improving with scale
+
+Pretraining works because all four scale.
+Next-token prediction is not perfect, but it is simple enough to apply to almost all human text.
+Transformers / linear-RNNs are not magic, but they make the objective trainable at scale.
+
+---
+
+## RL with pretrained knowledge
+
+RL is hard when search is blind and reward is sparse.
+LLM RL works better because pretraining makes search non-blind.
+
+The model already has knowledge, patterns, and human heuristics, so rollouts are more likely to hit reward.
+RL then selects and sharpens useful behavior.
+
+If tasks are diverse and hard enough, genuine reasoning is forced to emerge for better rewards.
+Similar to pretraining: if reward keeps improving on broad tasks, the model must learn general strategies instead of memorizing shortcuts.
 
 --- 
 
-## Actionables
+## How to build great models
 
-How to build better LLMs?
+Data:
 
-- better data, nothing matters more than the distribution you learn...
-- accurate reward and heuristic for RL training 
-- scaling!
+- scalable and high-quality pretraining distribution
+- RL tasks that teach generalizable behaviors, or the abilities we genuinely care about
 
+Architecture:
 
-Prioritize good practices and filter / explain bad ones
+- expressive
+- highly parallelizable training
+- less unnecessary inductive bias
 
-- e.g. Masked LMs < Autoregressive LMs: there exist short cuts to prevent the model from compressing in the most generalizable way
+Compute:
 
-Would love to explore and execute some first-principled research ideas if bandwidth permits
+- stable optimization
+- enough compute / $$ to scale
+
+And no bugs or hackable objectives.
