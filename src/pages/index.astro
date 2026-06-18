@@ -4,12 +4,13 @@ import ArticleLayout from "../layouts/ArticleLayout.astro";
 import {
   currentWork,
   facts,
+  pageMeta,
   personal,
   professionalRoles,
   profile,
 } from "../data/siteContent";
 
-const frontmatter = { title: profile.name, tags: ["home"] };
+const frontmatter = pageMeta.home;
 ---
 
 <ArticleLayout frontmatter={frontmatter}>

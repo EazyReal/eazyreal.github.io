@@ -1,4 +1,4 @@
-// Shared source of truth for homepage, projects, OSS, and site links.
+// Shared source of truth for homepage, projects, open source, and site links.
 export type RichTextPart =
   | string
   | { href: string; text: string }
@@ -21,6 +21,7 @@ type Project = {
 export type ExternalWritingItem = Link & {
   kind: "coursework" | "essay" | "report" | "tutorial";
   description: string;
+  lastUpdated?: string;
   tags: string[];
 };
 
@@ -30,18 +31,81 @@ type CourseworkGroup = {
   links: Link[];
 };
 
+export type PageMeta = {
+  title: string;
+  heading?: string | false;
+  description?: string;
+  lastUpdated?: string;
+  tags?: string[];
+};
+
+export const siteMeta = {
+  author: "Maxwill Lin",
+  description: "Maxwill's personal website.",
+  latestContentUpdate: "2026-06-18",
+  name: "Maxwill Lin",
+  technicalDescription:
+    "Technical writing, notes, and project documentation by Maxwill Lin.",
+};
+
+const pageHrefs = {
+  coursework: "/writing/coursework/",
+  home: "/",
+  oss: "/oss/",
+  projects: "/projects/",
+  writing: "/writing/",
+  writingTags: "/writing/tags/",
+};
+
 export const links = {
-  home: { href: "/", label: "Home" },
-  projects: { href: "/projects/", label: "Projects" },
-  oss: { href: "/oss/", label: "OSS" },
-  writing: { href: "/writing/", label: "Writing" },
+  home: { href: pageHrefs.home, label: "Home" },
+  projects: { href: pageHrefs.projects, label: "Projects" },
+  oss: { href: pageHrefs.oss, label: "Open Source" },
+  writing: { href: pageHrefs.writing, label: "Writing" },
+  writingTags: { href: pageHrefs.writingTags, label: "Tags" },
+  coursework: { href: pageHrefs.coursework, label: "Theoretical coursework" },
   github: { href: "https://github.com/EazyReal", label: "GitHub" },
   linkedin: { href: "https://www.linkedin.com/in/maxwilllin/", label: "LinkedIn" },
   resume: { href: "/resume-ml.pdf", label: "Resume" },
   x: { href: "https://twitter.com/tensorfi", label: "X" },
   vmax: { href: "https://vmax.ai/", label: "Vmax" },
-  slime: { href: "/oss/#slime", label: "slime" },
-  harbor: { href: "/oss/#harbor", label: "Harbor" },
+  slime: { href: `${pageHrefs.oss}#slime`, label: "slime" },
+  harbor: { href: `${pageHrefs.oss}#harbor`, label: "Harbor" },
+};
+
+export const pageMeta = {
+  coursework: {
+    title: links.coursework.label,
+    lastUpdated: siteMeta.latestContentUpdate,
+    tags: ["writing", "coursework"],
+  },
+  home: {
+    title: siteMeta.name,
+    heading: false,
+    lastUpdated: siteMeta.latestContentUpdate,
+    tags: ["home"],
+  },
+  oss: {
+    title: "Open Source Contributions",
+    lastUpdated: siteMeta.latestContentUpdate,
+    tags: ["engineering", "oss"],
+  },
+  projects: {
+    title: links.projects.label,
+    lastUpdated: siteMeta.latestContentUpdate,
+    tags: ["engineering"],
+  },
+  writing: {
+    title: links.writing.label,
+    lastUpdated: siteMeta.latestContentUpdate,
+    tags: ["writing"],
+  },
+  writingTags: {
+    title: "Writing Tags",
+    heading: links.writingTags.label,
+    lastUpdated: siteMeta.latestContentUpdate,
+    tags: ["writing", "tags"],
+  },
 };
 
 export const siteNavLinks = [links.home, links.projects, links.oss, links.writing];
@@ -49,10 +113,10 @@ export const siteNavLinks = [links.home, links.projects, links.oss, links.writin
 export const socialLinks = [links.github, links.linkedin, links.resume, links.x];
 
 export const profile = {
-  name: "Maxwill Lin",
+  name: siteMeta.name,
   photo: {
     src: "/img/profile.jpg",
-    alt: "Maxwill Lin",
+    alt: siteMeta.name,
   },
   education: [
     {
@@ -153,11 +217,12 @@ export const personal = {
 
 export const selectedWritingItems: ExternalWritingItem[] = [
   {
-    href: "/writing/coursework/",
-    label: "Theoretical coursework",
+    href: links.coursework.href,
+    label: links.coursework.label,
     kind: "coursework",
     description:
       "Graduate-level and theoretical work across cryptography, quantum computation, blockchain protocols, and mathematics.",
+    lastUpdated: pageMeta.coursework.lastUpdated,
     tags: ["theory", "cryptography", "quantum", "blockchain", "math"],
   },
   {
@@ -165,6 +230,7 @@ export const selectedWritingItems: ExternalWritingItem[] = [
     label: "Treap Tutorial",
     kind: "tutorial",
     description: "Competitive programming teaching material for the NCTU PCCA winter camp.",
+    lastUpdated: "2020-01-19",
     tags: ["algorithms", "data structures", "competitive programming"],
   },
 ];

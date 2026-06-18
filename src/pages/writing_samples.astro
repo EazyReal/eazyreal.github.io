@@ -1,5 +1,7 @@
 ---
-const target = "/writing/";
+import { links } from "../data/siteContent";
+
+const target = links.writing.href;
 ---
 
 <!doctype html>
@@ -11,6 +13,6 @@ const target = "/writing/";
     <title>Redirecting to Writing</title>
   </head>
   <body>
-    <p><a href={target}>Writing</a></p>
+    <p><a href={target}>{links.writing.label}</a></p>
   </body>
 </html>

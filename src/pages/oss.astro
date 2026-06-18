@@ -1,13 +1,11 @@
 ---
 import ArticleLayout from "../layouts/ArticleLayout.astro";
-import { ossGroups } from "../data/siteContent";
+import { ossGroups, pageMeta } from "../data/siteContent";
 
-const frontmatter = { title: "OSS Contributions", tags: ["engineering", "oss"] };
+const frontmatter = pageMeta.oss;
 ---
 
 <ArticleLayout frontmatter={frontmatter}>
-  <h1>OSS Contributions</h1>
-
   <p>Selected merged PRs to open-source systems I use for RL infrastructure and software-engineering agent training.</p>
 
   {

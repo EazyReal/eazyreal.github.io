@@ -1,15 +1,14 @@
 ---
 import ArticleLayout from "../../../layouts/ArticleLayout.astro";
+import { links, pageMeta } from "../../../data/siteContent";
 import { tagFacets } from "../../../data/writingIndex";
 
-const frontmatter = { title: "Writing Tags", tags: ["writing", "tags"] };
+const frontmatter = pageMeta.writingTags;
 ---
 
 <ArticleLayout frontmatter={frontmatter}>
-  <h1>Tags</h1>
-
   <p>
-    <a href="/writing/">Writing</a>
+    <a href={links.writing.href}>{links.writing.label}</a>
   </p>
 
   <ul>

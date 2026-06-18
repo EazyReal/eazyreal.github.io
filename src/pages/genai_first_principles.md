@@ -3,6 +3,7 @@ layout: ../layouts/ArticleLayout.astro
 title: "GenAI from first principles"
 description: "A short first-principles note on generative ML, compression, scaling, and RL."
 kind: essay
+lastUpdated: 2026-06-18
 section: GenAI
 featured: true
 selected: true
@@ -12,8 +13,6 @@ tags:
     - first principles
     - rl
 ---
-
-# GenAI from first principles
 
 *Author: [Maxwill Lin](https://www.linkedin.com/in/maxwilllin/)*
 

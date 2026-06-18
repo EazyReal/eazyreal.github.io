@@ -1,0 +1,13 @@
+---
+import { formatDisplayDate } from "../utils/dates";
+
+const { value } = Astro.props;
+---
+
+{
+  value && (
+    <p class="not-prose mb-6 text-xs text-muted">
+      Last updated <time datetime={value}>{formatDisplayDate(value)}</time>
+    </p>
+  )
+}

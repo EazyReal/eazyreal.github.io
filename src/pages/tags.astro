@@ -1,5 +1,7 @@
 ---
-const target = "/writing/tags/";
+import { links } from "../data/siteContent";
+
+const target = links.writingTags.href;
 ---
 
 <!doctype html>
@@ -11,6 +13,6 @@ const target = "/writing/tags/";
     <title>Redirecting to Writing Tags</title>
   </head>
   <body>
-    <p><a href={target}>Writing Tags</a></p>
+    <p><a href={target}>Writing {links.writingTags.label}</a></p>
   </body>
 </html>

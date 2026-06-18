@@ -1,4 +1,5 @@
-import { selectedWritingItems } from "./siteContent";
+import { links, selectedWritingItems } from "./siteContent";
+import { normalizeDate } from "../utils/dates";
 
 type MarkdownFrontmatter = {
   title?: string;
@@ -6,7 +7,7 @@ type MarkdownFrontmatter = {
   tags?: string[];
   kind?: string;
   section?: string;
-  lastUpdated?: string;
+  lastUpdated?: Date | string;
   featured?: boolean;
   selected?: boolean;
 };
@@ -113,7 +114,7 @@ export const slugify = (value: string) =>
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-|-$/g, "");
 
-export const tagHref = (tag: string) => `/writing/tags/${slugify(tag)}/`;
+export const tagHref = (tag: string) => `${links.writingTags.href}${slugify(tag)}/`;
 
 const canonicalTag = (tag: string) => {
   const slug = tagAliases.get(slugify(tag)) ?? slugify(tag);
@@ -121,7 +122,7 @@ const canonicalTag = (tag: string) => {
   return {
     label: tagLabels.get(slug) ?? tag.trim(),
     slug,
-    href: `/writing/tags/${slug}/`,
+    href: `${links.writingTags.href}${slug}/`,
   };
 };
 
@@ -208,7 +209,7 @@ const selectedMarkdownEntries = Object.entries(internalPageModules)
       section: "Selected",
       sectionSlug: "selected",
       tags: uniqueBySlug(rawTags),
-      lastUpdated: frontmatter.lastUpdated,
+      lastUpdated: normalizeDate(frontmatter.lastUpdated),
       featured: Boolean(frontmatter.featured),
       source: "internal",
     } satisfies WritingEntry;
@@ -224,6 +225,7 @@ export const selectedExternalEntries: WritingEntry[] = selectedWritingItems.map(
     section: "Selected",
     sectionSlug: "selected",
     tags: uniqueBySlug(item.tags),
+    lastUpdated: normalizeDate(item.lastUpdated),
     featured: false,
     source: "external",
   }),

@@ -1,14 +1,12 @@
 ---
 import RichText from "../components/RichText.astro";
 import ArticleLayout from "../layouts/ArticleLayout.astro";
-import { projects } from "../data/siteContent";
+import { pageMeta, projects } from "../data/siteContent";
 
-const frontmatter = { title: "Projects", tags: ["engineering"] };
+const frontmatter = pageMeta.projects;
 ---
 
 <ArticleLayout frontmatter={frontmatter}>
-  <h1>Projects</h1>
-
   {
     projects.map((project) => (
       <>

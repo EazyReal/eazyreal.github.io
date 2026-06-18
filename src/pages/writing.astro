@@ -1,18 +1,18 @@
 ---
 import ArticleLayout from "../layouts/ArticleLayout.astro";
+import { links, pageMeta } from "../data/siteContent";
 import {
   isTopicTag,
   primaryTagFacets,
   tagFacets,
   writingEntries,
 } from "../data/writingIndex";
+import { formatDisplayDate } from "../utils/dates";
 
-const frontmatter = { title: "Writing", tags: ["writing"] };
+const frontmatter = pageMeta.writing;
 ---
 
 <ArticleLayout frontmatter={frontmatter}>
-  <h1>Writing</h1>
-
   <div class="not-prose mb-8 border-y border-line py-4 text-sm">
     <nav aria-label="Writing tags" class="flex flex-wrap gap-x-4 gap-y-2">
       <span class="text-muted">Tags</span>
@@ -23,7 +23,7 @@ const frontmatter = { title: "Writing", tags: ["writing"] };
           </a>
         ))
       }
-      <a class="underline underline-offset-[6px]" href="/writing/tags/">
+      <a class="underline underline-offset-[6px]" href={links.writingTags.href}>
         all tags <span class="text-muted">{tagFacets.length}</span>
       </a>
     </nav>
@@ -37,7 +37,14 @@ const frontmatter = { title: "Writing", tags: ["writing"] };
           {entry.description && <> - {entry.description}</>}
           <br />
           <span class="text-muted">
-            {entry.kind} ·{" "}
+            {entry.kind}
+            {entry.lastUpdated && (
+              <>
+                {" "}
+                · updated <time datetime={entry.lastUpdated}>{formatDisplayDate(entry.lastUpdated)}</time>
+              </>
+            )}
+            {" · "}
             {entry.tags.filter(isTopicTag).map((tag, index) => (
               <>
                 {index > 0 && " · "}

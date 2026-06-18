@@ -1,6 +1,8 @@
 ---
 import ArticleLayout from "../../../layouts/ArticleLayout.astro";
+import { links, pageMeta } from "../../../data/siteContent";
 import { tagFacets } from "../../../data/writingIndex";
+import { formatDisplayDate } from "../../../utils/dates";
 
 export function getStaticPaths() {
   return tagFacets.map((tag) => ({
@@ -10,14 +12,19 @@ export function getStaticPaths() {
 }
 
 const { tag } = Astro.props;
-const frontmatter = { title: `Writing: ${tag.label}`, tags: ["writing", tag.label] };
+const frontmatter = {
+  ...pageMeta.writing,
+  title: `${pageMeta.writing.title}: ${tag.label}`,
+  heading: tag.label,
+  tags: ["writing", tag.label],
+};
 ---
 
 <ArticleLayout frontmatter={frontmatter}>
-  <h1>{tag.label}</h1>
-
   <p>
-    <a href="/writing/">Writing</a> / <a href="/writing/tags/">Tags</a>
+    <a href={links.writing.href}>{links.writing.label}</a> / <a href={links.writingTags.href}>
+      {links.writingTags.label}
+    </a>
   </p>
 
   <ul>
@@ -28,7 +35,13 @@ const frontmatter = { title: `Writing: ${tag.label}`, tags: ["writing", tag.labe
           {entry.description && <> - {entry.description}</>}
           <br />
           <span class="text-muted">
-            {entry.kind} · {entry.section}
+            {entry.kind}
+            {entry.lastUpdated && (
+              <>
+                {" "}
+                · updated <time datetime={entry.lastUpdated}>{formatDisplayDate(entry.lastUpdated)}</time>
+              </>
+            )}
           </span>
         </li>
       ))

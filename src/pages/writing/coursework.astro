@@ -1,15 +1,13 @@
 ---
 import ArticleLayout from "../../layouts/ArticleLayout.astro";
-import { courseworkGroups } from "../../data/siteContent";
+import { courseworkGroups, links, pageMeta } from "../../data/siteContent";
 
-const frontmatter = { title: "Theoretical Coursework", tags: ["writing", "coursework"] };
+const frontmatter = pageMeta.coursework;
 ---
 
 <ArticleLayout frontmatter={frontmatter}>
-  <h1>Theoretical coursework</h1>
-
   <p>
-    <a href="/writing/">Writing</a>
+    <a href={links.writing.href}>{links.writing.label}</a>
   </p>
 
   <ul>

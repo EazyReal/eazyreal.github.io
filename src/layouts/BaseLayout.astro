@@ -2,13 +2,15 @@
 import "katex/dist/katex.min.css";
 import "../styles/global.css";
 import SiteShell from "../components/SiteShell.astro";
+import { siteMeta } from "../data/siteContent";
 
 const {
-  title = "Maxwill Lin",
-  description = "Maxwill's personal website.",
+  title = siteMeta.name,
+  description = siteMeta.description,
+  lastUpdated,
 } = Astro.props;
 
-const pageTitle = title === "Maxwill Lin" ? title : `${title} | Maxwill Lin`;
+const pageTitle = title === siteMeta.name ? title : `${title} | ${siteMeta.name}`;
 ---
 
 <!doctype html>
@@ -17,7 +19,8 @@ const pageTitle = title === "Maxwill Lin" ? title : `${title} | Maxwill Lin`;
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
-    <meta name="author" content="Maxwill Lin" />
+    <meta name="author" content={siteMeta.author} />
+    {lastUpdated && <meta property="article:modified_time" content={lastUpdated} />}
     <link rel="icon" href="/img/favicon.ico" />
     <title>{pageTitle}</title>
   </head>

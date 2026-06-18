@@ -1,6 +1,7 @@
 ---
 import SiteNav from "./SiteNav.astro";
 import SocialLinks from "./SocialLinks.astro";
+import { links, siteMeta } from "../data/siteContent";
 ---
 
 <div class="ml-4 w-[calc(100%-2rem)] py-6 md:ml-12 md:w-[min(690px,calc(100%-6rem))] md:py-11">
@@ -8,10 +9,10 @@ import SocialLinks from "./SocialLinks.astro";
     <div>
       <a
         class="block font-serif text-[30px] leading-none no-underline"
-        href="/"
-        aria-label="Maxwill Lin home"
+        href={links.home.href}
+        aria-label={`${siteMeta.name} home`}
       >
-        Maxwill Lin
+        {siteMeta.name}
       </a>
       <SocialLinks />
     </div>

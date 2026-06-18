@@ -1,16 +1,23 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
+import LastUpdated from "../components/LastUpdated.astro";
 import Prose from "../components/Prose.astro";
+import { siteMeta } from "../data/siteContent";
+import { normalizeDate } from "../utils/dates";
 
 const { frontmatter = {} } = Astro.props;
 const title = frontmatter.title ?? "Technical Note";
 const description =
   frontmatter.description ??
-  "Technical writing, notes, and project documentation by Maxwill Lin.";
+  siteMeta.technicalDescription;
+const heading = frontmatter.heading === false ? undefined : frontmatter.heading ?? title;
+const lastUpdated = normalizeDate(frontmatter.lastUpdated);
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout title={title} description={description} lastUpdated={lastUpdated}>
   <Prose>
+    <LastUpdated value={lastUpdated} />
+    {heading && <h1>{heading}</h1>}
     <slot />
   </Prose>
 </BaseLayout>
