@@ -1,0 +1,19 @@
+---
+import type { RichTextPart } from "../data/siteContent";
+
+const { parts } = Astro.props as { parts: RichTextPart[] };
+---
+
+{
+  parts.map((part) => {
+    if (typeof part === "string") {
+      return part;
+    }
+
+    if ("strong" in part) {
+      return <strong>{part.strong}</strong>;
+    }
+
+    return <a href={part.href}>{part.text}</a>;
+  })
+}

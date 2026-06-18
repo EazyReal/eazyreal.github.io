@@ -1,0 +1,29 @@
+---
+import ArticleLayout from "../layouts/ArticleLayout.astro";
+import { ossGroups } from "../data/siteContent";
+
+const frontmatter = { title: "OSS Contributions", tags: ["engineering", "oss"] };
+---
+
+<ArticleLayout frontmatter={frontmatter}>
+  <h1>OSS Contributions</h1>
+
+  <p>Selected merged PRs to open-source systems I use for RL infrastructure and software-engineering agent training.</p>
+
+  {
+    ossGroups.map((group) => (
+      <>
+        <h2 id={group.id}>{group.name}</h2>
+        <ul>
+          {
+            group.contributions.map((contribution) => (
+              <li>
+                <a href={contribution.href}>{contribution.title}</a> - {contribution.description}
+              </li>
+            ))
+          }
+        </ul>
+      </>
+    ))
+  }
+</ArticleLayout>

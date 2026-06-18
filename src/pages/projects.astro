@@ -1,0 +1,27 @@
+---
+import RichText from "../components/RichText.astro";
+import ArticleLayout from "../layouts/ArticleLayout.astro";
+import { projects } from "../data/siteContent";
+
+const frontmatter = { title: "Projects", tags: ["engineering"] };
+---
+
+<ArticleLayout frontmatter={frontmatter}>
+  <h1>Projects</h1>
+
+  {
+    projects.map((project) => (
+      <>
+        <h2 id={project.id}>{project.title}</h2>
+        {project.paragraphs.map((paragraph) => <p><RichText parts={paragraph} /></p>)}
+        {
+          project.links && (
+            <ul>
+              {project.links.map((link) => <li><a href={link.href}>{link.label}</a></li>)}
+            </ul>
+          )
+        }
+      </>
+    ))
+  }
+</ArticleLayout>

@@ -1,15 +1,10 @@
 ---
-const navItems = [
-  { href: "/", label: "Home" },
-  { href: "/projects/", label: "Projects" },
-  { href: "/oss/", label: "OSS" },
-  { href: "/writing_samples/", label: "Writing" },
-];
+import { siteNavLinks } from "../data/siteContent";
 ---
 
 <nav class="flex gap-4 whitespace-nowrap" aria-label="Primary navigation">
   {
-    navItems.map((item) => (
+    siteNavLinks.map((item) => (
       <a
         class="underline decoration-1 underline-offset-[6px] hover:decoration-2"
         href={item.href}

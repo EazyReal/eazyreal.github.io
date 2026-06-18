@@ -1,0 +1,61 @@
+---
+import RichText from "../components/RichText.astro";
+import ArticleLayout from "../layouts/ArticleLayout.astro";
+import {
+  currentWork,
+  facts,
+  personal,
+  professionalRoles,
+  profile,
+} from "../data/siteContent";
+
+const frontmatter = { title: profile.name, tags: ["home"] };
+---
+
+<ArticleLayout frontmatter={frontmatter}>
+  <figure class="profile-photo">
+    <img src={profile.photo.src} alt={profile.photo.alt} />
+  </figure>
+
+  <h2>About Me</h2>
+
+  <h2>{currentWork.heading}</h2>
+  {currentWork.paragraphs.map((paragraph) => <p><RichText parts={paragraph} /></p>)}
+
+  <h2>Professional Experience</h2>
+  <ul>
+    {professionalRoles.map((role) => <li><strong>{role}</strong></li>)}
+  </ul>
+
+  <h2>Education</h2>
+  <ul>
+    {
+      profile.education.map((item) => (
+        <li>
+          <strong>{item.degree}</strong>, <em>{item.school}</em> - {item.note}
+        </li>
+      ))
+    }
+  </ul>
+
+  <h2>Some Facts</h2>
+  <ul>
+    {facts.map((fact) => <li><RichText parts={fact} /></li>)}
+  </ul>
+
+  <hr />
+
+  <h2>Beyond Work</h2>
+  <p>{personal.origin}</p>
+
+  <h3>Hobbies</h3>
+  <ul>
+    {personal.hobbies.map((hobby) => <li>{hobby}</li>)}
+    {personal.hobbyLinks.map((link) => <li><a href={link.href}>{link.label}</a></li>)}
+  </ul>
+
+  <hr />
+
+  <h2>Web3 Addresses</h2>
+  <pre><code>{profile.web3Addresses.join("\n")}</code></pre>
+</ArticleLayout>
