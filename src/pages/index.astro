@@ -51,8 +51,7 @@ const frontmatter = pageMeta.home;
 
   <h3>Hobbies</h3>
   <ul>
-    {personal.hobbies.map((hobby) => <li>{hobby}</li>)}
-    {personal.hobbyLinks.map((link) => <li><a href={link.href}>{link.label}</a></li>)}
+    {personal.hobbies.map((hobby) => <li><RichText parts={hobby} /></li>)}
   </ul>
 
   <hr />

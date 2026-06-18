@@ -201,20 +201,22 @@ export const facts: RichText[] = [
 export const personal = {
   origin: "I grew up in Taipei, Taiwan (Mandarin name: 林彥彤 / Yan-Tong Lin).",
   hobbies: [
-    "Poker",
-    "Competitive multiplayer games",
-    "Health & fitness",
-    "Guitar & piano",
-  ],
-  hobbyLinks: [
-    {
-      href: "https://youtu.be/XmpmadFYGOk",
-      label: 'My "Fight" acoustic guitar cover',
-    },
-    {
-      href: "https://youtu.be/MSYaon4zNsc?si=ac7TzA_bLDmVUMfR",
-      label: "Hosted by Antalpha Hacker House during ETH CC in Paris",
-    },
+    ["Poker; competitive multiplayer games; health & fitness."],
+    [
+      "Guitar & piano: ",
+      {
+        href: "https://youtu.be/XmpmadFYGOk",
+        text: '"Fight" acoustic guitar cover',
+      },
+      ".",
+    ],
+    [
+      {
+        href: "https://youtu.be/MSYaon4zNsc?si=ac7TzA_bLDmVUMfR",
+        text: "ETH CC Paris hacker house",
+      },
+      ".",
+    ],
   ],
 };
 
