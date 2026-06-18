@@ -1,6 +1,15 @@
 ---
 layout: ../layouts/ArticleLayout.astro
 title: "GenAI from first principles"
+description: "A short first-principles note on generative ML, compression, scaling, and RL."
+kind: essay
+section: GenAI
+featured: true
+tags:
+    - genai
+    - llm
+    - first principles
+    - rl
 ---
 
 # GenAI from first principles

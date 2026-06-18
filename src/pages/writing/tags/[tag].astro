@@ -1,0 +1,37 @@
+---
+import ArticleLayout from "../../../layouts/ArticleLayout.astro";
+import { tagFacets } from "../../../data/writingIndex";
+
+export function getStaticPaths() {
+  return tagFacets.map((tag) => ({
+    params: { tag: tag.slug },
+    props: { tag },
+  }));
+}
+
+const { tag } = Astro.props;
+const frontmatter = { title: `Writing: ${tag.label}`, tags: ["writing", tag.label] };
+---
+
+<ArticleLayout frontmatter={frontmatter}>
+  <h1>{tag.label}</h1>
+
+  <p>
+    <a href="/writing/">Writing</a> / <a href="/writing/tags/">Tags</a>
+  </p>
+
+  <ul>
+    {
+      tag.entries.map((entry) => (
+        <li>
+          <a href={entry.href}>{entry.title}</a>
+          {entry.description && <> - {entry.description}</>}
+          <br />
+          <span class="text-muted">
+            {entry.kind} · {entry.section}
+          </span>
+        </li>
+      ))
+    }
+  </ul>
+</ArticleLayout>

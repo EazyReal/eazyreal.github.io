@@ -1,0 +1,26 @@
+---
+import ArticleLayout from "../../../layouts/ArticleLayout.astro";
+import { tagFacets } from "../../../data/writingIndex";
+
+const frontmatter = { title: "Writing Tags", tags: ["writing", "tags"] };
+---
+
+<ArticleLayout frontmatter={frontmatter}>
+  <h1>Tags</h1>
+
+  <p>
+    <a href="/writing/">Writing</a>
+  </p>
+
+  <ul>
+    {
+      tagFacets.map((tag) => (
+        <li>
+          <a href={tag.href}>{tag.label}</a>
+          {" "}
+          <span class="text-muted">{tag.count}</span>
+        </li>
+      ))
+    }
+  </ul>
+</ArticleLayout>

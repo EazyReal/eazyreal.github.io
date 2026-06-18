@@ -1,0 +1,96 @@
+---
+import ArticleLayout from "../layouts/ArticleLayout.astro";
+import {
+  areaFacets,
+  externalWritingEntries,
+  isTopicTag,
+  primaryTagFacets,
+  tagFacets,
+} from "../data/writingIndex";
+
+const frontmatter = { title: "Writing", tags: ["writing"] };
+---
+
+<ArticleLayout frontmatter={frontmatter}>
+  <h1>Writing</h1>
+
+  <div class="not-prose mb-8 space-y-3 border-y border-line py-4 text-sm">
+    <nav aria-label="Writing areas" class="flex flex-wrap gap-x-4 gap-y-2">
+      <span class="text-muted">Areas</span>
+      {
+        areaFacets.map((area) => (
+          <a class="underline underline-offset-[6px]" href={area.href}>
+            {area.label} <span class="text-muted">{area.count}</span>
+          </a>
+        ))
+      }
+    </nav>
+
+    <nav aria-label="Writing tags" class="flex flex-wrap gap-x-4 gap-y-2">
+      <span class="text-muted">Tags</span>
+      {
+        primaryTagFacets.map((tag) => (
+          <a class="underline underline-offset-[6px]" href={tag.href}>
+            {tag.label} <span class="text-muted">{tag.count}</span>
+          </a>
+        ))
+      }
+      <a class="underline underline-offset-[6px]" href="/writing/tags/">
+        all tags <span class="text-muted">{tagFacets.length}</span>
+      </a>
+    </nav>
+  </div>
+
+  <h2>Notes</h2>
+  {
+    areaFacets.map((area) => (
+      <section>
+        <h3>
+          <a href={area.href}>{area.label}</a>
+        </h3>
+        <ul>
+          {area.entries.map((entry) => (
+            <li>
+              <a href={entry.href}>{entry.title}</a>
+              {entry.description && <> - {entry.description}</>}
+            <br />
+            <span class="text-muted">
+              {entry.kind} ·{" "}
+                {entry.tags.filter(isTopicTag).map((tag, index) => (
+                  <>
+                    {index > 0 && " · "}
+                    <a href={tag.href}>{tag.label}</a>
+                  </>
+                ))}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))
+  }
+
+  {externalWritingEntries.length > 0 && <h2>External</h2>}
+  {
+    externalWritingEntries.length > 0 && (
+      <ul>
+        {externalWritingEntries.map((entry) => (
+          <li>
+            <a href={entry.href}>{entry.title}</a>
+            {entry.description && <> - {entry.description}</>}
+            <br />
+            <span class="text-muted">
+              {entry.kind} ·{" "}
+              {entry.tags.filter(isTopicTag).map((tag, index) => (
+                <>
+                  {index > 0 && " · "}
+                  <a href={tag.href}>{tag.label}</a>
+                </>
+              ))}
+            </span>
+          </li>
+        ))}
+      </ul>
+    )
+  }
+</ArticleLayout>

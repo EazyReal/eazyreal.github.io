@@ -1,6 +1,12 @@
 ---
 layout: ../../layouts/ArticleLayout.astro
 title: "Stanford CS224n NLP with DL"
+description: "Course notes for Stanford CS224n natural language processing with deep learning."
+kind: note
+tags:
+    - NLP
+    - deep learning
+    - course notes
 ---
 
 # Stanford CS224n NLP with DL
@@ -75,5 +81,4 @@ http://web.stanford.edu/class/cs224n/readings/cs224n-2019-notes06-NMT_seq2seq_at
     - mentioned
     - https://zhuanlan.zhihu.com/p/27151397
     - attention to coattention?
-
 

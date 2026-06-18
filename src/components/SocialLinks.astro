@@ -1,15 +1,10 @@
 ---
-const links = [
-  { href: "https://github.com/EazyReal", label: "GitHub" },
-  { href: "https://www.linkedin.com/in/maxwilllin/", label: "LinkedIn" },
-  { href: "https://drive.google.com/file/d/1iBTJaVHiqBjrJ9jxYKth7Zv-mOVhbsf0/view", label: "CV" },
-  { href: "https://twitter.com/tensorfi", label: "X" },
-];
+import { socialLinks } from "../data/siteContent";
 ---
 
 <nav class="mt-4 flex flex-wrap gap-x-4 gap-y-2 text-muted" aria-label="External links">
   {
-    links.map((link) => (
+    socialLinks.map((link) => (
       <a
         class="underline decoration-1 underline-offset-[6px] hover:decoration-2"
         href={link.href}
