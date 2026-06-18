@@ -8,30 +8,30 @@ tags: [home]
   <img src="/img/profile.jpg" alt="Maxwill Lin" />
 </figure>
 
+## About Me
+
 ## Current Work
-
-At Vmax, I designed and built the core system end-to-end for training software-engineering agents: RL infrastructure that orchestrates hundreds of GPUs, a self-improving task generator, and a rollout framework that runs thousands of concurrent sandboxes; I am actively contributing upstream across [slime](https://github.com/THUDM/slime), [Miles](https://github.com/radixark/miles), and [Harbor](https://github.com/harbor-framework/harbor).
-
-Earlier: Meta MRS (Meta Recommendation System), autopilot systems, cryptography/blockchain protocols, and quantitative research.
-
-## Quick Links
-
-* [LinkedIn](https://www.linkedin.com/in/maxwilllin/)
-* [CV](https://drive.google.com/file/d/1iBTJaVHiqBjrJ9jxYKth7Zv-mOVhbsf0/view)
-* [GenAI from first principles](/genai_first_principles/)
-* In the age of GenAI, [tastes](/tastes/) matter
-* [Writing samples](/writing_samples/)
-* [Engineering projects](/projects/)
-
+I am the 1st technical staff at [Vmax](https://vmax.ai/). 
+I designed and built the core training system end-to-end: configuration system that makes experiments agent legible and reproducible, RL infrastructure orchestrating hundreds of GPUs, self-improving software-engineering task generators, and a rollout framework running agents in Harbor tasks on thousands of concurrent sandboxes.
+I am contributor to [slime](/oss/#slime) and [Harbor](/oss/#harbor), covering RL training logic, agent integrations, and sandbox runtime fixes.
 
 ## Professional Experience
 
 * **Vmax – RL infrastructure and self-improving task generation**
-  Designed and built the core system end-to-end: an internal slime fork, a self-improving agentic RL environment generator, and a rollout framework for thousands of concurrent sandboxes; actively contributing upstream across slime, Miles, and Harbor.
 * **Meta – MRS (Meta Recommendation System)**
-  Applied ML Researcher working on LLMs for ads recommendation.
-* **Previous roles**
-  Autopilot systems · Cryptography & Blockchain protocols · Quantitative research.
+* **Tesla Autopilot – Autopilot systems**
+* **BTQ - Post Quantum Cryptography & Blockchain protocols**
+* **Kronos Research – Quantitative research**
+
+## Quick Links
+
+* [LinkedIn](https://www.linkedin.com/in/maxwilllin/)
+* [Resume](/resume-ml.pdf)
+* [OSS contributions](/oss/)
+* [GenAI from first principles](/genai_first_principles/)
+* In the age of GenAI, [tastes](/tastes/) matter
+* [Writing samples](/writing_samples/)
+* [Engineering projects](/projects/)
 
 
 ## Education
@@ -42,8 +42,8 @@ Earlier: Meta MRS (Meta Recommendation System), autopilot systems, cryptography/
 ## Some Facts
 
 * Top **0.56%** of a **96,000+** registrant field in **Google Code Jam 2020**
-* **~USD 9k** prize at **ETHGlobal Paris** (1,400 participants, 321 projects)
-* I enjoyed challenging myself with theoretical CS/ math courses (e.g. Quantum Computation and Quantum Information, Quantum Machine Learning, Advanced Algorithms and Uncertainty, Intractable Problems, Advanced Linear Algebra, Algebra)
+* Won **~USD 9k** prize in **ETHGlobal Paris** (1,400 participants, 321 projects)
+* Enjoyed challenging myself with theoretical CS/math courses, including quantum computation, quantum machine learning, advanced algorithms, intractable problems, advanced linear algebra, and algebra.
 
 ---
 

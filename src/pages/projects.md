@@ -7,7 +7,11 @@ tags: [engineering]
 # Projects
 
 ## RL infrastructure and self-improving task generation
-At Vmax, I designed and built the core system end-to-end for training software-engineering agents: RL infrastructure that orchestrates hundreds of GPUs, a self-improving task generator, and a rollout framework that runs thousands of concurrent sandboxes; I am actively contributing upstream across [slime](https://github.com/THUDM/slime), [Miles](https://github.com/radixark/miles), and [Harbor](https://github.com/harbor-framework/harbor).
+At Vmax, I am the first hire building RL infrastructure for software-engineering agents. I designed and built the core training system end-to-end: GPU orchestration, self-improving task generation, and rollout infrastructure for thousands of concurrent sandboxes.
+
+The system improved an open-source SWE-bench Pro base model by **+50% relative** under a constrained context window using synthetic tasks.
+
+I also have merged PRs in [slime and Harbor](/oss/), the open-source systems behind this work.
 
 ## zkAlpha
 zkAlpha connects quant traders and liquidity providers w/o revealing the strategy through the use of
