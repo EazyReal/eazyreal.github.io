@@ -19,6 +19,7 @@ const frontmatter = pageMeta.home;
   </figure>
 
   <h2>About Me</h2>
+  {profile.about.map((paragraph) => <p><RichText parts={paragraph} /></p>)}
 
   <h2>{currentWork.heading}</h2>
   {currentWork.paragraphs.map((paragraph) => <p><RichText parts={paragraph} /></p>)}
