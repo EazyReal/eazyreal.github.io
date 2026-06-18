@@ -136,6 +136,11 @@ export const profile = {
     [
       "I develop algorithms and infrastructure for recursive self-improvement, especially around generative models, reinforcement learning, and software-engineering agents. Across research, engineering, business, and prioritization, I try to quotient out accidental detail, preserve the invariant, then build from there.",
     ],
+    [
+      "That is also how I think about GenAI: ",
+      { href: "/genai_first_principles/", text: "from first principles" },
+      ".",
+    ],
   ],
   photo: {
     src: "/img/profile.jpg",
