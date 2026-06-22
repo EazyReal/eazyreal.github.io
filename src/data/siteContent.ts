@@ -42,7 +42,7 @@ export type PageMeta = {
 export const siteMeta = {
   author: "Maxwill Lin",
   description: "Maxwill's personal website.",
-  latestContentUpdate: "2026-06-18",
+  latestContentUpdate: "2026-06-22",
   name: "Maxwill Lin",
   technicalDescription:
     "Technical writing, notes, and project documentation by Maxwill Lin.",
@@ -78,6 +78,10 @@ export const links = {
   vmax: { href: "https://vmax.ai/", label: "Vmax" },
   slime: { href: `${pageHrefs.oss}#slime`, label: "slime" },
   harbor: { href: `${pageHrefs.oss}#harbor`, label: "Harbor" },
+  areal: { href: `${pageHrefs.oss}#areal`, label: "AReaL" },
+  sglang: { href: `${pageHrefs.oss}#sglang`, label: "SGLang" },
+  vllm: { href: `${pageHrefs.oss}#vllm`, label: "vLLM" },
+  primeRl: { href: `${pageHrefs.oss}#prime-rl`, label: "Prime-RL" },
 };
 
 export const pageMeta = {
@@ -184,11 +188,19 @@ export const vmaxHomepageSummary =
 
 export const homepageHighlights: RichText[] = [
   [
-    "Contributor to ",
+    "Merged upstream work in ",
+    { href: links.vllm.href, text: links.vllm.label },
+    ", ",
+    { href: links.sglang.href, text: links.sglang.label },
+    ", ",
+    { href: links.primeRl.href, text: links.primeRl.label },
+    ", ",
+    { href: links.areal.href, text: links.areal.label },
+    ", ",
     { href: links.slime.href, text: links.slime.label },
-    " and ",
+    ", and ",
     { href: links.harbor.href, text: links.harbor.label },
-    " on RL training logic, agent integrations, and sandbox runtime fixes.",
+    " across RL training, agent infrastructure, and LLM serving correctness.",
   ],
   [
     "Ranked top ",
@@ -356,6 +368,54 @@ export const projects: Project[] = [
 ];
 
 export const ossGroups = [
+  {
+    id: "vllm",
+    name: "vLLM",
+    contributions: [
+      {
+        href: "https://github.com/vllm-project/vllm/pull/46313",
+        title: "Matryoshka embedding dimension validation",
+        description:
+          "rejected oversized Matryoshka embedding dimensions instead of silently returning hidden-size vectors.",
+      },
+    ],
+  },
+  {
+    id: "sglang",
+    name: "SGLang",
+    contributions: [
+      {
+        href: "https://github.com/sgl-project/sglang/pull/28802",
+        title: "Stop-string precedence under speculative decoding",
+        description:
+          "fixed stop-string trimming when EOS and a stop string are accepted in the same decode step.",
+      },
+    ],
+  },
+  {
+    id: "prime-rl",
+    name: "Prime-RL",
+    contributions: [
+      {
+        href: "https://github.com/PrimeIntellect-ai/prime-rl/pull/2844",
+        title: "Gemma 4 VLM dispatch and softcapping",
+        description:
+          "registered Gemma 4 as a vision-language model and preserved nested logit softcapping during training.",
+      },
+    ],
+  },
+  {
+    id: "areal",
+    name: "AReaL",
+    contributions: [
+      {
+        href: "https://github.com/areal-project/AReaL/pull/1346",
+        title: "2D sequence advantage masking",
+        description:
+          "fixed a PPO/GSPO sequence-level loss path so masked padding advantages cannot change valid-token loss, gradients, or updates.",
+      },
+    ],
+  },
   {
     id: "slime",
     name: "slime",
