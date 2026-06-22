@@ -78,7 +78,6 @@ export const links = {
   vmax: { href: "https://vmax.ai/", label: "Vmax" },
   slime: { href: `${pageHrefs.oss}#slime`, label: "slime" },
   harbor: { href: `${pageHrefs.oss}#harbor`, label: "Harbor" },
-  areal: { href: `${pageHrefs.oss}#areal`, label: "AReaL" },
   sglang: { href: `${pageHrefs.oss}#sglang`, label: "SGLang" },
   vllm: { href: `${pageHrefs.oss}#vllm`, label: "vLLM" },
   primeRl: { href: `${pageHrefs.oss}#prime-rl`, label: "Prime-RL" },
@@ -194,8 +193,6 @@ export const homepageHighlights: RichText[] = [
     { href: links.sglang.href, text: links.sglang.label },
     ", ",
     { href: links.primeRl.href, text: links.primeRl.label },
-    ", ",
-    { href: links.areal.href, text: links.areal.label },
     ", ",
     { href: links.slime.href, text: links.slime.label },
     ", and ",
@@ -401,18 +398,6 @@ export const ossGroups = [
         title: "Gemma 4 VLM dispatch and softcapping",
         description:
           "registered Gemma 4 as a vision-language model and preserved nested logit softcapping during training.",
-      },
-    ],
-  },
-  {
-    id: "areal",
-    name: "AReaL",
-    contributions: [
-      {
-        href: "https://github.com/areal-project/AReaL/pull/1346",
-        title: "2D sequence advantage masking",
-        description:
-          "fixed a PPO/GSPO sequence-level loss path so masked padding advantages cannot change valid-token loss, gradients, or updates.",
       },
     ],
   },
