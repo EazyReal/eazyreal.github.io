@@ -220,10 +220,10 @@ export const experienceTimeline: TimelineItem[] = [
     id: "nycu",
     kind: "education",
     title: "B.S. Computer Science and Applied Mathematics",
-    organization: "National Yang Ming Chiao Tung University",
+    organization: "National Chiao Tung University",
     location: "Hsinchu, Taiwan",
     period: "Sep 2018 - Jun 2021",
-    shortLabel: "NYCU",
+    shortLabel: "National Chiao Tung University",
     homepageSummary:
       "CS and applied math; Presidential Award top 5%; A+ in proof-heavy theory courses.",
     summary: [
@@ -236,7 +236,7 @@ export const experienceTimeline: TimelineItem[] = [
     ],
     image: {
       src: "/img/experience/nycu.png",
-      alt: "National Yang Ming Chiao Tung University logo",
+      alt: "National Chiao Tung University logo",
     },
   },
   {
