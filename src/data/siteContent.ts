@@ -42,7 +42,7 @@ export type PageMeta = {
 export const siteMeta = {
   author: "Maxwill Lin",
   description: "Maxwill's personal website.",
-  latestContentUpdate: "2026-06-22",
+  latestContentUpdate: "2026-06-23",
   name: "Maxwill Lin",
   technicalDescription:
     "Technical writing, notes, and project documentation by Maxwill Lin.",
@@ -78,6 +78,7 @@ export const links = {
   vmax: { href: "https://vmax.ai/", label: "Vmax" },
   slime: { href: `${pageHrefs.oss}#slime`, label: "slime" },
   harbor: { href: `${pageHrefs.oss}#harbor`, label: "Harbor" },
+  areal: { href: `${pageHrefs.oss}#areal`, label: "AReaL" },
   sglang: { href: `${pageHrefs.oss}#sglang`, label: "SGLang" },
   vllm: { href: `${pageHrefs.oss}#vllm`, label: "vLLM" },
   primeRl: { href: `${pageHrefs.oss}#prime-rl`, label: "Prime-RL" },
@@ -188,6 +189,8 @@ export const vmaxHomepageSummary =
 export const homepageHighlights: RichText[] = [
   [
     "Merged upstream work in ",
+    { href: links.areal.href, text: links.areal.label },
+    ", ",
     { href: links.vllm.href, text: links.vllm.label },
     ", ",
     { href: links.sglang.href, text: links.sglang.label },
@@ -366,6 +369,36 @@ export const projects: Project[] = [
 
 export const ossGroups = [
   {
+    id: "areal",
+    name: "AReaL",
+    contributions: [
+      {
+        href: "https://github.com/areal-project/AReaL/pull/1412",
+        title: "CISPO loss surrogate",
+        description:
+          "added the MiniMax-M1 CISPO policy-gradient estimator to AReaL's PPO path.",
+      },
+      {
+        href: "https://github.com/areal-project/AReaL/pull/1429",
+        title: "vLLM generation request parity",
+        description:
+          "forwarded frequency penalties and stop conditions through the vLLM generation backend.",
+      },
+      {
+        href: "https://github.com/areal-project/AReaL/pull/1430",
+        title: "Reward scoring failure guard",
+        description:
+          "guarded a CLEVR reward function against scoring failures instead of letting one bad sample break evaluation.",
+      },
+      {
+        href: "https://github.com/areal-project/AReaL/pull/1436",
+        title: "Robust free-port selection",
+        description:
+          "fixed free-port discovery so out-of-range exclusions do not block valid worker ports.",
+      },
+    ],
+  },
+  {
     id: "vllm",
     name: "vLLM",
     contributions: [
@@ -431,6 +464,16 @@ export const ossGroups = [
         href: "https://github.com/harbor-framework/harbor/pull/1968",
         title: "mini-swe-agent credential env handling",
         description: "fixed host-side credential and API-base resolution from configured agent env.",
+      },
+      {
+        href: "https://github.com/harbor-framework/harbor/pull/1967",
+        title: "Agent env propagation",
+        description: "propagated configured agent environment variables through every agent load path.",
+      },
+      {
+        href: "https://github.com/harbor-framework/harbor/pull/1969",
+        title: "Sandbox env secret reuse",
+        description: "reused environment secrets consistently across Modal sandbox operations.",
       },
       {
         href: "https://github.com/harbor-framework/harbor/pull/1039",
