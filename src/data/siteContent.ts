@@ -42,7 +42,7 @@ export type PageMeta = {
 export const siteMeta = {
   author: "Maxwill Lin",
   description: "Maxwill's personal website.",
-  latestContentUpdate: "2026-06-23",
+  latestContentUpdate: "2026-06-24",
   name: "Maxwill Lin",
   technicalDescription:
     "Technical writing, notes, and project documentation by Maxwill Lin.",
@@ -403,6 +403,18 @@ export const ossGroups = [
     name: "vLLM",
     contributions: [
       {
+        href: "https://github.com/vllm-project/vllm/pull/46525",
+        title: "Anthropic empty-completion compatibility",
+        description:
+          "returned an explicit content block for empty Anthropic completions instead of an invalid response shape.",
+      },
+      {
+        href: "https://github.com/vllm-project/vllm/pull/46308",
+        title: "Non-ASCII tool-call argument emission",
+        description:
+          "kept non-ASCII tool-call arguments readable instead of escaping them as Unicode codepoints.",
+      },
+      {
         href: "https://github.com/vllm-project/vllm/pull/46313",
         title: "Matryoshka embedding dimension validation",
         description:
@@ -443,6 +455,11 @@ export const ossGroups = [
         title: "CISPO advantage estimator",
         description:
           "added the MiniMax-M1 CISPO estimator at slime's policy-loss seam, with tests for surrogate value and gradient routing.",
+      },
+      {
+        href: "https://github.com/THUDM/slime/pull/2096",
+        title: "Dr.GRPO docs reference cleanup",
+        description: "removed a dangling custom-reducer example reference from the Dr.GRPO docs.",
       },
     ],
   },
