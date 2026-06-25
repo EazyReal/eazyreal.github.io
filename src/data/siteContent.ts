@@ -42,7 +42,7 @@ export type PageMeta = {
 export const siteMeta = {
   author: "Maxwill Lin",
   description: "Maxwill's personal website.",
-  latestContentUpdate: "2026-06-24",
+  latestContentUpdate: "2026-06-25",
   name: "Maxwill Lin",
   technicalDescription:
     "Technical writing, notes, and project documentation by Maxwill Lin.",
@@ -374,9 +374,9 @@ export const ossGroups = [
     contributions: [
       {
         href: "https://github.com/areal-project/AReaL/pull/1412",
-        title: "CISPO loss surrogate",
+        title: "CISPO policy loss",
         description:
-          "added the MiniMax-M1 CISPO policy-gradient estimator to AReaL's PPO path.",
+          "added the MiniMax-M1 CISPO clipped importance-sampling policy-gradient loss to AReaL's PPO path.",
       },
       {
         href: "https://github.com/areal-project/AReaL/pull/1429",
@@ -458,9 +458,9 @@ export const ossGroups = [
     contributions: [
       {
         href: "https://github.com/THUDM/slime/pull/2067",
-        title: "CISPO advantage estimator",
+        title: "CISPO policy loss",
         description:
-          "added the MiniMax-M1 CISPO estimator at slime's policy-loss seam, with tests for surrogate value and gradient routing.",
+          "added the MiniMax-M1 CISPO clipped importance-sampling policy-gradient loss at slime's policy-loss seam, with tests for surrogate value and gradient routing.",
       },
       {
         href: "https://github.com/THUDM/slime/pull/2096",
