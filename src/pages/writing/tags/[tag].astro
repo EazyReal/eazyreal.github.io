@@ -1,7 +1,7 @@
 ---
 import ArticleLayout from "../../../layouts/ArticleLayout.astro";
 import { links, pageMeta } from "../../../data/siteContent";
-import { tagFacets } from "../../../data/writingIndex";
+import { latestLastUpdated, tagFacets } from "../../../data/writingIndex";
 import { formatDisplayDate } from "../../../utils/dates";
 
 export function getStaticPaths() {
@@ -16,6 +16,7 @@ const frontmatter = {
   ...pageMeta.writing,
   title: `${pageMeta.writing.title}: ${tag.label}`,
   heading: tag.label,
+  lastUpdated: latestLastUpdated(tag.entries) ?? pageMeta.writing.lastUpdated,
   tags: ["writing", tag.label],
 };
 ---

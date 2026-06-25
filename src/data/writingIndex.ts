@@ -190,6 +190,19 @@ const sortEntries = (entries: WritingEntry[]) =>
     return left.title.localeCompare(right.title);
   });
 
+export const latestLastUpdated = (entries: Array<{ lastUpdated?: string }>) =>
+  entries.reduce<string | undefined>((latest, entry) => {
+    if (!entry.lastUpdated) {
+      return latest;
+    }
+
+    if (!latest || entry.lastUpdated > latest) {
+      return entry.lastUpdated;
+    }
+
+    return latest;
+  }, undefined);
+
 const selectedMarkdownEntries = Object.entries(internalPageModules)
   .map(([path, mod]) => {
     const frontmatter = mod.frontmatter ?? {};

@@ -3,13 +3,17 @@ import ArticleLayout from "../layouts/ArticleLayout.astro";
 import { links, pageMeta } from "../data/siteContent";
 import {
   isTopicTag,
+  latestLastUpdated,
   primaryTagFacets,
   tagFacets,
   writingEntries,
 } from "../data/writingIndex";
 import { formatDisplayDate } from "../utils/dates";
 
-const frontmatter = pageMeta.writing;
+const frontmatter = {
+  ...pageMeta.writing,
+  lastUpdated: latestLastUpdated(writingEntries) ?? pageMeta.writing.lastUpdated,
+};
 ---
 
 <ArticleLayout frontmatter={frontmatter}>
