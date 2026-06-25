@@ -1,9 +1,12 @@
 ---
 import ArticleLayout from "../../../layouts/ArticleLayout.astro";
 import { links, pageMeta } from "../../../data/siteContent";
-import { tagFacets } from "../../../data/writingIndex";
+import { latestLastUpdated, tagFacets, writingEntries } from "../../../data/writingIndex";
 
-const frontmatter = pageMeta.writingTags;
+const frontmatter = {
+  ...pageMeta.writingTags,
+  lastUpdated: latestLastUpdated(writingEntries) ?? pageMeta.writingTags.lastUpdated,
+};
 ---
 
 <ArticleLayout frontmatter={frontmatter}>

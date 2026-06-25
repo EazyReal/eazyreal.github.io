@@ -42,7 +42,6 @@ export type PageMeta = {
 export const siteMeta = {
   author: "Maxwill Lin",
   description: "Maxwill's personal website.",
-  latestContentUpdate: "2026-06-25",
   name: "Maxwill Lin",
   technicalDescription:
     "Technical writing, notes, and project documentation by Maxwill Lin.",
@@ -84,47 +83,58 @@ export const links = {
   primeRl: { href: `${pageHrefs.oss}#prime-rl`, label: "Prime-RL" },
 };
 
+const pageLastUpdated = {
+  coursework: "2026-06-18",
+  experience: "2026-06-18",
+  home: "2026-06-23",
+  oss: "2026-06-25",
+  projects: "2026-06-17",
+  socials: "2026-06-18",
+  writing: "2026-06-18",
+  writingTags: "2026-06-18",
+} as const;
+
 export const pageMeta = {
   coursework: {
     title: links.coursework.label,
-    lastUpdated: siteMeta.latestContentUpdate,
+    lastUpdated: pageLastUpdated.coursework,
     tags: ["writing", "coursework"],
   },
   home: {
     title: siteMeta.name,
     heading: false,
-    lastUpdated: siteMeta.latestContentUpdate,
+    lastUpdated: pageLastUpdated.home,
     tags: ["home"],
   },
   experience: {
     title: "Experience & Education",
-    lastUpdated: siteMeta.latestContentUpdate,
+    lastUpdated: pageLastUpdated.experience,
     tags: ["experience", "education"],
   },
   oss: {
     title: "Open Source Contributions",
-    lastUpdated: siteMeta.latestContentUpdate,
+    lastUpdated: pageLastUpdated.oss,
     tags: ["engineering", "oss"],
   },
   projects: {
     title: links.projects.label,
-    lastUpdated: siteMeta.latestContentUpdate,
+    lastUpdated: pageLastUpdated.projects,
     tags: ["engineering"],
   },
   socials: {
     title: links.socials.label,
-    lastUpdated: siteMeta.latestContentUpdate,
+    lastUpdated: pageLastUpdated.socials,
     tags: ["socials", "identity"],
   },
   writing: {
     title: links.writing.label,
-    lastUpdated: siteMeta.latestContentUpdate,
+    lastUpdated: pageLastUpdated.writing,
     tags: ["writing"],
   },
   writingTags: {
     title: "Writing Tags",
     heading: links.writingTags.label,
-    lastUpdated: siteMeta.latestContentUpdate,
+    lastUpdated: pageLastUpdated.writingTags,
     tags: ["writing", "tags"],
   },
 };
