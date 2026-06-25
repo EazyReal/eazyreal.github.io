@@ -403,6 +403,12 @@ export const ossGroups = [
     name: "vLLM",
     contributions: [
       {
+        href: "https://github.com/vllm-project/vllm/pull/46314",
+        title: "seed_oss streaming parser support",
+        description:
+          "ported seed_oss to the streaming parser engine as a Qwen3 subclass for frontend parsing.",
+      },
+      {
         href: "https://github.com/vllm-project/vllm/pull/46525",
         title: "Anthropic empty-completion compatibility",
         description:
