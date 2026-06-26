@@ -78,6 +78,7 @@ export const links = {
   slime: { href: `${pageHrefs.oss}#slime`, label: "slime" },
   harbor: { href: `${pageHrefs.oss}#harbor`, label: "Harbor" },
   areal: { href: `${pageHrefs.oss}#areal`, label: "AReaL" },
+  verl: { href: `${pageHrefs.oss}#verl`, label: "verl" },
   sglang: { href: `${pageHrefs.oss}#sglang`, label: "SGLang" },
   vllm: { href: `${pageHrefs.oss}#vllm`, label: "vLLM" },
   primeRl: { href: `${pageHrefs.oss}#prime-rl`, label: "Prime-RL" },
@@ -86,8 +87,8 @@ export const links = {
 const pageLastUpdated = {
   coursework: "2026-06-18",
   experience: "2026-06-18",
-  home: "2026-06-23",
-  oss: "2026-06-25",
+  home: "2026-06-26",
+  oss: "2026-06-26",
   projects: "2026-06-17",
   socials: "2026-06-18",
   writing: "2026-06-18",
@@ -200,6 +201,8 @@ export const homepageHighlights: RichText[] = [
   [
     "Merged upstream work in ",
     { href: links.areal.href, text: links.areal.label },
+    ", ",
+    { href: links.verl.href, text: links.verl.label },
     ", ",
     { href: links.vllm.href, text: links.vllm.label },
     ", ",
@@ -405,6 +408,18 @@ export const ossGroups = [
         title: "Robust free-port selection",
         description:
           "fixed free-port discovery so out-of-range exclusions do not block valid worker ports.",
+      },
+    ],
+  },
+  {
+    id: "verl",
+    name: "verl",
+    contributions: [
+      {
+        href: "https://github.com/verl-project/verl/pull/6806",
+        title: "Rollout importance-sampling metrics",
+        description:
+          "computed sequence-level high/low rollout importance-sampling fractions from raw weights instead of clamped weights.",
       },
     ],
   },
