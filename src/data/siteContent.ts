@@ -88,7 +88,7 @@ const pageLastUpdated = {
   coursework: "2026-06-18",
   experience: "2026-06-18",
   home: "2026-06-26",
-  oss: "2026-06-26",
+  oss: "2026-06-29",
   projects: "2026-06-17",
   socials: "2026-06-18",
   writing: "2026-06-18",
@@ -481,6 +481,18 @@ export const ossGroups = [
     id: "slime",
     name: "slime",
     contributions: [
+      {
+        href: "https://github.com/THUDM/slime/pull/2135",
+        title: "Gemma4 dense and MoE support",
+        description:
+          "added slime-native Gemma4 model, conversion, loss-mask, script, doc, and test support for dense and MoE checkpoints.",
+      },
+      {
+        href: "https://github.com/THUDM/slime/pull/2134",
+        title: "Empty colocated weight bucket handling",
+        description:
+          "fixed raw weight sync when uneven tensor chunks leave a tensor-parallel rank with no local Hugging Face tensors.",
+      },
       {
         href: "https://github.com/THUDM/slime/pull/2067",
         title: "CISPO policy loss",
