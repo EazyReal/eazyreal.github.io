@@ -78,6 +78,7 @@ export const links = {
   slime: { href: `${pageHrefs.oss}#slime`, label: "slime" },
   harbor: { href: `${pageHrefs.oss}#harbor`, label: "Harbor" },
   areal: { href: `${pageHrefs.oss}#areal`, label: "AReaL" },
+  skyrl: { href: `${pageHrefs.oss}#skyrl`, label: "SkyRL" },
   verl: { href: `${pageHrefs.oss}#verl`, label: "verl" },
   sglang: { href: `${pageHrefs.oss}#sglang`, label: "SGLang" },
   vllm: { href: `${pageHrefs.oss}#vllm`, label: "vLLM" },
@@ -87,8 +88,8 @@ export const links = {
 const pageLastUpdated = {
   coursework: "2026-06-18",
   experience: "2026-06-18",
-  home: "2026-06-26",
-  oss: "2026-06-29",
+  home: "2026-07-07",
+  oss: "2026-07-07",
   projects: "2026-06-17",
   socials: "2026-06-18",
   writing: "2026-06-18",
@@ -201,6 +202,8 @@ export const homepageHighlights: RichText[] = [
   [
     "Merged upstream work in ",
     { href: links.areal.href, text: links.areal.label },
+    ", ",
+    { href: links.skyrl.href, text: links.skyrl.label },
     ", ",
     { href: links.verl.href, text: links.verl.label },
     ", ",
@@ -387,9 +390,9 @@ export const ossGroups = [
     contributions: [
       {
         href: "https://github.com/areal-project/AReaL/pull/1412",
-        title: "CISPO policy loss",
+        title: "CISPO loss surrogate",
         description:
-          "added the MiniMax-M1 CISPO clipped importance-sampling policy-gradient loss to AReaL's PPO path.",
+          "added the MiniMax-M1 CISPO clipped importance-sampling loss surrogate to AReaL's PPO path.",
       },
       {
         href: "https://github.com/areal-project/AReaL/pull/1429",
@@ -408,6 +411,18 @@ export const ossGroups = [
         title: "Robust free-port selection",
         description:
           "fixed free-port discovery so out-of-range exclusions do not block valid worker ports.",
+      },
+    ],
+  },
+  {
+    id: "skyrl",
+    name: "SkyRL",
+    contributions: [
+      {
+        href: "https://github.com/NovaSky-AI/SkyRL/pull/1821",
+        title: "Batched rollout metrics",
+        description:
+          "computed SkyRL Gym batched rollout metrics from truncated responses, matching the tokens returned for training.",
       },
     ],
   },
@@ -495,9 +510,9 @@ export const ossGroups = [
       },
       {
         href: "https://github.com/THUDM/slime/pull/2067",
-        title: "CISPO policy loss",
+        title: "CISPO advantage estimator",
         description:
-          "added the MiniMax-M1 CISPO clipped importance-sampling policy-gradient loss at slime's policy-loss seam, with tests for surrogate value and gradient routing.",
+          "added the MiniMax-M1 CISPO advantage-estimator option at slime's existing policy-loss seam, with tests for surrogate value and gradient routing.",
       },
       {
         href: "https://github.com/THUDM/slime/pull/2096",
