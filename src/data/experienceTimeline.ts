@@ -42,7 +42,7 @@ export const experienceTimeline: TimelineItem[] = [
     homepageSummary: vmaxHomepageSummary,
     summary: vmaxLead,
     details: [vmaxSystem, vmaxMetric, vmaxOss],
-    links: [links.vmax, links.slime, links.harbor],
+    links: [links.vmax, links.oss],
     image: {
       src: "/img/experience/vmax.png",
       alt: "Vmax AI logo",

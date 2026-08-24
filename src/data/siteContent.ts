@@ -83,13 +83,14 @@ export const links = {
   sglang: { href: `${pageHrefs.oss}#sglang`, label: "SGLang" },
   vllm: { href: `${pageHrefs.oss}#vllm`, label: "vLLM" },
   primeRl: { href: `${pageHrefs.oss}#prime-rl`, label: "Prime-RL" },
+  renderers: { href: `${pageHrefs.oss}#renderers`, label: "Renderers" },
 };
 
 const pageLastUpdated = {
   coursework: "2026-06-18",
-  experience: "2026-06-18",
-  home: "2026-07-07",
-  oss: "2026-07-07",
+  experience: "2026-08-24",
+  home: "2026-08-24",
+  oss: "2026-08-24",
   projects: "2026-06-17",
   socials: "2026-06-18",
   writing: "2026-06-18",
@@ -182,11 +183,11 @@ export const vmaxSystem: RichText = [
 ];
 
 export const vmaxOss: RichText = [
-  "I am a contributor to ",
-  { href: links.slime.href, text: links.slime.label },
-  " and ",
-  { href: links.harbor.href, text: links.harbor.label },
-  ", covering RL training logic, agent integrations, and sandbox runtime fixes.",
+  "I have authored ",
+  { strong: "30+ merged upstream PRs" },
+  " across RL training, agent infrastructure, and LLM serving; see ",
+  { href: links.oss.href, text: "selected open-source contributions" },
+  ".",
 ];
 
 export const vmaxMetric: RichText = [
@@ -200,7 +201,8 @@ export const vmaxHomepageSummary =
 
 export const homepageHighlights: RichText[] = [
   [
-    "Merged upstream work in ",
+    { strong: "30+ merged upstream PRs" },
+    " across ",
     { href: links.areal.href, text: links.areal.label },
     ", ",
     { href: links.skyrl.href, text: links.skyrl.label },
@@ -213,10 +215,12 @@ export const homepageHighlights: RichText[] = [
     ", ",
     { href: links.primeRl.href, text: links.primeRl.label },
     ", ",
+    { href: links.renderers.href, text: links.renderers.label },
+    ", ",
     { href: links.slime.href, text: links.slime.label },
     ", and ",
     { href: links.harbor.href, text: links.harbor.label },
-    " across RL training, agent infrastructure, and LLM serving correctness.",
+    " spanning RL training, agent infrastructure, and LLM serving correctness.",
   ],
   [
     "Ranked top ",
@@ -395,22 +399,16 @@ export const ossGroups = [
           "added the MiniMax-M1 CISPO clipped importance-sampling loss surrogate to AReaL's PPO path.",
       },
       {
+        href: "https://github.com/areal-project/AReaL/pull/1554",
+        title: "Fail-closed sampling-evidence validation",
+        description:
+          "rejected incomplete, non-finite, or positionally inconsistent provider token and logprob evidence before PPO rollout accumulation.",
+      },
+      {
         href: "https://github.com/areal-project/AReaL/pull/1429",
         title: "vLLM generation request parity",
         description:
           "forwarded frequency penalties and stop conditions through the vLLM generation backend.",
-      },
-      {
-        href: "https://github.com/areal-project/AReaL/pull/1430",
-        title: "Reward scoring failure guard",
-        description:
-          "guarded a CLEVR reward function against scoring failures instead of letting one bad sample break evaluation.",
-      },
-      {
-        href: "https://github.com/areal-project/AReaL/pull/1436",
-        title: "Robust free-port selection",
-        description:
-          "fixed free-port discovery so out-of-range exclusions do not block valid worker ports.",
       },
     ],
   },
@@ -493,6 +491,18 @@ export const ossGroups = [
     ],
   },
   {
+    id: "renderers",
+    name: "Renderers",
+    contributions: [
+      {
+        href: "https://github.com/PrimeIntellect-ai/renderers/pull/108",
+        title: "Sampled-token evidence validation",
+        description:
+          "rejected missing, malformed, non-finite, or misbound token logprobs before renderer parsing and downstream training.",
+      },
+    ],
+  },
+  {
     id: "slime",
     name: "slime",
     contributions: [
@@ -503,21 +513,34 @@ export const ossGroups = [
           "added slime-native Gemma4 model, conversion, loss-mask, script, doc, and test support for dense and MoE checkpoints.",
       },
       {
-        href: "https://github.com/THUDM/slime/pull/2134",
-        title: "Empty colocated weight bucket handling",
-        description:
-          "fixed raw weight sync when uneven tensor chunks leave a tensor-parallel rank with no local Hugging Face tensors.",
-      },
-      {
         href: "https://github.com/THUDM/slime/pull/2067",
         title: "CISPO advantage estimator",
         description:
           "added the MiniMax-M1 CISPO advantage-estimator option at slime's existing policy-loss seam, with tests for surrogate value and gradient routing.",
       },
       {
-        href: "https://github.com/THUDM/slime/pull/2096",
-        title: "Dr.GRPO docs reference cleanup",
-        description: "removed a dangling custom-reducer example reference from the Dr.GRPO docs.",
+        href: "https://github.com/THUDM/slime/pull/2085",
+        title: "On-policy distillation temperature fidelity",
+        description:
+          "scored teacher logprobs at the rollout sampling temperature so the distillation KL matches the student policy.",
+      },
+      {
+        href: "https://github.com/THUDM/slime/pull/2114",
+        title: "Raw PPO KL metric preservation",
+        description:
+          "kept rollout KL logging raw while constructing scaled token rewards out of place for PPO advantages.",
+      },
+      {
+        href: "https://github.com/THUDM/slime/pull/2134",
+        title: "Empty colocated weight bucket handling",
+        description:
+          "fixed raw weight sync when uneven tensor chunks leave a tensor-parallel rank with no local Hugging Face tensors.",
+      },
+      {
+        href: "https://github.com/THUDM/slime/pull/2296",
+        title: "Eval-only training-stack bypass",
+        description:
+          "skipped optimizer, scheduler, and critic construction for zero-rollout evaluation while preserving actor loading and weight sync.",
       },
     ],
   },
@@ -549,16 +572,6 @@ export const ossGroups = [
         href: "https://github.com/harbor-framework/harbor/pull/1969",
         title: "Sandbox env secret reuse",
         description: "reused environment secrets consistently across Modal sandbox operations.",
-      },
-      {
-        href: "https://github.com/harbor-framework/harbor/pull/1039",
-        title: "Agent install fix",
-        description: "fixed install scripts when uv's env file is absent.",
-      },
-      {
-        href: "https://github.com/harbor-framework/harbor/pull/1964",
-        title: "Adapter docs fix",
-        description: "aligned adapter README filenames with the validator contract.",
       },
     ],
   },
