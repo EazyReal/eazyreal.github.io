@@ -88,9 +88,9 @@ export const links = {
 
 const pageLastUpdated = {
   coursework: "2026-06-18",
-  experience: "2026-08-24",
+  experience: "2026-08-30",
   home: "2026-08-24",
-  oss: "2026-08-24",
+  oss: "2026-08-30",
   projects: "2026-06-17",
   socials: "2026-06-18",
   writing: "2026-06-18",
@@ -183,11 +183,20 @@ export const vmaxSystem: RichText = [
 ];
 
 export const vmaxOss: RichText = [
-  "I have authored ",
+  "I was ",
+  {
+    href: "https://github.com/areal-project/AReaL/issues/1652",
+    text: "nominated for AReaL maintainership",
+  },
+  " and have authored ",
   { strong: "30+ merged upstream PRs" },
   " across RL training, agent infrastructure, and LLM serving; see ",
   { href: links.oss.href, text: "selected open-source contributions" },
   ".",
+];
+
+export const vmaxHiring: RichText = [
+  "I designed and ran high-signal technical interview loops across research and engineering, including candidates from frontier AI labs and quantitative trading firms; shaped hiring decisions and successfully advocated for candidates later hired.",
 ];
 
 export const vmaxMetric: RichText = [

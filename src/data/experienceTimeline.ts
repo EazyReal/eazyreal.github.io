@@ -1,6 +1,7 @@
 import type { Link, RichText } from "./siteContent";
 import {
   links,
+  vmaxHiring,
   vmaxHomepageSummary,
   vmaxLead,
   vmaxMetric,
@@ -41,7 +42,7 @@ export const experienceTimeline: TimelineItem[] = [
     period: "Mar 2026 - Present",
     homepageSummary: vmaxHomepageSummary,
     summary: vmaxLead,
-    details: [vmaxSystem, vmaxMetric, vmaxOss],
+    details: [vmaxSystem, vmaxMetric, vmaxOss, vmaxHiring],
     links: [links.vmax, links.oss],
     image: {
       src: "/img/experience/vmax.png",
