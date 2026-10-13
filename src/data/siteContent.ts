@@ -88,9 +88,9 @@ export const links = {
 
 const pageLastUpdated = {
   coursework: "2026-06-18",
-  experience: "2026-08-30",
-  home: "2026-08-24",
-  oss: "2026-08-30",
+  experience: "2026-10-13",
+  home: "2026-10-13",
+  oss: "2026-10-13",
   projects: "2026-06-17",
   socials: "2026-06-18",
   writing: "2026-06-18",
@@ -182,14 +182,16 @@ export const vmaxSystem: RichText = [
   "I developed the core training system end-to-end: configuration system that makes experiments agent legible and reproducible, RL infrastructure orchestrating hundreds of GPUs, self-improving software-engineering task generators, and a rollout framework running agents in Harbor tasks on thousands of concurrent sandboxes.",
 ];
 
+export const ossPrSummary = "36 merged upstream PRs";
+
 export const vmaxOss: RichText = [
-  "I was ",
+  "I am an ",
   {
     href: "https://github.com/areal-project/AReaL/issues/1652",
-    text: "nominated for AReaL maintainership",
+    text: "AReaL repository collaborator",
   },
   " and have authored ",
-  { strong: "30+ merged upstream PRs" },
+  { strong: ossPrSummary },
   " across RL training, agent infrastructure, and LLM serving; see ",
   { href: links.oss.href, text: "selected open-source contributions" },
   ".",
@@ -210,7 +212,12 @@ export const vmaxHomepageSummary =
 
 export const homepageHighlights: RichText[] = [
   [
-    { strong: "30+ merged upstream PRs" },
+    {
+      href: "https://github.com/areal-project/AReaL/issues/1652",
+      text: "AReaL repository collaborator",
+    },
+    "; ",
+    { strong: ossPrSummary },
     " across ",
     { href: links.areal.href, text: links.areal.label },
     ", ",
@@ -229,7 +236,7 @@ export const homepageHighlights: RichText[] = [
     { href: links.slime.href, text: links.slime.label },
     ", and ",
     { href: links.harbor.href, text: links.harbor.label },
-    " spanning RL training, agent infrastructure, and LLM serving correctness.",
+    " spanning RL training, agent infrastructure, and LLM serving correctness, including configurable PPO loss aggregation, safe incomplete-group training, CISPO, Gemma 4, and Harbor RLM support.",
   ],
   [
     "Ranked top ",
@@ -399,8 +406,34 @@ export const projects: Project[] = [
 export const ossGroups = [
   {
     id: "areal",
+    mergedPrCount: 11,
+    mergedPrsHref: "https://github.com/areal-project/AReaL/pulls?q=is:pr+is:merged+author:EazyReal",
     name: "AReaL",
     contributions: [
+      {
+        href: "https://github.com/areal-project/AReaL/pull/1546",
+        title: "Configurable PPO loss aggregation",
+        description:
+          "added token, sequence, prompt-group, and constant-normalized policy-gradient reductions while preserving the default objective and response-level optimizer schedule.",
+      },
+      {
+        href: "https://github.com/areal-project/AReaL/pull/1563",
+        title: "Incomplete rollout-group training",
+        description:
+          "retained usable rollouts from incomplete groups and preserved logical rollout membership through context-compacted training rows, reward normalization, and distributed collection.",
+      },
+      {
+        href: "https://github.com/areal-project/AReaL/pull/1566",
+        title: "Objective-safe ragged transport padding",
+        description:
+          "kept distributed microbatch execution synchronized while excluding transport padding from objectives, loss denominators, semantic metrics, and returned outputs.",
+      },
+      {
+        href: "https://github.com/areal-project/AReaL/pull/1632",
+        title: "Megatron sequence-packing correctness",
+        description:
+          "removed synthetic model-visible padding rows from padded and model-owned THD layouts while retaining token alignment and exact unpadding.",
+      },
       {
         href: "https://github.com/areal-project/AReaL/pull/1412",
         title: "CISPO loss surrogate",
@@ -423,6 +456,8 @@ export const ossGroups = [
   },
   {
     id: "skyrl",
+    mergedPrCount: 1,
+    mergedPrsHref: "https://github.com/NovaSky-AI/SkyRL/pulls?q=is:pr+is:merged+author:EazyReal",
     name: "SkyRL",
     contributions: [
       {
@@ -435,6 +470,8 @@ export const ossGroups = [
   },
   {
     id: "verl",
+    mergedPrCount: 1,
+    mergedPrsHref: "https://github.com/verl-project/verl/pulls?q=is:pr+is:merged+author:EazyReal",
     name: "verl",
     contributions: [
       {
@@ -447,6 +484,8 @@ export const ossGroups = [
   },
   {
     id: "vllm",
+    mergedPrCount: 4,
+    mergedPrsHref: "https://github.com/vllm-project/vllm/pulls?q=is:pr+is:merged+author:EazyReal",
     name: "vLLM",
     contributions: [
       {
@@ -477,6 +516,8 @@ export const ossGroups = [
   },
   {
     id: "sglang",
+    mergedPrCount: 1,
+    mergedPrsHref: "https://github.com/sgl-project/sglang/pulls?q=is:pr+is:merged+author:EazyReal",
     name: "SGLang",
     contributions: [
       {
@@ -489,6 +530,8 @@ export const ossGroups = [
   },
   {
     id: "prime-rl",
+    mergedPrCount: 1,
+    mergedPrsHref: "https://github.com/PrimeIntellect-ai/prime-rl/pulls?q=is:pr+is:merged+author:EazyReal",
     name: "Prime-RL",
     contributions: [
       {
@@ -501,6 +544,8 @@ export const ossGroups = [
   },
   {
     id: "renderers",
+    mergedPrCount: 1,
+    mergedPrsHref: "https://github.com/PrimeIntellect-ai/renderers/pulls?q=is:pr+is:merged+author:EazyReal",
     name: "Renderers",
     contributions: [
       {
@@ -513,8 +558,16 @@ export const ossGroups = [
   },
   {
     id: "slime",
+    mergedPrCount: 9,
+    mergedPrsHref: "https://github.com/THUDM/slime/pulls?q=is:pr+is:merged+author:EazyReal",
     name: "slime",
     contributions: [
+      {
+        href: "https://github.com/THUDM/slime/pull/2297",
+        title: "RL rollout temperature validation",
+        description:
+          "rejected non-positive rollout temperatures at argument parsing to prevent a mismatch between greedy sampling and softmax policy logprobs, while preserving greedy evaluation.",
+      },
       {
         href: "https://github.com/THUDM/slime/pull/2135",
         title: "Gemma4 dense and MoE support",
@@ -555,6 +608,8 @@ export const ossGroups = [
   },
   {
     id: "harbor",
+    mergedPrCount: 7,
+    mergedPrsHref: "https://github.com/harbor-framework/harbor/pulls?q=is:pr+is:merged+author:EazyReal",
     name: "Harbor",
     contributions: [
       {
