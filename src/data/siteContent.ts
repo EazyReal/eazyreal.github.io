@@ -76,6 +76,7 @@ export const links = {
   x: { href: "https://twitter.com/tensorfi", label: "X" },
   vmax: { href: "https://vmax.ai/", label: "Vmax" },
   slime: { href: `${pageHrefs.oss}#slime`, label: "slime" },
+  miles: { href: `${pageHrefs.oss}#miles`, label: "Miles" },
   harbor: { href: `${pageHrefs.oss}#harbor`, label: "Harbor" },
   areal: { href: `${pageHrefs.oss}#areal`, label: "AReaL" },
   skyrl: { href: `${pageHrefs.oss}#skyrl`, label: "SkyRL" },
@@ -88,9 +89,9 @@ export const links = {
 
 const pageLastUpdated = {
   coursework: "2026-06-18",
-  experience: "2026-10-13",
-  home: "2026-10-13",
-  oss: "2026-10-13",
+  experience: "2026-11-25",
+  home: "2026-11-25",
+  oss: "2026-11-25",
   projects: "2026-06-17",
   socials: "2026-06-18",
   writing: "2026-06-18",
@@ -182,7 +183,7 @@ export const vmaxSystem: RichText = [
   "I developed the core training system end-to-end: configuration system that makes experiments agent legible and reproducible, RL infrastructure orchestrating hundreds of GPUs, self-improving software-engineering task generators, and a rollout framework running agents in Harbor tasks on thousands of concurrent sandboxes.",
 ];
 
-export const ossPrSummary = "36 merged upstream PRs";
+export const ossPrSummary = "37 merged upstream PRs";
 
 export const vmaxOss: RichText = [
   "I am an ",
@@ -221,6 +222,8 @@ export const homepageHighlights: RichText[] = [
     " across ",
     { href: links.areal.href, text: links.areal.label },
     ", ",
+    { href: links.miles.href, text: links.miles.label },
+    ", ",
     { href: links.skyrl.href, text: links.skyrl.label },
     ", ",
     { href: links.verl.href, text: links.verl.label },
@@ -236,7 +239,7 @@ export const homepageHighlights: RichText[] = [
     { href: links.slime.href, text: links.slime.label },
     ", and ",
     { href: links.harbor.href, text: links.harbor.label },
-    " spanning RL training, agent infrastructure, and LLM serving correctness, including configurable PPO loss aggregation, safe incomplete-group training, CISPO, Gemma 4, and Harbor RLM support.",
+    " spanning RL training, agent infrastructure, and LLM serving correctness, including configurable PPO loss aggregation, safe incomplete-group training, expert-balanced MoE routing-replay padding, CISPO, Gemma 4, and Harbor RLM support.",
   ],
   [
     "Ranked top ",
@@ -451,6 +454,20 @@ export const ossGroups = [
         title: "vLLM generation request parity",
         description:
           "forwarded frequency penalties and stop conditions through the vLLM generation backend.",
+      },
+    ],
+  },
+  {
+    id: "miles",
+    mergedPrCount: 1,
+    mergedPrsHref: "https://github.com/radixark/miles/pulls?q=is:pr+is:merged+author:EazyReal",
+    name: "Miles",
+    contributions: [
+      {
+        href: "https://github.com/radixark/miles/pull/2697",
+        title: "Expert-balanced MoE routing-replay padding",
+        description:
+          "strided fully padded routing-replay rows by pad-row ordinal across experts instead of concentrating them on experts 0..topk-1, preventing hot-rank expert-dispatch OOMs observed on 128-H100 256k-context DeepSeek-V4-Flash runs without aliasing under BSHD per-sample padding.",
       },
     ],
   },
